@@ -4,13 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "npm run clean-dist && npm run compile-index",
+    "compile-index": "node-sass --output dist --source-map true --source-map-contents true --output-style expanded src/css/index.css",
+    "compile-dev-index": "node-sass --output examples/css --source-map true --source-map-contents true --output-style expanded src/css/index.css",
+    "compile-sources": "node-sass --output src/sources --output-style expanded src/sources/indexes",
+    "clean-dist": "rm -rf dist/*",
+    "clean-dev": "rm -rf examples/css/*",
+    "clean-sources": "rm -rf src/sources/*",
+    "start": "npm run clean-dev && npm run compile-dev-index && npm run watch",
+    "sources": "npm run clean-sources && npm run compile-sources",
+    "watch": "nodemon --watch src/css --ext \"css\" --exec \"npm run compile-dev-index\" --on-change-only"
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "bootstrap": "^4.1.1",
     "node-sass": "^4.10.0",
+    "nodemon": "^1.18.6",
     "normalize.css": "^8.0.1"
   }
 }
