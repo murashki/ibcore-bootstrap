@@ -64,8 +64,7 @@ body {
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
-  // color: $body-color;
-  color: $color-base;
+  color: $body-color;
   text-align: left; // 3
   background-color: $body-bg; // 2
 }
@@ -339,7 +338,7 @@ th {
 label {
   // Allow labels to use `margin` for spacing.
   display: inline-block;
-  // margin-bottom: $label-margin-bottom;
+  margin-bottom: $label-margin-bottom;
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.

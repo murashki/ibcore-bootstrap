@@ -1,0 +1,8 @@
+$btn-link-color: #007bff;
+$btn-link-decoration: none;
+$btn-link-hover-color: darken($btn-link-color, 12.5%);
+$btn-link-hover-decoration: $btn-link-decoration;
+$btn-link-focus-color: $btn-link-hover-color;
+$btn-link-focus-decoration: $btn-link-hover-decoration;
+$btn-link-disabled-opacity: 0.5;
+$btn-link-ngb-margin: 1em;

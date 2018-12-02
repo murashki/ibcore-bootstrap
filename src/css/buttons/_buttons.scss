@@ -1,0 +1,78 @@
+// Variables we use here:
+//   $btn-font-size
+//   $btn-font-size-sm
+//   $btn-font-size-lg
+//
+//   $btn-disabled-opacity
+//
+//   $btn-color
+//   $btn-bg-color
+//   $btn-border-color
+//
+//   $btn-ngb-margin
+
+.btn {
+  display: inline-block;
+  font-size: $btn-font-size;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375em 0.75em;
+  line-height: 1.5em;
+  border-radius: 0.15em;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.btn-sm {
+  font-size: $btn-font-size-sm;
+}
+
+.btn-lg {
+  font-size: $btn-font-size-lg;
+}
+
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+}
+
+.btn:focus,
+.btn.focus {
+  outline: 0;
+}
+
+// TODO
+.btn:active,
+.btn.active {
+  background-image: none;
+}
+
+.btn:disabled,
+.btn.disabled {
+  opacity: $btn-disabled-opacity;
+}
+
+.btn {
+  @include button-variant($btn-color, $btn-bg-color, $btn-border-color);
+}
+
+.btn + .btn {
+  margin-left: $btn-ngb-margin;
+}

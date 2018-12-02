@@ -1,0 +1,51 @@
+// Variables we use here:
+//   $btn-link-color
+//   $btn-link-decoration
+//   $btn-link-hover-color
+//   $btn-link-hover-decoration
+//   $btn-link-focus-color
+//   $btn-link-focus-decoration
+//   $btn-link-disabled-opacity
+//   $btn-link-ngb-margin
+
+.btn-link {
+  display: inline-block;
+  padding: 0;
+  line-height: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border: none;
+  color: $btn-link-color;
+  text-decoration: $btn-link-decoration;
+  background-color: transparent;
+  transition: none;
+}
+
+.btn-link:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  color: $btn-link-hover-color;
+  text-decoration: $btn-link-hover-decoration;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-link:focus,
+.btn-link.focus {
+  color: $btn-link-focus-color;
+  text-decoration: $btn-link-focus-decoration;
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+}
+
+.btn-link:disabled,
+.btn-link.disabled {
+  opacity: $btn-link-disabled-opacity;
+}
+
+.btn-link + .btn-link {
+  margin-left: $btn-link-ngb-margin;
+}

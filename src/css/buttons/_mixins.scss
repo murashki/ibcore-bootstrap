@@ -1,0 +1,39 @@
+@mixin button-variant(
+  $color,
+  $bg-color,
+  $border-color,
+  $hover-bg-color: darken($bg-color, 7.5%),
+  $hover-border-color: darken($border-color, 10%),
+  $active-bg-color: darken($bg-color, 10%),
+  $active-border-color: darken($border-color, 12.5%)
+) {
+  color: $color;
+  background-color: $bg-color;
+  border-color: $border-color;
+
+  &:hover {
+    color: $color;
+    background-color: $hover-bg-color;
+    border-color: $hover-border-color;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2em rgba($border-color, 0.5);
+    border-color: $active-border-color;
+  }
+
+  &:active,
+  &.active {
+    color: $color;
+    background-color: $active-bg-color;
+    border-color: $active-border-color;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color;
+  }
+}
