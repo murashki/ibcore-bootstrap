@@ -101,31 +101,70 @@
   padding-left: 0;
 }
 
-.row-outer-margin {
+.bottom-gutters > .col,
+.bottom-gutters > [class*="col-"] {
   margin-bottom: $grid-gutter-height;
 }
 
-.row-outer-margin-sm {
+.bottom-gutters-sm > .col,
+.bottom-gutters-sm > [class*="col-"] {
   margin-bottom: $grid-gutter-height-sm;
 }
 
-.row-outer-margin-lg {
+.bottom-gutters-lg > .col,
+.bottom-gutters-lg > [class*="col-"] {
   margin-bottom: $grid-gutter-height-lg;
 }
 
-.row-inner-margin > .col,
-.row-inner-margin > [class*="col-"] {
-  margin-bottom: $grid-gutter-height;
+.outer-bottom-gutter-sm + .outer-bottom-gutter,
+.outer-bottom-gutter-sm + [class*="outer-bottom-gutter-"] {
+  margin-top: $grid-gutter-height-sm;
 }
 
-.row-inner-margin-sm > .col,
-.row-inner-margin-sm > [class*="col-"] {
-  margin-bottom: $grid-gutter-height-sm;
+.bottom-gutters-sm.outer-bottom-gutter-sm + .outer-bottom-gutter,
+.bottom-gutters-sm.outer-bottom-gutter-sm + [class*="outer-bottom-gutter"] {
+  margin-top: 0;
 }
 
-.row-inner-margin-lg > .col,
-.row-inner-margin-lg > [class*="col-"] {
-  margin-bottom: $grid-gutter-height-lg;
+.bottom-gutters-sm.outer-bottom-gutter + .outer-bottom-gutter,
+.bottom-gutters-sm.outer-bottom-gutter + [class*="outer-bottom-gutter"] {
+  margin-top: $grid-gutter-height - $grid-gutter-height-sm;
+}
+
+.bottom-gutters-sm.outer-bottom-gutter-lg + .outer-bottom-gutter,
+.bottom-gutters-sm.outer-bottom-gutter-lg + [class*="outer-bottom-gutter"] {
+  margin-top: $grid-gutter-height-lg - $grid-gutter-height-sm;
+}
+
+.outer-bottom-gutter + .outer-bottom-gutter,
+.outer-bottom-gutter + [class*="outer-bottom-gutter-"] {
+  margin-top: $grid-gutter-height;
+}
+
+.bottom-gutters.outer-bottom-gutter + .outer-bottom-gutter,
+.bottom-gutters.outer-bottom-gutter + [class*="outer-bottom-gutter"],
+.bottom-gutters.outer-bottom-gutter-sm + .outer-bottom-gutter,
+.bottom-gutters.outer-bottom-gutter-sm + [class*="outer-bottom-gutter"] {
+  margin-top: 0;
+}
+
+.bottom-gutters.outer-bottom-gutter-lg + .outer-bottom-gutter,
+.bottom-gutters.outer-bottom-gutter-lg + [class*="outer-bottom-gutter"] {
+  margin-top: $grid-gutter-height-lg - $grid-gutter-height;
+}
+
+.outer-bottom-gutter-lg + .outer-bottom-gutter,
+.outer-bottom-gutter-lg + [class*="outer-bottom-gutter-"] {
+  margin-top: $grid-gutter-height-lg;
+}
+
+.bottom-gutters-lg.outer-bottom-gutter-sm + .outer-bottom-gutter,
+.bottom-gutters-lg.outer-bottom-gutter-sm + [class*="outer-bottom-gutter"],
+.bottom-gutters-lg.outer-bottom-gutter + .outer-bottom-gutter,
+.bottom-gutters-lg.outer-bottom-gutter + [class*="outer-bottom-gutter"],
+.bottom-gutters-lg.outer-bottom-gutter-lg + .outer-bottom-gutter,
+.bottom-gutters-lg.outer-bottom-gutter-lg + [class*="outer-bottom-gutter"] {
+  margin-top: 0;
 }
 
 .col {

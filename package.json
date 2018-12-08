@@ -6,10 +6,10 @@
   "scripts": {
     "compile": "npm run clean-dist && npm run compile-index",
     "compile-index": "node-sass --output dist --source-map true --source-map-contents true --output-style expanded src/css/index.scss",
-    "compile-dev-index": "node-sass --output examples/css --source-map true --source-map-contents true --output-style expanded src/css/index.scss",
+    "compile-dev-index": "node-sass --output examples/css/compiled --source-map true --source-map-contents true --output-style expanded src/css/index.scss",
     "compile-sources": "node-sass --output src/sources/compiled --output-style expanded src/sources/indexes",
     "clean-dist": "rm -rf dist/*",
-    "clean-dev": "rm -rf examples/css/*",
+    "clean-dev": "rm -rf examples/css/compiled/*",
     "clean-sources": "rm -rf src/sources/compiled/*",
     "start": "npm run clean-dev && npm run compile-dev-index && npm run watch",
     "sources": "npm run clean-sources && npm run compile-sources",
