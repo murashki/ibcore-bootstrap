@@ -11,13 +11,13 @@
 //
 //   $container-gutter-width
 //
-//   $grid-gutter-width
-//   $grid-gutter-width-sm
-//   $grid-gutter-width-lg
+//   $grid-gutter
+//   $grid-gutter-sm
+//   $grid-gutter-lg
 //
-//   $grid-gutter-height
-//   $grid-gutter-height-sm
-//   $grid-gutter-height-lg
+//   $grid-margin
+//   $grid-margin-sm
+//   $grid-margin-lg
 
 .container,
 .container-fluid {
@@ -55,8 +55,6 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -$grid-gutter-width / 2;
-  margin-left: -$grid-gutter-width / 2;
 }
 
 .col,
@@ -64,30 +62,39 @@
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: $grid-gutter-width / 2;
-  padding-left: $grid-gutter-width / 2;
 }
 
 .gutters-sm {
-  margin-right: -$grid-gutter-width-sm / 2;
-  margin-left: -$grid-gutter-width-sm / 2;
+  margin-right: -$grid-gutter-sm / 2;
+  margin-left: -$grid-gutter-sm / 2;
 }
 
 .gutters-sm > .col,
 .gutters-sm > [class*="col-"] {
-  padding-right: $grid-gutter-width-sm / 2;
-  padding-left: $grid-gutter-width-sm / 2;
+  padding-right: $grid-gutter-sm / 2;
+  padding-left: $grid-gutter-sm / 2;
+}
+
+.row {
+  margin-right: -$grid-gutter / 2;
+  margin-left: -$grid-gutter / 2;
+}
+
+.col,
+[class*="col-"] {
+  padding-right: $grid-gutter / 2;
+  padding-left: $grid-gutter / 2;
 }
 
 .gutters-lg {
-  margin-right: -$grid-gutter-width-lg / 2;
-  margin-left: -$grid-gutter-width-lg / 2;
+  margin-right: -$grid-gutter-lg / 2;
+  margin-left: -$grid-gutter-lg / 2;
 }
 
 .gutters-lg > .col,
 .gutters-lg > [class*="col-"] {
-  padding-right: $grid-gutter-width-lg / 2;
-  padding-left: $grid-gutter-width-lg / 2;
+  padding-right: $grid-gutter-lg / 2;
+  padding-left: $grid-gutter-lg / 2;
 }
 
 .no-gutters {
@@ -101,69 +108,69 @@
   padding-left: 0;
 }
 
-.bottom-gutters > .col,
-.bottom-gutters > [class*="col-"] {
-  margin-bottom: $grid-gutter-height;
+.cell-margin-sm > .col,
+.cell-margin-sm > [class*="col-"] {
+  margin-bottom: $grid-margin-sm;
 }
 
-.bottom-gutters-sm > .col,
-.bottom-gutters-sm > [class*="col-"] {
-  margin-bottom: $grid-gutter-height-sm;
+.cell-margin > .col,
+.cell-margin > [class*="col-"] {
+  margin-bottom: $grid-margin;
 }
 
-.bottom-gutters-lg > .col,
-.bottom-gutters-lg > [class*="col-"] {
-  margin-bottom: $grid-gutter-height-lg;
+.cell-margin-lg > .col,
+.cell-margin-lg > [class*="col-"] {
+  margin-bottom: $grid-margin-lg;
 }
 
-.outer-bottom-gutter-sm + .outer-bottom-gutter,
-.outer-bottom-gutter-sm + [class*="outer-bottom-gutter-"] {
-  margin-top: $grid-gutter-height-sm;
+.row-margin-sm + .row-margin,
+.row-margin-sm + [class*="row-margin-"] {
+  margin-top: $grid-margin-sm;
 }
 
-.bottom-gutters-sm.outer-bottom-gutter-sm + .outer-bottom-gutter,
-.bottom-gutters-sm.outer-bottom-gutter-sm + [class*="outer-bottom-gutter"] {
+.cell-margin-sm.row-margin-sm + .row-margin,
+.cell-margin-sm.row-margin-sm + [class*="row-margin-"],
+.cell-margin.row-margin-sm + .row-margin,
+.cell-margin.row-margin-sm + [class*="row-margin-"],
+.cell-margin-lg.row-margin-sm + .row-margin,
+.cell-margin-lg.row-margin-sm + [class*="row-margin-"] {
   margin-top: 0;
 }
 
-.bottom-gutters-sm.outer-bottom-gutter + .outer-bottom-gutter,
-.bottom-gutters-sm.outer-bottom-gutter + [class*="outer-bottom-gutter"] {
-  margin-top: $grid-gutter-height - $grid-gutter-height-sm;
+.row-margin + .row-margin,
+.row-margin + [class*="row-margin-"] {
+  margin-top: $grid-margin;
 }
 
-.bottom-gutters-sm.outer-bottom-gutter-lg + .outer-bottom-gutter,
-.bottom-gutters-sm.outer-bottom-gutter-lg + [class*="outer-bottom-gutter"] {
-  margin-top: $grid-gutter-height-lg - $grid-gutter-height-sm;
+.cell-margin-sm.row-margin + .row-margin,
+.cell-margin-sm.row-margin + [class*="row-margin-"] {
+  margin-top: $grid-margin - $grid-margin-sm;
 }
 
-.outer-bottom-gutter + .outer-bottom-gutter,
-.outer-bottom-gutter + [class*="outer-bottom-gutter-"] {
-  margin-top: $grid-gutter-height;
-}
-
-.bottom-gutters.outer-bottom-gutter + .outer-bottom-gutter,
-.bottom-gutters.outer-bottom-gutter + [class*="outer-bottom-gutter"],
-.bottom-gutters.outer-bottom-gutter-sm + .outer-bottom-gutter,
-.bottom-gutters.outer-bottom-gutter-sm + [class*="outer-bottom-gutter"] {
+.cell-margin.row-margin + .row-margin,
+.cell-margin.row-margin + [class*="row-margin-"],
+.cell-margin-lg.row-margin + .row-margin,
+.cell-margin-lg.row-margin + [class*="row-margin-"] {
   margin-top: 0;
 }
 
-.bottom-gutters.outer-bottom-gutter-lg + .outer-bottom-gutter,
-.bottom-gutters.outer-bottom-gutter-lg + [class*="outer-bottom-gutter"] {
-  margin-top: $grid-gutter-height-lg - $grid-gutter-height;
+.row-margin-lg + .row-margin,
+.row-margin-lg + [class*="row-margin-"] {
+  margin-top: $grid-margin-lg;
 }
 
-.outer-bottom-gutter-lg + .outer-bottom-gutter,
-.outer-bottom-gutter-lg + [class*="outer-bottom-gutter-"] {
-  margin-top: $grid-gutter-height-lg;
+.cell-margin-sm.row-margin-lg + .row-margin,
+.cell-margin-sm.row-margin-lg + [class*="row-margin-"] {
+  margin-top: $grid-margin-lg - $grid-margin-sm;
 }
 
-.bottom-gutters-lg.outer-bottom-gutter-sm + .outer-bottom-gutter,
-.bottom-gutters-lg.outer-bottom-gutter-sm + [class*="outer-bottom-gutter"],
-.bottom-gutters-lg.outer-bottom-gutter + .outer-bottom-gutter,
-.bottom-gutters-lg.outer-bottom-gutter + [class*="outer-bottom-gutter"],
-.bottom-gutters-lg.outer-bottom-gutter-lg + .outer-bottom-gutter,
-.bottom-gutters-lg.outer-bottom-gutter-lg + [class*="outer-bottom-gutter"] {
+.cell-margin.row-margin-lg + .row-margin,
+.cell-margin.row-margin-lg + [class*="row-margin-"] {
+  margin-top: $grid-margin-lg - $grid-margin;
+}
+
+.cell-margin-lg.row-margin-lg + .row-margin,
+.cell-margin-lg.row-margin-lg + [class*="row-margin-"] {
   margin-top: 0;
 }
 
