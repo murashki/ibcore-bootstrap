@@ -1,27 +1,32 @@
 // Variables we use here:
+//   $grid-breakpoint-sm
+//   $grid-breakpoint-md
+//   $grid-breakpoint-lg
+//   $grid-breakpoint-xl
+//
 //   $container-max-width-sm
 //   $container-max-width-md
 //   $container-max-width-lg
 //   $container-max-width-xl
 //
-//   $container-gutter-width-sm
-//   $container-gutter-width-md
-//   $container-gutter-width-lg
-//   $container-gutter-width-xl
+//   $container-gutter-sm
+//   $container-gutter-md
+//   $container-gutter-lg
+//   $container-gutter-xl
 //
-//   $grid-gutter
 //   $grid-gutter-sm
+//   $grid-gutter
 //   $grid-gutter-lg
 //
-//   $grid-bottom-gutter
 //   $grid-bottom-gutter-sm
+//   $grid-bottom-gutter
 //   $grid-bottom-gutter-lg
 
 .container,
 .container-fluid {
   width: 100%;
-  padding-right: $container-gutter-width-xl / 2;
-  padding-left: $container-gutter-width-xl / 2;
+  padding-right: $container-gutter-xl / 2;
+  padding-left: $container-gutter-xl / 2;
   margin-right: auto;
   margin-left: auto;
 }
@@ -30,47 +35,44 @@
   max-width: $container-max-width-xl;
 }
 
-@media (max-width: $container-max-width-xl - 1) {
+@media (max-width: $grid-breakpoint-xl - 1) {
   .container,
   .container-fluid {
-    padding-right: $container-gutter-width-xl / 2;
-    padding-left: $container-gutter-width-xl / 2;
+    padding-right: $container-gutter-xl / 2;
+    padding-left: $container-gutter-xl / 2;
   }
   .container {
     max-width: $container-max-width-lg;
   }
 }
 
-@media (max-width: $container-max-width-lg - 1) {
+@media (max-width: $grid-breakpoint-lg - 1) {
   .container,
   .container-fluid {
-    padding-right: $container-gutter-width-lg / 2;
-    padding-left: $container-gutter-width-lg / 2;
+    padding-right: $container-gutter-lg / 2;
+    padding-left: $container-gutter-lg / 2;
   }
   .container {
     max-width: $container-max-width-md;
   }
 }
 
-@media (max-width: $container-max-width-md - 1) {
+@media (max-width: $grid-breakpoint-md - 1) {
   .container,
   .container-fluid {
-    padding-right: $container-gutter-width-md / 2;
-    padding-left: $container-gutter-width-md / 2;
+    padding-right: $container-gutter-md / 2;
+    padding-left: $container-gutter-md / 2;
   }
   .container {
     max-width: $container-max-width-sm;
   }
 }
 
-@media (max-width: $container-max-width-sm - 1) {
+@media (max-width: $grid-breakpoint-sm - 1) {
   .container,
   .container-fluid {
-    padding-right: $container-gutter-width-sm / 2;
-    padding-left: $container-gutter-width-sm / 2;
-  }
-  .container {
-    max-width: 100%;
+    padding-right: $container-gutter-sm / 2;
+    padding-left: $container-gutter-sm / 2;
   }
 }
 
@@ -288,7 +290,7 @@
   margin-left: 91.666667%;
 }
 
-@media (max-width: $container-max-width-xl - 1) {
+@media (max-width: $grid-breakpoint-xl - 1) {
   .col-xl {
     flex-basis: 0;
     flex-grow: 1;
@@ -432,7 +434,7 @@
   }
 }
 
-@media (max-width: $container-max-width-lg - 1) {
+@media (max-width: $grid-breakpoint-lg - 1) {
   .col-lg {
     flex-basis: 0;
     flex-grow: 1;
@@ -576,7 +578,7 @@
   }
 }
 
-@media (max-width: $container-max-width-md - 1) {
+@media (max-width: $grid-breakpoint-md - 1) {
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
@@ -720,7 +722,7 @@
   }
 }
 
-@media (max-width: $container-max-width-sm - 1) {
+@media (max-width: $grid-breakpoint-sm - 1) {
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
@@ -883,7 +885,7 @@
   display: inline-flex !important;
 }
 
-@media (max-width: $container-max-width-xl - 1) {
+@media (max-width: $grid-breakpoint-xl - 1) {
   .d-xl-none {
     display: none !important;
   }
@@ -904,7 +906,7 @@
   }
 }
 
-@media (max-width: $container-max-width-lg - 1) {
+@media (max-width: $grid-breakpoint-lg - 1) {
   .d-lg-none {
     display: none !important;
   }
@@ -925,7 +927,7 @@
   }
 }
 
-@media (max-width: $container-max-width-md - 1) {
+@media (max-width: $grid-breakpoint-md - 1) {
   .d-md-none {
     display: none !important;
   }
@@ -946,7 +948,7 @@
   }
 }
 
-@media (max-width: $container-max-width-sm - 1) {
+@media (max-width: $grid-breakpoint-sm - 1) {
   .d-sm-none {
     display: none !important;
   }
