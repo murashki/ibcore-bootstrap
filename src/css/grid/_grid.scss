@@ -92,10 +92,32 @@
   padding-left: $grid-gutter / 2;
 }
 
-
-// TODO row-break-sm row-break-md row-break-lg row-break-xl
 .row-break {
   width: 100% !important;
+}
+
+@media (max-width: $grid-breakpoint-xl - 1) {
+  .row-break-xl {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: $grid-breakpoint-lg - 1) {
+  .row-break-lg {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: $grid-breakpoint-md - 1) {
+  .row-break-md {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: $grid-breakpoint-sm - 1) {
+  .row-break-sm {
+    max-width: 100% !important;
+  }
 }
 
 .gutters-sm {
