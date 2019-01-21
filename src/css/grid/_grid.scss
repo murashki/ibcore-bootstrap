@@ -155,7 +155,7 @@
 
 .col,
 [class*="col-"] {
-  padding-bottom: $grid-bottom-gutter;
+  margin-bottom: $grid-bottom-gutter;
 }
 
 .bottom-gutters-sm > .col,
