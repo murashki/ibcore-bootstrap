@@ -1,0 +1,228 @@
+/* -- Sizing -- */
+button,
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=file],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea {
+  box-sizing: border-box;
+}
+
+/* -- Height -- */
+button,
+input,
+select {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+textarea {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  line-height: 1.4em;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  vertical-align: middle;
+}
+
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select:not([multiple]) {
+  height: 2.4em;
+}
+
+textarea {
+  height: 6.8em;
+}
+
+/* -- Width -- */
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+}
+
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=text],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week],
+textarea {
+  padding-right: 0.4em;
+  padding-left: 0.4em;
+}
+
+input[type=checkbox],
+input[type=file],
+input[type=image],
+input[type=radio],
+input[type=range] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+select[multiple] {
+  padding-left: 0.15em;
+  padding-right: 0.15em;
+}
+
+optgroup {
+  padding-left: 0.15em;
+  padding-right: 0.15em;
+} /* Firefox fix */
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  width: 10em;
+}
+
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select{
+  width: 15.4em;
+}
+
+textarea {
+  width: 24em;
+}
+
+/* -- Fonts, colors -- */
+button,
+input[type=button],
+input[type=reset],
+input[type=submit],
+input[type=file] {
+  font-size: 1.1em;
+}
+
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea {
+  border: 1px solid #aaa;
+  border-radius: 0.2em;
+  background-color: #fff;
+}
+
+/* Disabled appearence */
+input[type=date][disabled],
+input[type=datetime][disabled],
+input[type=datetime-local][disabled],
+input[type=email][disabled],
+input[type=month][disabled],
+input[type=number][disabled],
+input[type=password][disabled],
+input[type=search][disabled],
+input[type=text][disabled],
+input[type=tel][disabled],
+input[type=time][disabled],
+input[type=url][disabled],
+input[type=week][disabled],
+select[disabled],
+textarea[disabled],
+fieldset[disabled] input[type=date],
+fieldset[disabled] input[type=datetime],
+fieldset[disabled] input[type=datetime-local],
+fieldset[disabled] input[type=email],
+fieldset[disabled] input[type=month],
+fieldset[disabled] input[type=number],
+fieldset[disabled] input[type=password],
+fieldset[disabled] input[type=search],
+fieldset[disabled] input[type=text],
+fieldset[disabled] input[type=tel],
+fieldset[disabled] input[type=time],
+fieldset[disabled] input[type=url],
+fieldset[disabled] input[type=week],
+fieldset[disabled] select,
+fieldset[disabled] textarea{
+  background-color: #eee;
+}
+
+select[disabled] option {
+  color: inherit;
+} /* Chrome fix */
+
+textarea[disabled],
+fieldset[disabled] textarea {
+  cursor: default;
+} /* Chrome fix */ /* TO DO IE fix */
+
+fieldset[disabled] button,
+fieldset[disabled] input[type=button],
+fieldset[disabled] input[type=reset],
+fieldset[disabled] input[type=submit] {
+  cursor: default;
+} /* Chrome, IE fix */
+
+fieldset[disabled] input[type=image] {
+  cursor: default;
+} /* Chrome, Firefox fix */
