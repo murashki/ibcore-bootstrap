@@ -1,0 +1,49 @@
+.ordered-list,
+.unordered-list,
+.desctiption-list {
+  margin-top: 0;
+  margin-bottom: 1em; // TODO Should use paragraph margin variable
+}
+
+.ordered-list,
+.unordered-list {
+  padding-left: 2em;
+}
+
+.ordered-list .ordered-list,
+.unordered-list .unordered-list,
+.ordered-list .unordered-list,
+.unordered-list .ordered-list,
+.desctiption-list .desctiption-list {
+  margin-bottom: 0;
+}
+
+.desctiption-list dt {
+  font-weight: 700;
+}
+
+.desctiption-list dd {
+  margin-bottom: .5em;
+  margin-left: 0;
+}
+
+.desctiption-list dd:last-child {
+  margin-bottom: 0;
+}
+
+.list--unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list--followed {
+  margin-bottom: 0;
+}
+
+.list--inline li {
+  display: inline-block;
+}
+
+.list--inline li + li {
+  margin-left: 2em;
+}
