@@ -1,0 +1,21 @@
+.preformatted-text,
+.code-text,
+.code-block,
+.keyboard-input,
+.sample-output {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: inherit;
+}
+
+.preformatted-text {
+  margin-top: 0;
+  margin-bottom: 1em; // TODO Should use paragraph margin variable
+  overflow: auto;
+  // We have @viewport set which causes scrollbars to overlap content in IE11 and Edge, so
+  // we force a non-overlapping, non-auto-hiding scrollbar to counteract.
+  -ms-overflow-style: scrollbar;
+}
+
+.code-text {
+  color: #e83e8c;
+}
