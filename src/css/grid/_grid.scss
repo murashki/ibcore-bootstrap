@@ -84,7 +84,8 @@
 }
 
 .row > .col,
-.row > [class*="col-"] {
+.row > [class^="col-"],
+.row > [class*=" col-"] {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -127,7 +128,8 @@
 }
 
 .gutters-sm > .col,
-.gutters-sm > [class*="col-"] {
+.gutters-sm > [class^="col-"],
+.gutters-sm > [class*=" col-"] {
   padding-right: $grid-gutter-sm / 2;
   padding-left: $grid-gutter-sm / 2;
 }
@@ -138,7 +140,8 @@
 }
 
 .gutters-lg > .col,
-.gutters-lg > [class*="col-"] {
+.gutters-lg > [class^="col-"],
+.gutters-lg > [class*=" col-"] {
   padding-right: $grid-gutter-lg / 2;
   padding-left: $grid-gutter-lg / 2;
 }
@@ -149,23 +152,27 @@
 }
 
 .no-gutters > .col,
-.no-gutters > [class*="col-"] {
+.no-gutters > [class^="col-"],
+.no-gutters > [class*=" col-"] {
   padding-right: 0;
   padding-left: 0;
 }
 
 .bottom-gutters-sm > .col,
-.bottom-gutters-sm > [class*="col-"] {
+.bottom-gutters-sm > [class^="col-"],
+.bottom-gutters-sm > [class*=" col-"] {
   margin-bottom: $grid-bottom-gutter-sm;
 }
 
 .bottom-gutters-lg > .col,
-.bottom-gutters-lg > [class*="col-"] {
+.bottom-gutters-lg > [class^="col-"],
+.bottom-gutters-lg > [class*=" col-"] {
   margin-bottom: $grid-bottom-gutter-lg;
 }
 
 .no-bottom-gutters > .col,
-.no-bottom-gutters > [class*="col-"] {
+.no-bottom-gutters > [class^="col-"],
+.no-bottom-gutters > [class*=" col-"] {
   margin-bottom: 0;
 }
 
