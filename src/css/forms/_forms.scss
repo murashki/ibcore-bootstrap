@@ -193,6 +193,12 @@
   margin-bottom: 0;
 }
 
+.form-group > [class^="col-"],
+.form-group > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+}
+
 .form-label {
   display: block;
   margin-bottom: .5em;
@@ -207,10 +213,12 @@
 
 .form--label-right-align .form-label {
   text-align: right;
+  justify-content: flex-end;
 }
 
 .form--label-left-align .form-label {
   text-align: right;
+  justify-content: flex-start;
 }
 
 // TODO >>>
