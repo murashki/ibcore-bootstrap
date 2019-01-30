@@ -1,0 +1,1016 @@
+<html lang="ru">
+  <head>
+    <meta charSet="utf-8">
+    <title>forms.ibcore-bootstrap</title>
+    <link rel="stylesheet" href="css/compiled/index.css">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <div class="head">
+      <div class="container">
+        <div class="menu">
+          <a class="menuLink" href="index.html">Grid</a>
+          <a class="menuLink" href="buttons.html">Buttons</a>
+          <a class="menuLink menuLink--active" href="forms.html">Forms</a>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="container">
+        <h1>Forms</h1>
+
+        <div class="section">
+          <h2>Vertical forms</h2>
+          <form class="form">
+            <div class="form-group">
+              <label class="form-label" for="input-text-vf">input[type=text]</label>
+              <input type="text" id="input-text-vf" class="form-control-week" value="Some text">
+            </div>
+            <div class="row">
+              <div class="col-6 form-group">
+                <label class="form-label" for="input-text-hf">input[type=text]</label>
+                <input type="text" id="input-text-hf" class="form-control-week" value="Some text">
+              </div>
+              <div class="col-6 form-group">
+                <label class="form-label" for="input-text-hf">input[type=text]</label>
+                <input type="text" id="input-text-hf" class="form-control-week" value="Some text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="select-vf">select</label>
+              <select id="select-vf" class="form-control-select">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="textarea-vf">textarea</label>
+              <textarea id="textarea-vf" class="form-control-textarea">Some text</textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+
+        <div class="section">
+          <h2>Horizontal forms</h2>
+          <form class="form form--label-right-align">
+            <div class="row form-group">
+              <label class="col-2 col-lg-3 form-label" for="input-text-hf">Lorem</label>
+              <div class="col-10 col-lg-9">
+                <input type="text" id="input-text-hf" class="form-control-week" value="Some text">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-12 row form-group">
+                <label class="col-4 col-lg-6 col-md-3 form-label" for="input-text-hf">Lorem ipsum dolor sit</label>
+                <div class="col-8 col-lg-6 col-md-9">
+                  <input type="text" id="input-text-hf" class="form-control-week" value="Some text">
+                </div>
+              </div>
+              <div class="col-6 col-md-12 row form-group">
+                <label class="col-4 col-lg-6 col-md-3 form-label" for="input-text-hf">Amet</label>
+                 <div class="col-8 col-lg-6 col-md-9">
+                  <input type="text" id="input-text-hf" class="form-control-week" value="Some text">
+                </div>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-2 col-lg-3 form-label" for="select-hf">Ipsum</label>
+              <div class="col-10 col-lg-9">
+                <select id="select-hf" class="form-control-select">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-2 col-lg-3 form-label" for="textarea-hf">Dolor</label>
+              <div class="col-10 col-lg-9">
+                <textarea id="textarea-hf" class="form-control-textarea">Some text</textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+
+        <div class="section">
+          <h2>Default controls</h2>
+          <form class="form">
+            <div class="row form-group">
+              <label class="col-4 form-label">button[type=button]</label>
+              <div class="col-8">
+                <button type="button" class="btn">Button</button>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">button[type=reset]</label>
+              <div class="col-8">
+                <button type="reset" class="btn">Reset</button>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">button[type=submit]</label>
+              <div class="col-8">
+                <button type="submit" class="btn">Submit</button>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">input[type=button]</label>
+              <div class="col-8">
+                <input type="button" class="btn" value="Button">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">input[type=reset]</label>
+              <div class="col-8">
+                <input type="reset" class="btn">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">input[type=submit]</label>
+              <div class="col-8">
+                <input type="submit" class="btn">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-checkbox">input[type=checkbox]</label>
+              <div class="col-8">
+                <input type="checkbox" id="input-checkbox" class="form-control-checkbox">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-color">input[type=color]</label>
+              <div class="col-8">
+                <input type="color" id="input-color" class="form-control-color">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-date">input[type=date]</label>
+              <div class="col-8">
+                <input type="date" id="input-date" class="form-control-date">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-datetime">input[type=datetime]</label>
+              <div class="col-8">
+                <input type="datetime" id="input-datetime" class="form-control-datetime">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-datetime-local">input[type=datetime-local]</label>
+              <div class="col-8">
+                <input type="datetime-local" id="input-datetime-local" class="form-control-datetime-local">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-email">input[type=email]</label>
+              <div class="col-8">
+                <input type="email" id="input-email" class="form-control-email" value="example@example.com">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-file">input[type=file]</label>
+              <div class="col-8">
+                <input type="file" id="input-file" class="form-control-file">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-image">input[type=image]</label>
+              <div class="col-8">
+                <input type="image" id="input-image" class="form-control-image" src="images/image-example.jpg">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-month">input[type=month]</label>
+              <div class="col-8">
+                <input type="month" id="input-month" class="form-control-month">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-number">input[type=number]</label>
+              <div class="col-8">
+                <input type="number" id="input-number" class="form-control-number" value="1234567890">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-password">input[type=password]</label>
+              <div class="col-8">
+                <input type="password" id="input-password" class="form-control-password" value="password">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-radio">input[type=radio]</label>
+              <div class="col-8">
+                <input type="radio" id="input-radio" class="form-control-radio">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-range">input[type=range]</label>
+              <div class="col-8">
+                <input type="range" id="input-range" class="form-control-range">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-search">input[type=search]</label>
+              <div class="col-8">
+                <input type="search" id="input-search" class="form-control-search" value="Search text">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-tel">input[type=tel]</label>
+              <div class="col-8">
+                <input type="tel" id="input-tel" class="form-control-tel" value="(800) 800-800-800">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-text">input[type=text]</label>
+              <div class="col-8">
+                <input type="text" id="input-text" class="form-control-week" value="Some text">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-text-placeholder">input[type=text] (placeholder)</label>
+              <div class="col-8">
+                <input type="text" id="input-text-placeholder" class="form-control-text" placeholder="Some placeholder">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-time">input[type=time]</label>
+              <div class="col-8">
+                <input type="time" id="input-time" class="form-control-time">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-url">input[type=url]</label>
+              <div class="col-8">
+                <input type="url" id="input-url" class="form-control-url" value="http://example.com">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-week">input[type=week]</label>
+              <div class="col-8">
+                <input type="week" id="input-week" class="form-control-week">
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select">select</label>
+              <div class="col-8">
+                <select id="select" class="form-control-select">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-optgroup">select (with optgroup)</label>
+              <div class="col-8">
+                <select id="select-optgroup" class="form-control-select">
+                  <optgroup label="Optgroup 1">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                  <optgroup label="Optgroup 2">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-multiple">select[multiple]</label>
+              <div class="col-8">
+                <select id="select-multiple" class="form-control-select" multiple>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-multiple-optgroup">select[multiple] (with optgroup)</label>
+              <div class="col-8">
+                <select id="select-multiple-optgroup" class="form-control-select" multiple>
+                  <optgroup label="Optgroup 1">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                  <optgroup label="Optgroup 2">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="textarea">textarea</label>
+              <div class="col-8">
+                <textarea id="textarea" class="form-control-textarea">Some text</textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="section">
+          <h2>Disabled controls</h2>
+          <form class="form">
+            <div class="row form-group">
+              <label class="col-4 form-label">button[type=button]:disabled</label>
+              <div class="col-8">
+                <button type="button" class="btn" disabled>Button</button>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">button[type=reset]:disabled</label>
+              <div class="col-8">
+                <button type="reset" class="btn" disabled>Reset</button>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">button[type=submit]:disabled</label>
+              <div class="col-8">
+                <button type="submit" class="btn" disabled>Submit</button>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">input[type=button]:disabled</label>
+              <div class="col-8">
+                <input type="button" class="btn" value="Button" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">input[type=reset]:disabled</label>
+              <div class="col-8">
+                <input type="reset" class="btn" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">input[type=submit]:disabled</label>
+              <div class="col-8">
+                <input type="submit" class="btn" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-checkbox-disabled">input[type=checkbox]:disabled</label>
+              <div class="col-8">
+                <input type="checkbox" id="input-checkbox-disabled" class="form-control-checkbox" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-color-disabled">input[type=color]:disabled</label>
+              <div class="col-8">
+                <input type="color" id="input-color-disabled" class="form-control-color" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-date-disabled">input[type=date]:disabled</label>
+              <div class="col-8">
+                <input type="date" id="input-date-disabled" class="form-control-date" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-datetime-disabled">input[type=datetime]:disabled</label>
+              <div class="col-8">
+                <input type="datetime" id="input-datetime-disabled" class="form-control-datetime" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-datetime-local-disabled">input[type=datetime-local]:disabled</label>
+              <div class="col-8">
+                <input type="datetime-local" id="input-datetime-local-disabled" class="form-control-datetime-local" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-email-disabled">input[type=email]:disabled</label>
+              <div class="col-8">
+                <input type="email" id="input-email-disabled" class="form-control-email" value="example@example.com" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-file-disabled">input[type=file]:disabled</label>
+              <div class="col-8">
+                <input type="file" id="input-file-disabled" class="form-control-file" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-image-disabled">input[type=image]:disabled</label>
+              <div class="col-8">
+                <input type="image" id="input-image-disabled" class="form-control-image" src="images/image-example.jpg" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-month-disabled">input[type=month]:disabled</label>
+              <div class="col-8">
+                <input type="month" id="input-month-disabled" class="form-control-month" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-number-disabled">input[type=number]:disabled</label>
+              <div class="col-8">
+                <input type="number" id="input-number-disabled" class="form-control-number" value="1234567890" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-password-disabled">input[type=password]:disabled</label>
+              <div class="col-8">
+                <input type="password" id="input-password-disabled" class="form-control-password" value="password" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-radio-disabled">input[type=radio]:disabled</label>
+              <div class="col-8">
+                <input type="radio" id="input-radio-disabled" class="form-control-radio" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-range-disabled">input[type=range]:disabled</label>
+              <div class="col-8">
+                <input type="range" id="input-range-disabled" class="form-control-range" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-search-disabled">input[type=search]:disabled</label>
+              <div class="col-8">
+                <input type="search" id="input-search-disabled" class="form-control-search" value="Search text" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-tel-disabled">input[type=tel]:disabled</label>
+              <div class="col-8">
+                <input type="tel" id="input-tel-disabled" class="form-control-tel" value="(800) 800-800-800" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-text-disabled">input[type=text]:disabled</label>
+              <div class="col-8">
+                <input type="text" id="input-text-disabled" class="form-control-text" value="Some text" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-text-placeholder-disabled">input[type=text] (placeholder)</label>
+              <div class="col-8">
+                <input type="text" id="<input-text-placeholder-disabled" class="form-control-text" placeholder="Some placeholder" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-time-disabled">input[type=time]:disabled</label>
+              <div class="col-8">
+                <input type="time" id="input-time-disabled" class="form-control-time" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-url-disabled">input[type=url]:disabled</label>
+              <div class="col-8">
+                <input type="url" id="input-url-disabled" class="form-control-url" value="http://example.com" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-week-disabled">input[type=week]:disabled</label>
+              <div class="col-8">
+                <input type="week" id="input-week-disabled" class="form-control-week" disabled>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-disabled">select:disabled</label>
+              <div class="col-8">
+                <select id="select-disabled" class="form-control-select" disabled>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-optgroup-disabled">select:disabled (with optgroup)</label>
+              <div class="col-8">
+                <select id="select-optgroup-disabled" class="form-control-select" disabled>
+                  <optgroup label="Optgroup 1">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                  <optgroup label="Optgroup 2">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-multiple-disabled">select[multiple]:disabled</label>
+              <div class="col-8">
+                <select id="select-multiple-disabled" class="form-control-select" multiple disabled>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-multiple-optgroup-disabled">select[multiple]:disabled (with optgroup)</label>
+              <div class="col-8">
+                <select id="select-multiple-optgroup-disabled" class="form-control-select" multiple disabled>
+                  <optgroup label="Optgroup 1">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                  <optgroup label="Optgroup 2">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="textarea-disabled">textarea:disabled</label>
+              <div class="col-8">
+                <textarea id="textarea-disabled" class="form-control-textarea" disabled>Some text</textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="section">
+          <h2>Fieldset disabled controls</h2>
+          <form class="form">
+            <fieldset disabled>
+              <div class="row form-group">
+                <label class="col-4 form-label">fieldset:disabled button[type=button]</label>
+                <div class="col-8">
+                  <button type="button" class="btn">Button</button>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label">fieldset:disabled button[type=reset]</label>
+                <div class="col-8">
+                  <button type="reset" class="btn">Reset</button>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label">fieldset:disabled button[type=submit]</label>
+                <div class="col-8">
+                  <button type="submit" class="btn">Submit</button>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label">fieldset:disabled input[type=button]</label>
+                <div class="col-8">
+                  <input type="button" class="btn" value="Button">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label">fieldset:disabled input[type=reset]</label>
+                <div class="col-8">
+                  <input type="reset" class="btn">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label">fieldset:disabled input[type=submit]</label>
+                <div class="col-8">
+                  <input type="submit" class="btn">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-checkbox-fieldset">fieldset:disabled input[type=checkbox]</label>
+                <div class="col-8">
+                  <input type="checkbox" id="input-checkbox-fieldset" class="form-control-checkbox">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-color-fieldset">fieldset:disabled input[type=color]</label>
+                <div class="col-8">
+                  <input type="color" id="input-color-fieldset" class="form-control-color">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-date-fieldset">fieldset:disabled input[type=date]</label>
+                <div class="col-8">
+                  <input type="date" id="input-date-fieldset" class="form-control-date">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-datetime-fieldset">fieldset:disabled input[type=datetime]</label>
+                <div class="col-8">
+                  <input type="datetime" id="input-datetime-fieldset" class="form-control-datetime">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-datetime-local-fieldset">fieldset:disabled input[type=datetime-local]</label>
+                <div class="col-8">
+                  <input type="datetime-local" id="input-datetime-local-fieldset" class="form-control-datetime-local">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-email-fieldset">fieldset:disabled input[type=email]</label>
+                <div class="col-8">
+                  <input type="email" id="input-email-fieldset" class="form-control-email" value="example@example.com">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-file-fieldset">fieldset:disabled input[type=file]</label>
+                <div class="col-8">
+                  <input type="file" id="input-file-fieldset" class="form-control-file">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-image-fieldset">fieldset:disabled input[type=image]</label>
+                <div class="col-8">
+                  <input type="image" id="input-image-fieldset" class="form-control-image" src="images/image-example.jpg">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-month-fieldset">fieldset:disabled input[type=month]</label>
+                <div class="col-8">
+                  <input type="month" id="input-month-fieldset" class="form-control-month">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-number-fieldset">fieldset:disabled input[type=number]</label>
+                <div class="col-8">
+                  <input type="number" id="input-number-fieldset" class="form-control-number" value="1234567890">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-password-fieldset">fieldset:disabled input[type=password]</label>
+                <div class="col-8">
+                  <input type="password" id="input-password-fieldset" class="form-control-password" value="password">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-radio-fieldset">fieldset:disabled input[type=radio]</label>
+                <div class="col-8">
+                  <input type="radio" id="input-radio-fieldset" class="form-control-radio">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-range-fieldset">fieldset:disabled input[type=range]</label>
+                <div class="col-8">
+                  <input type="range" id="input-range-fieldset" class="form-control-range">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-search-fieldset">fieldset:disabled input[type=search]</label>
+                <div class="col-8">
+                  <input type="search" for="input-search-fieldset" class="form-control-search" value="Search text">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-tel-fieldset">fieldset:disabled input[type=tel]</label>
+                <div class="col-8">
+                  <input type="tel" id="input-tel-fieldset" class="form-control-tel" value="(800) 800-800-800">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-text-fieldset">fieldset:disabled input[type=text]</label>
+                <div class="col-8">
+                  <input type="text" id="input-text-fieldset" class="form-control-text" value="Some text">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-text-placeholder-fieldset">fieldset:disabled input[type=text] (placeholder)</label>
+                <div class="col-8">
+                  <input type="text" id="input-text-placeholder-fieldset" class="form-control-text" placeholder="Some placeholder">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-time-fieldset">fieldset:disabled input[type=time]</label>
+                <div class="col-8">
+                  <input type="time" id="input-time-fieldset" class="form-control-time">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-url-fieldset">fieldset:disabled input[type=url]</label>
+                <div class="col-8">
+                  <input type="url" id="input-url-fieldset" class="form-control-url" value="http://example.com">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="input-week-fieldset">fieldset:disabled input[type=week]</label>
+                <div class="col-8">
+                  <input type="week" id="input-week-fieldset" class="form-control-week">
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="select-fieldset">fieldset:disabled select</label>
+                <div class="col-8">
+                  <select id="select-fieldset" class="form-control-select">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="select-optgroup-fieldset">fieldset:disabled select (with optgroup)</label>
+                <div class="col-8">
+                  <select id="select-optgroup-fieldset" class="form-control-select">
+                    <optgroup label="Optgroup 1">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </optgroup>
+                    <optgroup label="Optgroup 2">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="select-multiple-fieldset">fieldset:disabled select[multiple]</label>
+                <div class="col-8">
+                  <select id="select-multiple-fieldset" class="form-control-select" multiple>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="select-multiple-optgroup-fieldset">fieldset:disabled select[multiple] (with optgroup)</label>
+                <div class="col-8">
+                  <select id="select-multiple-optgroup-fieldset" class="form-control-select" multiple>
+                    <optgroup label="Optgroup 1">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </optgroup>
+                    <optgroup label="Optgroup 2">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                      <option>Option 3</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-4 form-label" for="textarea-fieldset">fieldset:disabled textarea</label>
+                <div class="col-8">
+                  <textarea id="textarea-fieldset" class="form-control-textarea">Some text</textarea>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="section">
+          <h2 class="heading-2">Readonly controls</h2>
+          <p class="paragraph followed"><code class="code-text">readonly</code> attribute only affects following controls:</p>
+          <ul class="unordered-list">
+            <li><code class="code-text">input[type=date]</code></li>
+            <li><code class="code-text">input[type=datetime]</code></li>
+            <li><code class="code-text">input[type=datetime-local]</code></li>
+            <li><code class="code-text">input[type=email]</code></li>
+            <li><code class="code-text">input[type=month]</code></li>
+            <li><code class="code-text">input[type=number]</code></li>
+            <li><code class="code-text">input[type=password]</code></li>
+            <li><code class="code-text">input[type=search]</code></li>
+            <li><code class="code-text">input[type=tel]</code></li>
+            <li><code class="code-text">input[type=text]</code></li>
+            <li><code class="code-text">input[type=time]</code></li>
+            <li><code class="code-text">input[type=url]</code></li>
+            <li><code class="code-text">input[type=week]</code></li>
+            <li><code class="code-text">textarea</code></li>
+          </ul>
+          <p class="paragraph">Below you check the behavior of these controls in different browsers.</p>
+
+          <form class="form">
+            <div class="row form-group">
+              <label class="col-4 form-label">button[type=button][readonly]</label>
+              <div class="col-8">
+                <button type="button" class="btn" readonly>Button</button>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">button[type=reset][readonly]</label>
+              <div class="col-8">
+                <button type="reset" class="btn" readonly>Reset</button>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">button[type=submit][readonly]</label>
+              <div class="col-8">
+                <button type="submit" class="btn" readonly>Submit</button>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">input[type=button][readonly]</label>
+              <div class="col-8">
+                <input type="button" class="btn" value="Button" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">input[type=reset][readonly]</label>
+              <div class="col-8">
+                <input type="reset" class="btn" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label">input[type=submit][readonly]</label>
+              <div class="col-8">
+                <input type="submit" class="btn" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-checkbox-readonly">input[type=checkbox][readonly]</label>
+              <div class="col-8">
+                <input type="checkbox" id="input-checkbox-readonly" class="form-control-checkbox" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-color-readonly">input[type=color][readonly]</label>
+              <div class="col-8">
+                <input type="color" id="input-color-readonly" class="form-control-color" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-date-readonly">input[type=date][readonly]</label>
+              <div class="col-8">
+                <input type="date" id="input-date-readonly" class="form-control-date" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-datetime-readonly">input[type=datetime][readonly]</label>
+              <div class="col-8">
+                <input type="datetime" id="input-datetime-readonly" class="form-control-datetime" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-datetime-local-readonly">input[type=datetime-local][readonly]</label>
+              <div class="col-8">
+                <input type="datetime-local" id="input-datetime-local-readonly" class="form-control-datetime-local" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-email-readonly">input[type=email][readonly]</label>
+              <div class="col-8">
+                <input type="email" id="input-email-readonly" class="form-control-email" value="example@example.com" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-file-readonly">input[type=file][readonly]</label>
+              <div class="col-8">
+                <input type="file" id="input-file-readonly" class="form-control-file" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-image-readonly">input[type=image][readonly]</label>
+              <div class="col-8">
+                <input type="image" id="input-image-readonly" class="form-control-image" src="images/image-example.jpg" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-month-readonly">input[type=month][readonly]</label>
+              <div class="col-8">
+                <input type="month" id="input-month-readonly" class="form-control-month" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-number-readonly">input[type=number][readonly]</label>
+              <div class="col-8">
+                <input type="number" id="input-number-readonly" class="form-control-number" value="1234567890" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-password-readonly">input[type=password][readonly]</label>
+              <div class="col-8">
+                <input type="password" id="input-password-readonly" class="form-control-password" value="password" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-radio-readonly">input[type=radio][readonly]</label>
+              <div class="col-8">
+                <input type="radio" id="input-radio-readonly" class="form-control-radio" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-range-readonly">input[type=range][readonly]</label>
+              <div class="col-8">
+                <input type="range" id="input-range-readonly" class="form-control-range" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-search-readonly">input[type=search][readonly]</label>
+              <div class="col-8">
+                <input type="search" id="input-search-readonly" class="form-control-search" value="Search text" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-tel-readonly">input[type=tel][readonly]</label>
+              <div class="col-8">
+                <input type="tel" id="input-tel-readonly" class="form-control-tel" value="(800) 800-800-800" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-text-readonly">input[type=text][readonly]</label>
+              <div class="col-8">
+                <input type="text" id="input-text-readonly" class="form-control-text" value="Some text" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-text-placeholder-readonly">input[type=text] (placeholder)</label>
+              <div class="col-8">
+                <input type="text" id="<input-text-placeholder-readonly" class="form-control-text" placeholder="Some placeholder" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-time-readonly">input[type=time][readonly]</label>
+              <div class="col-8">
+                <input type="time" id="input-time-readonly" class="form-control-time" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-url-readonly">input[type=url][readonly]</label>
+              <div class="col-8">
+                <input type="url" id="input-url-readonly" class="form-control-url" value="http://example.com" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="input-week-readonly">input[type=week][readonly]</label>
+              <div class="col-8">
+                <input type="week" id="input-week-readonly" class="form-control-week" readonly>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-readonly">select[readonly]</label>
+              <div class="col-8">
+                <select id="select-readonly" class="form-control-select" readonly>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-optgroup-readonly">select[readonly] (with optgroup)</label>
+              <div class="col-8">
+                <select id="select-optgroup-readonly" class="form-control-select" readonly>
+                  <optgroup label="Optgroup 1">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                  <optgroup label="Optgroup 2">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-multiple-readonly">select[multiple][readonly]</label>
+              <div class="col-8">
+                <select id="select-multiple-readonly" class="form-control-select" multiple readonly>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="select-multiple-optgroup-readonly">select[multiple][readonly] (with optgroup)</label>
+              <div class="col-8">
+                <select id="select-multiple-optgroup-readonly" class="form-control-select" multiple readonly>
+                  <optgroup label="Optgroup 1">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                  <optgroup label="Optgroup 2">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label class="col-4 form-label" for="textarea-readonly">textarea[readonly]</label>
+              <div class="col-8">
+                <textarea id="textarea-readonly" class="form-control-textarea" readonly>Some text</textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="breakpoint">
+      <span class="d-xxl-inline-block">max</span>
+      <span class="d-xl-inline-block">xl</span>
+      <span class="d-lg-inline-block">lg</span>
+      <span class="d-md-inline-block">md</span>
+      <span class="d-sm-inline-block">sm</span>
+    </div>
+  </body>
+</html>

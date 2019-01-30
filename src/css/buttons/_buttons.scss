@@ -61,12 +61,13 @@
 // TODO
 .btn:active,
 .btn.active {
-  background-image: none;
+  background-image: none; // TODO What browser fix is this?
 }
 
 .btn:disabled,
 .btn.disabled {
   opacity: $btn-disabled-opacity;
+  cursor: default; // Chrome, IE fix
 }
 
 .btn {
