@@ -3,16 +3,19 @@
 //   $grid-breakpoint-md
 //   $grid-breakpoint-lg
 //   $grid-breakpoint-xl
+//   $grid-breakpoint-xxl
 //
 //   $container-max-width-sm
 //   $container-max-width-md
 //   $container-max-width-lg
 //   $container-max-width-xl
+//   $container-max-width-xxl
 //
 //   $container-gutter-sm
 //   $container-gutter-md
 //   $container-gutter-lg
 //   $container-gutter-xl
+//   $container-gutter-xxl
 //
 //   $grid-gutter-sm
 //   $grid-gutter
@@ -25,21 +28,32 @@
 .container,
 .container-fluid {
   width: 100%;
-  padding-right: $container-gutter-xl / 2;
-  padding-left: $container-gutter-xl / 2;
+  padding-right: $container-gutter-xxl / 2;
+  padding-left: $container-gutter-xxl / 2;
   margin-right: auto;
   margin-left: auto;
 }
 
 .container {
-  max-width: $container-max-width-xl;
+  max-width: $container-max-width-xxl;
+}
+
+@media (max-width: $grid-breakpoint-xxl - 1) {
+  .container,
+  .container-fluid {
+    padding-right: $container-gutter-xl / 2;
+    padding-left: $container-gutter-xl / 2;
+  }
+  .container {
+    max-width: $container-max-width-xl;
+  }
 }
 
 @media (max-width: $grid-breakpoint-xl - 1) {
   .container,
   .container-fluid {
-    padding-right: $container-gutter-xl / 2;
-    padding-left: $container-gutter-xl / 2;
+    padding-right: $container-gutter-lg / 2;
+    padding-left: $container-gutter-lg / 2;
   }
   .container {
     max-width: $container-max-width-lg;
@@ -49,8 +63,8 @@
 @media (max-width: $grid-breakpoint-lg - 1) {
   .container,
   .container-fluid {
-    padding-right: $container-gutter-lg / 2;
-    padding-left: $container-gutter-lg / 2;
+    padding-right: $container-gutter-md / 2;
+    padding-left: $container-gutter-md / 2;
   }
   .container {
     max-width: $container-max-width-md;
@@ -60,8 +74,8 @@
 @media (max-width: $grid-breakpoint-md - 1) {
   .container,
   .container-fluid {
-    padding-right: $container-gutter-md / 2;
-    padding-left: $container-gutter-md / 2;
+    padding-right: $container-gutter-sm / 2;
+    padding-left: $container-gutter-sm / 2;
   }
   .container {
     max-width: $container-max-width-sm;
@@ -71,8 +85,7 @@
 @media (max-width: $grid-breakpoint-sm - 1) {
   .container,
   .container-fluid {
-    padding-right: $container-gutter-sm / 2;
-    padding-left: $container-gutter-sm / 2;
+    width: $container-max-width-sm;
   }
 }
 
@@ -94,29 +107,35 @@
   padding-left: $grid-gutter / 2;
 }
 
-.row-break {
-  width: 100% !important;
+.row.col,
+.row[class^="col-"],
+.row[class*=" col-"] {
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
-@media (max-width: $grid-breakpoint-xl - 1) {
+@media (max-width: $grid-breakpoint-xxl - 1) {
   .row-break-xl {
     max-width: 100% !important;
   }
 }
 
-@media (max-width: $grid-breakpoint-lg - 1) {
+@media (max-width: $grid-breakpoint-xl - 1) {
   .row-break-lg {
     max-width: 100% !important;
   }
 }
 
-@media (max-width: $grid-breakpoint-md - 1) {
+@media (max-width: $grid-breakpoint-lg - 1) {
   .row-break-md {
     max-width: 100% !important;
   }
 }
 
-@media (max-width: $grid-breakpoint-sm - 1) {
+@media (max-width: $grid-breakpoint-md - 1) {
   .row-break-sm {
     max-width: 100% !important;
   }
@@ -315,7 +334,7 @@
   margin-left: 91.666667%;
 }
 
-@media (max-width: $grid-breakpoint-xl - 1) {
+@media (max-width: $grid-breakpoint-xxl - 1) {
   .col-xl {
     flex-basis: 0;
     flex-grow: 1;
@@ -459,7 +478,7 @@
   }
 }
 
-@media (max-width: $grid-breakpoint-lg - 1) {
+@media (max-width: $grid-breakpoint-xl - 1) {
   .col-lg {
     flex-basis: 0;
     flex-grow: 1;
@@ -603,7 +622,7 @@
   }
 }
 
-@media (max-width: $grid-breakpoint-md - 1) {
+@media (max-width: $grid-breakpoint-lg - 1) {
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
@@ -747,7 +766,7 @@
   }
 }
 
-@media (max-width: $grid-breakpoint-sm - 1) {
+@media (max-width: $grid-breakpoint-md - 1) {
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
@@ -910,7 +929,28 @@
   display: inline-flex !important;
 }
 
-@media (max-width: $grid-breakpoint-xl - 1) {
+@media (min-width: $grid-breakpoint-xxl) {
+  .d-xxl-none {
+    display: none !important;
+  }
+  .d-xxl-inline {
+    display: inline !important;
+  }
+  .d-xxl-inline-block {
+    display: inline-block !important;
+  }
+  .d-xxl-block {
+    display: block !important;
+  }
+  .d-xxl-flex {
+    display: flex !important;
+  }
+  .d-xxl-inline-flex {
+    display: inline-flex !important;
+  }
+}
+
+@media (min-width: $grid-breakpoint-xl) and (max-width: $grid-breakpoint-xxl - 1) {
   .d-xl-none {
     display: none !important;
   }
@@ -931,7 +971,7 @@
   }
 }
 
-@media (max-width: $grid-breakpoint-lg - 1) {
+@media (min-width: $grid-breakpoint-lg) and (max-width: $grid-breakpoint-xl - 1) {
   .d-lg-none {
     display: none !important;
   }
@@ -952,7 +992,7 @@
   }
 }
 
-@media (max-width: $grid-breakpoint-md - 1) {
+@media (min-width: $grid-breakpoint-md) and (max-width: $grid-breakpoint-lg - 1) {
   .d-md-none {
     display: none !important;
   }
@@ -973,7 +1013,7 @@
   }
 }
 
-@media (max-width: $grid-breakpoint-sm - 1) {
+@media (max-width: $grid-breakpoint-md - 1) {
   .d-sm-none {
     display: none !important;
   }

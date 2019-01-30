@@ -2,11 +2,13 @@ $grid-breakpoint-sm: 576px;
 $grid-breakpoint-md: 768px;
 $grid-breakpoint-lg: 992px;
 $grid-breakpoint-xl: 1200px;
+$grid-breakpoint-xxl: 1400px;
 
 $container-max-width-sm: 540px;
 $container-max-width-md: 720px;
 $container-max-width-lg: 960px;
-$container-max-width-xl: 1140px;
+$container-max-width-xl: 1160px;
+$container-max-width-xxl: 1360px;
 
 // $grid-gutter, $grid-gutter-sm and $grid-gutter-lg should be greater than 2 * $container-gutter-sm
 
@@ -14,6 +16,7 @@ $container-gutter-sm: 20px;
 $container-gutter-md: 25px;
 $container-gutter-lg: 30px;
 $container-gutter-xl: 35px;
+$container-gutter-xxl: 35px;
 
 $grid-gutter-sm: 10px;
 $grid-gutter: 20px;
