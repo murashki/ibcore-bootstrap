@@ -1,43 +1,46 @@
-.ordered-list,
-.unordered-list,
-.desctiption-list {
+/*
+  Variables we use here:
+    $listMarginBottom
+    $listPaddingLeft
+*/
+
+.orderedList,
+.unorderedList,
+.descriptionList {
   margin-top: 0;
-  margin-bottom: 1em; // TODO Should use paragraph margin variable
+  margin-bottom: $listMarginBottom;
 }
 
-.ordered-list,
-.unordered-list {
-  padding-left: 2em;
+.orderedList,
+.unorderedList {
+  padding-left: $listPaddingLeft;
 }
 
-.ordered-list .ordered-list,
-.unordered-list .unordered-list,
-.ordered-list .unordered-list,
-.unordered-list .ordered-list,
-.desctiption-list .desctiption-list {
+.orderedList .orderedList,
+.unorderedList .unorderedList,
+.orderedList .unorderedList,
+.unorderedList .orderedList,
+.descriptionList .descriptionList {
   margin-bottom: 0;
 }
 
-.desctiption-list dt {
+.descriptionList dt {
   font-weight: 700;
 }
 
-.desctiption-list dd {
+.descriptionList dd {
   margin-bottom: .5em;
   margin-left: 0;
 }
 
-.desctiption-list dd:last-child {
+.descriptionList dd:last-child {
   margin-bottom: 0;
 }
 
 .list--unstyled {
   padding-left: 0;
-  list-style: none;
-}
-
-.list--followed {
   margin-bottom: 0;
+  list-style: none;
 }
 
 .list--inline li {

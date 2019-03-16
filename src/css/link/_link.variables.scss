@@ -1,0 +1,13 @@
+/*
+  Variables we use here:
+    $base_linkColor
+*/
+
+$linkColor: $base_linkColor;
+$linkDecoration: none;
+$linkHoverColor: $linkColor;
+$linkHoverDecoration: underline;
+$linkFocusColor: $linkColor;
+$linkFocusDecoration: underline;
+$linkFocusOutline: 0;
+$linkVisitedColor: $linkColor;

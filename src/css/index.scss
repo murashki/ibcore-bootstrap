@@ -1,25 +1,24 @@
 @import './normalize';
 
+@import './variables';
+
 @import './reboot/reboot.variables';
 @import './grid/grid.variables';
 @import './forms/forms.variables';
-@import './links/links.variables';
+@import './link/link.variables';
 @import './buttons/buttons.variables';
 @import './buttons/button-variants.variables';
 @import './buttons/button-link.variables';
+@import './lists/lists.variables';
 
 @import './buttons/mixins';
 
 @import './reboot/reboot';
 @import './grid/grid';
 @import './forms/forms';
-@import './links/links';
+@import './link/link';
 @import './buttons/buttons';
 @import './buttons/button-variants';
 @import './buttons/button-link';
 @import './lists/lists';
 @import './code/code';
-
-.followed {
-  margin-bottom: 0 !important;
-}

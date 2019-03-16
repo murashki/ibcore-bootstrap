@@ -1,33 +1,41 @@
-// Variables we use here:
-//   $btn-font-size
-//   $btn-font-size-sm
-//   $btn-font-size-lg
-//
-//   $btn-disabled-opacity
-//
-//   $btn-color
-//   $btn-bg-color
-//   $btn-border-color
-//
-//   $btn-ngb-margin
+/*
+  Variables we use here:
+    $btnFontFamily
+    $btnFontSize
+    $btnFontSize--sm
+    $btnFontSize--lg
+    $btnFontSize--xl
+    $btnFontWeight
+    $btnLineHeight
+    $btnColor
+    $btnBgColor
+    $btnBorderColor
+    $btnBorderWidth
+    $btnBorderRadius
+    $btnDisabledOpacity
+    $btnVerticalPadding
+    $btnHorizontalPadding
+    $btnTransition
+    $btnNgbMargin
+*/
 
 .btn {
-  display: inline-block;
-  font-size: $btn-font-size;
-  font-weight: 400;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $btnFontFamily;
+  font-size: $btnFontSize;
+  font-weight: $btnFontWeight;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid transparent;
-  padding: 0.375em 0.75em;
-  line-height: 1.5em;
-  border-radius: 0.15em;
-  transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  border: $btnBorderWidth solid transparent;
+  padding: $btnVerticalPadding $btnHorizontalPadding;
+  line-height: $btnLineHeight;
+  border-radius: $btnBorderRadius;
+  cursor: pointer;
+  transition: $btnTransition;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -36,44 +44,59 @@
   }
 }
 
-.btn:not(:disabled):not(.disabled) {
-  cursor: pointer;
-}
-
-.btn-sm {
-  font-size: $btn-font-size-sm;
-}
-
-.btn-lg {
-  font-size: $btn-font-size-lg;
-}
-
-.btn:hover,
-.btn:focus {
+.btn:hover {
   text-decoration: none;
 }
 
-.btn:focus,
-.btn.focus {
-  outline: 0;
+.btn:focus {
+  outline: none;
 }
 
-// TODO
-.btn:active,
-.btn.active {
-  background-image: none; // TODO What browser fix is this?
-}
-
-.btn:disabled,
-.btn.disabled {
-  opacity: $btn-disabled-opacity;
-  cursor: default; // Chrome, IE fix
+.btn:disabled {
+  opacity: $btnDisabledOpacity;
+  cursor: default;
 }
 
 .btn {
-  @include button-variant($btn-color, $btn-bg-color, $btn-border-color);
+  @include button-common-variant($btnColor, $btnBgColor, $btnBorderColor);
+}
+
+.btn--sm {
+  font-size: $btnFontSize--sm;
+}
+
+.btn--lg {
+  font-size: $btnFontSize--lg;
+}
+
+.btn--xl {
+  font-size: $btnFontSize--xl;
+}
+
+.btn--unstyled {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border: none;
+  padding: 0;
+  line-height: inherit;
+  border-radius: 0;
+  transition: none;
+}
+
+.btn--unstyled,
+.btn--unstyled:hover,
+.btn--unstyled:focus,
+.btn--unstyled:active {
+  color: inherit;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.btn--unstyled:disabled {
+  opacity: 1;
 }
 
 .btn + .btn {
-  margin-left: $btn-ngb-margin;
+  margin-left: $btnNgbMargin;
 }

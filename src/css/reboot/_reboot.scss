@@ -143,7 +143,7 @@ p {
 // 3. Add explicit cursor to indicate changed behavior.
 // 4. Duplicate behavior to the data-* attribute for our tooltip plugin
 
-abbr[title],
+abbr[title]
 // abbr[data-original-title] // 4 {
 {
   text-decoration: underline; // 2

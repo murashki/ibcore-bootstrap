@@ -6,6 +6,12 @@
 // Variables
 //
 
+$base_fontSize: 0.8rem;
+$base_transitionAppearance: 0.15s ease-in-out;
+$base_linkColor: #007bff;
+$base_controlDisabledOpacity: 0.5;
+$base_controlNgbMargin: 1em;
+
 @import './buttons.variables';
 @import './button-variants.variables';
 @import './button-link.variables';

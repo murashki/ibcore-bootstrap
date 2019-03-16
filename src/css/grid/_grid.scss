@@ -96,9 +96,9 @@
   margin-left: -$grid-gutter / 2;
 }
 
-.row > .col,
-.row > [class^="col-"],
-.row > [class*=" col-"] {
+.col,
+[class^="col-"],
+[class*=" col-"] {
   position: relative;
   width: 100%;
   min-height: 1px;

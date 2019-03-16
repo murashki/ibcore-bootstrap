@@ -1,39 +1,75 @@
+@mixin button-common-variant(
+  $color,
+  $bgColor,
+  $borderColor
+) {
+  @include button-variant(
+    $color,
+    $bgColor,
+    $borderColor,
+    $hoverColor: $color,
+    $hoverBgColor: darken($bgColor, 7.5%),
+    $hoverBorderColor: darken($borderColor, 10%),
+    $focusColor: $color,
+    $focusBgColor: darken($bgColor, 10%),
+    $focusBorderColor: darken($borderColor, 12.5%),
+    $focusBoxShadow: 0 0 0 0.2em rgba($borderColor, 0.5),
+    $activeColor: $color,
+    $activeBgColor: darken($bgColor, 10%),
+    $activeBorderColor: darken($borderColor, 12.5%),
+    $activeBoxShadow: 0 0 0 0.2em rgba($borderColor, 0.5),
+    $disabledColor: $color,
+    $disabledBgColor: $bgColor,
+    $disabledBorderColor: $borderColor
+  );
+}
+
 @mixin button-variant(
   $color,
-  $bg-color,
-  $border-color,
-  $hover-bg-color: darken($bg-color, 7.5%),
-  $hover-border-color: darken($border-color, 10%),
-  $active-bg-color: darken($bg-color, 10%),
-  $active-border-color: darken($border-color, 12.5%)
+  $bgColor,
+  $borderColor,
+  $hoverColor,
+  $hoverBgColor,
+  $hoverBorderColor,
+  $focusColor,
+  $focusBgColor,
+  $focusBorderColor,
+  $focusBoxShadow,
+  $activeColor,
+  $activeBgColor,
+  $activeBorderColor,
+  $activeBoxShadow,
+  $disabledColor,
+  $disabledBgColor,
+  $disabledBorderColor
 ) {
   color: $color;
-  background-color: $bg-color;
-  border-color: $border-color;
+  background-color: $bgColor;
+  border-color: $borderColor;
 
   &:hover {
-    color: $color;
-    background-color: $hover-bg-color;
-    border-color: $hover-border-color;
+    color: $hoverColor;
+    background-color: $hoverBgColor;
+    border-color: $hoverBorderColor;
   }
 
-  &:focus,
-  &.focus {
-    box-shadow: 0 0 0 0.2em rgba($border-color, 0.5);
-    border-color: $active-border-color;
+  &:focus {
+    color: $focusColor;
+    background-color: $focusBgColor;
+    border-color: $focusBorderColor;
+    box-shadow: $focusBoxShadow;
   }
 
-  &:active,
-  &.active {
-    color: $color;
-    background-color: $active-bg-color;
-    border-color: $active-border-color;
+  &:active {
+    color: $activeColor;
+    background-color: $activeBgColor;
+    border-color: $activeBorderColor;
+    box-shadow: $activeBoxShadow;
   }
 
-  &:disabled,
-  &.disabled {
-    color: $color;
-    background-color: $bg-color;
-    border-color: $border-color;
+  &:disabled {
+    color: $disabledColor;
+    background-color: $disabledBgColor;
+    border-color: $disabledBorderColor;
   }
 }

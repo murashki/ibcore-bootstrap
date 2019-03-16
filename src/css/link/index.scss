@@ -6,11 +6,13 @@
 // Variables
 //
 
-@import './links.variables';
+$base_linkColor: #007bff;
+
+@import './link.variables';
 
 
 //
 // Styles
 //
 
-@import './links';
+@import './link';

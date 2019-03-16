@@ -1,24 +1,24 @@
-// Variables we use here:
-//   $btn-success-color
-//   $btn-success-bg-color
-//   $btn-success-border-color
-
-//   $btn-warning-color
-//   $btn-warning-bg-color
-//   $btn-warning-border-color
-
-//   $btn-danger-color
-//   $btn-danger-bg-color
-//   $btn-danger-border-color
+/*
+  Variables we use here:
+    $btnSuccessColor
+    $btnSuccessBgColor
+    $btnSuccessBorderColor
+    $btnWarningColor
+    $btnWarningBgColor
+    $btnWarningBorderColor
+    $btnDangerColor
+    $btnDangerBgColor
+    $btnDangerBorderColor
+*/
 
 .btn--success {
-  @include button-variant($btn-success-color, $btn-success-bg-color, $btn-success-border-color);
+  @include button-common-variant($btnSuccessColor, $btnSuccessBgColor, $btnSuccessBorderColor);
 }
 
 .btn--warning {
-  @include button-variant($btn-warning-color, $btn-warning-bg-color, $btn-warning-border-color);
+  @include button-common-variant($btnWarningColor, $btnWarningBgColor, $btnWarningBorderColor);
 }
 
 .btn--danger {
-  @include button-variant($btn-danger-color, $btn-danger-bg-color, $btn-danger-border-color);
+  @include button-common-variant($btnDangerColor, $btnDangerBgColor, $btnDangerBorderColor);
 }

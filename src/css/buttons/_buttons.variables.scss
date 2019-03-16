@@ -1,11 +1,27 @@
-$btn-font-size: 1.2em;
-$btn-font-size-sm: 1em;
-$btn-font-size-lg: 1.43em;
+/*
+  Variables we use here:
+    $base_fontSize
+    $base_transitionAppearance
+*/
 
-$btn-disabled-opacity: 0.5;
-
-$btn-color: #585467;
-$btn-bg-color: #edecf1;
-$btn-border-color: $btn-bg-color;
-
-$btn-ngb-margin: 1em;
+$btnFontFamily: inherit;
+$btnFontSize: $base_fontSize * 1.2;
+$btnFontSize--sm: $base_fontSize;
+$btnFontSize--lg: $base_fontSize * 1.4;
+$btnFontSize--xl: $base_fontSize * 1.6;
+$btnFontWeight: inherit;
+$btnLineHeight: 1.5em;
+$btnColor: #585467;
+$btnBgColor: #edecf1;
+$btnBorderColor: $btnBgColor;
+$btnBorderWidth: 1px;
+$btnBorderRadius: 0.15em;
+$btnDisabledOpacity: 0.5;
+$btnVerticalPadding: 0.375em;
+$btnHorizontalPadding: 0.75em;
+$btnTransition:
+    color $base_transitionAppearance,
+    background-color $base_transitionAppearance,
+    border-color $base_transitionAppearance,
+    box-shadow $base_transitionAppearance;
+$btnNgbMargin: 1em;

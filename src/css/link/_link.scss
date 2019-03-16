@@ -1,0 +1,50 @@
+/*
+  Variables we use here:
+    $linkColor
+    $linkDecoration
+    $linkHoverColor
+    $linkHoverDecoration
+    $linkFocusColor
+    $linkFocusDecoration
+    $linkFocusOutline
+    $linkVisitedColor
+*/
+
+.link {
+  color: $linkColor;
+  text-decoration: $linkDecoration;
+}
+
+.link:visited {
+  color: $linkVisitedColor;
+}
+
+.link:hover {
+  color: $linkHoverColor;
+  text-decoration: $linkHoverDecoration;
+}
+
+.link:focus {
+  color: $linkFocusColor;
+  text-decoration: $linkFocusDecoration;
+  outline: $linkFocusOutline;
+}
+
+.link:not([href]):not([tabindex]),
+.link:not([href]):not([tabindex]):hover,
+.link:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link--unstyled,
+.link--unstyled:visited,
+.link--unstyled:hover,
+.link--unstyled:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link--unstyled:focus {
+  outline: none;
+}
