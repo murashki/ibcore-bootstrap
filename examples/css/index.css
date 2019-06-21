@@ -1,0 +1,88 @@
+/*
+ * Base color: #272e56
+ */
+
+html {
+  overflow-y: scroll;
+}
+
+.head {
+  padding: 1em 0;
+  background-color: #323442;
+  margin-bottom: 1em;
+}
+
+.menu {
+  display: flex;
+}
+
+.menuLink {
+  display: block;
+}
+
+.menuLink,
+.menuLink:visited,
+.menuLink:active {
+  color: #9d9fa7;
+  text-decoration: none;
+}
+
+.menuLink:focus,
+.menuLink:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.menuLink-active,
+.menuLink-active:visited,
+.menuLink-active:active {
+  color: #8194e2;
+}
+
+.menuLink-active:focus,
+.menuLink-active:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.menuLink + .menuLink {
+  margin-left: 2em;
+}
+
+.breakpoint {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #dadade;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+.breakpoint > * {
+  display: block;
+}
+
+.content {}
+
+.section {
+  margin-bottom: 4em;
+}
+
+.cellContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  padding: 0.4em;
+  background-color: #efeff3;
+  border: 1px solid #dddee0;
+}
+
+.form {
+  padding: 1.5em;
+  border: solid #f8f9fa;
+}

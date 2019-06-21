@@ -1,0 +1,42 @@
+/*
+  Variables we use here:
+    $btnWarningColor
+    $btnWarningBgColor
+    $btnWarningBorderColor
+    $btnWarningHoverColor
+    $btnWarningHoverBgColor
+    $btnWarningHoverBorderColor
+    $btnWarningFocusColor
+    $btnWarningFocusBgColor
+    $btnWarningFocusBorderColor
+    $btnWarningFocusBoxShadow
+    $btnWarningActiveColor
+    $btnWarningActiveBgColor
+    $btnWarningActiveBorderColor
+    $btnWarningActiveBoxShadow
+    $btnWarningDisabledColor
+    $btnWarningDisabledBgColor
+    $btnWarningDisabledBorderColor
+ */
+
+.btn--warning {
+  @include button-variant(
+    $btnWarningColor,
+    $btnWarningBgColor,
+    $btnWarningBorderColor,
+    $btnWarningHoverColor,
+    $btnWarningHoverBgColor,
+    $btnWarningHoverBorderColor,
+    $btnWarningFocusColor,
+    $btnWarningFocusBgColor,
+    $btnWarningFocusBorderColor,
+    $btnWarningFocusBoxShadow,
+    $btnWarningActiveColor,
+    $btnWarningActiveBgColor,
+    $btnWarningActiveBorderColor,
+    $btnWarningActiveBoxShadow,
+    $btnWarningDisabledColor,
+    $btnWarningDisabledBgColor,
+    $btnWarningDisabledBorderColor
+  );
+}

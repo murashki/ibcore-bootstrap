@@ -2,10 +2,6 @@
 // Bootstrap is licensed MIT. (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 
-//
-// Reboot
-//
-
 *,
 *::before,
 *::after {
@@ -13,15 +9,5 @@
 }
 
 
-//
-// Variables
-//
-
-@import './grid.variables';
-
-
-//
-// Styles
-//
-
-@import './grid';
+@import './variables';
+@import './styles';

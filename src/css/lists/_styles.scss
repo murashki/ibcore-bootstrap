@@ -4,36 +4,30 @@
     $listPaddingLeft
 */
 
-.orderedList,
-.unorderedList,
-.descriptionList {
+.list {
   margin-top: 0;
   margin-bottom: $listMarginBottom;
 }
 
-.orderedList,
-.unorderedList {
+.list--ordered,
+.list--unordered {
   padding-left: $listPaddingLeft;
 }
 
-.orderedList .orderedList,
-.unorderedList .unorderedList,
-.orderedList .unorderedList,
-.unorderedList .orderedList,
-.descriptionList .descriptionList {
+.list .list {
   margin-bottom: 0;
 }
 
-.descriptionList dt {
+.list--description dt {
   font-weight: 700;
 }
 
-.descriptionList dd {
+.list--description dd {
   margin-bottom: .5em;
   margin-left: 0;
 }
 
-.descriptionList dd:last-child {
+.list--description dd:last-child {
   margin-bottom: 0;
 }
 

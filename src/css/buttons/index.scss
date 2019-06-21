@@ -2,32 +2,28 @@
 // Bootstrap is licensed MIT. (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 
-//
-// Variables
-//
-
-$base_fontSize: 0.8rem;
-$base_transitionAppearance: 0.15s ease-in-out;
-$base_linkColor: #007bff;
-$base_controlDisabledOpacity: 0.5;
-$base_controlNgbMargin: 1em;
-
-@import './buttons.variables';
-@import './button-variants.variables';
-@import './button-link.variables';
+$transitionAppearance: 0.15s ease-in-out !default;
 
 
-//
-// Mixins
-//
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-@import './mixins';
+
+@import './variables';
+@import './default/variables';
+@import './success/variables';
+@import './warning/variables';
+@import './danger/variables';
+@import './link/variables';
 
 
-//
-// Styles
-//
-
-@import './buttons';
-@import './button-variants';
-@import './button-link';
+@import './styles';
+@import './default/styles';
+@import './success/styles';
+@import './warning/styles';
+@import './danger/styles';
+@import './link/styles';
+@import './unstyled/styles';

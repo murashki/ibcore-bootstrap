@@ -1,0 +1,52 @@
+
+//        ┌──────────────────────────────────────────────────────────$containerWidth-max─┐
+//        └─────────────────────────────────────────────────────────────────────────1400─┘
+//  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─┐
+//        ┌────────────────────────────────────────────$containerWidth-xl─┐        |
+//        └──────────────────────────────────────────────────────────1180─┘        |
+//  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐              |
+//        ┌─────────────────────────────$containerWidth-lg─┐        |              |
+//        └────────────────────────────────────────────960─┘        |              |
+//  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─┐              |              |
+//        ┌─────────────$containerWidth-md──┐        |              |              |
+//        └─────────────────────────────740─┘        |              |              |
+//  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐              |              |              |
+//        ┌─$containerWidth-sm─┐      |              |              |              |
+//        └────────────────540─┘      759            979           1199           1419
+// ┌──────────────────────────sm──────┘┌─────md──────┘┌─────lg──────┘┌─────xl──────┘┌────max──────>
+// 1                         col       |     col      |     col      |     col      |     col
+//                          col-xl     |    col-xl    |    col-xl    |    col-xl    |
+//                          col-lg     |    col-lg    |    col-lg    |              1420
+//                          col-md     |    col-md    |              1200           $gridBreakpoint-xl
+//                          col-sm     |              980            $gridBreakpoint-lg
+//                                    760            $gridBreakpoint-md
+//                                    $gridBreakpoint-sm
+
+
+$gridBreakpoint-sm: 760px !default;
+$gridBreakpoint-md: 980px !default;
+$gridBreakpoint-lg: 1200px !default;
+$gridBreakpoint-xl: 1420px !default;
+
+$containerMinWidth: 540px !default;
+$containerMaxWidth: 1400px !default;
+
+$containerWidth-sm: $containerMinWidth !default;
+$containerWidth-md: 740px !default;
+$containerWidth-lg: 960px !default;
+$containerWidth-xl: 1180px !default;
+$containerWidth-max: $containerMaxWidth !default;
+
+$containerGutter-sm: 30px !default;
+$containerGutter-md: 35px !default;
+$containerGutter-lg: 40px !default;
+$containerGutter-xl: 60px !default;
+$containerGutter-max: 80px !default;
+
+$gridGutter-sm: 10px !default;
+$gridGutter: 20px !default;
+$gridGutter-lg: 30px !default;
+
+$gridBottomGutter-sm: 10px !default;
+$gridBottomGutter: 20px !default;
+$gridBottomGutter-lg: 30px !default;

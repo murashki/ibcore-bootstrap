@@ -2,17 +2,10 @@
 // Bootstrap is licensed MIT. (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 
-//
-// Variables
-//
+$paragraphMarginBottom: 1em;
 
-$base_paragraphMarginBottom: 1em;
-$base_listPaddingLeft: 2em;
 
-@import './lists.variables.scss';
+@import './variables';
 
-//
-// Styles
-//
 
-@import './lists';
+@import './styles';

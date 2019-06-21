@@ -1,29 +1,3 @@
-@mixin button-common-variant(
-  $color,
-  $bgColor,
-  $borderColor
-) {
-  @include button-variant(
-    $color,
-    $bgColor,
-    $borderColor,
-    $hoverColor: $color,
-    $hoverBgColor: darken($bgColor, 7.5%),
-    $hoverBorderColor: darken($borderColor, 10%),
-    $focusColor: $color,
-    $focusBgColor: darken($bgColor, 10%),
-    $focusBorderColor: darken($borderColor, 12.5%),
-    $focusBoxShadow: 0 0 0 0.2em rgba($borderColor, 0.5),
-    $activeColor: $color,
-    $activeBgColor: darken($bgColor, 10%),
-    $activeBorderColor: darken($borderColor, 12.5%),
-    $activeBoxShadow: 0 0 0 0.2em rgba($borderColor, 0.5),
-    $disabledColor: $color,
-    $disabledBgColor: $bgColor,
-    $disabledBorderColor: $borderColor
-  );
-}
-
 @mixin button-variant(
   $color,
   $bgColor,

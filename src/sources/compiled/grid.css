@@ -51,7 +51,7 @@ html {
   }
 }
 
-.container-fluid {
+.containerFluid {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -66,13 +66,13 @@ html {
   margin-left: -15px;
 }
 
-.no-gutters {
+.noGutters {
   margin-right: 0;
   margin-left: 0;
 }
 
-.no-gutters > .col,
-.no-gutters > [class*="col-"] {
+.noGutters > .col,
+.noGutters > [class*="col-"] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -834,19 +834,19 @@ html {
   }
 }
 
-.d-none {
+.dNone {
   display: none !important;
 }
 
-.d-inline {
+.dInline {
   display: inline !important;
 }
 
-.d-inline-block {
+.dInlineBlock {
   display: inline-block !important;
 }
 
-.d-block {
+.dBlock {
   display: block !important;
 }
 
@@ -862,130 +862,130 @@ html {
   display: table-cell !important;
 }
 
-.d-flex {
+.dFlex {
   display: flex !important;
 }
 
-.d-inline-flex {
+.dInlineFlex {
   display: inline-flex !important;
 }
 
 @media (min-width: 576px) {
-  .d-sm-none {
+  .d-none-sm {
     display: none !important;
   }
-  .d-sm-inline {
+  .d-inline-sm {
     display: inline !important;
   }
-  .d-sm-inline-block {
+  .d-inlineBlock-sm {
     display: inline-block !important;
   }
-  .d-sm-block {
+  .d-block-sm {
     display: block !important;
   }
-  .d-sm-table {
+  .d-table-sm {
     display: table !important;
   }
-  .d-sm-table-row {
+  .d-table-sm-row {
     display: table-row !important;
   }
-  .d-sm-table-cell {
+  .d-table-sm-cell {
     display: table-cell !important;
   }
-  .d-sm-flex {
+  .d-flex-sm {
     display: flex !important;
   }
-  .d-sm-inline-flex {
+  .d-inlineFlex-sm {
     display: inline-flex !important;
   }
 }
 
 @media (min-width: 768px) {
-  .d-md-none {
+  .d-none-md {
     display: none !important;
   }
-  .d-md-inline {
+  .d-inline-md {
     display: inline !important;
   }
-  .d-md-inline-block {
+  .d-inlineBlock-md {
     display: inline-block !important;
   }
-  .d-md-block {
+  .d-block-md {
     display: block !important;
   }
-  .d-md-table {
+  .d-table-md {
     display: table !important;
   }
-  .d-md-table-row {
+  .d-table-md-row {
     display: table-row !important;
   }
-  .d-md-table-cell {
+  .d-table-md-cell {
     display: table-cell !important;
   }
-  .d-md-flex {
+  .d-flex-md {
     display: flex !important;
   }
-  .d-md-inline-flex {
+  .d-inlineFlex-md {
     display: inline-flex !important;
   }
 }
 
 @media (min-width: 992px) {
-  .d-lg-none {
+  .d-none-lg {
     display: none !important;
   }
-  .d-lg-inline {
+  .d-inline-lg {
     display: inline !important;
   }
-  .d-lg-inline-block {
+  .d-inlineBlock-lg {
     display: inline-block !important;
   }
-  .d-lg-block {
+  .d-block-lg {
     display: block !important;
   }
-  .d-lg-table {
+  .d-table-lg {
     display: table !important;
   }
-  .d-lg-table-row {
+  .d-table-lg-row {
     display: table-row !important;
   }
-  .d-lg-table-cell {
+  .d-table-lg-cell {
     display: table-cell !important;
   }
-  .d-lg-flex {
+  .d-flex-lg {
     display: flex !important;
   }
-  .d-lg-inline-flex {
+  .d-inlineFlex-lg {
     display: inline-flex !important;
   }
 }
 
 @media (min-width: 1200px) {
-  .d-xl-none {
+  .d-none-xl {
     display: none !important;
   }
-  .d-xl-inline {
+  .d-inline-xl {
     display: inline !important;
   }
-  .d-xl-inline-block {
+  .d-inlineBlock-xl {
     display: inline-block !important;
   }
-  .d-xl-block {
+  .d-block-xl {
     display: block !important;
   }
-  .d-xl-table {
+  .d-table-xl {
     display: table !important;
   }
-  .d-xl-table-row {
+  .d-table-xl-row {
     display: table-row !important;
   }
-  .d-xl-table-cell {
+  .d-table-xl-cell {
     display: table-cell !important;
   }
-  .d-xl-flex {
+  .d-flex-xl {
     display: flex !important;
   }
-  .d-xl-inline-flex {
+  .d-inlineFlex-xl {
     display: inline-flex !important;
   }
 }
@@ -994,10 +994,10 @@ html {
   .d-print-none {
     display: none !important;
   }
-  .d-print-inline {
+  .displayPrintInline {
     display: inline !important;
   }
-  .d-print-inline-block {
+  .displayPrintInlineBlock {
     display: inline-block !important;
   }
   .d-print-block {
@@ -1015,7 +1015,7 @@ html {
   .d-print-flex {
     display: flex !important;
   }
-  .d-print-inline-flex {
+  .displayPrintInlineFlex {
     display: inline-flex !important;
   }
 }

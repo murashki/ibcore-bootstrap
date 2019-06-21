@@ -1,0 +1,21 @@
+/*
+  Variables we use here:
+    $linkColor
+    $linkTextDecoration
+    $linkHoverColor
+    $linkHoverTextDecoration
+    $linkFocusColor
+    $linkFocusTextDecoration
+    $linkFocusOutline
+*/
+
+$btnLinkColor: $linkColor !default;
+$btnLinkTextDecoration: $linkTextDecoration !default;
+$btnLinkHoverColor: $linkHoverColor !default;
+$btnLinkHoverTextDecoration: $linkHoverTextDecoration !default;
+$btnLinkFocusColor: $linkFocusColor !default;
+$btnLinkFocusTextDecoration: $linkFocusTextDecoration !default;
+$btnLinkFocusOutline: $linkFocusOutline !default;
+$btnLinkDisabledColor: $btnLinkColor !default;
+$btnLinkDisabledTextDecoration: $btnLinkTextDecoration !default;
+$btnLinkDisabledOpacity: 0.5 !default;

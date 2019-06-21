@@ -1,198 +1,334 @@
-// Variables we use here:
-//   $grid-breakpoint-sm
-//   $grid-breakpoint-md
-//   $grid-breakpoint-lg
-//   $grid-breakpoint-xl
-//   $grid-breakpoint-xxl
-//
-//   $container-max-width-sm
-//   $container-max-width-md
-//   $container-max-width-lg
-//   $container-max-width-xl
-//   $container-max-width-xxl
-//
-//   $container-gutter-sm
-//   $container-gutter-md
-//   $container-gutter-lg
-//   $container-gutter-xl
-//   $container-gutter-xxl
-//
-//   $grid-gutter-sm
-//   $grid-gutter
-//   $grid-gutter-lg
-//
-//   $grid-bottom-gutter-sm
-//   $grid-bottom-gutter
-//   $grid-bottom-gutter-lg
+/*
+  Variables we use here:
+    $gridBreakpoint-sm
+    $gridBreakpoint-md
+    $gridBreakpoint-lg
+    $gridBreakpoint-xl
+
+    $containerMinWidth
+    $containerMaxWidth
+
+    $containerWidth-sm
+    $containerWidth-md
+    $containerWidth-lg
+    $containerWidth-xl
+    $containerWidth-max
+
+    $containerGutter-sm
+    $containerGutter-md
+    $containerGutter-lg
+    $containerGutter-xl
+    $containerGutter-max
+
+    $gridGutter-sm
+    $gridGutter
+    $gridGutter-lg
+
+    $gridBottomGutter-sm
+    $gridBottomGutter
+    $gridBottomGutter-lg
+*/
 
 .container,
-.container-fluid {
-  width: 100%;
-  padding-right: $container-gutter-xxl / 2;
-  padding-left: $container-gutter-xxl / 2;
+.containerFluid {
+  padding-right: $containerGutter-max / 2;
+  padding-left: $containerGutter-max / 2;
   margin-right: auto;
   margin-left: auto;
 }
 
 .container {
-  max-width: $container-max-width-xxl;
+  width: $containerWidth-max;
 }
 
-@media (max-width: $grid-breakpoint-xxl - 1) {
+.containerFluid {
+  width: 100%;
+  min-width: $containerMinWidth;
+  max-width: $containerMaxWidth;
+}
+
+@media (max-width: $gridBreakpoint-xl - 1) {
   .container,
-  .container-fluid {
-    padding-right: $container-gutter-xl / 2;
-    padding-left: $container-gutter-xl / 2;
+  .containerFluid {
+    padding-right: $containerGutter-xl / 2;
+    padding-left: $containerGutter-xl / 2;
   }
   .container {
-    max-width: $container-max-width-xl;
+    width: $containerWidth-xl;
   }
 }
 
-@media (max-width: $grid-breakpoint-xl - 1) {
+@media (max-width: $gridBreakpoint-lg - 1) {
   .container,
-  .container-fluid {
-    padding-right: $container-gutter-lg / 2;
-    padding-left: $container-gutter-lg / 2;
+  .containerFluid {
+    padding-right: $containerGutter-lg / 2;
+    padding-left: $containerGutter-lg / 2;
   }
   .container {
-    max-width: $container-max-width-lg;
+    width: $containerWidth-lg;
   }
 }
 
-@media (max-width: $grid-breakpoint-lg - 1) {
+@media (max-width: $gridBreakpoint-md - 1) {
   .container,
-  .container-fluid {
-    padding-right: $container-gutter-md / 2;
-    padding-left: $container-gutter-md / 2;
+  .containerFluid {
+    padding-right: $containerGutter-md / 2;
+    padding-left: $containerGutter-md / 2;
   }
   .container {
-    max-width: $container-max-width-md;
+    width: $containerWidth-md;
   }
 }
 
-@media (max-width: $grid-breakpoint-md - 1) {
+@media (max-width: $gridBreakpoint-sm - 1) {
   .container,
-  .container-fluid {
-    padding-right: $container-gutter-sm / 2;
-    padding-left: $container-gutter-sm / 2;
+  .containerFluid {
+    padding-right: $containerGutter-sm / 2;
+    padding-left: $containerGutter-sm / 2;
   }
   .container {
-    max-width: $container-max-width-sm;
-  }
-}
-
-@media (max-width: $grid-breakpoint-sm - 1) {
-  .container,
-  .container-fluid {
-    width: $container-max-width-sm;
+    width: $containerWidth-sm;
   }
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -$grid-gutter / 2;
-  margin-left: -$grid-gutter / 2;
 }
 
 .col,
-[class^="col-"],
-[class*=" col-"] {
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-auto {
   position: relative;
   width: 100%;
   min-height: 1px;
-  margin-bottom: $grid-bottom-gutter;
-  padding-right: $grid-gutter / 2;
-  padding-left: $grid-gutter / 2;
 }
 
-.row.col,
-.row[class^="col-"],
-.row[class*=" col-"] {
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-right: 0;
-  padding-left: 0;
+.rowBreak-xl,
+.rowBreak-lg,
+.rowBreak-md,
+.rowBreak-sm {
+  display: none;
 }
 
-@media (max-width: $grid-breakpoint-xxl - 1) {
-  .row-break-xl {
-    max-width: 100% !important;
+@media (max-width: $gridBreakpoint-xl - 1) {
+  .rowBreak-xl {
+    display: block;
+    width: 100%;
   }
 }
 
-@media (max-width: $grid-breakpoint-xl - 1) {
-  .row-break-lg {
-    max-width: 100% !important;
+@media (max-width: $gridBreakpoint-lg - 1) {
+  .rowBreak-lg {
+    display: block;
+    width: 100%;
   }
 }
 
-@media (max-width: $grid-breakpoint-lg - 1) {
-  .row-break-md {
-    max-width: 100% !important;
+@media (max-width: $gridBreakpoint-md - 1) {
+  .rowBreak-md {
+    display: block;
+    width: 100%;
   }
 }
 
-@media (max-width: $grid-breakpoint-md - 1) {
-  .row-break-sm {
-    max-width: 100% !important;
+@media (max-width: $gridBreakpoint-sm - 1) {
+  .rowBreak-sm {
+    display: block;
+    width: 100%;
   }
+}
+
+.row {
+  margin-right: -$gridGutter / 2;
+  margin-left: -$gridGutter / 2;
+}
+
+.col,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-auto {
+  padding-right: $gridGutter / 2;
+  padding-left: $gridGutter / 2;
 }
 
 .gutters-sm {
-  margin-right: -$grid-gutter-sm / 2;
-  margin-left: -$grid-gutter-sm / 2;
+  margin-right: -$gridGutter-sm / 2;
+  margin-left: -$gridGutter-sm / 2;
 }
 
 .gutters-sm > .col,
-.gutters-sm > [class^="col-"],
-.gutters-sm > [class*=" col-"] {
-  padding-right: $grid-gutter-sm / 2;
-  padding-left: $grid-gutter-sm / 2;
+.gutters-sm > .col-1,
+.gutters-sm > .col-2,
+.gutters-sm > .col-3,
+.gutters-sm > .col-4,
+.gutters-sm > .col-5,
+.gutters-sm > .col-6,
+.gutters-sm > .col-7,
+.gutters-sm > .col-8,
+.gutters-sm > .col-9,
+.gutters-sm > .col-10,
+.gutters-sm > .col-11,
+.gutters-sm > .col-12,
+.gutters-sm > .col-auto {
+  padding-right: $gridGutter-sm / 2;
+  padding-left: $gridGutter-sm / 2;
 }
 
 .gutters-lg {
-  margin-right: -$grid-gutter-lg / 2;
-  margin-left: -$grid-gutter-lg / 2;
+  margin-right: -$gridGutter-lg / 2;
+  margin-left: -$gridGutter-lg / 2;
 }
 
 .gutters-lg > .col,
-.gutters-lg > [class^="col-"],
-.gutters-lg > [class*=" col-"] {
-  padding-right: $grid-gutter-lg / 2;
-  padding-left: $grid-gutter-lg / 2;
+.gutters-lg > .col-1,
+.gutters-lg > .col-2,
+.gutters-lg > .col-3,
+.gutters-lg > .col-4,
+.gutters-lg > .col-5,
+.gutters-lg > .col-6,
+.gutters-lg > .col-7,
+.gutters-lg > .col-8,
+.gutters-lg > .col-9,
+.gutters-lg > .col-10,
+.gutters-lg > .col-11,
+.gutters-lg > .col-12,
+.gutters-lg > .col-auto {
+  padding-right: $gridGutter-lg / 2;
+  padding-left: $gridGutter-lg / 2;
 }
 
-.no-gutters {
+.noGutters {
   margin-right: 0;
   margin-left: 0;
 }
 
-.no-gutters > .col,
-.no-gutters > [class^="col-"],
-.no-gutters > [class*=" col-"] {
+.noGutters > .col,
+.noGutters > .col-1,
+.noGutters > .col-2,
+.noGutters > .col-3,
+.noGutters > .col-4,
+.noGutters > .col-5,
+.noGutters > .col-6,
+.noGutters > .col-7,
+.noGutters > .col-8,
+.noGutters > .col-9,
+.noGutters > .col-10,
+.noGutters > .col-11,
+.noGutters > .col-12,
+.noGutters > .col-auto {
   padding-right: 0;
   padding-left: 0;
 }
 
-.bottom-gutters-sm > .col,
-.bottom-gutters-sm > [class^="col-"],
-.bottom-gutters-sm > [class*=" col-"] {
-  margin-bottom: $grid-bottom-gutter-sm;
+.col,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-auto {
+  margin-bottom: $gridBottomGutter;
 }
 
-.bottom-gutters-lg > .col,
-.bottom-gutters-lg > [class^="col-"],
-.bottom-gutters-lg > [class*=" col-"] {
-  margin-bottom: $grid-bottom-gutter-lg;
+.bottomGutters-sm > .col,
+.bottomGutters-sm > .col-1,
+.bottomGutters-sm > .col-2,
+.bottomGutters-sm > .col-3,
+.bottomGutters-sm > .col-4,
+.bottomGutters-sm > .col-5,
+.bottomGutters-sm > .col-6,
+.bottomGutters-sm > .col-7,
+.bottomGutters-sm > .col-8,
+.bottomGutters-sm > .col-9,
+.bottomGutters-sm > .col-10,
+.bottomGutters-sm > .col-11,
+.bottomGutters-sm > .col-12,
+.bottomGutters-sm > .col-auto {
+  margin-bottom: $gridBottomGutter-sm;
 }
 
-.no-bottom-gutters > .col,
-.no-bottom-gutters > [class^="col-"],
-.no-bottom-gutters > [class*=" col-"] {
+.bottomGutters-lg > .col,
+.bottomGutters-lg > .col-1,
+.bottomGutters-lg > .col-2,
+.bottomGutters-lg > .col-3,
+.bottomGutters-lg > .col-4,
+.bottomGutters-lg > .col-5,
+.bottomGutters-lg > .col-6,
+.bottomGutters-lg > .col-7,
+.bottomGutters-lg > .col-8,
+.bottomGutters-lg > .col-9,
+.bottomGutters-lg > .col-10,
+.bottomGutters-lg > .col-11,
+.bottomGutters-lg > .col-12,
+.bottomGutters-lg > .col-auto {
+  margin-bottom: $gridBottomGutter-lg;
+}
+
+.noBottomGutters > .col,
+.noBottomGutters > .col-1,
+.noBottomGutters > .col-2,
+.noBottomGutters > .col-3,
+.noBottomGutters > .col-4,
+.noBottomGutters > .col-5,
+.noBottomGutters > .col-6,
+.noBottomGutters > .col-7,
+.noBottomGutters > .col-8,
+.noBottomGutters > .col-9,
+.noBottomGutters > .col-10,
+.noBottomGutters > .col-11,
+.noBottomGutters > .col-12,
+.noBottomGutters > .col-auto {
   margin-bottom: 0;
+}
+
+.row.col,
+.row.col-1,
+.row.col-2,
+.row.col-3,
+.row.col-4,
+.row.col-5,
+.row.col-6,
+.row.col-7,
+.row.col-8,
+.row.col-9,
+.row.col-10,
+.row.col-11,
+.row.col-12,
+.row.col-auto {
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .col {
@@ -334,7 +470,7 @@
   margin-left: 91.666667%;
 }
 
-@media (max-width: $grid-breakpoint-xxl - 1) {
+@media (max-width: $gridBreakpoint-xl - 1) {
   .col-xl {
     flex-basis: 0;
     flex-grow: 1;
@@ -478,7 +614,7 @@
   }
 }
 
-@media (max-width: $grid-breakpoint-xl - 1) {
+@media (max-width: $gridBreakpoint-lg - 1) {
   .col-lg {
     flex-basis: 0;
     flex-grow: 1;
@@ -622,7 +758,7 @@
   }
 }
 
-@media (max-width: $grid-breakpoint-lg - 1) {
+@media (max-width: $gridBreakpoint-md - 1) {
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
@@ -766,7 +902,7 @@
   }
 }
 
-@media (max-width: $grid-breakpoint-md - 1) {
+@media (max-width: $gridBreakpoint-sm - 1) {
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
@@ -910,147 +1046,59 @@
   }
 }
 
-.d-none {
-  display: none !important;
-}
-.d-inline {
-  display: inline !important;
-}
-.d-inline-block {
-  display: inline-block !important;
-}
-.d-block {
-  display: block !important;
-}
-.d-flex {
-  display: flex !important;
-}
-.d-inline-flex {
-  display: inline-flex !important;
-}
-
-@media (min-width: $grid-breakpoint-xxl) {
-  .d-xxl-none {
+@media (min-width: $gridBreakpoint-xl) {
+  .display-sm:not(.display-max),
+  .display-md:not(.display-max),
+  .display-lg:not(.display-max),
+  .display-xl:not(.display-max) {
     display: none !important;
-  }
-  .d-xxl-inline {
-    display: inline !important;
-  }
-  .d-xxl-inline-block {
-    display: inline-block !important;
-  }
-  .d-xxl-block {
-    display: block !important;
-  }
-  .d-xxl-flex {
-    display: flex !important;
-  }
-  .d-xxl-inline-flex {
-    display: inline-flex !important;
   }
 }
 
-@media (min-width: $grid-breakpoint-xl) and (max-width: $grid-breakpoint-xxl - 1) {
-  .d-xl-none {
+@media (min-width: $gridBreakpoint-lg) and (max-width: $gridBreakpoint-xl - 1) {
+  .display-sm:not(.display-xl),
+  .display-md:not(.display-xl),
+  .display-lg:not(.display-xl),
+  .display-max:not(.display-xl) {
     display: none !important;
-  }
-  .d-xl-inline {
-    display: inline !important;
-  }
-  .d-xl-inline-block {
-    display: inline-block !important;
-  }
-  .d-xl-block {
-    display: block !important;
-  }
-  .d-xl-flex {
-    display: flex !important;
-  }
-  .d-xl-inline-flex {
-    display: inline-flex !important;
   }
 }
 
-@media (min-width: $grid-breakpoint-lg) and (max-width: $grid-breakpoint-xl - 1) {
-  .d-lg-none {
+@media (min-width: $gridBreakpoint-md) and (max-width: $gridBreakpoint-lg - 1) {
+  .display-sm:not(.display-lg),
+  .display-md:not(.display-lg),
+  .display-xl:not(.display-lg),
+  .display-max:not(.display-lg) {
     display: none !important;
-  }
-  .d-lg-inline {
-    display: inline !important;
-  }
-  .d-lg-inline-block {
-    display: inline-block !important;
-  }
-  .d-lg-block {
-    display: block !important;
-  }
-  .d-lg-flex {
-    display: flex !important;
-  }
-  .d-lg-inline-flex {
-    display: inline-flex !important;
   }
 }
 
-@media (min-width: $grid-breakpoint-md) and (max-width: $grid-breakpoint-lg - 1) {
-  .d-md-none {
+@media (min-width: $gridBreakpoint-sm) and (max-width: $gridBreakpoint-md - 1) {
+  .display-sm:not(.display-md),
+  .display-lg:not(.display-md),
+  .display-xl:not(.display-md),
+  .display-max:not(.display-md) {
     display: none !important;
-  }
-  .d-md-inline {
-    display: inline !important;
-  }
-  .d-md-inline-block {
-    display: inline-block !important;
-  }
-  .d-md-block {
-    display: block !important;
-  }
-  .d-md-flex {
-    display: flex !important;
-  }
-  .d-md-inline-flex {
-    display: inline-flex !important;
   }
 }
 
-@media (max-width: $grid-breakpoint-md - 1) {
-  .d-sm-none {
+@media (max-width: $gridBreakpoint-sm - 1) {
+  .display-md:not(.display-sm),
+  .display-lg:not(.display-sm),
+  .display-xl:not(.display-sm),
+  .display-max:not(.display-sm) {
     display: none !important;
   }
-  .d-sm-inline {
-    display: inline !important;
-  }
-  .d-sm-inline-block {
-    display: inline-block !important;
-  }
-  .d-sm-block {
-    display: block !important;
-  }
-  .d-sm-flex {
-    display: flex !important;
-  }
-  .d-sm-inline-flex {
-    display: inline-flex !important;
+}
+
+@media not print {
+  .display-print {
+    display: none !important;
   }
 }
 
 @media print {
-  .d-print-none {
+  .hide-print {
     display: none !important;
-  }
-  .d-print-inline {
-    display: inline !important;
-  }
-  .d-print-inline-block {
-    display: inline-block !important;
-  }
-  .d-print-block {
-    display: block !important;
-  }
-  .d-print-flex {
-    display: flex !important;
-  }
-  .d-print-inline-flex {
-    display: inline-flex !important;
   }
 }

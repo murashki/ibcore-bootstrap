@@ -2,14 +2,11 @@
   Variables we use here:
     $btnFontFamily
     $btnFontSize
-    $btnFontSize--sm
-    $btnFontSize--lg
-    $btnFontSize--xl
+    $btnFontSize-sm
+    $btnFontSize-lg
+    $btnFontSize-xl
     $btnFontWeight
     $btnLineHeight
-    $btnColor
-    $btnBgColor
-    $btnBorderColor
     $btnBorderWidth
     $btnBorderRadius
     $btnDisabledOpacity
@@ -27,6 +24,7 @@
   font-size: $btnFontSize;
   font-weight: $btnFontWeight;
   text-align: center;
+  text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
@@ -49,54 +47,29 @@
 }
 
 .btn:focus {
+  text-decoration: none;
   outline: none;
 }
 
-.btn:disabled {
+.btn:disabled,
+fieldset:disabled .btn {
   opacity: $btnDisabledOpacity;
   cursor: default;
-}
-
-.btn {
-  @include button-common-variant($btnColor, $btnBgColor, $btnBorderColor);
-}
-
-.btn--sm {
-  font-size: $btnFontSize--sm;
-}
-
-.btn--lg {
-  font-size: $btnFontSize--lg;
-}
-
-.btn--xl {
-  font-size: $btnFontSize--xl;
-}
-
-.btn--unstyled {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  border: none;
-  padding: 0;
-  line-height: inherit;
-  border-radius: 0;
-  transition: none;
-}
-
-.btn--unstyled,
-.btn--unstyled:hover,
-.btn--unstyled:focus,
-.btn--unstyled:active {
-  color: inherit;
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.btn--unstyled:disabled {
-  opacity: 1;
+  pointer-events: none;
 }
 
 .btn + .btn {
   margin-left: $btnNgbMargin;
+}
+
+.btn--sm {
+  font-size: $btnFontSize-sm;
+}
+
+.btn--lg {
+  font-size: $btnFontSize-lg;
+}
+
+.btn--xl {
+  font-size: $btnFontSize-xl;
 }

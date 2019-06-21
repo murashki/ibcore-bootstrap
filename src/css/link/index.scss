@@ -2,17 +2,7 @@
 // Bootstrap is licensed MIT. (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 
-//
-// Variables
-//
-
-$base_linkColor: #007bff;
-
-@import './link.variables';
+@import './variables';
 
 
-//
-// Styles
-//
-
-@import './link';
+@import './styles';

@@ -1,0 +1,59 @@
+/*
+  Variables we use here:
+    $btnLinkColor
+    $btnLinkTextDecoration
+    $btnLinkHoverColor
+    $btnLinkHoverTextDecoration
+    $btnLinkFocusColor
+    $btnLinkFocusTextDecoration
+    $btnLinkFocusOutline
+    $btnLinkDisabledColor
+    $btnLinkDisabledTextDecoration
+    $btnLinkDisabledOpacity
+*/
+
+.btn--link {
+  display: inline;
+  padding: 0;
+  vertical-align: initial;
+  line-height: inherit;
+  text-align: initial;
+  text-decoration: $btnLinkTextDecoration;
+  white-space: initial;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: $btnLinkColor;
+  user-select: initial;
+  background-color: transparent;
+  border: none;
+  border-radius: initial;
+  cursor: pointer;
+  transition: initial;
+}
+
+.btn--link:hover {
+  color: $btnLinkHoverColor;
+  text-decoration: $btnLinkHoverTextDecoration;
+  background-color: transparent;
+}
+
+.btn--link:focus,
+.btn--link:active {
+  color: $btnLinkFocusColor;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.btn--link:focus {
+  text-decoration: $btnLinkFocusTextDecoration;
+  outline: $btnLinkFocusOutline;
+}
+
+.btn--link:disabled {
+  color: $btnLinkDisabledColor;
+  text-decoration: $btnLinkDisabledTextDecoration;
+  background-color: transparent;
+  opacity: $btnLinkDisabledOpacity;
+  cursor: default;
+}

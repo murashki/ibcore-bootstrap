@@ -1,0 +1,42 @@
+/*
+  Variables we use here:
+    $btnColor
+    $btnBgColor
+    $btnBorderColor
+    $btnHoverColor
+    $btnHoverBgColor
+    $btnHoverBorderColor
+    $btnFocusColor
+    $btnFocusBgColor
+    $btnFocusBorderColor
+    $btnFocusBoxShadow
+    $btnActiveColor
+    $btnActiveBgColor
+    $btnActiveBorderColor
+    $btnActiveBoxShadow
+    $btnDisabledColor
+    $btnDisabledBgColor
+    $btnDisabledBorderColor
+ */
+
+.btn {
+  @include button-variant(
+    $btnColor,
+    $btnBgColor,
+    $btnBorderColor,
+    $btnHoverColor,
+    $btnHoverBgColor,
+    $btnHoverBorderColor,
+    $btnFocusColor,
+    $btnFocusBgColor,
+    $btnFocusBorderColor,
+    $btnFocusBoxShadow,
+    $btnActiveColor,
+    $btnActiveBgColor,
+    $btnActiveBorderColor,
+    $btnActiveBoxShadow,
+    $btnDisabledColor,
+    $btnDisabledBgColor,
+    $btnDisabledBorderColor
+  );
+}

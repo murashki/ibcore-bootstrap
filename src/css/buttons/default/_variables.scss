@@ -1,0 +1,17 @@
+$btnColor: #585467 !default;
+$btnBgColor: #edecf1 !default;
+$btnBorderColor: $btnBgColor !default;
+$btnHoverColor: $btnColor !default;
+$btnHoverBgColor: darken($btnBgColor, 7.5%) !default;
+$btnHoverBorderColor: darken($btnBorderColor, 10%) !default;
+$btnFocusColor: $btnColor !default;
+$btnFocusBgColor: darken($btnBgColor, 10%) !default;
+$btnFocusBorderColor: darken($btnBorderColor, 12.5%) !default;
+$btnFocusBoxShadow: 0 0 0 0.2em rgba($btnBorderColor, 0.5) !default;
+$btnActiveColor: $btnColor !default;
+$btnActiveBgColor: darken($btnBgColor, 10%) !default;
+$btnActiveBorderColor: darken($btnBorderColor, 12.5%) !default;
+$btnActiveBoxShadow: 0 0 0 0.2em rgba($btnBorderColor, 0.5) !default;
+$btnDisabledColor: $btnColor !default;
+$btnDisabledBgColor: $btnBgColor !default;
+$btnDisabledBorderColor: $btnBorderColor !default;

@@ -1,0 +1,23 @@
+/*
+  Variables we use here:
+    $transitionAppearance
+*/
+
+$btnFontFamily: inherit;
+$btnFontSize: 1.2em;
+$btnFontSize-sm: 1em;
+$btnFontSize-lg: 1.4em;
+$btnFontSize-xl: 1.8em;
+$btnFontWeight: inherit;
+$btnLineHeight: 1.4em;
+$btnBorderWidth: 1px;
+$btnBorderRadius: 0.15em;
+$btnDisabledOpacity: 0.5;
+$btnVerticalPadding: 0.375em;
+$btnHorizontalPadding: 0.75em;
+$btnTransition:
+    color $transitionAppearance,
+    background-color $transitionAppearance,
+    border-color $transitionAppearance,
+    box-shadow $transitionAppearance;
+$btnNgbMargin: 1em;

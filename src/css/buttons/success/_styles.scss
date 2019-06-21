@@ -1,0 +1,42 @@
+/*
+  Variables we use here:
+    $btnSuccessColor
+    $btnSuccessBgColor
+    $btnSuccessBorderColor
+    $btnSuccessHoverColor
+    $btnSuccessHoverBgColor
+    $btnSuccessHoverBorderColor
+    $btnSuccessFocusColor
+    $btnSuccessFocusBgColor
+    $btnSuccessFocusBorderColor
+    $btnSuccessFocusBoxShadow
+    $btnSuccessActiveColor
+    $btnSuccessActiveBgColor
+    $btnSuccessActiveBorderColor
+    $btnSuccessActiveBoxShadow
+    $btnSuccessDisabledColor
+    $btnSuccessDisabledBgColor
+    $btnSuccessDisabledBorderColor
+ */
+
+.btn--success {
+  @include button-variant(
+    $btnSuccessColor,
+    $btnSuccessBgColor,
+    $btnSuccessBorderColor,
+    $btnSuccessHoverColor,
+    $btnSuccessHoverBgColor,
+    $btnSuccessHoverBorderColor,
+    $btnSuccessFocusColor,
+    $btnSuccessFocusBgColor,
+    $btnSuccessFocusBorderColor,
+    $btnSuccessFocusBoxShadow,
+    $btnSuccessActiveColor,
+    $btnSuccessActiveBgColor,
+    $btnSuccessActiveBorderColor,
+    $btnSuccessActiveBoxShadow,
+    $btnSuccessDisabledColor,
+    $btnSuccessDisabledBgColor,
+    $btnSuccessDisabledBorderColor
+  );
+}
