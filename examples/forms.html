@@ -24,17 +24,17 @@
           <h2>Vertical forms</h2>
           <form class="form">
             <div class="formGroup">
-              <label class="formLabel" for="input-text-vf">input[type=text]</label>
+              <label class="formLabel" for="input-text-vf-01">input[type=text]</label>
               <input type="text" id="input-text-vf" class="formControl-week" value="Some text">
             </div>
             <div class="row">
               <div class="col-6 formGroup">
-                <label class="formLabel" for="input-text-hf">input[type=text]</label>
-                <input type="text" id="input-text-hf" class="formControl-week" value="Some text">
+                <label class="formLabel" for="input-text-vf-02">input[type=text]</label>
+                <input type="text" id="input-text-vf-02" class="formControl-week" value="Some text">
               </div>
               <div class="col-6 formGroup">
-                <label class="formLabel" for="input-text-hf">input[type=text]</label>
-                <input type="text" id="input-text-hf" class="formControl-week" value="Some text">
+                <label class="formLabel" for="input-text-vf-03">input[type=text]</label>
+                <input type="text" id="input-text-vf-03" class="formControl-week" value="Some text">
               </div>
             </div>
             <div class="formGroup">
@@ -57,27 +57,35 @@
           <h2>Horizontal forms</h2>
           <form class="form form--label-right-align">
             <div class="row formGroup">
-              <label class="col-2 col-lg-3 formLabel" for="input-text-hf">Lorem</label>
+              <div class="col-2 col-lg-3">
+                <label class="formLabel" for="input-text-hf-01">Lorem</label>
+              </div>
               <div class="col-10 col-lg-9">
-                <input type="text" id="input-text-hf" class="formControl-week" value="Some text">
+                <input type="text" id="input-text-hf-01" class="formControl-week" value="Some text">
               </div>
             </div>
             <div class="row">
               <div class="col-6 col-md-12 row formGroup">
-                <label class="col-4 col-lg-6 col-md-3 formLabel" for="input-text-hf">Lorem ipsum dolor sit</label>
+                <div class="col-4 col-lg-6 col-md-3">
+                  <label class="formLabel" for="input-text-hf-02">Lorem ipsum dolor sit</label>
+                </div>
                 <div class="col-8 col-lg-6 col-md-9">
-                  <input type="text" id="input-text-hf" class="formControl-week" value="Some text">
+                  <input type="text" id="input-text-hf-02" class="formControl-week" value="Some text">
                 </div>
               </div>
               <div class="col-6 col-md-12 row formGroup">
-                <label class="col-4 col-lg-6 col-md-3 formLabel" for="input-text-hf">Amet</label>
+                <div class="col-4 col-lg-6 col-md-3">
+                  <label class="formLabel" for="input-text-hf-03">Amet</label>
+                </div>
                  <div class="col-8 col-lg-6 col-md-9">
-                  <input type="text" id="input-text-hf" class="formControl-week" value="Some text">
+                  <input type="text" id="input-text-hf-03" class="formControl-week" value="Some text">
                 </div>
               </div>
             </div>
             <div class="row formGroup">
-              <label class="col-2 col-lg-3 formLabel" for="select-hf">Ipsum</label>
+              <div class="col-2 col-lg-3">
+                <label class="formLabel" for="select-hf">Ipsum</label>
+              </div>
               <div class="col-10 col-lg-9">
                 <select id="select-hf" class="formControl-select">
                   <option>Option 1</option>
@@ -87,7 +95,9 @@
               </div>
             </div>
             <div class="row formGroup">
-              <label class="col-2 col-lg-3 formLabel" for="textarea-hf">Dolor</label>
+              <div class="col-2 col-lg-3">
+                <label class="formLabel" for="textarea-hf">Dolor</label>
+              </div>
               <div class="col-10 col-lg-9">
                 <textarea id="textarea-hf" class="formControl-textarea">Some text</textarea>
               </div>

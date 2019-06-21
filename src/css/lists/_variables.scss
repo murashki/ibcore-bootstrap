@@ -3,5 +3,5 @@
     $paragraphMarginBottom
 */
 
-$listMarginBottom: $paragraphMarginBottom;
-$listPaddingLeft: 2em;
+$listMarginBottom: $paragraphMarginBottom !default;
+$listPaddingLeft: 2em !default;
