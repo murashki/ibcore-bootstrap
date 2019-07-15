@@ -3,21 +3,21 @@
     $transitionAppearance
 */
 
-$btnFontFamily: inherit;
-$btnFontSize: 1.2em;
-$btnFontSize-sm: 1em;
-$btnFontSize-lg: 1.4em;
-$btnFontSize-xl: 1.8em;
-$btnFontWeight: inherit;
-$btnLineHeight: 1.4em;
-$btnBorderWidth: 1px;
-$btnBorderRadius: 0.15em;
-$btnDisabledOpacity: 0.5;
-$btnVerticalPadding: 0.375em;
-$btnHorizontalPadding: 0.75em;
+$btnFontFamily: inherit !default;
+$btnFontSize: 1.2em !default;
+$btnFontSize-sm: 1em !default;
+$btnFontSize-lg: 1.4em !default;
+$btnFontSize-xl: 1.8em !default;
+$btnFontWeight: inherit !default;
+$btnLineHeight: 1.4em !default;
+$btnBorderWidth: 1px !default;
+$btnBorderRadius: 0.15em !default;
+$btnDisabledOpacity: 0.5 !default;
+$btnVerticalPadding: 0.375em !default;
+$btnHorizontalPadding: 0.75em !default;
 $btnTransition:
     color $transitionAppearance,
     background-color $transitionAppearance,
     border-color $transitionAppearance,
-    box-shadow $transitionAppearance;
-$btnNgbMargin: 1em;
+    box-shadow $transitionAppearance !default;
+$btnNgbMargin: 1em !default;

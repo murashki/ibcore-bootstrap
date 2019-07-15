@@ -20,6 +20,9 @@ $transitionAppearance: 0.15s ease-in-out !default;
 @import './link/variables';
 
 
+@import '../_mixins/button-variant';
+
+
 @import './styles';
 @import './default/styles';
 @import './success/styles';
