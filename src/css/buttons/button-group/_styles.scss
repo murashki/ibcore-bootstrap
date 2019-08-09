@@ -1,0 +1,38 @@
+.btnGroup {
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.btnGroup .btn {
+  position: relative;
+  flex: 0 1 auto;
+}
+
+.btnGroup .btn:hover {
+  z-index: 2;
+}
+
+.btnGroup .btn:focus,
+.btnGroup .btn:active {
+  z-index: 1;
+}
+
+.btnGroup .btn + .btn {
+  margin-left: -$btnBorderWidth;
+}
+
+.btnGroup .btn:first-child {
+  margin-left: 0;
+}
+
+.btnGroup .btn:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btnGroup .btn:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

@@ -5,16 +5,18 @@
 @import './grid/variables';
 @import './link/variables';
 @import './buttons/variables';
-@import './buttons/default/variables';
-@import './buttons/success/variables';
-@import './buttons/warning/variables';
-@import './buttons/danger/variables';
-@import './buttons/link/variables';
+@import './buttons/default-variant/variables';
+@import './buttons/variants/success/variables';
+@import './buttons/variants/warning/variables';
+@import './buttons/variants/danger/variables';
+@import './buttons/button-as-link/variables';
+@import './buttons/unstyled-button/variables';
+@import './buttons/button-group/variables';
 @import './forms/variables';
 @import './lists/variables';
 
 
-@import './_mixins/button-variant';
+@import './buttons/_mixins/button-variant';
 
 
 *,
@@ -27,12 +29,13 @@
 @import './grid/styles';
 @import './link/styles';
 @import './buttons/styles';
-@import './buttons/default/styles';
-@import './buttons/success/styles';
-@import './buttons/warning/styles';
-@import './buttons/danger/styles';
-@import './buttons/unstyled/styles';
-@import './buttons/link/styles';
+@import './buttons/default-variant/styles';
+@import './buttons/variants/success/styles';
+@import './buttons/variants/warning/styles';
+@import './buttons/variants/danger/styles';
+@import './buttons/button-as-link/styles';
+@import './buttons/unstyled-button/styles';
+@import './buttons/button-group/styles';
 @import './forms/styles';
 @import './lists/styles';
 @import './code/styles';

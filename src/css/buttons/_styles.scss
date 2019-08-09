@@ -2,6 +2,7 @@
   Variables we use here:
     $btnFontFamily
     $btnFontSize
+    $btnFontSize-xs
     $btnFontSize-sm
     $btnFontSize-lg
     $btnFontSize-xl
@@ -60,6 +61,10 @@ fieldset:disabled .btn {
 
 .btn + .btn {
   margin-left: $btnNgbMargin;
+}
+
+.btn--xs {
+  font-size: $btnFontSize-xs;
 }
 
 .btn--sm {

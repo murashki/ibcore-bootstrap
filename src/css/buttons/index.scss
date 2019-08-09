@@ -1,8 +1,18 @@
 // Buttons manually forked from Bootstrap v4.1.1.
 // Bootstrap is licensed MIT. (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
+@import '../normalize';
+
 
 $transitionAppearance: 0.15s ease-in-out !default;
+
+$linkColor: #007bff !default;
+$linkTextDecoration: none !default;
+$linkHoverColor: $linkColor !default;
+$linkHoverTextDecoration: underline !default;
+$linkFocusColor: $linkColor !default;
+$linkFocusTextDecoration: underline !default;
+$linkFocusOutline: 0 !default;
 
 
 *,
@@ -13,20 +23,23 @@ $transitionAppearance: 0.15s ease-in-out !default;
 
 
 @import './variables';
-@import './default/variables';
-@import './success/variables';
-@import './warning/variables';
-@import './danger/variables';
-@import './link/variables';
+@import './default-variant/variables';
+@import './variants/success/variables';
+@import './variants/warning/variables';
+@import './variants/danger/variables';
+@import './button-as-link/variables';
+@import './unstyled-button/variables';
+@import './button-group/variables';
 
 
-@import '../_mixins/button-variant';
+@import './_mixins/button-variant';
 
 
 @import './styles';
-@import './default/styles';
-@import './success/styles';
-@import './warning/styles';
-@import './danger/styles';
-@import './link/styles';
-@import './unstyled/styles';
+@import './default-variant/styles';
+@import './variants/success/styles';
+@import './variants/warning/styles';
+@import './variants/danger/styles';
+@import './button-as-link/styles';
+@import './unstyled-button/styles';
+@import './button-group/styles';

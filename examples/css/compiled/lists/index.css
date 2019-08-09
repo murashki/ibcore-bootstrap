@@ -1,0 +1,51 @@
+/*
+  Variables we use here:
+    $paragraphMarginBottom
+*/
+/*
+  Variables we use here:
+    $listMarginBottom
+    $listPaddingLeft
+*/
+.list {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.list--ordered,
+.list--unordered {
+  padding-left: 2em;
+}
+
+.list .list {
+  margin-bottom: 0;
+}
+
+.list--description dt {
+  font-weight: 700;
+}
+
+.list--description dd {
+  margin-bottom: .5em;
+  margin-left: 0;
+}
+
+.list--description dd:last-child {
+  margin-bottom: 0;
+}
+
+.list--unstyled {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.list--inline li {
+  display: inline-block;
+}
+
+.list--inline li + li {
+  margin-left: 2em;
+}
+
+/*# sourceMappingURL=index.css.map */

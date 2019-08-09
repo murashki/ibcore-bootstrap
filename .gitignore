@@ -1,5 +1,7 @@
-node_modules
-examples/css/compiled
 *.css.map
+compiled/*
+
+node_modules
 package-lock.json
+
 .idea
