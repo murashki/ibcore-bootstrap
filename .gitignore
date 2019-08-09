@@ -1,5 +1,5 @@
 *.css.map
-compiled/*
+examples/css/compiled/*
 
 node_modules
 package-lock.json
