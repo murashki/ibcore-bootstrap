@@ -349,7 +349,6 @@ template {
     $linkHoverTextDecoration
     $linkFocusColor
     $linkFocusTextDecoration
-    $linkFocusOutline
 */
 /*
   Variables we use here:
@@ -1592,20 +1591,8 @@ template {
   }
 }
 
-.btn:hover {
-  text-decoration: none;
-}
-
 .btn:focus {
-  text-decoration: none;
   outline: none;
-}
-
-.btn:disabled,
-fieldset:disabled .btn {
-  opacity: 0.5;
-  cursor: default;
-  pointer-events: none;
 }
 
 .btn + .btn {
@@ -1648,36 +1635,41 @@ fieldset:disabled .btn {
     $btnDisabledBgColor
     $btnDisabledBorderColor
  */
-.btn {
+.btn--primary {
   color: #585467;
   background-color: #edecf1;
   border-color: #edecf1;
 }
 
-.btn:hover {
+.btn--primary:hover {
   color: #585467;
   background-color: #d8d6e1;
   border-color: #d1cfdb;
 }
 
-.btn:focus {
+.btn--primary:focus, .btn--primary.btn--focus {
   color: #585467;
   background-color: #d1cfdb;
   border-color: #cac7d6;
   box-shadow: 0 0 0 0.2em rgba(237, 236, 241, 0.5);
 }
 
-.btn:active {
+.btn--primary:active, .btn--primary.btn--active {
   color: #585467;
   background-color: #d1cfdb;
   border-color: #cac7d6;
   box-shadow: 0 0 0 0.2em rgba(237, 236, 241, 0.5);
 }
 
-.btn:disabled {
+.btn--primary:disabled, .btn--primary.btn--disabled,
+fieldset:disabled .btn--primary {
+  opacity: 0.5;
   color: #585467;
   background-color: #edecf1;
   border-color: #edecf1;
+  box-shadow: none;
+  cursor: default;
+  pointer-events: none;
 }
 
 /*
@@ -1712,24 +1704,29 @@ fieldset:disabled .btn {
   border-color: #1e7e34;
 }
 
-.btn--success:focus {
+.btn--success:focus, .btn--success.btn--focus {
   color: #fff;
   background-color: #1e7e34;
   border-color: #1c7430;
   box-shadow: 0 0 0 0.2em rgba(40, 167, 69, 0.5);
 }
 
-.btn--success:active {
+.btn--success:active, .btn--success.btn--active {
   color: #fff;
   background-color: #1e7e34;
   border-color: #1c7430;
   box-shadow: 0 0 0 0.2em rgba(40, 167, 69, 0.5);
 }
 
-.btn--success:disabled {
+.btn--success:disabled, .btn--success.btn--disabled,
+fieldset:disabled .btn--success {
+  opacity: 0.5;
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
+  box-shadow: none;
+  cursor: default;
+  pointer-events: none;
 }
 
 /*
@@ -1764,24 +1761,29 @@ fieldset:disabled .btn {
   border-color: #d39e00;
 }
 
-.btn--warning:focus {
+.btn--warning:focus, .btn--warning.btn--focus {
   color: #212529;
   background-color: #d39e00;
   border-color: #c69500;
   box-shadow: 0 0 0 0.2em rgba(255, 193, 7, 0.5);
 }
 
-.btn--warning:active {
+.btn--warning:active, .btn--warning.btn--active {
   color: #212529;
   background-color: #d39e00;
   border-color: #c69500;
   box-shadow: 0 0 0 0.2em rgba(255, 193, 7, 0.5);
 }
 
-.btn--warning:disabled {
+.btn--warning:disabled, .btn--warning.btn--disabled,
+fieldset:disabled .btn--warning {
+  opacity: 0.5;
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
+  box-shadow: none;
+  cursor: default;
+  pointer-events: none;
 }
 
 /*
@@ -1816,24 +1818,29 @@ fieldset:disabled .btn {
   border-color: #bd2130;
 }
 
-.btn--danger:focus {
+.btn--danger:focus, .btn--danger.btn--focus {
   color: #fff;
   background-color: #bd2130;
   border-color: #b21f2d;
   box-shadow: 0 0 0 0.2em rgba(220, 53, 69, 0.5);
 }
 
-.btn--danger:active {
+.btn--danger:active, .btn--danger.btn--active {
   color: #fff;
   background-color: #bd2130;
   border-color: #b21f2d;
   box-shadow: 0 0 0 0.2em rgba(220, 53, 69, 0.5);
 }
 
-.btn--danger:disabled {
+.btn--danger:disabled, .btn--danger.btn--disabled,
+fieldset:disabled .btn--danger {
+  opacity: 0.5;
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
+  box-shadow: none;
+  cursor: default;
+  pointer-events: none;
 }
 
 /*
@@ -1844,7 +1851,6 @@ fieldset:disabled .btn {
     $btnLinkHoverTextDecoration
     $btnLinkFocusColor
     $btnLinkFocusTextDecoration
-    $btnLinkFocusOutline
     $btnLinkDisabledColor
     $btnLinkDisabledTextDecoration
     $btnLinkDisabledOpacity
@@ -1876,23 +1882,24 @@ fieldset:disabled .btn {
 }
 
 .btn--link:focus,
-.btn--link:active {
+.btn--link.btn--focus,
+.btn--link:active,
+.btn--link.btn--active {
   color: #007bff;
   background-color: transparent;
   box-shadow: none;
-}
-
-.btn--link:focus {
   text-decoration: underline;
-  outline: 0;
 }
 
-.btn--link:disabled {
+.btn--link:disabled,
+.btn--link.btn--disabled,
+fieldset:disabled .btn--link {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
   opacity: 0.5;
   cursor: default;
+  pointer-events: none;
 }
 
 .btn--unstyled {
@@ -1916,6 +1923,13 @@ fieldset:disabled .btn {
   background-color: transparent;
   box-shadow: none;
   opacity: 1;
+}
+
+.btn--unstyled:disabled,
+.btn--unstyled.btn--disabled,
+fieldset:disabled .btn--unstyled {
+  cursor: default;
+  pointer-events: none;
 }
 
 .btnGroup {

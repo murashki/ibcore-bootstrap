@@ -43,20 +43,8 @@
   }
 }
 
-.btn:hover {
-  text-decoration: none;
-}
-
 .btn:focus {
-  text-decoration: none;
   outline: none;
-}
-
-.btn:disabled,
-fieldset:disabled .btn {
-  opacity: $btnDisabledOpacity;
-  cursor: default;
-  pointer-events: none;
 }
 
 .btn + .btn {

@@ -20,3 +20,10 @@
   box-shadow: none;
   opacity: 1;
 }
+
+.btn--unstyled:disabled,
+.btn--unstyled.btn--disabled,
+fieldset:disabled .btn--unstyled {
+  cursor: default;
+  pointer-events: none;
+}

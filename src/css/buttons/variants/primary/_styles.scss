@@ -19,7 +19,7 @@
     $btnDisabledBorderColor
  */
 
-.btn {
+.btn--primary {
   @include button-variant(
     $btnColor,
     $btnBgColor,

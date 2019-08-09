@@ -12,7 +12,6 @@ $linkHoverColor: $linkColor !default;
 $linkHoverTextDecoration: underline !default;
 $linkFocusColor: $linkColor !default;
 $linkFocusTextDecoration: underline !default;
-$linkFocusOutline: 0 !default;
 
 
 *,
@@ -23,7 +22,7 @@ $linkFocusOutline: 0 !default;
 
 
 @import './variables';
-@import './default-variant/variables';
+@import './variants/primary/variables';
 @import './variants/success/variables';
 @import './variants/warning/variables';
 @import './variants/danger/variables';
@@ -36,7 +35,7 @@ $linkFocusOutline: 0 !default;
 
 
 @import './styles';
-@import './default-variant/styles';
+@import './variants/primary/styles';
 @import './variants/success/styles';
 @import './variants/warning/styles';
 @import './variants/danger/styles';

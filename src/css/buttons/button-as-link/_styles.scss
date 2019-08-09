@@ -6,7 +6,6 @@
     $btnLinkHoverTextDecoration
     $btnLinkFocusColor
     $btnLinkFocusTextDecoration
-    $btnLinkFocusOutline
     $btnLinkDisabledColor
     $btnLinkDisabledTextDecoration
     $btnLinkDisabledOpacity
@@ -39,21 +38,22 @@
 }
 
 .btn--link:focus,
-.btn--link:active {
+.btn--link.btn--focus,
+.btn--link:active,
+.btn--link.btn--active {
   color: $btnLinkFocusColor;
   background-color: transparent;
   box-shadow: none;
-}
-
-.btn--link:focus {
   text-decoration: $btnLinkFocusTextDecoration;
-  outline: $btnLinkFocusOutline;
 }
 
-.btn--link:disabled {
+.btn--link:disabled,
+.btn--link.btn--disabled,
+fieldset:disabled .btn--link {
   color: $btnLinkDisabledColor;
   text-decoration: $btnLinkDisabledTextDecoration;
   background-color: transparent;
   opacity: $btnLinkDisabledOpacity;
   cursor: default;
+  pointer-events: none;
 }

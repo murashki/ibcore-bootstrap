@@ -27,23 +27,31 @@
     border-color: $hoverBorderColor;
   }
 
-  &:focus {
+  &:focus,
+  &.btn--focus  {
     color: $focusColor;
     background-color: $focusBgColor;
     border-color: $focusBorderColor;
     box-shadow: $focusBoxShadow;
   }
 
-  &:active {
+  &:active,
+  &.btn--active {
     color: $activeColor;
     background-color: $activeBgColor;
     border-color: $activeBorderColor;
     box-shadow: $activeBoxShadow;
   }
 
-  &:disabled {
+  &:disabled,
+  &.btn--disabled,
+  fieldset:disabled & {
+    opacity: $btnDisabledOpacity;
     color: $disabledColor;
     background-color: $disabledBgColor;
     border-color: $disabledBorderColor;
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
   }
 }
