@@ -1,0 +1,9 @@
+.grid-cellContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  padding: 0 1.2em;
+  background-color: #f5f5f7;
+  border: 1px solid #dadbe2;
+}
