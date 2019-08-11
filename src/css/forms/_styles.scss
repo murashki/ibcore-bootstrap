@@ -34,7 +34,7 @@
     $formLabelMarginBotton
     $formLabelLineHeight
 
-  This contorls have borders:
+  Contorls with borders:
     // Textlike controls
     .formControl-date
     .formControl-datetime
@@ -56,7 +56,7 @@
     // Textarea
     .formControl-textarea
 
-  This controls have no borders:
+  Controls with no borders:
     // Checkbox
     .formControl-checkbox
 
@@ -80,10 +80,6 @@
 
 .formGroup {
   margin-bottom: $formGroupMarginBottom;
-}
-
-.formGroup.row {
-  margin-bottom: 0;
 }
 
 .formGroup > .col,
@@ -110,14 +106,18 @@
   line-height: $formLabelLineHeight;
 }
 
-.form--labelRightAlign .formLabel {
-  text-align: right;
-  justify-content: flex-end;
+.form--vertical .formLabel {
+  margin-bottom: $formLabelMarginBotton;
 }
 
-.form--labelLeftAlign .formLabel {
+.form--horizontal .formLabel {
+  width: 100%;
+}
+
+.form--labelRightAlign .formLabel {}
+
+.form--labelRightAlign .formLabel {
   text-align: right;
-  justify-content: flex-start;
 }
 
 .form fieldset,
