@@ -1,29 +1,5 @@
 /*
   Variables we use here:
-    $btnControlFontFamily
-    $btnControlFontSize
-    $btnControlFontWeight
-    $btnControlLineHeight
-    $btnControlBorderWidth
-    $btnControlColor
-    $btnControlBgColor
-    $btnControlBorderColor
-    $btnControlHoverColor
-    $btnControlHoverBgColor
-    $btnControlHoverBorderColor
-    $btnControlFocusColor
-    $btnControlFocusBgColor
-    $btnControlFocusBorderColor
-    $btnControlFocusBoxShadow
-    $btnControlActiveColor
-    $btnControlActiveBgColor
-    $btnControlActiveBorderColor
-    $btnControlActiveBoxShadow
-    $btnControlDisabledColor
-    $btnControlDisabledBgColor
-    $btnControlDisabledBorderColor
-    $btnControlDisabledOpacity
-    $btnControlTransition
 */
 
 .btnControl {
@@ -42,27 +18,19 @@
   vertical-align: middle;
   user-select: none;
   border: $btnControlBorderWidth solid $btnControlBorderColor;
+  border-radius: 0;
   background-color: $btnControlBgColor;
   cursor: pointer;
-  transition: $btnControlTransition;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .btnControl {
-    transition: none;
-  }
 }
 
 .btnControl:before {
   content: " ";
-  display: block;
-  height: 15px;
-  width: 15px;
-  background-color: #333;
-}
-
-.btnControl.btnControl--hasLabel:before {
-  margin-right: 0.4em;
+  opacity: $btnControlIconOpacity;
+  display: table; // Guys, i can't explain why, but it's better round off
+  height: 1em;
+  width: 1em;
+  border: $btnControlIconBorderWidth solid $btnControlIconBorderColor;
+  background-color: $btnControlIconBgColor;
 }
 
 .btnControl:hover {
@@ -70,6 +38,8 @@
   background-color: $btnControlHoverBgColor;
   border-color: $btnControlHoverBorderColor;
 }
+
+.btnControl:hover:before {}
 
 .btnControl:focus,
 .btnControl.btnControl--focus  {
@@ -80,6 +50,9 @@
   outline: none;
 }
 
+.btnControl:focus:before,
+.btnControl.btnControl--focus:before {}
+
 .btnControl:active,
 .btnControl.btnControl--active {
   color: $btnControlActiveColor;
@@ -87,6 +60,9 @@
   border-color: $btnControlActiveBorderColor;
   box-shadow: $btnControlActiveBoxShadow;
 }
+
+.btnControl:active:before,
+.btnControl.btnControl--active:before {}
 
 .btnControl:disabled,
 .btnControl.btnControl--disabled,
@@ -98,6 +74,30 @@ fieldset:disabled .btnControl {
   box-shadow: none;
   cursor: default;
   pointer-events: none;
+}
+
+.btnControl:disabled:before,
+.btnControl.btnControl--disabled:before,
+fieldset:disabled .btnControl:before {}
+
+.btnControl.btnControl--checked {}
+
+.btnControl.btnControl--checked:before {
+  opacity: 1;
+  background-color: $btnControlIconCheckedBgColor;
+  border-color: $btnControlIconCheckedBorderColor;
+}
+
+.btnControl.btnControl--radio {
+  border-radius: calc(#{$btnControlLineHeight}em + #{$btnControlPadding} / 2);
+}
+
+.btnControl.btnControl--radio:before {
+  border-radius: calc(#{$btnControlLineHeight}em / 2);
+}
+
+.btnControl.btnControl--hasLabel:before {
+  margin-right: 0.4em;
 }
 
 .btnControl--xs {
@@ -120,7 +120,20 @@ fieldset:disabled .btnControl {
   margin-left: $btnControlNgbMargin;
 }
 
-.btnControl-label {
-  margin-left: 0.4em;
-  color: inherit;
+.btnControl {
+  transition: $btnControlTransition;
+}
+
+.btnControl:before {
+  transition: $btnControlIconTransition;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .btnControl {
+    transition: none;
+  }
+
+  .btnControl:before {
+    transition: none;
+  }
 }

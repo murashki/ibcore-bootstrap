@@ -28,28 +28,48 @@
 </div>
 <div class="app-content">
   <div class="container">
-    <h1>Button link</h1>
+    <h1>Button as ...</h1>
+
+    <div class="app-section">
+      <h2>Button as a checkbox</h2>
+      <button type="button" class="btnControl btnControl--hasLabel">Button</button>
+      <button type="button" class="btnControl btnControl--hasLabel btnControl--checked">Checked button</button>
+    </div>
+
+    <div class="app-section">
+      <h2>Button as a checkbox with labels</h2>
+      <form class="form">
+        <div class="formGroup formGroup--horizontal">
+          <button type="button" class="btnControl"></button>
+          <label class="formLabel">Button</label>
+        </div>
+        <div class="formGroup formGroup--horizontal">
+          <button type="button" class="btnControl btnControl--checked"></button>
+          <label class="formLabel">Checked button</label>
+        </div>
+      </form>
+    </div>
 
     <div class="app-section">
       <h2>Button as a radio</h2>
-      <button type="button" class="btnControl btnControl--radio btnControl--hasLabel">Lorem ipsum</button>
-      <button type="button" class="btnControl btnControl--radio btnControl--hasLabel btnControl--checked">Dolor sit amet</button>
+      <button type="button" class="btnControl btnControl--radio btnControl--hasLabel">Button</button>
+      <button type="button" class="btnControl btnControl--radio btnControl--hasLabel btnControl--checked">Checked button</button>
     </div>
 
     <div class="app-section">
-      <h2>Button with labels</h2>
-      <div class="formGroup">
-        <button type="button" class="btnControl btnControl--radio btnControl--sm"></button>
-        <label class="btnControl-label">Lorem ipsum</label>
+      <h2>Button as a radio with labels</h2>
+      <div class="formGroup formGroup--horizontal">
+        <button type="button" class="btnControl btnControl--radio"></button>
+        <label class="formLabel">Button</label>
       </div>
-      <div class="formGroup">
-        <button type="button" class="btnControl btnControl--radio btnControl--sm btnControl--checked"></button>
-        <label class="btnControl-label">Dolor sit amet</label>
+      <div class="formGroup formGroup--horizontal">
+        <button type="button" class="btnControl btnControl--radio btnControl--checked"></button>
+        <label class="formLabel">Checked button</label>
       </div>
     </div>
 
     <div class="app-section">
-      <h2>Button as link</h2>
+      <h2>Button as a link</h2>
       <p class="paragraph" style="width: 34em;">Lorem ipsum dolor sit amet, <button type="button" class="btnLink">button</button> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <p class="paragraph" style="width: 34em;">Lorem ipsum dolor sit amet, <input type="button" class="btnLink" value="input tag button"> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>

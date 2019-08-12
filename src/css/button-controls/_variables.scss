@@ -10,24 +10,28 @@ $btnControlFontSize-sm: 1em !default;
 $btnControlFontSize-lg: 1.4em !default;
 $btnControlFontSize-xl: 1.8em !default;
 $btnControlFontWeight: inherit !default;
-$btnControlLineHeight: 1em !default;
-$btnControlBorderWidth: 1px !default;
+$btnControlLineHeight: 1 !default;
 $btnControlPadding: 0.375em !default;
 
 $btnControlColor: #585467 !default;
 $btnControlBgColor: #edecf1 !default;
 $btnControlBorderColor: $btnControlBgColor !default;
+$btnControlBorderWidth: 1px !default;
+
 $btnControlHoverColor: $btnControlColor !default;
 $btnControlHoverBgColor: darken($btnControlBgColor, 7.5%) !default;
 $btnControlHoverBorderColor: darken($btnControlBorderColor, 10%) !default;
+
 $btnControlFocusColor: $btnControlColor !default;
 $btnControlFocusBgColor: darken($btnControlBgColor, 10%) !default;
 $btnControlFocusBorderColor: darken($btnControlBorderColor, 12.5%) !default;
 $btnControlFocusBoxShadow: 0 0 0 0.2em rgba($btnControlBorderColor, 0.5) !default;
+
 $btnControlActiveColor: $btnControlFocusColor !default;
 $btnControlActiveBgColor: $btnControlFocusBgColor !default;
 $btnControlActiveBorderColor: $btnControlFocusBorderColor !default;
 $btnControlActiveBoxShadow: $btnControlFocusBoxShadow !default;
+
 $btnControlDisabledColor: $btnControlColor !default;
 $btnControlDisabledBgColor: $btnControlBgColor !default;
 $btnControlDisabledBorderColor: $btnControlBorderColor !default;
@@ -39,3 +43,13 @@ $btnControlTransition:
   border-color $transitionAppearance,
   box-shadow $transitionAppearance !default;
 $btnControlNgbMargin: 1em !default;
+
+$btnControlIconOpacity: 0.2;
+$btnControlIconBgColor: transparent !default;
+$btnControlIconBorderColor: currentColor !default;
+$btnControlIconBorderWidth: 1px !default;
+
+$btnControlIconCheckedBgColor: currentColor !default;
+$btnControlIconCheckedBorderColor: currentColor !default;
+
+$btnControlIconTransition: $btnControlTransition;
