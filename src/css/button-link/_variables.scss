@@ -6,6 +6,8 @@
     $linkHoverTextDecoration
     $linkFocusColor
     $linkFocusTextDecoration
+    $linkActiveColor
+    $linkActiveTextDecoration
 */
 
 $btnLinkColor: $linkColor !default;
@@ -14,6 +16,8 @@ $btnLinkHoverColor: $linkHoverColor !default;
 $btnLinkHoverTextDecoration: $linkHoverTextDecoration !default;
 $btnLinkFocusColor: $linkFocusColor !default;
 $btnLinkFocusTextDecoration: $linkFocusTextDecoration !default;
+$btnLinkActiveColor: $linkActiveColor !default;
+$btnLinkActiveTextDecoration: $linkActiveTextDecoration !default;
 $btnLinkDisabledColor: $btnLinkColor !default;
 $btnLinkDisabledTextDecoration: $btnLinkTextDecoration !default;
 $btnLinkDisabledOpacity: 0.5 !default;

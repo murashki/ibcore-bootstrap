@@ -1,9 +1,28 @@
+// Button link manually forked from Bootstrap v4.1.1.
+// Bootstrap is licensed MIT. (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+
+@import '../normalize';
+
+
 $linkColor: #007bff !default;
 $linkTextDecoration: none !default;
-$linkVisitedColor: $linkColor !default;
 $linkHoverColor: $linkColor !default;
 $linkHoverTextDecoration: underline !default;
 $linkFocusColor: $linkColor !default;
 $linkFocusTextDecoration: underline !default;
 $linkActiveColor: $linkColor !default;
 $linkActiveTextDecoration: underline !default;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+@import './variables';
+
+
+@import './styles';

@@ -1,0 +1,17 @@
+@import '../normalize';
+
+
+$transitionAppearance: 0.15s ease-in-out !default;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+@import './variables';
+
+
+@import './styles';

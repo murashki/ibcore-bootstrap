@@ -1,0 +1,126 @@
+/*
+  Variables we use here:
+    $btnControlFontFamily
+    $btnControlFontSize
+    $btnControlFontWeight
+    $btnControlLineHeight
+    $btnControlBorderWidth
+    $btnControlColor
+    $btnControlBgColor
+    $btnControlBorderColor
+    $btnControlHoverColor
+    $btnControlHoverBgColor
+    $btnControlHoverBorderColor
+    $btnControlFocusColor
+    $btnControlFocusBgColor
+    $btnControlFocusBorderColor
+    $btnControlFocusBoxShadow
+    $btnControlActiveColor
+    $btnControlActiveBgColor
+    $btnControlActiveBorderColor
+    $btnControlActiveBoxShadow
+    $btnControlDisabledColor
+    $btnControlDisabledBgColor
+    $btnControlDisabledBorderColor
+    $btnControlDisabledOpacity
+    $btnControlTransition
+*/
+
+.btnControl {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: $btnControlPadding;
+  line-height: $btnControlLineHeight;
+  font-family: $btnControlFontFamily;
+  font-size: $btnControlFontSize;
+  font-weight: $btnControlFontWeight;
+  text-align: center;
+  color: $btnControlColor;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $btnControlBorderWidth solid $btnControlBorderColor;
+  background-color: $btnControlBgColor;
+  cursor: pointer;
+  transition: $btnControlTransition;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .btnControl {
+    transition: none;
+  }
+}
+
+.btnControl:before {
+  content: " ";
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-color: #333;
+}
+
+.btnControl.btnControl--hasLabel:before {
+  margin-right: 0.4em;
+}
+
+.btnControl:hover {
+  color: $btnControlHoverColor;
+  background-color: $btnControlHoverBgColor;
+  border-color: $btnControlHoverBorderColor;
+}
+
+.btnControl:focus,
+.btnControl.btnControl--focus  {
+  color: $btnControlFocusColor;
+  background-color: $btnControlFocusBgColor;
+  border-color: $btnControlFocusBorderColor;
+  box-shadow: $btnControlFocusBoxShadow;
+  outline: none;
+}
+
+.btnControl:active,
+.btnControl.btnControl--active {
+  color: $btnControlActiveColor;
+  background-color: $btnControlActiveBgColor;
+  border-color: $btnControlActiveBorderColor;
+  box-shadow: $btnControlActiveBoxShadow;
+}
+
+.btnControl:disabled,
+.btnControl.btnControl--disabled,
+fieldset:disabled .btnControl {
+  opacity: $btnControlDisabledOpacity;
+  color: $btnControlDisabledColor;
+  background-color: $btnControlDisabledBgColor;
+  border-color: $btnControlDisabledBorderColor;
+  box-shadow: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.btnControl--xs {
+  font-size: $btnControlFontSize-xs;
+}
+
+.btnControl--sm {
+  font-size: $btnControlFontSize-sm;
+}
+
+.btnControl--lg {
+  font-size: $btnControlFontSize-lg;
+}
+
+.btnControl--xl {
+  font-size: $btnControlFontSize-xl;
+}
+
+.btnControl + .btnControl {
+  margin-left: $btnControlNgbMargin;
+}
+
+.btnControl-label {
+  margin-left: 0.4em;
+  color: inherit;
+}

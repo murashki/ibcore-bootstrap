@@ -19,7 +19,9 @@
     <div class="app-menu">
       <a class="link app-menuLink" href="grid.html">Grid</a>
       <a class="link app-menuLink app-menuLink--active" href="forms.html">Forms</a>
+      <a class="link app-menuLink" href="native.html">Native forms</a>
       <a class="link app-menuLink" href="buttons.html">Buttons</a>
+      <a class="link app-menuLink" href="button-as.html">Button as...</a>
       <a class="link app-menuLink" href="link.html">Link</a>
     </div>
   </div>
@@ -29,89 +31,83 @@
     <h1>Forms</h1>
 
     <div class="app-section">
-      <h2>Vertical forms</h2>
-      <form class="form form--vertical">
-        <div class="formGroup">
-          <label class="formLabel" for="input-text-vf-01">Lorem</label>
-          <input type="text" id="input-text-vf" class="formControl-week" value="Some text">
+      <h2>.formGroup.formGroup--vertical > (.formLabel, .formControl)</h2>
+      <form class="form">
+        <div class="formGroup formGroup--vertical">
+          <label class="formLabel" for="input-text-frgv-frl-01">Label</label>
+          <input type="text" id="input-text-frgv-frl-01" class="formControl-text" value="Some text">
         </div>
-        <div class="row">
-          <div class="col-6 formGroup">
-            <label class="formLabel" for="input-text-vf-02">Lorem ipsum dolor sit</label>
-            <input type="text" id="input-text-vf-02" class="formControl-week" value="Some text">
-          </div>
-          <div class="col-6 formGroup">
-            <label class="formLabel" for="input-text-vf-03">Amet</label>
-            <input type="text" id="input-text-vf-03" class="formControl-week" value="Some text">
-          </div>
-        </div>
-        <div class="formGroup">
-          <label class="formLabel" for="select-vf">Ipsum</label>
-          <select id="select-vf" class="formControl-select">
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-        </div>
-        <div class="formGroup">
-          <label class="formLabel" for="textarea-vf">Dolor</label>
-          <textarea id="textarea-vf" class="formControl-textarea">Some text</textarea>
-        </div>
-        <div class="row">
-          <div class="col">
-            <button type="submit" class="btn btn--success">Submit</button>
-          </div>
+        <div class="formGroup formGroup--vertical">
+          <label class="formLabel" for="input-text-frgv-frl-02">Label</label>
+          <input type="text" id="input-text-frgv-frl-02" class="formControl-text" value="Some text">
         </div>
       </form>
     </div>
 
     <div class="app-section">
-      <h2>Horizontal forms</h2>
-      <form class="form form--horizontal">
+      <h2>.formGroup.formGroup--horizontal > (.formLabel, .formControl)</h2>
+      <form class="form">
+        <div class="formGroup formGroup--horizontal">
+          <label class="formLabel" for="input-text-frgh-frl-01">Label</label>
+          <input type="text" id="input-text-frgh-frl-01" class="formControl-text" value="Some text">
+        </div>
+        <div class="formGroup formGroup--horizontal">
+          <label class="formLabel" for="input-text-frgh-frl-02">Label</label>
+          <input type="text" id="input-text-frgh-frl-02" class="formControl-text" value="Some text">
+        </div>
+      </form>
+    </div>
+
+    <div class="app-section">
+      <h2>.formGroup > (.formLabel, .formControl)</h2>
+      <p class="paragraph">As you can see, it's good idea to use .formGroup--vertical or .formGroup--horizontal, cause labels there have more accurate width and position.</p>
+      <form class="form">
+        <div class="formGroup">
+          <label class="formLabel" for="input-text-frg-01">Label</label>
+          <input type="text" id="input-text-frg-01" class="formControl-text" value="Some text">
+        </div>
+        <div class="formGroup">
+          <label class="formLabel" for="input-text-frg-02">Label</label>
+          <input type="text" id="input-text-frg-02" class="formControl-text" value="Some text">
+        </div>
+      </form>
+    </div>
+
+    <div class="app-section">
+      <h2>Forms with grid</h2>
+      <form class="form">
         <div class="row formGroup">
           <div class="col-2 col-lg-3">
-            <label class="formLabel" for="input-text-hf-01">Lorem</label>
+            <label class="formLabel" for="input-text-fg-01">Label</label>
           </div>
           <div class="col-10 col-lg-9">
-            <input type="text" id="input-text-hf-01" class="formControl-week" value="Some text">
+            <input type="text" id="input-text-fg-01" class="formControl-text" value="Some text">
           </div>
         </div>
         <div class="row">
           <div class="col-6 col-md-12 row formGroup">
             <div class="col-4 col-lg-6 col-md-3">
-              <label class="formLabel" for="input-text-hf-02">Lorem ipsum dolor sit</label>
+              <label class="formLabel" for="input-text-fg-02">Label</label>
             </div>
             <div class="col-8 col-lg-6 col-md-9">
-              <input type="text" id="input-text-hf-02" class="formControl-week" value="Some text">
+              <input type="text" id="input-text-fg-02" class="formControl-text" value="Some text">
             </div>
           </div>
           <div class="col-6 col-md-12 row formGroup">
             <div class="col-4 col-lg-6 col-md-3">
-              <label class="formLabel" for="input-text-hf-03">Amet</label>
+              <label class="formLabel" for="input-text-fg-03">Label</label>
             </div>
             <div class="col-8 col-lg-6 col-md-9">
-              <input type="text" id="input-text-hf-03" class="formControl-week" value="Some text">
+              <input type="text" id="input-text-fg-03" class="formControl-text" value="Some text">
             </div>
           </div>
         </div>
         <div class="row formGroup">
           <div class="col-2 col-lg-3">
-            <label class="formLabel" for="select-hf">Ipsum</label>
+            <label class="formLabel" for="textarea-fg">Label</label>
           </div>
           <div class="col-10 col-lg-9">
-            <select id="select-hf" class="formControl-select">
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-2 col-lg-3">
-            <label class="formLabel" for="textarea-hf">Dolor</label>
-          </div>
-          <div class="col-10 col-lg-9">
-            <textarea id="textarea-hf" class="formControl-textarea">Some text</textarea>
+            <textarea id="textarea-fg" class="formControl-textarea">Some text</textarea>
           </div>
         </div>
         <div class="row">
@@ -123,52 +119,21 @@
     </div>
 
     <div class="app-section">
-      <h2>Horizontal forms with right aligned labels</h2>
-      <form class="form form--horizontal form--labelRightAlign">
+      <h2>.col > label vs label.col</h2>
+      <p class="paragraph">As you can see, it's good idea to use first variant (.col > label), cause labels here have more accurate width and position.</p>
+      <form class="form">
         <div class="row formGroup">
           <div class="col-2 col-lg-3">
-            <label class="formLabel" for="input-text-hf-01">Lorem</label>
+            <label class="formLabel" for="input-text-cl">Label</label>
           </div>
           <div class="col-10 col-lg-9">
-            <input type="text" id="input-text-hf-01" class="formControl-week" value="Some text">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 col-md-12 row formGroup">
-            <div class="col-4 col-lg-6 col-md-3">
-              <label class="formLabel" for="input-text-hf-02">Lorem ipsum dolor sit</label>
-            </div>
-            <div class="col-8 col-lg-6 col-md-9">
-              <input type="text" id="input-text-hf-02" class="formControl-week" value="Some text">
-            </div>
-          </div>
-          <div class="col-6 col-md-12 row formGroup">
-            <div class="col-4 col-lg-6 col-md-3">
-              <label class="formLabel" for="input-text-hf-03">Amet</label>
-            </div>
-            <div class="col-8 col-lg-6 col-md-9">
-              <input type="text" id="input-text-hf-03" class="formControl-week" value="Some text">
-            </div>
+            <input type="text" id="input-text-cl" class="formControl-text" value="Some text">
           </div>
         </div>
         <div class="row formGroup">
-          <div class="col-2 col-lg-3">
-            <label class="formLabel" for="select-hf">Ipsum</label>
-          </div>
+          <label class="col-2 col-lg-3 formLabel" for="input-text-lc">Label</label>
           <div class="col-10 col-lg-9">
-            <select id="select-hf" class="formControl-select">
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-2 col-lg-3">
-            <label class="formLabel" for="textarea-hf">Dolor</label>
-          </div>
-          <div class="col-10 col-lg-9">
-            <textarea id="textarea-hf" class="formControl-textarea">Some text</textarea>
+            <input type="text" id="input-text-lc" class="formControl-text" value="Some text">
           </div>
         </div>
         <div class="row">
@@ -180,7 +145,7 @@
     </div>
 
     <div class="app-section">
-      <h2>Default controls</h2>
+      <h2>Supported controls</h2>
       <form class="form">
         <div class="row formGroup">
           <label class="col-4 formLabel">button[type=button]</label>
@@ -435,7 +400,7 @@
 
     <div class="app-section">
       <h2 class="heading-2">Readonly controls</h2>
-      <p class="paragraph followed"><code class="code-text">readonly</code> attribute only affects following controls:</p>
+      <p class="paragraph"><code class="code-text">readonly</code> attribute only affects following controls:</p>
       <ul class="unordered-list">
         <li><code class="code-text">input[type=email]</code></li>
         <li><code class="code-text">input[type=password]</code></li>

@@ -1,0 +1,66 @@
+<html lang="ru">
+<head>
+  <meta charSet="utf-8">
+  <title>Button link</title>
+
+  <!--This-->
+  <!--<link rel="stylesheet" href="css/compiled/button-controls/index.css">-->
+  <!--<link rel="stylesheet" href="css/compiled/button-link/index.css">-->
+  <!--<link rel="stylesheet" href="css/compiled/grid/index.css">-->
+  <!--Or this-->
+  <link rel="stylesheet" href="css/compiled/index.css">
+
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/pages/button-as.css">
+</head>
+<body>
+<div class="app-head">
+  <div class="container">
+    <div class="app-menu">
+      <a class="link app-menuLink" href="grid.html">Grid</a>
+      <a class="link app-menuLink" href="forms.html">Forms</a>
+      <a class="link app-menuLink" href="native.html">Native forms</a>
+      <a class="link app-menuLink" href="buttons.html">Buttons</a>
+      <a class="link app-menuLink app-menuLink--active" href="button-as.html">Button as...</a>
+      <a class="link app-menuLink" href="link.html">Link</a>
+    </div>
+  </div>
+</div>
+<div class="app-content">
+  <div class="container">
+    <h1>Button link</h1>
+
+    <div class="app-section">
+      <h2>Button as a radio</h2>
+      <button type="button" class="btnControl btnControl--radio btnControl--hasLabel">Lorem ipsum</button>
+      <button type="button" class="btnControl btnControl--radio btnControl--hasLabel btnControl--checked">Dolor sit amet</button>
+    </div>
+
+    <div class="app-section">
+      <h2>Button with labels</h2>
+      <div class="formGroup">
+        <button type="button" class="btnControl btnControl--radio btnControl--sm"></button>
+        <label class="btnControl-label">Lorem ipsum</label>
+      </div>
+      <div class="formGroup">
+        <button type="button" class="btnControl btnControl--radio btnControl--sm btnControl--checked"></button>
+        <label class="btnControl-label">Dolor sit amet</label>
+      </div>
+    </div>
+
+    <div class="app-section">
+      <h2>Button as link</h2>
+      <p class="paragraph" style="width: 34em;">Lorem ipsum dolor sit amet, <button type="button" class="btnLink">button</button> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p class="paragraph" style="width: 34em;">Lorem ipsum dolor sit amet, <input type="button" class="btnLink" value="input tag button"> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+</div>
+<div class="app-breakpoint">
+  <span class="display-max">max</span>
+  <span class="display-xl">xl</span>
+  <span class="display-lg">lg</span>
+  <span class="display-md">md</span>
+  <span class="display-sm">sm</span>
+</div>
+</body>
+</html>

@@ -6,12 +6,14 @@
     $btnLinkHoverTextDecoration
     $btnLinkFocusColor
     $btnLinkFocusTextDecoration
+    $btnLinkActiveColor
+    $btnLinkActiveTextDecoration
     $btnLinkDisabledColor
     $btnLinkDisabledTextDecoration
     $btnLinkDisabledOpacity
 */
 
-.btn--link {
+.btnLink {
   display: inline;
   padding: 0;
   vertical-align: initial;
@@ -31,28 +33,29 @@
   transition: initial;
 }
 
-.btn--link:hover {
+.btnLink:hover {
   color: $btnLinkHoverColor;
   text-decoration: $btnLinkHoverTextDecoration;
-  background-color: transparent;
 }
 
-.btn--link:focus,
-.btn--link.btn--focus,
-.btn--link:active,
-.btn--link.btn--active {
+.btnLink:focus,
+.btnLink.btn--focus {
   color: $btnLinkFocusColor;
-  background-color: transparent;
-  box-shadow: none;
   text-decoration: $btnLinkFocusTextDecoration;
+  outline: none;
 }
 
-.btn--link:disabled,
-.btn--link.btn--disabled,
-fieldset:disabled .btn--link {
+.btnLink:active,
+.btnLink.btn--active {
+  color: $btnLinkActiveColor;
+  text-decoration: $btnLinkActiveTextDecoration;
+}
+
+.btnLink:disabled,
+.btnLink.btn--disabled,
+fieldset:disabled .btnLink {
   color: $btnLinkDisabledColor;
   text-decoration: $btnLinkDisabledTextDecoration;
-  background-color: transparent;
   opacity: $btnLinkDisabledOpacity;
   cursor: default;
   pointer-events: none;

@@ -7,13 +7,6 @@
 
 $transitionAppearance: 0.15s ease-in-out !default;
 
-$linkColor: #007bff !default;
-$linkTextDecoration: none !default;
-$linkHoverColor: $linkColor !default;
-$linkHoverTextDecoration: underline !default;
-$linkFocusColor: $linkColor !default;
-$linkFocusTextDecoration: underline !default;
-
 
 *,
 *::before,
@@ -27,7 +20,6 @@ $linkFocusTextDecoration: underline !default;
 @import './variants/success/variables';
 @import './variants/warning/variables';
 @import './variants/danger/variables';
-@import './button-as-link/variables';
 @import './unstyled-button/variables';
 @import './button-group/variables';
 
@@ -40,6 +32,5 @@ $linkFocusTextDecoration: underline !default;
 @import './variants/success/styles';
 @import './variants/warning/styles';
 @import './variants/danger/styles';
-@import './button-as-link/styles';
 @import './unstyled-button/styles';
 @import './button-group/styles';

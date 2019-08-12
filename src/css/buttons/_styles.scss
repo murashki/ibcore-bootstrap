@@ -47,10 +47,6 @@
   outline: none;
 }
 
-.btn + .btn {
-  margin-left: $btnNgbMargin;
-}
-
 .btn--xs {
   font-size: $btnFontSize-xs;
 }
@@ -65,4 +61,8 @@
 
 .btn--xl {
   font-size: $btnFontSize-xl;
+}
+
+.btn + .btn {
+  margin-left: $btnNgbMargin;
 }

@@ -11,7 +11,8 @@
 @import './buttons/variants/success/variables';
 @import './buttons/variants/warning/variables';
 @import './buttons/variants/danger/variables';
-@import './buttons/button-as-link/variables';
+@import './button-link/variables';
+@import './button-controls/variables';
 @import './buttons/unstyled-button/variables';
 @import './buttons/button-group/variables';
 @import './lists/variables';
@@ -37,7 +38,8 @@
 @import './buttons/variants/success/styles';
 @import './buttons/variants/warning/styles';
 @import './buttons/variants/danger/styles';
-@import './buttons/button-as-link/styles';
+@import './button-link/styles';
+@import './button-controls/styles';
 @import './buttons/unstyled-button/styles';
 @import './buttons/button-group/styles';
 @import './lists/styles';
@@ -46,3 +48,6 @@
 
 @import './misc/paragraph';
 @import './misc/text-ellipsis';
+
+
+@import './styles';
