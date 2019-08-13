@@ -14,11 +14,11 @@ $formControlFocusBorderColor: #80bdff !default;
 $formControlFocusBoxShadow: 0 0 0 0.2em rgba(0, 123, 255, 0.25) !default;
 $formControlFocusOutline: 0 !default;
 
-$formControlDisabledColor: #acaab3 !default;
-$formControlDisabledBgColor: #f6f6f8 !default;
-$formControlDisabledBorderColor: #eaeaef !default;
-$formControlDisabledOpacity: 1 !default;
-$formControlDisabledPlaceholderColor: #d0cfd6 !default;
+$formControlDisabledColor: $formControlColor !default;
+$formControlDisabledBgColor: $formControlBgColor !default;
+$formControlDisabledBorderColor: $formControlBorderColor !default;
+$formControlDisabledOpacity: 0.5 !default;
+$formControlDisabledPlaceholderColor: $formControlPlaceholderColor !default;
 
 $formControlHorizontalPadding: 0.75em !default;
 $formControlVerticalPadding: 0.375em !default;
@@ -28,11 +28,9 @@ $formControlFontSize: 1em !default;
 $formControlFontWeight: inherit !default;
 $formControlTransitionAppearance: 0.15s ease-in-out !default;
 
-$selectMultipleHeight: 5em !default;
 $textareaHeight: 5em !default;
 
 $formGroupMarginBottom: 1em !default;
 
-$formLabelFontSize: 1em !default;
-$formLabelLineHeight: 1.4 !default;
-$formLabelMarginBotton: 0.32em !default;
+$formLabelFontSize: inherit !default;
+$formLabelLineHeight: 1.2 !default;

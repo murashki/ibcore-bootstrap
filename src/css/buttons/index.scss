@@ -13,21 +13,19 @@
 
 
 @import './variables';
-@import './variants/default/variables';
-@import './variants/success/variables';
-@import './variants/warning/variables';
-@import './variants/danger/variables';
-@import './unstyled-button/variables';
-@import './button-group/variables';
-
-
-@import './_mixins/button-variant';
-
-
 @import './styles';
-@import './variants/default/styles';
+
+@import './variants/success/variables';
 @import './variants/success/styles';
+
+@import './variants/warning/variables';
 @import './variants/warning/styles';
+
+@import './variants/danger/variables';
 @import './variants/danger/styles';
+
+@import './unstyled-button/variables';
 @import './unstyled-button/styles';
+
+@import './button-group/variables';
 @import './button-group/styles';

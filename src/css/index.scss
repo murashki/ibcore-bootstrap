@@ -1,29 +1,6 @@
 @import './normalize';
 
 
-@import './variables';
-@import './grid/variables';
-@import './forms/variables';
-@import './link/variables';
-@import './link/unstyled-link/variables';
-@import './buttons/variables';
-@import './buttons/variants/default/variables';
-@import './buttons/variants/success/variables';
-@import './buttons/variants/warning/variables';
-@import './buttons/variants/danger/variables';
-@import './button-link/variables';
-@import './button-controls/variables';
-@import './buttons/unstyled-button/variables';
-@import './buttons/button-group/variables';
-@import './code/variables';
-@import './lists/variables';
-@import './paragraph/variables';
-@import './text-truncate/variables';
-
-
-@import './buttons/_mixins/button-variant';
-
-
 *,
 *::before,
 *::after {
@@ -31,23 +8,95 @@
 }
 
 
-@import './grid/styles';
-@import './forms/styles';
-@import './link/styles';
-@import './link/unstyled-link/styles';
-@import './buttons/styles';
-@import './buttons/variants/default/styles';
-@import './buttons/variants/success/styles';
-@import './buttons/variants/warning/styles';
-@import './buttons/variants/danger/styles';
-@import './button-link/styles';
-@import './button-controls/styles';
-@import './buttons/unstyled-button/styles';
-@import './buttons/button-group/styles';
-@import './code/styles';
-@import './lists/styles';
-@import './paragraph/styles';
-@import './text-truncate/styles';
+$transitionAppearance: 0.15s ease-in-out !default;
+$controlDisabledOpacity: 0.5 !default;
 
 
+@import './variables';
 @import './styles';
+
+
+@import './grid/variables';
+@import './grid/styles';
+
+
+$formControlDisabledOpacity: $controlDisabledOpacity !default;
+$formControlTransitionAppearance: $transitionAppearance !default;
+
+@import './forms/variables';
+@import './forms/styles';
+
+
+@import './link/variables';
+@import './link/styles';
+
+
+@import './link/unstyled-link/variables';
+@import './link/unstyled-link/styles';
+
+
+$btnDisabledOpacity: $controlDisabledOpacity !default;
+$btnTransitionAppearance: $transitionAppearance !default;
+
+@import './buttons/variables';
+@import './buttons/styles';
+
+
+@import './buttons/variants/success/variables';
+@import './buttons/variants/success/styles';
+
+
+@import './buttons/variants/warning/variables';
+@import './buttons/variants/warning/styles';
+
+
+@import './buttons/variants/danger/variables';
+@import './buttons/variants/danger/styles';
+
+
+$btnLinkColor: $linkColor !default;
+$btnLinkTextDecoration: $linkTextDecoration !default;
+$btnLinkHoverTextDecoration: $linkHoverTextDecoration !default;
+$btnLinkFocusTextDecoration: $linkFocusTextDecoration !default;
+$btnLinkActiveTextDecoration: $linkActiveTextDecoration !default;
+$btnLinkDisabledTextDecoration: $btnLinkTextDecoration !default;
+
+@import './button-link/variables';
+@import './button-link/styles';
+
+
+$btnControlColor: $btnColor !default;
+$btnControlBgColor: $btnBgColor !default;
+$btnControlBorderWidth: $btnBorderWidth !default;
+$btnControlDisabledOpacity: $btnDisabledOpacity !default;
+$btnControlTransitionAppearance: $btnTransitionAppearance !default;
+$btnControlTransition: $btnTransition !default;
+
+@import './button-controls/variables';
+@import './button-controls/styles';
+
+
+@import './buttons/unstyled-button/variables';
+@import './buttons/unstyled-button/styles';
+
+
+@import './buttons/button-group/variables';
+@import './buttons/button-group/styles';
+
+
+@import './code/variables';
+@import './code/styles';
+
+
+@import './paragraph/variables';
+@import './paragraph/styles';
+
+
+$listLineHeight: $paragraphLineHeight !default;
+
+@import './lists/variables';
+@import './lists/styles';
+
+
+@import './text-truncate/variables';
+@import './text-truncate/styles';

@@ -9,9 +9,12 @@
 }
 
 .code {
-  line-height: inherit;
+  padding: $codePadding;
+  display: inline-block;
+  border: 1px solid $codeBorderColor;
+  background-color: $codeBgColor;
+  line-height: $codeLineHeight;
   font-family: $codeFontFamily;
   font-size: $codeFontSize;
-  font-weight: $codeFontWeight;
   color: $codeColor;
 }

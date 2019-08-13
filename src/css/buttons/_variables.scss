@@ -12,6 +12,23 @@ $btnVerticalPadding: 0.375em !default;
 $btnHorizontalPadding: 0.75em !default;
 $btnDisabledOpacity: 0.5 !default;
 
+$btnColor: #585467 !default;
+$btnBgColor: #edecf1 !default;
+$btnBorderColor: $btnBgColor !default;
+$btnHoverColor: $btnColor !default;
+$btnHoverBgColor: darken($btnBgColor, 5%) !default;
+$btnHoverBorderColor: darken($btnHoverBgColor, 2.5%) !default;
+$btnFocusColor: $btnColor !default;
+$btnFocusBgColor: darken($btnBgColor, 5%) !default;
+$btnFocusBorderColor: darken($btnFocusBgColor, 2.5%) !default;
+$btnFocusBoxShadow: 0 0 0 0.2em rgba($btnFocusBorderColor, 0.5) !default;
+$btnActiveColor: $btnColor !default;
+$btnActiveBgColor: darken($btnBgColor, 5%) !default;
+$btnActiveBorderColor: darken($btnFocusBgColor, 2.5%) !default;
+$btnDisabledColor: $btnColor !default;
+$btnDisabledBgColor: $btnBgColor !default;
+$btnDisabledBorderColor: $btnBorderColor !default;
+
 $btnTransitionAppearance: 0.15s ease-in-out !default;
 $btnTransition:
     color $btnTransitionAppearance,

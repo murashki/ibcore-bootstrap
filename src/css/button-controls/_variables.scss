@@ -1,5 +1,5 @@
 $btnControlFontFamily: inherit !default;
-$btnControlFontSize: 1em !default;
+$btnControlFontSize: inherit !default;
 $btnControlFontWeight: inherit !default;
 $btnControlLineHeight: 1 !default;
 $btnControlPadding: 0.375em !default;
@@ -10,17 +10,17 @@ $btnControlBorderColor: $btnControlBgColor !default;
 $btnControlBorderWidth: 1px !default;
 
 $btnControlHoverColor: $btnControlColor !default;
-$btnControlHoverBgColor: darken($btnControlBgColor, 7.5%) !default;
-$btnControlHoverBorderColor: darken($btnControlBorderColor, 10%) !default;
+$btnControlHoverBgColor: darken($btnControlBgColor, 5%) !default;
+$btnControlHoverBorderColor: darken($btnControlHoverBgColor, 2.5%) !default;
 
 $btnControlFocusColor: $btnControlColor !default;
-$btnControlFocusBgColor: darken($btnControlBgColor, 10%) !default;
-$btnControlFocusBorderColor: darken($btnControlBorderColor, 12.5%) !default;
-$btnControlFocusBoxShadow: 0 0 0 0.2em rgba($btnControlBorderColor, 0.5) !default;
+$btnControlFocusBgColor: darken($btnControlBgColor, 5%) !default;
+$btnControlFocusBorderColor: darken($btnControlFocusBgColor, 2.5%) !default;
+$btnControlFocusBoxShadow: 0 0 0 0.2em rgba($btnControlFocusBorderColor, 0.5) !default;
 
-$btnControlActiveColor: $btnControlFocusColor !default;
-$btnControlActiveBgColor: $btnControlFocusBgColor !default;
-$btnControlActiveBorderColor: $btnControlFocusBorderColor !default;
+$btnControlActiveColor: $btnControlColor !default;
+$btnControlActiveBgColor: darken($btnControlBgColor, 5%) !default;
+$btnControlActiveBorderColor: darken($btnControlFocusBgColor, 2.5%) !default;
 
 $btnControlDisabledColor: $btnControlColor !default;
 $btnControlDisabledBgColor: $btnControlBgColor !default;

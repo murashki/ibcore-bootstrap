@@ -1,3 +1,5 @@
+@import './_mixins/button-variant';
+
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -26,6 +28,27 @@
 
 .btn:focus {
   outline: none;
+}
+
+.btn {
+  @include button-variant(
+    $btnColor,
+    $btnBgColor,
+    $btnBorderColor,
+    $btnHoverColor,
+    $btnHoverBgColor,
+    $btnHoverBorderColor,
+    $btnFocusColor,
+    $btnFocusBgColor,
+    $btnFocusBorderColor,
+    $btnFocusBoxShadow,
+    $btnActiveColor,
+    $btnActiveBgColor,
+    $btnActiveBorderColor,
+    $btnDisabledColor,
+    $btnDisabledBgColor,
+    $btnDisabledBorderColor
+  );
 }
 
 .btn--xs {

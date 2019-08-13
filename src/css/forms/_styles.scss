@@ -1,46 +1,3 @@
-/*
-  Contorls with borders:
-    // Textlike controls
-    .formControl-date
-    .formControl-datetime
-    .formControl-datetime-local
-    .formControl-email
-    .formControl-month
-    .formControl-number
-    .formControl-password
-    .formControl-search
-    .formControl-tel
-    .formControl-text
-    .formControl-time
-    .formControl-url
-    .formControl-week
-
-    // Select
-    .formControl-select
-
-    // Textarea
-    .formControl-textarea
-
-  Controls with no borders:
-    // Checkbox
-    .formControl-checkbox
-
-    // Color
-    .formControl-color
-
-    // File
-    .formControl-file
-
-    // Image
-    .formControl-image
-
-    // Radio
-    .formControl-radio
-
-    // Range
-    .formControl-range
- */
-
 .form {}
 
 .formGroup {
@@ -95,7 +52,6 @@
   display: block;
 }
 
-
 .form fieldset,
 .fieldset {
   min-width: 0;
@@ -104,26 +60,10 @@
   border: 0;
 }
 
-.formControl-date,
-.formControl-datetime,
-.formControl-datetime-local,
-.formControl-email,
-.formControl-month,
-.formControl-number,
-.formControl-password,
-.formControl-search,
-.formControl-tel,
-.formControl-text,
-.formControl-time,
-.formControl-url,
-.formControl-week,
-// Select
-.formControl-select,
-// Textarea
-.formControl-textarea {
+.formControl,
+.textarea {
   display: block;
   width: 100%;
-  height: calc(2 * #{$formControlVerticalPadding} + #{$formControlLineHeight}em + 2 * #{$formControlBorderWidth});
   padding: $formControlVerticalPadding $formControlHorizontalPadding;
   font-family: $formControlFontFamily;
   font-size: $formControlFontSize;
@@ -135,71 +75,29 @@
   border: $formControlBorderWidth solid $formControlBorderColor;
   border-radius: $formControlBorderRadius;
   transition:
+    color $formControlTransitionAppearance,
+    background-color $formControlTransitionAppearance,
     border-color $formControlTransitionAppearance,
     box-shadow $formControlTransitionAppearance;
 }
 
+.formControl {
+  height: calc(2 * #{$formControlVerticalPadding} + #{$formControlLineHeight}em + 2 * #{$formControlBorderWidth});
+}
+
+.textarea {
+  height: $textareaHeight;
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
-  .formControl-date,
-  .formControl-datetime,
-  .formControl-datetime-local,
-  .formControl-email,
-  .formControl-month,
-  .formControl-number,
-  .formControl-password,
-  .formControl-search,
-  .formControl-tel,
-  .formControl-text,
-  .formControl-time,
-  .formControl-url,
-  .formControl-week,
-    // Select
-  .formControl-select,
-    // Textarea
-  .formControl-textarea {
+  .formControl,
+  .textarea {
     transition: none;
   }
 }
 
-.formControl-select[multiple],
-.formControl-select[size] {
-  height: $selectMultipleHeight;
-  overflow-y: auto; // Remove unnecessary scroll bar (at least at chrome)
-}
-
-.formControl-textarea {
-  height: $textareaHeight;
-}
-
-.formControl-select option {
-  color: inherit; // Chrome disabled select options fix
-}
-
-// File
-.formControl-file,
-// Range
-.formControl-range {
-  display: block;
-  width: 100%;
-}
-
-.formControl-date:focus,
-.formControl-datetime:focus,
-.formControl-datetime-local:focus,
-.formControl-email:focus,
-.formControl-month:focus,
-.formControl-number:focus,
-.formControl-password:focus,
-.formControl-search:focus,
-.formControl-tel:focus,
-.formControl-text:focus,
-.formControl-time:focus,
-.formControl-url:focus,
-.formControl-week:focus,
-// Select
-.formControl-select:focus,
-// Textarea
-.formControl-textarea:focus {
+.formControl:focus,
+.textarea:focus {
   color: $formControlFocusColor;
   background-color: $formControlFocusBgColor;
   border-color: $formControlFocusBorderColor;
@@ -207,119 +105,27 @@
   box-shadow: $formControlFocusBoxShadow;
 }
 
-.formControl-date:disabled,
-.formControl-datetime:disabled,
-.formControl-datetime-local:disabled,
-.formControl-email:disabled,
-.formControl-month:disabled,
-.formControl-number:disabled,
-.formControl-password:disabled,
-.formControl-search:disabled,
-.formControl-tel:disabled,
-.formControl-text:disabled,
-.formControl-time:disabled,
-.formControl-url:disabled,
-.formControl-week:disabled,
-// Select
-.formControl-select:disabled,
-// Textarea
-.formControl-textarea:disabled,
-.formControl-date[readonly],
-.formControl-datetime[readonly],
-.formControl-datetime-local[readonly],
-.formControl-email[readonly],
-.formControl-month[readonly],
-.formControl-number[readonly],
-.formControl-password[readonly],
-.formControl-search[readonly],
-.formControl-tel[readonly],
-.formControl-text[readonly],
-.formControl-time[readonly],
-.formControl-url[readonly],
-.formControl-week[readonly],
-// Textarea
-.formControl-textarea[readonly] {
+.formControl:disabled,
+.formControl[readonly],
+.textarea:disabled,
+.textarea[readonly] {
   color: $formControlDisabledColor;
   background-color: $formControlDisabledBgColor;
   border-color: $formControlDisabledBorderColor;
-  opacity: $formControlDisabledOpacity; // TODO What browser and element fix is this?
-  cursor: default; // textarea Chrome fix
+  opacity: $formControlDisabledOpacity;
+  cursor: default;
 }
 
-// Checkbox
-.formControl-checkbox:disabled,
-// Color
-.formControl-color:disabled,
-// File
-.formControl-file:disabled,
-// Image
-.formControl-image:disabled,
-// Radio
-.formControl-radio:disabled,
-// Range
-.formControl-range:disabled {
-  opacity: 1; // TODO What browser and element fix is this?
-  cursor: default; // input[type=image] Chrome and Firefox fix
-}
-
-/*
-  TODO Check if prefixes exists in compiled css:
-    ::-webkit-input-placeholder
-    :-ms-input-placeholder
-    ::-ms-input-placeholder
-*/
-.formControl-date::placeholder,
-.formControl-datetime::placeholder,
-.formControl-datetime-local::placeholder,
-.formControl-email::placeholder,
-.formControl-month::placeholder,
-.formControl-number::placeholder,
-.formControl-password::placeholder,
-.formControl-search::placeholder,
-.formControl-tel::placeholder,
-.formControl-text::placeholder,
-.formControl-time::placeholder,
-.formControl-url::placeholder,
-.formControl-week::placeholder,
-// Select
-.formControl-select::placeholder,
-// Textarea
-.formControl-textarea::placeholder {
+.formControl::placeholder,
+.textarea::placeholder {
+  opacity: 1;
   color: $formControlPlaceholderColor;
-  opacity: 1; // TODO What browser fix is this?
+  user-select: none;
 }
 
-.formControl-date:disabled::placeholder,
-.formControl-datetime:disabled::placeholder,
-.formControl-datetime-local:disabled::placeholder,
-.formControl-email:disabled::placeholder,
-.formControl-month:disabled::placeholder,
-.formControl-number:disabled::placeholder,
-.formControl-password:disabled::placeholder,
-.formControl-search:disabled::placeholder,
-.formControl-tel:disabled::placeholder,
-.formControl-text:disabled::placeholder,
-.formControl-time:disabled::placeholder,
-.formControl-url:disabled::placeholder,
-.formControl-week:disabled::placeholder,
-// Select
-.formControl-select:disabled::placeholder,
-// Textarea
-.formControl-textarea:disabled::placeholder,
-.formControl-date[readonly]::placeholder,
-.formControl-datetime[readonly]::placeholder,
-.formControl-datetime-local[readonly]::placeholder,
-.formControl-email[readonly]::placeholder,
-.formControl-month[readonly]::placeholder,
-.formControl-number[readonly]::placeholder,
-.formControl-password[readonly]::placeholder,
-.formControl-search[readonly]::placeholder,
-.formControl-tel[readonly]::placeholder,
-.formControl-text[readonly]::placeholder,
-.formControl-time[readonly]::placeholder,
-.formControl-url[readonly]::placeholder,
-.formControl-week[readonly]::placeholder,
-  // Textarea
-.formControl-textarea[readonly]::placeholder {
+.formControl:disabled::placeholder,
+.formControl[readonly]::placeholder,
+.textarea:disabled::placeholder,
+.textarea[readonly]::placeholder {
   color: $formControlDisabledPlaceholderColor;
 }

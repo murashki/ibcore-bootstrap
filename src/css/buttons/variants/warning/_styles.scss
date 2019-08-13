@@ -1,3 +1,5 @@
+@import '../../_mixins/button-variant';
+
 .btn--warning {
   @include button-variant(
     $btnWarningColor,
