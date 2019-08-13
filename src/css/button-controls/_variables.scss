@@ -4,11 +4,7 @@
 */
 
 $btnControlFontFamily: inherit !default;
-$btnControlFontSize: 1.2em !default;
-$btnControlFontSize-xs: 0.8em !default;
-$btnControlFontSize-sm: 1em !default;
-$btnControlFontSize-lg: 1.4em !default;
-$btnControlFontSize-xl: 1.8em !default;
+$btnControlFontSize: 1em !default;
 $btnControlFontWeight: inherit !default;
 $btnControlLineHeight: 1 !default;
 $btnControlPadding: 0.375em !default;
@@ -30,7 +26,6 @@ $btnControlFocusBoxShadow: 0 0 0 0.2em rgba($btnControlBorderColor, 0.5) !defaul
 $btnControlActiveColor: $btnControlFocusColor !default;
 $btnControlActiveBgColor: $btnControlFocusBgColor !default;
 $btnControlActiveBorderColor: $btnControlFocusBorderColor !default;
-$btnControlActiveBoxShadow: $btnControlFocusBoxShadow !default;
 
 $btnControlDisabledColor: $btnControlColor !default;
 $btnControlDisabledBgColor: $btnControlBgColor !default;

@@ -12,7 +12,6 @@
   $activeColor,
   $activeBgColor,
   $activeBorderColor,
-  $activeBoxShadow,
   $disabledColor,
   $disabledBgColor,
   $disabledBorderColor
@@ -40,7 +39,6 @@
     color: $activeColor;
     background-color: $activeBgColor;
     border-color: $activeBorderColor;
-    box-shadow: $activeBoxShadow;
   }
 
   &:disabled,

@@ -16,7 +16,7 @@ $transitionAppearance: 0.15s ease-in-out !default;
 
 
 @import './variables';
-@import './variants/primary/variables';
+@import './variants/default/variables';
 @import './variants/success/variables';
 @import './variants/warning/variables';
 @import './variants/danger/variables';
@@ -28,7 +28,7 @@ $transitionAppearance: 0.15s ease-in-out !default;
 
 
 @import './styles';
-@import './variants/primary/styles';
+@import './variants/default/styles';
 @import './variants/success/styles';
 @import './variants/warning/styles';
 @import './variants/danger/styles';

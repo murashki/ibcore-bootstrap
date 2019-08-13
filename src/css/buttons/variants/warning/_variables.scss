@@ -11,7 +11,6 @@ $btnWarningFocusBoxShadow: 0 0 0 0.2em rgba($btnWarningBorderColor, 0.5) !defaul
 $btnWarningActiveColor: $btnWarningColor !default;
 $btnWarningActiveBgColor: darken($btnWarningBgColor, 10%) !default;
 $btnWarningActiveBorderColor: darken($btnWarningBorderColor, 12.5%) !default;
-$btnWarningActiveBoxShadow: 0 0 0 0.2em rgba($btnWarningBorderColor, 0.5) !default;
 $btnWarningDisabledColor: $btnWarningColor !default;
 $btnWarningDisabledBgColor: $btnWarningBgColor !default;
 $btnWarningDisabledBorderColor: $btnWarningBorderColor !default;

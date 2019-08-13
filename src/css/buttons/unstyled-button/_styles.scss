@@ -13,8 +13,12 @@
 .btn--unstyled,
 .btn--unstyled:hover,
 .btn--unstyled:focus,
+.btn--unstyled.btn--focus,
 .btn--unstyled:active,
-.btn--unstyled:disabled {
+.btn--unstyled.btn--active,
+.btn--unstyled:disabled,
+.btn--unstyled.btn--disabled,
+fieldset:disabled .btn--unstyled {
   color: inherit;
   background-color: transparent;
   box-shadow: none;

@@ -1,5 +1,46 @@
 /*
   Variables we use here:
+    $btnControlFontFamily
+    $btnControlFontSize
+    $btnControlFontWeight
+    $btnControlLineHeight
+    $btnControlPadding
+
+    $btnControlColor
+    $btnControlBgColor
+    $btnControlBorderColor
+    $btnControlBorderWidth
+
+    $btnControlHoverColor
+    $btnControlHoverBgColor
+    $btnControlHoverBorderColor
+
+    $btnControlFocusColor
+    $btnControlFocusBgColor
+    $btnControlFocusBorderColor
+    $btnControlFocusBoxShadow
+
+    $btnControlActiveColor
+    $btnControlActiveBgColor
+    $btnControlActiveBorderColor
+
+    $btnControlDisabledColor
+    $btnControlDisabledBgColor
+    $btnControlDisabledBorderColor
+    $btnControlDisabledOpacity
+
+    $btnControlTransition
+    $btnControlNgbMargin
+
+    $btnControlIconOpacity
+    $btnControlIconBgColor
+    $btnControlIconBorderColor
+    $btnControlIconBorderWidth
+
+    $btnControlIconCheckedBgColor
+    $btnControlIconCheckedBorderColor
+
+    $btnControlIconTransition
 */
 
 .btnControl {
@@ -58,7 +99,6 @@
   color: $btnControlActiveColor;
   background-color: $btnControlActiveBgColor;
   border-color: $btnControlActiveBorderColor;
-  box-shadow: $btnControlActiveBoxShadow;
 }
 
 .btnControl:active:before,
@@ -98,22 +138,6 @@ fieldset:disabled .btnControl:before {}
 
 .btnControl.btnControl--hasLabel:before {
   margin-right: 0.4em;
-}
-
-.btnControl--xs {
-  font-size: $btnControlFontSize-xs;
-}
-
-.btnControl--sm {
-  font-size: $btnControlFontSize-sm;
-}
-
-.btnControl--lg {
-  font-size: $btnControlFontSize-lg;
-}
-
-.btnControl--xl {
-  font-size: $btnControlFontSize-xl;
 }
 
 .btnControl + .btnControl {

@@ -20,7 +20,7 @@
       <a class="link app-menuLink" href="forms.html">Forms</a>
       <a class="link app-menuLink" href="native.html">Native forms</a>
       <a class="link app-menuLink" href="buttons.html">Buttons</a>
-      <a class="link app-menuLink" href="button-link.html">Button link</a>
+      <a class="link app-menuLink" href="button-as.html">Button as...</a>
       <a class="link app-menuLink" href="link.html">Link</a>
     </div>
   </div>
@@ -31,96 +31,106 @@
 
     <div class="app-section">
       <h2>Base usage</h2>
-      <div class="row">
-        <div class="col">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-3 col-md-6 col-sm-12">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col-3 col-md-6 col-sm-12</span></div>
-        </div>
-        <div class="col-3 col-md-6 col-sm-12">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col-3 col-md-6 col-sm-12</span></div>
-        </div>
-        <div class="col-6 col-md-12">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col-6 col-md-12</span></div>
+        <div class="row">
+          <div class="col-3 col-md-6 col-sm-12">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col-3 col-md-6 col-sm-12</span></div>
+          </div>
+          <div class="col-3 col-md-6 col-sm-12">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col-3 col-md-6 col-sm-12</span></div>
+          </div>
+          <div class="col-6 col-md-12">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col-6 col-md-12</span></div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="app-section">
       <h2>Nested grid</h2>
-      <div class="row">
-        <div class="col">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <div class="row">
+        <div class="row">
+          <div class="col-6">
+            <div class="row">
+              <div class="col-6">
+                <div class="grid-cellContent"><span class="textEllipsis">row > col-6 > row > col-6</span></div>
+              </div>
+              <div class="col-6">
+                <div class="grid-cellContent"><span class="textEllipsis">row > col-6 > row > col-6</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 row">
             <div class="col-6">
-              <div class="grid-cellContent"><span class="textEllipsis">row > col-6 > row > col-6</span></div>
+              <div class="grid-cellContent"><span class="textEllipsis">row > col-6 row > col-6</span></div>
             </div>
             <div class="col-6">
-              <div class="grid-cellContent"><span class="textEllipsis">row > col-6 > row > col-6</span></div>
+              <div class="grid-cellContent"><span class="textEllipsis">row > col-6 row > col-6</span></div>
             </div>
           </div>
         </div>
-        <div class="col-6 row">
-          <div class="col-6">
-            <div class="grid-cellContent"><span class="textEllipsis">row > col-6 row > col-6</span></div>
+        <div class="row">
+          <div class="col">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
           </div>
-          <div class="col-6">
-            <div class="grid-cellContent"><span class="textEllipsis">row > col-6 row > col-6</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
         </div>
       </div>
     </div>
 
     <div class="app-section">
       <h2>.col vs .col-auto</h2>
-      <div class="row">
-        <div class="col">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
+          </div>
+          <div class="col">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
+          </div>
         </div>
-        <div class="col">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-auto">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col-auto</span></div>
-        </div>
-        <div class="col-auto">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col-auto</span></div>
+        <div class="row">
+          <div class="col-auto">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col-auto</span></div>
+          </div>
+          <div class="col-auto">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col-auto</span></div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="app-section">
       <h2>Offset</h2>
-      <div class="row">
-        <div class="col offset-6 offset-lg-0">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col offset-6 offset-lg-0</span></div>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col offset-6 offset-lg-0">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col offset-6 offset-lg-0</span></div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="app-section">
       <h2>Row break</h2>
-      <div class="row">
-        <div class="col">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
-        </div>
-        <div class="rowBreak-lg"></div>
-        <div class="col">
-          <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
+          </div>
+          <div class="rowBreak-lg"></div>
+          <div class="col">
+            <div class="grid-cellContent"><span class="textEllipsis">row > col</span></div>
+          </div>
         </div>
       </div>
     </div>

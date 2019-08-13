@@ -6,16 +6,12 @@
 
 .list {
   margin-top: 0;
-  margin-bottom: $listMarginBottom;
+  margin-bottom: 0;
 }
 
 .list--ordered,
 .list--unordered {
   padding-left: $listPaddingLeft;
-}
-
-.list .list {
-  margin-bottom: 0;
 }
 
 .list--description dt {
@@ -33,7 +29,6 @@
 
 .list--unstyled {
   padding-left: 0;
-  margin-bottom: 0;
   list-style: none;
 }
 

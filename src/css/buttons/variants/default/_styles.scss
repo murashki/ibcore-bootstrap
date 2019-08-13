@@ -13,13 +13,12 @@
     $btnActiveColor
     $btnActiveBgColor
     $btnActiveBorderColor
-    $btnActiveBoxShadow
     $btnDisabledColor
     $btnDisabledBgColor
     $btnDisabledBorderColor
  */
 
-.btn--primary {
+.btn {
   @include button-variant(
     $btnColor,
     $btnBgColor,
@@ -34,7 +33,6 @@
     $btnActiveColor,
     $btnActiveBgColor,
     $btnActiveBorderColor,
-    $btnActiveBoxShadow,
     $btnDisabledColor,
     $btnDisabledBgColor,
     $btnDisabledBorderColor

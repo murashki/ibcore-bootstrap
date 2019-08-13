@@ -11,7 +11,6 @@ $btnSuccessFocusBoxShadow: 0 0 0 0.2em rgba($btnSuccessBorderColor, 0.5) !defaul
 $btnSuccessActiveColor: $btnSuccessColor !default;
 $btnSuccessActiveBgColor: darken($btnSuccessBgColor, 10%) !default;
 $btnSuccessActiveBorderColor: darken($btnSuccessBorderColor, 12.5%) !default;
-$btnSuccessActiveBoxShadow: 0 0 0 0.2em rgba($btnSuccessBorderColor, 0.5) !default;
 $btnSuccessDisabledColor: $btnSuccessColor !default;
 $btnSuccessDisabledBgColor: $btnSuccessBgColor !default;
 $btnSuccessDisabledBorderColor: $btnSuccessBorderColor !default;

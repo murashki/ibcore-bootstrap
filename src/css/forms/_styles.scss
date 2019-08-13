@@ -161,7 +161,9 @@
   width: 100%;
   height: calc(2 * #{$formControlVerticalPadding} + #{$formControlLineHeight}em + 2 * #{$formControlBorderWidth});
   padding: $formControlVerticalPadding $formControlHorizontalPadding;
+  font-family: $formControlFontFamily;
   font-size: $formControlFontSize;
+  font-weight: $formControlFontWeight;
   line-height: $formControlLineHeight;
   color: $formControlColor;
   background-color: $formControlBgColor;

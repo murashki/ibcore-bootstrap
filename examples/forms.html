@@ -4,11 +4,12 @@
   <title>Forms</title>
 
   <!--This-->
-  <!--<link rel="stylesheet" href="css/compiled/forms/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/grid/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/buttons/index.css">-->
+  <link rel="stylesheet" href="css/compiled/forms/index.css">
+  <link rel="stylesheet" href="css/compiled/buttons/index.css">
+  <link rel="stylesheet" href="css/compiled/misc/paragraph.css">
+  <link rel="stylesheet" href="css/compiled/grid/index.css">
   <!--Or this-->
-  <link rel="stylesheet" href="css/compiled/index.css">
+  <!--<link rel="stylesheet" href="css/compiled/index.css">-->
 
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/pages/forms.css">
@@ -32,511 +33,542 @@
 
     <div class="app-section">
       <h2>.formGroup.formGroup--vertical > (.formLabel, .formControl)</h2>
-      <form class="form">
-        <div class="formGroup formGroup--vertical">
-          <label class="formLabel" for="input-text-frgv-frl-01">Label</label>
-          <input type="text" id="input-text-frgv-frl-01" class="formControl-text" value="Some text">
-        </div>
-        <div class="formGroup formGroup--vertical">
-          <label class="formLabel" for="input-text-frgv-frl-02">Label</label>
-          <input type="text" id="input-text-frgv-frl-02" class="formControl-text" value="Some text">
-        </div>
-      </form>
+      <div class="app-sectionBlock">
+        <form class="form">
+          <div class="formGroup formGroup--vertical">
+            <label class="formLabel" for="input-text-frgv-frl-01">Label</label>
+            <input type="text" id="input-text-frgv-frl-01" class="formControl-text" value="Some text">
+          </div>
+          <div class="formGroup formGroup--vertical">
+            <label class="formLabel" for="input-text-frgv-frl-02">Label</label>
+            <input type="text" id="input-text-frgv-frl-02" class="formControl-text" value="Some text">
+          </div>
+        </form>
+      </div>
     </div>
 
     <div class="app-section">
       <h2>.formGroup.formGroup--horizontal > (.formLabel, .formControl)</h2>
-      <form class="form">
-        <div class="formGroup formGroup--horizontal">
-          <label class="formLabel" for="input-text-frgh-frl-01">Label</label>
-          <input type="text" id="input-text-frgh-frl-01" class="formControl-text" value="Some text">
-        </div>
-        <div class="formGroup formGroup--horizontal">
-          <label class="formLabel" for="input-text-frgh-frl-02">Label</label>
-          <input type="text" id="input-text-frgh-frl-02" class="formControl-text" value="Some text">
-        </div>
-      </form>
+      <div class="app-sectionBlock">
+        <form class="form">
+          <div class="formGroup formGroup--horizontal">
+            <label class="formLabel" for="input-text-frgh-frl-01">Label</label>
+            <input type="text" id="input-text-frgh-frl-01" class="formControl-text" value="Some text">
+          </div>
+          <div class="formGroup formGroup--horizontal">
+            <label class="formLabel" for="input-text-frgh-frl-02">Label</label>
+            <input type="text" id="input-text-frgh-frl-02" class="formControl-text" value="Some text">
+          </div>
+        </form>
+      </div>
     </div>
 
     <div class="app-section">
       <h2>.formGroup > (.formLabel, .formControl)</h2>
-      <p class="paragraph">As you can see, it's good idea to use .formGroup--vertical or .formGroup--horizontal, cause labels there have more accurate width and position.</p>
-      <form class="form">
-        <div class="formGroup">
-          <label class="formLabel" for="input-text-frg-01">Label</label>
-          <input type="text" id="input-text-frg-01" class="formControl-text" value="Some text">
+      <div class="app-sectionBlock">
+        <p class="paragraph">
+          As you can see, it's good idea to use .formGroup--vertical or .formGroup--horizontal, cause labels there have more accurate width and position.
+        </p>
+        <div class="paragraph">
+          <form class="form">
+            <div class="formGroup">
+              <label class="formLabel" for="input-text-frg-01">Label</label>
+              <input type="text" id="input-text-frg-01" class="formControl-text" value="Some text">
+            </div>
+            <div class="formGroup">
+              <label class="formLabel" for="input-text-frg-02">Label</label>
+              <input type="text" id="input-text-frg-02" class="formControl-text" value="Some text">
+            </div>
+          </form>
         </div>
-        <div class="formGroup">
-          <label class="formLabel" for="input-text-frg-02">Label</label>
-          <input type="text" id="input-text-frg-02" class="formControl-text" value="Some text">
-        </div>
-      </form>
+      </div>
     </div>
 
     <div class="app-section">
       <h2>Forms with grid</h2>
-      <form class="form">
-        <div class="row formGroup">
-          <div class="col-2 col-lg-3">
-            <label class="formLabel" for="input-text-fg-01">Label</label>
-          </div>
-          <div class="col-10 col-lg-9">
-            <input type="text" id="input-text-fg-01" class="formControl-text" value="Some text">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 col-md-12 row formGroup">
-            <div class="col-4 col-lg-6 col-md-3">
-              <label class="formLabel" for="input-text-fg-02">Label</label>
+      <div class="app-sectionBlock">
+        <form class="form">
+          <div class="row formGroup">
+            <div class="col-2 col-lg-3">
+              <label class="formLabel" for="input-text-fg-01">Label</label>
             </div>
-            <div class="col-8 col-lg-6 col-md-9">
-              <input type="text" id="input-text-fg-02" class="formControl-text" value="Some text">
+            <div class="col-10 col-lg-9">
+              <input type="text" id="input-text-fg-01" class="formControl-text" value="Some text">
             </div>
           </div>
-          <div class="col-6 col-md-12 row formGroup">
-            <div class="col-4 col-lg-6 col-md-3">
-              <label class="formLabel" for="input-text-fg-03">Label</label>
+          <div class="row">
+            <div class="col-6 col-md-12 row formGroup">
+              <div class="col-4 col-lg-6 col-md-3">
+                <label class="formLabel" for="input-text-fg-02">Label</label>
+              </div>
+              <div class="col-8 col-lg-6 col-md-9">
+                <input type="text" id="input-text-fg-02" class="formControl-text" value="Some text">
+              </div>
             </div>
-            <div class="col-8 col-lg-6 col-md-9">
-              <input type="text" id="input-text-fg-03" class="formControl-text" value="Some text">
+            <div class="col-6 col-md-12 row formGroup">
+              <div class="col-4 col-lg-6 col-md-3">
+                <label class="formLabel" for="input-text-fg-03">Label</label>
+              </div>
+              <div class="col-8 col-lg-6 col-md-9">
+                <input type="text" id="input-text-fg-03" class="formControl-text" value="Some text">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-2 col-lg-3">
-            <label class="formLabel" for="textarea-fg">Label</label>
+          <div class="row formGroup">
+            <div class="col-2 col-lg-3">
+              <label class="formLabel" for="textarea-fg">Label</label>
+            </div>
+            <div class="col-10 col-lg-9">
+              <textarea id="textarea-fg" class="formControl-textarea">Some text</textarea>
+            </div>
           </div>
-          <div class="col-10 col-lg-9">
-            <textarea id="textarea-fg" class="formControl-textarea">Some text</textarea>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
 
     <div class="app-section">
       <h2>.col > label vs label.col</h2>
-      <p class="paragraph">As you can see, it's good idea to use first variant (.col > label), cause labels here have more accurate width and position.</p>
-      <form class="form">
-        <div class="row formGroup">
-          <div class="col-2 col-lg-3">
-            <label class="formLabel" for="input-text-cl">Label</label>
-          </div>
-          <div class="col-10 col-lg-9">
-            <input type="text" id="input-text-cl" class="formControl-text" value="Some text">
-          </div>
+      <div class="app-sectionBlock">
+        <p class="paragraph">
+          As you can see, it's good idea to use first variant (.col > label), cause labels here have more accurate width and position.
+        </p>
+        <div class="paragraph">
+          <form class="form">
+            <div class="row formGroup">
+              <div class="col-2 col-lg-3">
+                <label class="formLabel" for="input-text-cl">Label</label>
+              </div>
+              <div class="col-10 col-lg-9">
+                <input type="text" id="input-text-cl" class="formControl-text" value="Some text">
+              </div>
+            </div>
+            <div class="row formGroup">
+              <label class="col-2 col-lg-3 formLabel" for="input-text-lc">Label</label>
+              <div class="col-10 col-lg-9">
+                <input type="text" id="input-text-lc" class="formControl-text" value="Some text">
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="row formGroup">
-          <label class="col-2 col-lg-3 formLabel" for="input-text-lc">Label</label>
-          <div class="col-10 col-lg-9">
-            <input type="text" id="input-text-lc" class="formControl-text" value="Some text">
-          </div>
-        </div>
-      </form>
+      </div>
     </div>
 
     <div class="app-section">
       <h2>Supported controls</h2>
-      <form class="form">
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">button[type=button]</label>
+      <div class="app-sectionBlock">
+        <form class="form">
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">button[type=button]</label>
+            </div>
+            <div class="col-8">
+              <button type="button" class="btn">Button</button>
+            </div>
           </div>
-          <div class="col-8">
-            <button type="button" class="btn btn--primary">Button</button>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">button[type=reset]</label>
+            </div>
+            <div class="col-8">
+              <button type="reset" class="btn">Reset</button>
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">button[type=reset]</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">button[type=submit]</label>
+            </div>
+            <div class="col-8">
+              <button type="submit" class="btn">Submit</button>
+            </div>
           </div>
-          <div class="col-8">
-            <button type="reset" class="btn btn--primary">Reset</button>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">input[type=button]</label>
+            </div>
+            <div class="col-8">
+              <input type="button" class="btn" value="Button">
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">button[type=submit]</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">input[type=reset]</label>
+            </div>
+            <div class="col-8">
+              <input type="reset" class="btn">
+            </div>
           </div>
-          <div class="col-8">
-            <button type="submit" class="btn btn--primary">Submit</button>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">input[type=submit]</label>
+            </div>
+            <div class="col-8">
+              <input type="submit" class="btn">
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">input[type=button]</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-email">input[type=email]</label>
+            </div>
+            <div class="col-8">
+              <input type="email" id="input-email" class="formControl-email" value="example@example.com">
+            </div>
           </div>
-          <div class="col-8">
-            <input type="button" class="btn btn--primary" value="Button">
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-password">input[type=password]</label>
+            </div>
+            <div class="col-8">
+              <input type="password" id="input-password" class="formControl-password" value="password">
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">input[type=reset]</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-tel">input[type=tel]</label>
+            </div>
+            <div class="col-8">
+              <input type="tel" id="input-tel" class="formControl-tel" value="(800) 800-800-800">
+            </div>
           </div>
-          <div class="col-8">
-            <input type="reset" class="btn btn--primary">
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-text">input[type=text]</label>
+            </div>
+            <div class="col-8">
+              <input type="text" id="input-text" class="formControl-week" value="Some text">
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">input[type=submit]</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-text-placeholder">input[type=text] (placeholder)</label>
+            </div>
+            <div class="col-8">
+              <input type="text" id="input-text-placeholder" class="formControl-text" placeholder="Some placeholder">
+            </div>
           </div>
-          <div class="col-8">
-            <input type="submit" class="btn btn--primary">
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-url">input[type=url]</label>
+            </div>
+            <div class="col-8">
+              <input type="url" id="input-url" class="formControl-url" value="http://example.com">
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-email">input[type=email]</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="textarea">textarea</label>
+            </div>
+            <div class="col-8">
+              <textarea id="textarea" class="formControl-textarea">Some text</textarea>
+            </div>
           </div>
-          <div class="col-8">
-            <input type="email" id="input-email" class="formControl-email" value="example@example.com">
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-password">input[type=password]</label>
-          </div>
-          <div class="col-8">
-            <input type="password" id="input-password" class="formControl-password" value="password">
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-tel">input[type=tel]</label>
-          </div>
-          <div class="col-8">
-            <input type="tel" id="input-tel" class="formControl-tel" value="(800) 800-800-800">
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-text">input[type=text]</label>
-          </div>
-          <div class="col-8">
-            <input type="text" id="input-text" class="formControl-week" value="Some text">
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-text-placeholder">input[type=text] (placeholder)</label>
-          </div>
-          <div class="col-8">
-            <input type="text" id="input-text-placeholder" class="formControl-text" placeholder="Some placeholder">
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-url">input[type=url]</label>
-          </div>
-          <div class="col-8">
-            <input type="url" id="input-url" class="formControl-url" value="http://example.com">
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="textarea">textarea</label>
-          </div>
-          <div class="col-8">
-            <textarea id="textarea" class="formControl-textarea">Some text</textarea>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
 
     <div class="app-section">
       <h2>Disabled controls</h2>
-      <form class="form">
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">button[type=button]:disabled</label>
+      <div class="app-sectionBlock">
+        <form class="form">
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">button[type=button]:disabled</label>
+            </div>
+            <div class="col-8">
+              <button type="button" class="btn" disabled>Button</button>
+            </div>
           </div>
-          <div class="col-8">
-            <button type="button" class="btn btn--primary" disabled>Button</button>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">button[type=reset]:disabled</label>
+            </div>
+            <div class="col-8">
+              <button type="reset" class="btn" disabled>Reset</button>
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">button[type=reset]:disabled</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">button[type=submit]:disabled</label>
+            </div>
+            <div class="col-8">
+              <button type="submit" class="btn" disabled>Submit</button>
+            </div>
           </div>
-          <div class="col-8">
-            <button type="reset" class="btn btn--primary" disabled>Reset</button>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">input[type=button]:disabled</label>
+            </div>
+            <div class="col-8">
+              <input type="button" class="btn" value="Button" disabled>
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">button[type=submit]:disabled</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">input[type=reset]:disabled</label>
+            </div>
+            <div class="col-8">
+              <input type="reset" class="btn" disabled>
+            </div>
           </div>
-          <div class="col-8">
-            <button type="submit" class="btn btn--primary" disabled>Submit</button>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel">input[type=submit]:disabled</label>
+            </div>
+            <div class="col-8">
+              <input type="submit" class="btn" disabled>
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">input[type=button]:disabled</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-email-disabled">input[type=email]:disabled</label>
+            </div>
+            <div class="col-8">
+              <input type="email" id="input-email-disabled" class="formControl-email" value="example@example.com" disabled>
+            </div>
           </div>
-          <div class="col-8">
-            <input type="button" class="btn btn--primary" value="Button" disabled>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-password-disabled">input[type=password]:disabled</label>
+            </div>
+            <div class="col-8">
+              <input type="password" id="input-password-disabled" class="formControl-password" value="password" disabled>
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">input[type=reset]:disabled</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-tel-disabled">input[type=tel]:disabled</label>
+            </div>
+            <div class="col-8">
+              <input type="tel" id="input-tel-disabled" class="formControl-tel" value="(800) 800-800-800" disabled>
+            </div>
           </div>
-          <div class="col-8">
-            <input type="reset" class="btn btn--primary" disabled>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-text-disabled">input[type=text]:disabled</label>
+            </div>
+            <div class="col-8">
+              <input type="text" id="input-text-disabled" class="formControl-text" value="Some text" disabled>
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel">input[type=submit]:disabled</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-text-placeholder-disabled">input[type=text] (placeholder)</label>
+            </div>
+            <div class="col-8">
+              <input type="text" id="<input-text-placeholder-disabled" class="formControl-text" placeholder="Some placeholder" disabled>
+            </div>
           </div>
-          <div class="col-8">
-            <input type="submit" class="btn btn--primary" disabled>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="input-url-disabled">input[type=url]:disabled</label>
+            </div>
+            <div class="col-8">
+              <input type="url" id="input-url-disabled" class="formControl-url" value="http://example.com" disabled>
+            </div>
           </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-email-disabled">input[type=email]:disabled</label>
+          <div class="row formGroup">
+            <div class="col-4">
+              <label class="formLabel" for="textarea-disabled">textarea:disabled</label>
+            </div>
+            <div class="col-8">
+              <textarea id="textarea-disabled" class="formControl-textarea" disabled>Some text</textarea>
+            </div>
           </div>
-          <div class="col-8">
-            <input type="email" id="input-email-disabled" class="formControl-email" value="example@example.com" disabled>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-password-disabled">input[type=password]:disabled</label>
-          </div>
-          <div class="col-8">
-            <input type="password" id="input-password-disabled" class="formControl-password" value="password" disabled>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-tel-disabled">input[type=tel]:disabled</label>
-          </div>
-          <div class="col-8">
-            <input type="tel" id="input-tel-disabled" class="formControl-tel" value="(800) 800-800-800" disabled>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-text-disabled">input[type=text]:disabled</label>
-          </div>
-          <div class="col-8">
-            <input type="text" id="input-text-disabled" class="formControl-text" value="Some text" disabled>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-text-placeholder-disabled">input[type=text] (placeholder)</label>
-          </div>
-          <div class="col-8">
-            <input type="text" id="<input-text-placeholder-disabled" class="formControl-text" placeholder="Some placeholder" disabled>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-url-disabled">input[type=url]:disabled</label>
-          </div>
-          <div class="col-8">
-            <input type="url" id="input-url-disabled" class="formControl-url" value="http://example.com" disabled>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="textarea-disabled">textarea:disabled</label>
-          </div>
-          <div class="col-8">
-            <textarea id="textarea-disabled" class="formControl-textarea" disabled>Some text</textarea>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
 
     <div class="app-section">
       <h2>Fieldset disabled controls</h2>
-      <form class="form">
-        <fieldset disabled class="fieldset">
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel">fieldset:disabled button[type=button]</label>
+      <div class="app-sectionBlock">
+        <form class="form">
+          <fieldset disabled class="fieldset">
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel">fieldset:disabled button[type=button]</label>
+              </div>
+              <div class="col-8">
+                <button type="button" class="btn">Button</button>
+              </div>
             </div>
-            <div class="col-8">
-              <button type="button" class="btn btn--primary">Button</button>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel">fieldset:disabled button[type=reset]</label>
+              </div>
+              <div class="col-8">
+                <button type="reset" class="btn">Reset</button>
+              </div>
             </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel">fieldset:disabled button[type=reset]</label>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel">fieldset:disabled button[type=submit]</label>
+              </div>
+              <div class="col-8">
+                <button type="submit" class="btn">Submit</button>
+              </div>
             </div>
-            <div class="col-8">
-              <button type="reset" class="btn btn--primary">Reset</button>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel">fieldset:disabled input[type=button]</label>
+              </div>
+              <div class="col-8">
+                <input type="button" class="btn" value="Button">
+              </div>
             </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel">fieldset:disabled button[type=submit]</label>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel">fieldset:disabled input[type=reset]</label>
+              </div>
+              <div class="col-8">
+                <input type="reset" class="btn">
+              </div>
             </div>
-            <div class="col-8">
-              <button type="submit" class="btn btn--primary">Submit</button>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel">fieldset:disabled input[type=submit]</label>
+              </div>
+              <div class="col-8">
+                <input type="submit" class="btn">
+              </div>
             </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel">fieldset:disabled input[type=button]</label>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-email-fieldset">fieldset:disabled input[type=email]</label>
+              </div>
+              <div class="col-8">
+                <input type="email" id="input-email-fieldset" class="formControl-email" value="example@example.com">
+              </div>
             </div>
-            <div class="col-8">
-              <input type="button" class="btn btn--primary" value="Button">
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-password-fieldset">fieldset:disabled input[type=password]</label>
+              </div>
+              <div class="col-8">
+                <input type="password" id="input-password-fieldset" class="formControl-password" value="password">
+              </div>
             </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel">fieldset:disabled input[type=reset]</label>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-tel-fieldset">fieldset:disabled input[type=tel]</label>
+              </div>
+              <div class="col-8">
+                <input type="tel" id="input-tel-fieldset" class="formControl-tel" value="(800) 800-800-800">
+              </div>
             </div>
-            <div class="col-8">
-              <input type="reset" class="btn btn--primary">
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-text-fieldset">fieldset:disabled input[type=text]</label>
+              </div>
+              <div class="col-8">
+                <input type="text" id="input-text-fieldset" class="formControl-text" value="Some text">
+              </div>
             </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel">fieldset:disabled input[type=submit]</label>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-text-placeholder-fieldset">fieldset:disabled input[type=text] (placeholder)</label>
+              </div>
+              <div class="col-8">
+                <input type="text" id="input-text-placeholder-fieldset" class="formControl-text" placeholder="Some placeholder">
+              </div>
             </div>
-            <div class="col-8">
-              <input type="submit" class="btn btn--primary">
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-url-fieldset">fieldset:disabled input[type=url]</label>
+              </div>
+              <div class="col-8">
+                <input type="url" id="input-url-fieldset" class="formControl-url" value="http://example.com">
+              </div>
             </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel" for="input-email-fieldset">fieldset:disabled input[type=email]</label>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="textarea-fieldset">fieldset:disabled textarea</label>
+              </div>
+              <div class="col-8">
+                <textarea id="textarea-fieldset" class="formControl-textarea">Some text</textarea>
+              </div>
             </div>
-            <div class="col-8">
-              <input type="email" id="input-email-fieldset" class="formControl-email" value="example@example.com">
-            </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel" for="input-password-fieldset">fieldset:disabled input[type=password]</label>
-            </div>
-            <div class="col-8">
-              <input type="password" id="input-password-fieldset" class="formControl-password" value="password">
-            </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel" for="input-tel-fieldset">fieldset:disabled input[type=tel]</label>
-            </div>
-            <div class="col-8">
-              <input type="tel" id="input-tel-fieldset" class="formControl-tel" value="(800) 800-800-800">
-            </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel" for="input-text-fieldset">fieldset:disabled input[type=text]</label>
-            </div>
-            <div class="col-8">
-              <input type="text" id="input-text-fieldset" class="formControl-text" value="Some text">
-            </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel" for="input-text-placeholder-fieldset">fieldset:disabled input[type=text] (placeholder)</label>
-            </div>
-            <div class="col-8">
-              <input type="text" id="input-text-placeholder-fieldset" class="formControl-text" placeholder="Some placeholder">
-            </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel" for="input-url-fieldset">fieldset:disabled input[type=url]</label>
-            </div>
-            <div class="col-8">
-              <input type="url" id="input-url-fieldset" class="formControl-url" value="http://example.com">
-            </div>
-          </div>
-          <div class="row formGroup">
-            <div class="col-4">
-              <label class="formLabel" for="textarea-fieldset">fieldset:disabled textarea</label>
-            </div>
-            <div class="col-8">
-              <textarea id="textarea-fieldset" class="formControl-textarea">Some text</textarea>
-            </div>
-          </div>
-        </fieldset>
-      </form>
+          </fieldset>
+        </form>
+      </div>
     </div>
 
     <div class="app-section">
-      <h2 class="heading-2">Readonly controls</h2>
-      <p class="paragraph"><code class="code-text">readonly</code> attribute only affects following controls:</p>
-      <ul class="unordered-list">
-        <li><code class="code-text">input[type=email]</code></li>
-        <li><code class="code-text">input[type=password]</code></li>
-        <li><code class="code-text">input[type=tel]</code></li>
-        <li><code class="code-text">input[type=text]</code></li>
-        <li><code class="code-text">input[type=url]</code></li>
-        <li><code class="code-text">textarea</code></li>
-      </ul>
-      <p class="paragraph">Below you can check the behavior of these controls in different browsers.</p>
-
-      <form class="form">
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-email-readonly">input[type=email][readonly]</label>
-          </div>
-          <div class="col-8">
-            <input type="email" id="input-email-readonly" class="formControl-email" value="example@example.com" readonly>
-          </div>
+      <h2>Readonly controls</h2>
+      <div class="app-sectionBlock">
+        <p class="paragraph">
+          <code class="code-text">readonly</code> attribute only affects following controls:
+        </p>
+        <ul class="list list--unordered paragraph">
+          <li><code class="code-text">input[type=email]</code></li>
+          <li><code class="code-text">input[type=password]</code></li>
+          <li><code class="code-text">input[type=tel]</code></li>
+          <li><code class="code-text">input[type=text]</code></li>
+          <li><code class="code-text">input[type=url]</code></li>
+          <li><code class="code-text">textarea</code></li>
+        </ul>
+        <p class="paragraph">
+          Below you can check the behavior of these controls in different browsers.
+        </p>
+        <div class="paragraph">
+          <form class="form">
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-email-readonly">input[type=email][readonly]</label>
+              </div>
+              <div class="col-8">
+                <input type="email" id="input-email-readonly" class="formControl-email" value="example@example.com" readonly>
+              </div>
+            </div>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-password-readonly">input[type=password][readonly]</label>
+              </div>
+              <div class="col-8">
+                <input type="password" id="input-password-readonly" class="formControl-password" value="password" readonly>
+              </div>
+            </div>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-tel-readonly">input[type=tel][readonly]</label>
+              </div>
+              <div class="col-8">
+                <input type="tel" id="input-tel-readonly" class="formControl-tel" value="(800) 800-800-800" readonly>
+              </div>
+            </div>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class=" formLabel" for="input-text-readonly">input[type=text][readonly]</label>
+              </div>
+              <div class="col-8">
+                <input type="text" id="input-text-readonly" class="formControl-text" value="Some text" readonly>
+              </div>
+            </div>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-text-placeholder-readonly">input[type=text] (placeholder)</label>
+              </div>
+              <div class="col-8">
+                <input type="text" id="<input-text-placeholder-readonly" class="formControl-text" placeholder="Some placeholder" readonly>
+              </div>
+            </div>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="input-url-readonly">input[type=url][readonly]</label>
+              </div>
+              <div class="col-8">
+                <input type="url" id="input-url-readonly" class="formControl-url" value="http://example.com" readonly>
+              </div>
+            </div>
+            <div class="row formGroup">
+              <div class="col-4">
+                <label class="formLabel" for="textarea-readonly">textarea[readonly]</label>
+              </div>
+              <div class="col-8">
+                <textarea id="textarea-readonly" class="formControl-textarea" readonly>Some text</textarea>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-password-readonly">input[type=password][readonly]</label>
-          </div>
-          <div class="col-8">
-            <input type="password" id="input-password-readonly" class="formControl-password" value="password" readonly>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-tel-readonly">input[type=tel][readonly]</label>
-          </div>
-          <div class="col-8">
-            <input type="tel" id="input-tel-readonly" class="formControl-tel" value="(800) 800-800-800" readonly>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class=" formLabel" for="input-text-readonly">input[type=text][readonly]</label>
-          </div>
-          <div class="col-8">
-            <input type="text" id="input-text-readonly" class="formControl-text" value="Some text" readonly>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-text-placeholder-readonly">input[type=text] (placeholder)</label>
-          </div>
-          <div class="col-8">
-            <input type="text" id="<input-text-placeholder-readonly" class="formControl-text" placeholder="Some placeholder" readonly>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="input-url-readonly">input[type=url][readonly]</label>
-          </div>
-          <div class="col-8">
-            <input type="url" id="input-url-readonly" class="formControl-url" value="http://example.com" readonly>
-          </div>
-        </div>
-        <div class="row formGroup">
-          <div class="col-4">
-            <label class="formLabel" for="textarea-readonly">textarea[readonly]</label>
-          </div>
-          <div class="col-8">
-            <textarea id="textarea-readonly" class="formControl-textarea" readonly>Some text</textarea>
-          </div>
-        </div>
-      </form>
+      </div>
     </div>
   </div>
 </div>

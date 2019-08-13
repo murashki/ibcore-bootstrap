@@ -49,10 +49,16 @@ html {
   margin-left: 2em;
 }
 
-.app-content {}
+.app-content {
+  margin-bottom: 10em;
+}
 
-.app-section {
-  margin-bottom: 4em;
+.app-section + .app-section {
+  margin-top: 4em;
+}
+
+.app-sectionBlock + .app-sectionBlock {
+  margin-top: 2em;
 }
 
 .app-breakpoint {
