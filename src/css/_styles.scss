@@ -1,4 +1,7 @@
 html {
-  color: $color;
+  line-height: $lineHeight;
+  background-color: $bgColor;
   font-size: $fontSize;
+  font-family: $fontFamily;;
+  color: $color;
 }

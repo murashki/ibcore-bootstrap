@@ -1,0 +1,84 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: $headingMarginBottom;
+  font-family: $headingFontFamily;
+  font-weight: $headingFontWeight;
+  line-height: $headingLineHeight;
+  color: $headingColor;
+}
+
+.h1 {
+  font-size: $heading-1-fontSize;
+}
+
+.h2 {
+  font-size: $heading-2-fontSize;
+}
+
+.h3 {
+  font-size: $heading-3-fontSize;
+}
+
+.h4 {
+  font-size: $heading-4-fontSize;
+}
+
+.h5 {
+  font-size: $heading-5-fontSize;
+}
+
+.h6 {
+  font-size: $heading-6-fontSize;
+}
+
+.h--numbered {
+  counter-reset: heading-2 heading-3 heading-4 heading-5 heading-6;
+}
+
+.h--numbered .h2 {
+  counter-reset: heading-3 heading-4 heading-5 heading-6;
+  counter-increment: heading-2;
+}
+
+.h--numbered .h2:before {
+  content: counter(heading-2) ". ";
+}
+
+.h--numbered .h3 {
+  counter-reset: heading-4 heading-5 heading-6;
+  counter-increment: heading-3;
+}
+
+.h--numbered .h3:before {
+  content: counter(heading-2) "." counter(heading-3) ". ";
+}
+
+.h--numbered .h4 {
+  counter-reset: heading-5 heading-6;
+  counter-increment: heading-4;
+}
+
+.h--numbered .h4:before {
+  content: counter(heading-2) "." counter(heading-3) "." counter(heading-4) ". ";
+}
+
+.h--numbered .h5 {
+  counter-reset: heading-6;
+  counter-increment: heading-5;
+}
+
+.h--numbered .h5:before {
+  content: counter(heading-2) "." counter(heading-3) "." counter(heading-4) "." counter(heading-5) ". ";
+}
+
+.h--numbered .h6 {
+  counter-increment: heading-6;
+}
+
+.h--numbered .h6:before {
+  content: counter(heading-2) "." counter(heading-3) "." counter(heading-4) "." counter(heading-5) "." counter(heading-6) ". ";
+}
