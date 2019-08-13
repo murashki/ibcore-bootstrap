@@ -1,15 +1,17 @@
-.pre,
-.code {
-  font-family: monospace;
-  font-size: inherit;
-}
-
-.pre {
-  margin-top: 0;
-  margin-bottom: 1em; // TODO Should use paragraph margin variable
+.preformattedText {
   overflow: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: $preformattedLineHeight;
+  font-family: $preformattedFontFamily;
+  font-size: $preformattedFontSize;
+  color: $preformattedColor;
 }
 
 .code {
-  color: #e83e8c;
+  line-height: inherit;
+  font-family: $codeFontFamily;
+  font-size: $codeFontSize;
+  font-weight: $codeFontWeight;
+  color: $codeColor;
 }

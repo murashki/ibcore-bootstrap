@@ -1,8 +1,3 @@
-/*
-  Variables we use here:
-    $transitionAppearance
-*/
-
 $btnControlFontFamily: inherit !default;
 $btnControlFontSize: 1em !default;
 $btnControlFontWeight: inherit !default;
@@ -32,11 +27,12 @@ $btnControlDisabledBgColor: $btnControlBgColor !default;
 $btnControlDisabledBorderColor: $btnControlBorderColor !default;
 $btnControlDisabledOpacity: 0.5 !default;
 
+$btnControlTransitionAppearance: 0.15s ease-in-out !default;
 $btnControlTransition:
-  color $transitionAppearance,
-  background-color $transitionAppearance,
-  border-color $transitionAppearance,
-  box-shadow $transitionAppearance !default;
+  color $btnControlTransitionAppearance,
+  background-color $btnControlTransitionAppearance,
+  border-color $btnControlTransitionAppearance,
+  box-shadow $btnControlTransitionAppearance !default;
 $btnControlNgbMargin: 1em !default;
 
 $btnControlIconOpacity: 0.2;

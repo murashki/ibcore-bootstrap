@@ -5,16 +5,6 @@
 @import '../normalize';
 
 
-$linkColor: #007bff !default;
-$linkTextDecoration: none !default;
-$linkHoverColor: $linkColor !default;
-$linkHoverTextDecoration: underline !default;
-$linkFocusColor: $linkColor !default;
-$linkFocusTextDecoration: underline !default;
-$linkActiveColor: $linkColor !default;
-$linkActiveTextDecoration: underline !default;
-
-
 *,
 *::before,
 *::after {

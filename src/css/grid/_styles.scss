@@ -1,34 +1,3 @@
-/*
-  Variables we use here:
-    $gridBreakpoint-sm
-    $gridBreakpoint-md
-    $gridBreakpoint-lg
-    $gridBreakpoint-xl
-
-    $containerMinWidth
-    $containerMaxWidth
-
-    $containerWidth-sm
-    $containerWidth-md
-    $containerWidth-lg
-    $containerWidth-xl
-    $containerWidth-max
-
-    $containerGutter-sm
-    $containerGutter-md
-    $containerGutter-lg
-    $containerGutter-xl
-    $containerGutter-max
-
-    $gridGutter-sm
-    $gridGutter
-    $gridGutter-lg
-
-    $gridBottomGutter-sm
-    $gridBottomGutter
-    $gridBottomGutter-lg
-*/
-
 .container,
 .containerFluid {
   padding-right: $containerGutter-max / 2;

@@ -1,41 +1,62 @@
-/*
-  Variables we use here:
-    $listMarginBottom
-    $listPaddingLeft
-*/
-
 .list {
   margin-top: 0;
   margin-bottom: 0;
+  line-height: $listLineHeight;
 }
+
+.list--ordered {
+  counter-reset: list;
+}
+
+.list--unordered {}
 
 .list--ordered,
 .list--unordered {
   padding-left: $listPaddingLeft;
+  list-style: none;
 }
 
-.list--description dt {
-  font-weight: 700;
+.list--ordered li,
+.list--unordered li {
+  position: relative;
 }
 
-.list--description dd {
-  margin-bottom: .5em;
-  margin-left: 0;
+.list--ordered li:before,
+.list--unordered li:before {
+  position: absolute;
+  right: 100%;
+  display: inline-block;
+  margin-right: $listLabelMarginRight;
 }
 
-.list--description dd:last-child {
-  margin-bottom: 0;
+.list--ordered li:before {
+  counter-increment: list;
+  content: counters(list, ".") ".";
+}
+
+.list--unordered li:before {
+  content: "•";
+}
+
+.list-resetCounter {
+  counter-reset: list;
+}
+
+.list-continueCounter {
+  counter-reset: none;
+}
+
+.list-innerCounter {
+  counter-reset: list;
+}
+
+.list-innerCounter li:before {
+  counter-increment: list;
+  content: counter(list) ". ";
 }
 
 .list--unstyled {
   padding-left: 0;
   list-style: none;
-}
-
-.list--inline li {
-  display: inline-block;
-}
-
-.list--inline li + li {
-  margin-left: 2em;
+  line-height: inherit;
 }

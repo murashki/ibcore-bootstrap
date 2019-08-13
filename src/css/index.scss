@@ -1,7 +1,7 @@
 @import './normalize';
 
 
-@import './variables.base';
+@import './variables';
 @import './grid/variables';
 @import './forms/variables';
 @import './link/variables';
@@ -15,8 +15,10 @@
 @import './button-controls/variables';
 @import './buttons/unstyled-button/variables';
 @import './buttons/button-group/variables';
-@import './lists/variables';
 @import './code/variables';
+@import './lists/variables';
+@import './paragraph/variables';
+@import './text-truncate/variables';
 
 
 @import './buttons/_mixins/button-variant';
@@ -42,12 +44,10 @@
 @import './button-controls/styles';
 @import './buttons/unstyled-button/styles';
 @import './buttons/button-group/styles';
-@import './lists/styles';
 @import './code/styles';
-
-
-@import './misc/paragraph';
-@import './misc/text-ellipsis';
+@import './lists/styles';
+@import './paragraph/styles';
+@import './text-truncate/styles';
 
 
 @import './styles';
