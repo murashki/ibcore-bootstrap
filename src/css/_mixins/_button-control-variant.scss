@@ -1,0 +1,87 @@
+@mixin button-control-variant(
+  $btnControlColor,
+  $btnControlBgColor,
+  $btnControlBorderColor,
+  $btnControlHoverColor,
+  $btnControlHoverBgColor,
+  $btnControlHoverBorderColor,
+  $btnControlFocusColor,
+  $btnControlFocusBgColor,
+  $btnControlFocusBorderColor,
+  $btnControlFocusBoxShadow,
+  $btnControlActiveColor,
+  $btnControlActiveBgColor,
+  $btnControlActiveBorderColor,
+  $btnControlDisabledColor,
+  $btnControlDisabledBgColor,
+  $btnControlDisabledBorderColor,
+  $btnControlIconBgColor,
+  $btnControlIconBorderColor,
+  $btnControlIconCheckedBgColor,
+  $btnControlIconCheckedBorderColor
+) {
+  // >>> Base
+  & {
+    color: $btnControlColor;
+    background-color: $btnControlBgColor;
+    border-color: $btnControlBorderColor;
+  }
+
+  &:before {
+    background-color: $btnControlIconBgColor;
+    border-color: $btnControlIconBorderColor;
+  }
+  // <<< Base
+
+
+  // >>> Hover
+  &:hover {
+    color: $btnControlHoverColor;
+    background-color: $btnControlHoverBgColor;
+    border-color: $btnControlHoverBorderColor;
+  }
+  // <<< Hover
+
+
+  // >>> Focus
+  &:focus,
+  &.btnControl--focus  {
+    color: $btnControlFocusColor;
+    background-color: $btnControlFocusBgColor;
+    border-color: $btnControlFocusBorderColor;
+    box-shadow: $btnControlFocusBoxShadow;
+  }
+  // <<< Focus
+
+
+  // >>> Active
+  &:active,
+  &.btnControl--active {
+    color: $btnControlActiveColor;
+    background-color: $btnControlActiveBgColor;
+    border-color: $btnControlActiveBorderColor;
+  }
+  // <<< Active
+
+
+  // >>> Disabled
+  &:disabled,
+  &.btnControl--disabled,
+  fieldset:disabled & {
+    color: $btnControlDisabledColor;
+    background-color: $btnControlDisabledBgColor;
+    border-color: $btnControlDisabledBorderColor;
+    box-shadow: none;
+  }
+  // <<< Disabled
+
+
+  // >>> Checked
+  &.btnControl--checked {}
+
+  &.btnControl--checked:before {
+    background-color: $btnControlIconCheckedBgColor;
+    border-color: $btnControlIconCheckedBorderColor;
+  }
+  // <<< Checked
+}

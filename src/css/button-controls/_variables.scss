@@ -35,7 +35,7 @@ $btnControlTransition:
   box-shadow $btnControlTransitionAppearance !default;
 $btnControlNgbMargin: 1em !default;
 
-$btnControlIconOpacity: 0.2;
+$btnControlIconOpacity: 0.2 !default;
 $btnControlIconBgColor: transparent !default;
 $btnControlIconBorderColor: currentColor !default;
 $btnControlIconBorderWidth: 1px !default;

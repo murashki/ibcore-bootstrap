@@ -1,3 +1,6 @@
+@import '../_mixins/button-control-variant';
+
+// >>> Base
 .btnControl {
   display: inline-flex;
   justify-content: center;
@@ -8,14 +11,12 @@
   font-size: $btnControlFontSize;
   font-weight: $btnControlFontWeight;
   text-align: center;
-  color: $btnControlColor;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: $btnControlBorderWidth solid $btnControlBorderColor;
+  border: $btnControlBorderWidth solid transparent;
   border-radius: 0;
-  background-color: $btnControlBgColor;
   cursor: pointer;
 }
 
@@ -25,48 +26,27 @@
   display: table; // Guys, i can't explain why, but it's better round off
   height: 1em;
   width: 1em;
-  border: $btnControlIconBorderWidth solid $btnControlIconBorderColor;
-  background-color: $btnControlIconBgColor;
+  border: $btnControlIconBorderWidth solid transparent;
 }
+// <<< Base
 
-.btnControl:hover {
-  color: $btnControlHoverColor;
-  background-color: $btnControlHoverBgColor;
-  border-color: $btnControlHoverBorderColor;
-}
 
-.btnControl:hover:before {}
-
+// >>> Focus
 .btnControl:focus,
 .btnControl.btnControl--focus  {
-  color: $btnControlFocusColor;
-  background-color: $btnControlFocusBgColor;
-  border-color: $btnControlFocusBorderColor;
-  box-shadow: $btnControlFocusBoxShadow;
   outline: none;
 }
 
 .btnControl:focus:before,
-.btnControl.btnControl--focus:before {}
+.btnControl.btnControl--focus:before  {}
+// <<< Focus
 
-.btnControl:active,
-.btnControl.btnControl--active {
-  color: $btnControlActiveColor;
-  background-color: $btnControlActiveBgColor;
-  border-color: $btnControlActiveBorderColor;
-}
 
-.btnControl:active:before,
-.btnControl.btnControl--active:before {}
-
+// >>> Disabled
 .btnControl:disabled,
 .btnControl.btnControl--disabled,
 fieldset:disabled .btnControl {
   opacity: $btnControlDisabledOpacity;
-  color: $btnControlDisabledColor;
-  background-color: $btnControlDisabledBgColor;
-  border-color: $btnControlDisabledBorderColor;
-  box-shadow: none;
   cursor: default;
   pointer-events: none;
 }
@@ -74,31 +54,52 @@ fieldset:disabled .btnControl {
 .btnControl:disabled:before,
 .btnControl.btnControl--disabled:before,
 fieldset:disabled .btnControl:before {}
+// <<< Disabled
 
+
+// >>> Checked
 .btnControl.btnControl--checked {}
 
 .btnControl.btnControl--checked:before {
   opacity: 1;
-  background-color: $btnControlIconCheckedBgColor;
-  border-color: $btnControlIconCheckedBorderColor;
 }
+// <<< Checked
 
-.btnControl.btnControl--radio {
-  border-radius: calc(#{$btnControlLineHeight}em + #{$btnControlPadding} / 2);
-}
 
-.btnControl.btnControl--radio:before {
-  border-radius: calc(#{$btnControlLineHeight}em / 2);
-}
-
+// >>> With labels
 .btnControl.btnControl--hasLabel:before {
   margin-right: 0.4em;
 }
+// <<< With labels
 
-.btnControl + .btnControl {
-  margin-left: $btnControlNgbMargin;
+
+.btnControl {
+  @include button-control-variant(
+    $btnControlColor,
+    $btnControlBgColor,
+    $btnControlBorderColor,
+    $btnControlHoverColor,
+    $btnControlHoverBgColor,
+    $btnControlHoverBorderColor,
+    $btnControlFocusColor,
+    $btnControlFocusBgColor,
+    $btnControlFocusBorderColor,
+    $btnControlFocusBoxShadow,
+    $btnControlActiveColor,
+    $btnControlActiveBgColor,
+    $btnControlActiveBorderColor,
+    $btnControlDisabledColor,
+    $btnControlDisabledBgColor,
+    $btnControlDisabledBorderColor,
+    $btnControlIconBgColor,
+    $btnControlIconBorderColor,
+    $btnControlIconCheckedBgColor,
+    $btnControlIconCheckedBorderColor
+  );
 }
 
+
+// >>> Transition
 .btnControl {
   transition: $btnControlTransition;
 }
@@ -116,3 +117,22 @@ fieldset:disabled .btnControl:before {}
     transition: none;
   }
 }
+// <<< Transition
+
+
+// >>> Neighbors
+.btnControl + .btnControl {
+  margin-left: $btnControlNgbMargin;
+}
+// <<< Neighbors
+
+
+// >>> Radio button
+.btnControl.btnControl--radio {
+  border-radius: calc(#{$btnControlLineHeight}em + #{$btnControlPadding} / 2);
+}
+
+.btnControl.btnControl--radio:before {
+  border-radius: calc(#{$btnControlLineHeight}em / 2);
+}
+// <<< Radio button

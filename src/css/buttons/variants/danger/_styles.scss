@@ -1,4 +1,4 @@
-@import '../../_mixins/button-variant';
+@import '../../../_mixins/button-variant';
 
 .btn--danger {
   @include button-variant(

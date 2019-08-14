@@ -1,0 +1,33 @@
+<html lang="ru">
+<head>
+  <meta charSet="utf-8">
+  <!--Page specific-->
+  <title>Buttons</title>
+
+  <!--Page specific-->
+  <link rel="import" href="../content/buttons.html">
+
+  <link rel="stylesheet" href="../css/compiled/button-controls/index.css">
+  <link rel="stylesheet" href="../css/compiled/button-link/index.css">
+  <link rel="stylesheet" href="../css/compiled/buttons/index.css">
+  <link rel="stylesheet" href="../css/compiled/forms/index.css">
+  <link rel="stylesheet" href="../css/compiled/grid/index.css">
+  <link rel="stylesheet" href="../css/compiled/heading/index.css">
+  <link rel="stylesheet" href="../css/compiled/link/index.css">
+  <link rel="stylesheet" href="../css/compiled/lists/index.css">
+  <link rel="stylesheet" href="../css/compiled/paragraph/index.css">
+  <link rel="stylesheet" href="../css/compiled/text/index.css">
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+<div class="app-content">
+  <div id="content-outer" class="containerFluid"></div>
+</div>
+<script>
+  const contentOuter = document.querySelector('#content-outer');
+  const link = document.querySelector('link[rel=import]');
+  const contentInner = link.import.querySelector('#content-inner');
+  contentOuter.appendChild(contentInner.cloneNode(true));
+</script>
+</body>
+</html>

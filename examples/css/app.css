@@ -6,8 +6,8 @@ html {
   overflow-y: scroll;
 }
 
-body > #content-inner {
-  padding: 2em 2em 10em;
+#content-inner {
+  padding-top: 2em;
 }
 
 .app-head {

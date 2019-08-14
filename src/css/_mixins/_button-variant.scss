@@ -16,16 +16,23 @@
   $disabledBgColor,
   $disabledBorderColor
 ) {
+  // >>> Base
   color: $color;
   background-color: $bgColor;
   border-color: $borderColor;
+  // <<< Base
 
+
+  // >>> Hover
   &:hover {
     color: $hoverColor;
     background-color: $hoverBgColor;
     border-color: $hoverBorderColor;
   }
+  // <<< Hover
 
+
+  // >>> Focus
   &:focus,
   &.btn--focus  {
     color: $focusColor;
@@ -33,23 +40,27 @@
     border-color: $focusBorderColor;
     box-shadow: $focusBoxShadow;
   }
+  // <<< Focus
 
+
+  // >>> Active
   &:active,
   &.btn--active {
     color: $activeColor;
     background-color: $activeBgColor;
     border-color: $activeBorderColor;
   }
+  // <<< Active
 
+
+  // >>> Disabled
   &:disabled,
   &.btn--disabled,
   fieldset:disabled & {
-    opacity: $btnDisabledOpacity;
     color: $disabledColor;
     background-color: $disabledBgColor;
     border-color: $disabledBorderColor;
     box-shadow: none;
-    cursor: default;
-    pointer-events: none;
   }
+  // <<< Disabled
 }
