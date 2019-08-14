@@ -1,25 +1,19 @@
 <html lang="ru">
 <head>
   <meta charSet="utf-8">
+  <!--Page specific-->
   <title>Buttons</title>
 
-  <!--This-->
-  <!--<link rel="stylesheet" href="css/compiled/buttons/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/button-controls/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/button-link/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/text/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/paragraph/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/forms/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/grid/index.css">-->
-  <!--Or this-->
-  <link rel="stylesheet" href="css/compiled/index.css">
+  <!--Page specific-->
+  <link rel="import" href="content/buttons.html">
 
+  <link rel="stylesheet" href="css/compiled/index.css">
   <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/pages/buttons.css">
 </head>
 <body>
 <div class="app-head">
-  <div class="container">
+  <div class="containerFluid">
+    <!--Page specific-->
     <div class="app-menu">
       <a class="link app-menuLink" href="grid.html">Grid</a>
       <a class="link app-menuLink" href="forms.html">Forms</a>
@@ -29,343 +23,14 @@
   </div>
 </div>
 <div class="app-content">
-  <div class="container">
+  <div class="containerFluid">
+    <!--Page specific-->
     <h1 class="h1">Buttons</h1>
-
-    <div class="app-section">
-      <h2 class="h2">Button variants</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btn">Button primary</button>
-        <button type="button" class="btn btn--success">Success button</button>
-        <button type="button" class="btn btn--warning">Warning button</button>
-        <button type="button" class="btn btn--danger">Danger button</button>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Button size</h2>
-      <div class="app-sectionBlock">
-        <p class="paragraph text" style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="paragraph">
-          <button type="button" class="btn btn--xs">Button xs</button>
-          <button type="button" class="btn btn--sm">Button sm</button>
-          <button type="button" class="btn">Button</button>
-          <button type="button" class="btn btn--lg">Button lg</button>
-          <button type="button" class="btn btn--xl">Button xl</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Button tags</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btn">Button</button>
-        <input class="btn" type="button" value="Input tag button">
-        <a class="btn" href="#" role="button">Link as a button</a>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Button states</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btn">Button</button>
-        <button type="button" class="btn btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--active">Button active class</button>
-        <button type="button" class="btn btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="fieldset" disabled>
-            <button type="button" class="btn">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="app-sectionBlock">
-        <button type="button" class="btn btn--success">Button</button>
-        <button type="button" class="btn btn--success btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--success btn--active">Button active class</button>
-        <button type="button" class="btn btn--success btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn btn--success" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="fieldset" disabled>
-            <button type="button" class="btn btn--success">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="app-sectionBlock">
-        <button type="button" class="btn btn--warning">Button</button>
-        <button type="button" class="btn btn--warning btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--warning btn--active">Button active class</button>
-        <button type="button" class="btn btn--warning btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn btn--warning" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="fieldset" disabled>
-            <button type="button" class="btn btn--warning">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="app-sectionBlock">
-        <button type="button" class="btn btn--danger">Button</button>
-        <button type="button" class="btn btn--danger btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--danger btn--active">Button active class</button>
-        <button type="button" class="btn btn--danger btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn btn--danger" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="fieldset" disabled>
-            <button type="button" class="btn btn--danger">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Focus class buttons</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btn btn--focus">Button</button>
-        <input class="btn btn--focus" type="button" value="Input tag button">
-        <a class="btn btn--focus" href="#" role="button">Link as a button</a>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Active class buttons</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btn btn--active">Button</button>
-        <input class="btn btn--active" type="button" value="Input tag button">
-        <a class="btn btn--active" href="#" role="button">Link as a button</a>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Disabled class buttons</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btn btn--disabled" tabindex="-1">Button</button>
-        <input class="btn btn--disabled" type="button" value="Input tag button" tabindex="-1">
-        <a class="btn btn--disabled" href="#" tabindex="-1" role="button">Link as a button</a>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Disabled buttons</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btn" disabled>Button</button>
-        <input class="btn btn--disabled" type="button" value="Input tag button" disabled>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Disabled fielset buttons</h2>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="fieldset" disabled>
-            <button type="button" class="btn">Button</button>
-            <input class="btn" type="button" value="Input tag button">
-            <a class="btn" href="#" tabindex="-1" role="button">Link as a button</a>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Unstyled button tags</h2>
-      <div class="app-sectionBlock">
-        <p class="paragraph text" style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="paragraph">
-          <button type="button" class="btn btn--unstyled">Unstyled button</button>
-          <input type="button" class="btn btn--unstyled" value="Unstyled input tag button">
-          <a class="btn btn--unstyled" href="#" role="button">Link as a unstyled button</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Focus class unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p class="paragraph text" style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="paragraph">
-          <button type="button" class="btn btn--unstyled btn--focus">Unstyled button</button>
-          <input class="btn btn--unstyled btn--focus" type="button" value="Unstyled input tag button">
-          <a class="btn btn--unstyled btn--focus" href="#" role="button">Link as a unstyled button</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Active class unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p class="paragraph text" style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="paragraph">
-          <button type="button" class="btn btn--unstyled btn--active">Unstyled button</button>
-          <input class="btn btn--unstyled btn--active" type="button" value="Unstyled input tag button">
-          <a class="btn btn--unstyled btn--active" href="#" role="button">Link as a unstyled button</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Disabled class unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p class="paragraph text" style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="paragraph">
-          <button type="button" class="btn btn--unstyled btn--disabled" tabindex="-1">Unstyled button</button>
-          <input class="btn btn--unstyled btn--disabled" type="button" value="Unstyled input tag button" tabindex="-1">
-          <a class="btn btn--unstyled btn--disabled" href="#" tabindex="-1" role="button">Link as a unstyled button</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Disabled unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p class="paragraph text" style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="paragraph">
-          <button type="button" class="btn btn--unstyled" disabled>Unstyled button</button>
-          <input type="button" class="btn btn--unstyled" value="Unstyled input tag button" disabled>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Disabled fielset unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p class="paragraph text" style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="paragraph">
-          <form class="form">
-            <fieldset class="fieldset" disabled>
-              <button type="button" class="btn btn--unstyled">Unstyled button</button>
-              <input class="btn btn--unstyled" type="button" value="Unstyled input tag button">
-              <a class="btn btn--unstyled" href="#" tabindex="-1" role="button">Link as an unstyled button</a>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Button group</h2>
-      <div class="app-sectionBlock">
-        <div class="btnGroup">
-          <button type="button" class="btn">Button</button>
-          <input class="btn" type="button" value="Input button">
-        </div>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Button as a checkbox</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btnControl btnControl--hasLabel">Button</button>
-        <button type="button" class="btnControl btnControl--hasLabel btnControl--checked">Checked button</button>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Button as a checkbox with labels</h2>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <div class="formGroup formGroup--horizontal">
-            <button type="button" class="btnControl"></button>
-            <label class="formLabel">Button</label>
-          </div>
-          <div class="formGroup formGroup--horizontal">
-            <button type="button" class="btnControl btnControl--checked"></button>
-            <label class="formLabel">Checked button</label>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Button as a radio</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btnControl btnControl--radio btnControl--hasLabel">Button</button>
-        <button type="button" class="btnControl btnControl--radio btnControl--hasLabel btnControl--checked">Checked button</button>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Button as a radio with labels</h2>
-      <div class="app-sectionBlock">
-        <div class="formGroup formGroup--horizontal">
-          <button type="button" class="btnControl btnControl--radio"></button>
-          <label class="formLabel">Button</label>
-        </div>
-        <div class="formGroup formGroup--horizontal">
-          <button type="button" class="btnControl btnControl--radio btnControl--checked"></button>
-          <label class="formLabel">Checked button</label>
-        </div>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Control button states</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btnControl btnControl--hasLabel">Button</button>
-        <button type="button" class="btnControl btnControl--hasLabel btnControl--focus">Button focus class</button>
-        <button type="button" class="btnControl btnControl--hasLabel btnControl--active">Button active class</button>
-        <button type="button" class="btnControl btnControl--hasLabel btnControl--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btnControl btnControl--hasLabel" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="fieldset" disabled>
-            <button type="button" class="btnControl btnControl--hasLabel">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Checked control button states</h2>
-      <div class="app-sectionBlock">
-        <button type="button" class="btnControl btnControl--hasLabel btnControl--checked">Button</button>
-        <button type="button" class="btnControl btnControl--hasLabel btnControl--checked btnControl--focus">Button focus class</button>
-        <button type="button" class="btnControl btnControl--hasLabel btnControl--checked btnControl--active">Button active class</button>
-        <button type="button" class="btnControl btnControl--hasLabel btnControl--checked btnControl--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btnControl btnControl--hasLabel btnControl--checked" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="fieldset" disabled>
-            <button type="button" class="btnControl btnControl--hasLabel btnControl--checked">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Button as a link</h2>
-      <div class="app-sectionBlock" style="width: 34em;">
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, <button type="button" class="btnLink">button</button> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, <input type="button" class="btnLink" value="input tag button"> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-    </div>
+    <!--Page specific-->
+    <p class="paragraph"><a class="link" href="content/buttons.html">Standalone page</a></p>
   </div>
+
+  <div id="content-outer"></div>
 </div>
 <div class="app-breakpoint">
   <span class="display-max">max</span>
@@ -374,5 +39,11 @@
   <span class="display-md">md</span>
   <span class="display-sm">sm</span>
 </div>
+<script>
+  const contentOuter = document.querySelector('#content-outer');
+  const link = document.querySelector('link[rel=import]');
+  const contentInner = link.import.querySelector('#content-inner');
+  contentOuter.appendChild(contentInner.cloneNode(true));
+</script>
 </body>
 </html>

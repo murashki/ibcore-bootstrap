@@ -23,6 +23,11 @@ $controlDisabledOpacity: 0.5 !default;
 @import './grid/styles';
 
 
+/*
+  In forms.css you probably may want to inherit some css style values or create new once:
+    $formControlDisabledOpacity by other controls disabled opacity
+    $formControlTransitionAppearance by project base transition appearance if exists
+ */
 $formControlDisabledOpacity: $controlDisabledOpacity !default;
 $formControlTransitionAppearance: $transitionAppearance !default;
 
@@ -38,6 +43,11 @@ $formControlTransitionAppearance: $transitionAppearance !default;
 @import './link/unstyled-link/styles';
 
 
+/*
+  In buttons.css you probably may want to inherit some css style values or create new once:
+    $btnDisabledOpacity by other controls disabled opacity
+    $btnTransitionAppearance by project base transition appearance if exists
+ */
 $btnDisabledOpacity: $controlDisabledOpacity !default;
 $btnTransitionAppearance: $transitionAppearance !default;
 
@@ -57,6 +67,15 @@ $btnTransitionAppearance: $transitionAppearance !default;
 @import './buttons/variants/danger/styles';
 
 
+/*
+  In button-link.css you probably may want to inherit some css style values or create new once:
+    $btnLinkColor by link color
+    $btnLinkTextDecoration by link text decoration
+    $btnLinkHoverTextDecoration by hover link text decoration
+    $btnLinkFocusTextDecoration by focus link text decoration
+    $btnLinkActiveTextDecoration by action link text decoration
+    $btnLinkDisabledTextDecoration by $btnLinkTextDecoration
+ */
 $btnLinkColor: $linkColor !default;
 $btnLinkTextDecoration: $linkTextDecoration !default;
 $btnLinkHoverTextDecoration: $linkHoverTextDecoration !default;
@@ -68,6 +87,15 @@ $btnLinkDisabledTextDecoration: $btnLinkTextDecoration !default;
 @import './button-link/styles';
 
 
+/*
+  In paragraph.css you probably may want to inherit some css style values or create new once:
+    $btnControlColor by button color
+    $btnControlBgColor by button background color
+    $btnControlBorderWidth by button border width
+    $btnControlDisabledOpacity by disabled buton opacity
+    $btnControlTransitionAppearance by button transition apprearance
+    $btnControlTransition by button transition
+ */
 $btnControlColor: $btnColor !default;
 $btnControlBgColor: $btnBgColor !default;
 $btnControlBorderWidth: $btnBorderWidth !default;
@@ -91,15 +119,22 @@ $btnControlTransition: $btnTransition !default;
 @import './heading/styles';
 
 
+@import './lists/variables';
+@import './lists/styles';
+
+
+/*
+  Use text.css after list.css cause it specifies some css style values:
+    .list/line-height by .text/line-height
+*/
 @import './text/variables';
 @import './text/styles';
 
-
+/*
+  In paragraph.css you probably may want to inherit some css style values or create new once:
+    $paragraphMarginTop by $textLineHeight
+ */
 $paragraphMarginTop: $textLineHeight / 2 !default;
 
 @import './paragraph/variables';
 @import './paragraph/styles';
-
-
-@import './lists/variables';
-@import './lists/styles';

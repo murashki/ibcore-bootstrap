@@ -1,23 +1,19 @@
 <html lang="ru">
 <head>
   <meta charSet="utf-8">
-  <title>Link</title>
+  <!--Page specific-->
+  <title>Typography</title>
 
-  <!--This-->
-  <!--<link rel="stylesheet" href="css/compiled/link/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/lists/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/paragraph/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/text/index.css">-->
-  <!--<link rel="stylesheet" href="css/compiled/grid/index.css">-->
-  <!--Or this-->
+  <!--Page specific-->
+  <link rel="import" href="content/typography.html">
+
   <link rel="stylesheet" href="css/compiled/index.css">
-
   <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/pages/typography.css">
 </head>
 <body>
 <div class="app-head">
-  <div class="container">
+  <div class="containerFluid">
+    <!--Page specific-->
     <div class="app-menu">
       <a class="link app-menuLink" href="grid.html">Grid</a>
       <a class="link app-menuLink" href="forms.html">Forms</a>
@@ -27,177 +23,14 @@
   </div>
 </div>
 <div class="app-content">
-  <div class="container">
+  <div class="containerFluid">
+    <!--Page specific-->
     <h1 class="h1">Typography</h1>
-
-    <div class="app-section">
-      <h2 class="h2">Heading</h2>
-      <div class="app-sectionBlock" style="width: 34em;">
-        <h1 class="h1">H1 heading</h1>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h2 class="h2">H2 heading</h2>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h3 class="h3">H3 heading</h3>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h4 class="h4">H4 heading</h4>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h5 class="h5">H5 heading</h5>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h6 class="h6">H6 heading</h6>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Numbered heading</h2>
-      <div class="app-sectionBlock h--numbered" style="width: 34em;">
-        <h1 class="h1">Lorem ipsum dolor</h1>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h2 class="h2">Dolor sit amet</h2>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h3 class="h3">Consectetur adipiscing elit</h3>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h3 class="h3">Lorem ipsum dolor</h3>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h4 class="h4">Dolor sit amet</h4>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h4 class="h4">Consectetur adipiscing elit</h4>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h3 class="h3">Lorem ipsum dolor</h3>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <h4 class="h4">Dolor sit amet</h4>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Link</h2>
-      <div class="app-sectionBlock" style="width: 34em;">
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, <a class="link" href="#">link</a> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Unstyled link</h2>
-      <div class="app-sectionBlock" style="width: 34em;">
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, <a class="link link--unstyled" href="#">link</a> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Lists</h2>
-      <div class="app-sectionBlock list-resetCounter" style="width: 34em;">
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <ul class="list list--unordered text">
-          <li>Lorem ipsum dolor sit amet...</li>
-          <li>Ut enim ad minim veniam...</li>
-          <li>Duis aute irure dolor in reprehenderit
-            <ul class="list list--unordered text">
-              <li>Lorem ipsum dolor sit amet...</li>
-              <li>Ut enim ad minim veniam...</li>
-            </ul>
-          </li>
-          <li class="paragraph">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur;</li>
-          <li>Excepteur sint occaecat cupidatat non proident...</li>
-        </ul>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <ol class="list list--ordered list-continueCounter text">
-          <li>Lorem ipsum dolor sit amet...</li>
-          <li>Ut enim ad minim veniam...</li>
-          <li>
-            <p class="paragraph text">Duis aute irure dolor in reprehenderit</p>
-            <ol class="list list--ordered text">
-              <li>Lorem ipsum dolor sit amet...</li>
-              <li>Ut enim ad minim veniam...</li>
-            </ol>
-            <p class="paragraph text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <ol class="list list--ordered list-innerCounter text">
-              <li>Lorem ipsum dolor sit amet...</li>
-              <li>Ut enim ad minim veniam...</li>
-            </ol>
-            <p class="paragraph text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <ol class="list list--ordered list-continueCounter text">
-              <li>Lorem ipsum dolor sit amet...</li>
-              <li>Ut enim ad minim veniam...</li>
-            </ol>
-          </li>
-          <li class="paragraph">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur;</li>
-          <li>Excepteur sint occaecat cupidatat non proident...</li>
-        </ol>
-        <p class="paragraph text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <ol class="list list--ordered list-continueCounter text">
-          <li>Lorem ipsum dolor sit amet...</li>
-          <li>Ut enim ad minim veniam...</li>
-          <li>Duis aute irure dolor in reprehenderit
-            <ol class="list list--ordered text">
-              <li>Lorem ipsum dolor sit amet...</li>
-              <li>Ut enim ad minim veniam...</li>
-            </ol>
-          </li>
-          <li class="paragraph">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur;</li>
-          <li>Excepteur sint occaecat cupidatat non proident...</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="app-section">
-      <h2 class="h2">Unstyled lists</h2>
-      <div class="app-sectionBlock" style="width: 34em;">
-        <ul class="list list--unstyled">
-          <li>Lorem ipsum dolor sit amet...</li>
-          <li>Ut enim ad minim veniam...</li>
-          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur;</li>
-          <li>Excepteur sint occaecat cupidatat non proident...</li>
-        </ul>
-      </div>
-      <div class="app-sectionBlock" style="width: 34em;">
-        <ol class="list list--unstyled">
-          <li>Lorem ipsum dolor sit amet...</li>
-          <li>Ut enim ad minim veniam...</li>
-          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur;</li>
-          <li>Excepteur sint occaecat cupidatat non proident...</li>
-        </ol>
-      </div>
-    </div>
+    <!--Page specific-->
+    <p class="paragraph"><a class="link" href="content/typography.html">Standalone page</a></p>
   </div>
+
+  <div id="content-outer"></div>
 </div>
 <div class="app-breakpoint">
   <span class="display-max">max</span>
@@ -206,5 +39,11 @@
   <span class="display-md">md</span>
   <span class="display-sm">sm</span>
 </div>
+<script>
+  const contentOuter = document.querySelector('#content-outer');
+  const link = document.querySelector('link[rel=import]');
+  const contentInner = link.import.querySelector('#content-inner');
+  contentOuter.appendChild(contentInner.cloneNode(true));
+</script>
 </body>
 </html>
