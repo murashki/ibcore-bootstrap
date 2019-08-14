@@ -12,7 +12,12 @@ $formControlFocusColor: #495057 !default;
 $formControlFocusBgColor: #fff !default;
 $formControlFocusBorderColor: #80bdff !default;
 $formControlFocusBoxShadow: 0 0 0 0.2em rgba(0, 123, 255, 0.25) !default;
-$formControlFocusOutline: 0 !default;
+
+$formControlReadonlyColor: $formControlColor !default;
+$formControlReadonlyBorderColor: $formControlBorderColor !default;
+$formControlReadonlyBgColor: lighten($formControlReadonlyBorderColor, 12.5%) !default;
+$formControlReadonlyOpacity: 1 !default;
+$formControlReadonlyPlaceholderColor: $formControlPlaceholderColor !default;
 
 $formControlDisabledColor: $formControlColor !default;
 $formControlDisabledBgColor: $formControlBgColor !default;

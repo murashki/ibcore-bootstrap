@@ -101,14 +101,21 @@
   color: $formControlFocusColor;
   background-color: $formControlFocusBgColor;
   border-color: $formControlFocusBorderColor;
-  outline: $formControlFocusOutline;
   box-shadow: $formControlFocusBoxShadow;
+  outline: none;
+}
+
+.formControl[readonly],
+.textarea[readonly] {
+  color: $formControlReadonlyColor;
+  background-color: $formControlReadonlyBgColor;
+  border-color: $formControlReadonlyBorderColor;
+  opacity: $formControlReadonlyOpacity;
+  cursor: default;
 }
 
 .formControl:disabled,
-.formControl[readonly],
-.textarea:disabled,
-.textarea[readonly] {
+.textarea:disabled {
   color: $formControlDisabledColor;
   background-color: $formControlDisabledBgColor;
   border-color: $formControlDisabledBorderColor;
@@ -123,9 +130,12 @@
   user-select: none;
 }
 
-.formControl:disabled::placeholder,
 .formControl[readonly]::placeholder,
-.textarea:disabled::placeholder,
 .textarea[readonly]::placeholder {
+  color: $formControlReadonlyPlaceholderColor;
+}
+
+.formControl:disabled::placeholder,
+.textarea:disabled::placeholder {
   color: $formControlDisabledPlaceholderColor;
 }
