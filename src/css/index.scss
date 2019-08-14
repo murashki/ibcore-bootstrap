@@ -9,6 +9,7 @@
 
 
 $transitionAppearance: 0.15s ease-in-out !default;
+$monospaceFontFamily: "Roboto Mono" !default;
 $controlDisabledOpacity: 0.5 !default;
 
 
@@ -87,6 +88,15 @@ $btnControlTransition: $btnTransition !default;
 @import './buttons/button-group/styles';
 
 
+$preformattedFontFamily: $monospaceFontFamily !default;
+$preformattedLineHeight: $lineHeight !default;
+
+@import './preformatted-text/variables';
+@import './preformatted-text/styles';
+
+
+$codeFontFamily: $monospaceFontFamily !default;
+
 @import './code/variables';
 @import './code/styles';
 
@@ -94,6 +104,12 @@ $btnControlTransition: $btnTransition !default;
 @import './heading/variables';
 @import './heading/styles';
 
+
+@import './text/variables';
+@import './text/styles';
+
+
+$paragraphMarginTop: $textLineHeight / 2 !default;
 
 @import './paragraph/variables';
 @import './paragraph/styles';

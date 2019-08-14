@@ -1,14 +1,9 @@
-
-$preformattedFontFamily: "Roboto Mono" !default;
-$preformattedFontSize: inherit !default;
-$preformattedColor: inherit !default;
-$preformattedLineHeight: 1.2em !default;
-$codeFontFamily: $preformattedFontFamily !default;
-$codeFontSize: $preformattedFontSize !default;
+$codeFontFamily: "Roboto Mono" !default;
+$codeFontSize: inherit !default;
+$codeLineHeight: inherit !default;
 $codeColor: #007bff !default;
 $codeBorderColor: transparentize($codeColor, 0.94);
 $codeBorderRadius: 0.1em !default;
 $codeBgColor: transparentize($codeColor, 0.94);
-$codeLineHeight: inherit !default;
 $codeMargin: 0.1em 0 !default;
 $codePadding: 0 0.2em !default;
