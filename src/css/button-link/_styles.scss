@@ -1,21 +1,15 @@
 .btnLink {
   display: inline;
   padding: 0;
-  vertical-align: initial;
   line-height: inherit;
-  text-align: initial;
   text-decoration: $btnLinkTextDecoration;
-  white-space: initial;
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
   color: $btnLinkColor;
-  user-select: initial;
   background-color: transparent;
   border: none;
-  border-radius: initial;
   cursor: pointer;
-  transition: initial;
 }
 
 .btnLink:hover {
