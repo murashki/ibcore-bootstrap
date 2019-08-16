@@ -1,16 +1,2 @@
-$btnDangerColor: #fff !default;
-$btnDangerBgColor: #dc3545 !default;
-$btnDangerBorderColor: $btnDangerBgColor !default;
-$btnDangerHoverColor: $btnDangerColor !default;
-$btnDangerHoverBgColor: darken($btnDangerBgColor, 5%) !default;
-$btnDangerHoverBorderColor: darken($btnDangerHoverBgColor, 2.5%) !default;
-$btnDangerFocusColor: $btnDangerColor !default;
-$btnDangerFocusBgColor: darken($btnDangerBgColor, 5%) !default;
-$btnDangerFocusBorderColor: darken($btnDangerFocusBgColor, 2.5%) !default;
-$btnDangerFocusBoxShadow: 0 0 0 0.2em rgba($btnDangerFocusBorderColor, 0.5) !default;
-$btnDangerActiveColor: $btnDangerColor !default;
-$btnDangerActiveBgColor: darken($btnDangerBgColor, 5%) !default;
-$btnDangerActiveBorderColor: darken($btnDangerFocusBgColor, 2.5%) !default;
-$btnDangerDisabledColor: $btnDangerColor !default;
-$btnDangerDisabledBgColor: $btnDangerBgColor !default;
-$btnDangerDisabledBorderColor: $btnDangerBorderColor !default;
+$btn-danger-color: #fff !default;
+$btn-danger-bg-color: #dc3545 !default;

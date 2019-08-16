@@ -1,38 +1,22 @@
-$btnFontFamily: inherit !default;
-$btnFontSize: 1.2em !default;
-$btnFontSize-xs: 0.8em !default;
-$btnFontSize-sm: 1em !default;
-$btnFontSize-lg: 1.4em !default;
-$btnFontSize-xl: 1.8em !default;
-$btnFontWeight: inherit !default;
-$btnLineHeight: 1.4em !default;
-$btnBorderWidth: 1px !default;
-$btnBorderRadius: 0.15em !default;
-$btnVerticalPadding: 0.375em !default;
-$btnHorizontalPadding: 0.75em !default;
-$btnDisabledOpacity: 0.5 !default;
+$btn-font-family: inherit !default;
+$btn-font-size: 1.2em !default;
+$btn-font-size-xs: 0.8em !default;
+$btn-font-size-sm: 1em !default;
+$btn-font-size-lg: 1.4em !default;
+$btn-font-size-xl: 1.8em !default;
+$btn-font-weight: inherit !default;
+$btn-line-height: 1.4em !default;
+$btn-border-width: 1px !default;
+$btn-border-radius: 0.15em !default;
+$btn-vertical-padding: 0.375em !default;
+$btn-horizontal-padding: 0.75em !default;
+$btn-disabled-opacity: 0.5 !default;
 
-$btnColor: #585467 !default;
-$btnBgColor: #edecf1 !default;
-$btnBorderColor: $btnBgColor !default;
-$btnHoverColor: $btnColor !default;
-$btnHoverBgColor: darken($btnBgColor, 5%) !default;
-$btnHoverBorderColor: darken($btnHoverBgColor, 2.5%) !default;
-$btnFocusColor: $btnColor !default;
-$btnFocusBgColor: darken($btnBgColor, 5%) !default;
-$btnFocusBorderColor: darken($btnFocusBgColor, 2.5%) !default;
-$btnFocusBoxShadow: 0 0 0 0.2em rgba($btnFocusBorderColor, 0.5) !default;
-$btnActiveColor: $btnColor !default;
-$btnActiveBgColor: darken($btnBgColor, 5%) !default;
-$btnActiveBorderColor: darken($btnFocusBgColor, 2.5%) !default;
-$btnDisabledColor: $btnColor !default;
-$btnDisabledBgColor: $btnBgColor !default;
-$btnDisabledBorderColor: $btnBorderColor !default;
+$btn-transition-appearance: 0.15s ease-in-out !default;
+$btn-transition:
+  color $btn-transition-appearance,
+  background-color $btn-transition-appearance,
+  border-color $btn-transition-appearance,
+  box-shadow $btn-transition-appearance !default;
 
-$btnTransitionAppearance: 0.15s ease-in-out !default;
-$btnTransition:
-    color $btnTransitionAppearance,
-    background-color $btnTransitionAppearance,
-    border-color $btnTransitionAppearance,
-    box-shadow $btnTransitionAppearance !default;
-$btnNgbMargin: 1em !default;
+$btn-ngb-margin: 1em !default;

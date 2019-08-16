@@ -8,8 +8,8 @@
 }
 
 
-$transitionAppearance: 0.15s ease-in-out !default;
-$controlDisabledOpacity: 0.5 !default;
+$transition-appearance: 0.15s ease-in-out !default;
+$control-disabled-opacity: 0.5 !default;
 
 
 @import './fonts';
@@ -24,12 +24,12 @@ $controlDisabledOpacity: 0.5 !default;
 
 
 /*
-  In forms.css you probably may want to inherit some css style values or create new once:
-    $formControlDisabledOpacity by other controls disabled opacity
-    $formControlTransitionAppearance by project base transition appearance if exists
+  In forms.css we redefine some variables:
+    $form-control-disabled-opacity depends on project controls disabled opacity;
+    $form-control-transition-appearance depends on project common transition appearance.
  */
-$formControlDisabledOpacity: $controlDisabledOpacity !default;
-$formControlTransitionAppearance: $transitionAppearance !default;
+$form-control-disabled-opacity: $control-disabled-opacity !default;
+$form-control-transition-appearance: $transition-appearance !default;
 
 @import './forms/variables';
 @import './forms/styles';
@@ -44,15 +44,19 @@ $formControlTransitionAppearance: $transitionAppearance !default;
 
 
 /*
-  In buttons.css you probably may want to inherit some css style values or create new once:
-    $btnDisabledOpacity by other controls disabled opacity
-    $btnTransitionAppearance by project base transition appearance if exists
+  In buttons.css we redefine some variables:
+    $btn-disabled-opacity depends on project controls disabled opacity;
+    $btn-transition-appearance depends on project common transition appearance.
  */
-$btnDisabledOpacity: $controlDisabledOpacity !default;
-$btnTransitionAppearance: $transitionAppearance !default;
+$btn-disabled-opacity: $control-disabled-opacity !default;
+$btn-transition-appearance: $transition-appearance !default;
 
 @import './buttons/variables';
 @import './buttons/styles';
+
+
+@import './buttons/variants/default/variables';
+@import './buttons/variants/default/styles';
 
 
 @import './buttons/variants/success/variables';
@@ -68,43 +72,51 @@ $btnTransitionAppearance: $transitionAppearance !default;
 
 
 /*
-  In button-link.css you probably may want to inherit some css style values or create new once:
-    $btnLinkColor by link color
-    $btnLinkTextDecoration by link text decoration
-    $btnLinkHoverTextDecoration by hover link text decoration
-    $btnLinkFocusTextDecoration by focus link text decoration
-    $btnLinkActiveTextDecoration by action link text decoration
-    $btnLinkDisabledTextDecoration by $btnLinkTextDecoration
+  In button-link.css we redefine some variables:
+    $btn-link-color depends on link color;
+    $btn-link-text-decoration depends on link text decoration;
+    $btn-link-hover-text-decoration depends on hover link text decoration;
+    $btn-link-focus-text-decoration depends on focus link text decoration;
+    $btn-link-active-text-decoration depends on active link text decoration;
+    $btn-link-disabled-text-decoration depends on disabled link text decoration.
  */
-$btnLinkColor: $linkColor !default;
-$btnLinkTextDecoration: $linkTextDecoration !default;
-$btnLinkHoverTextDecoration: $linkHoverTextDecoration !default;
-$btnLinkFocusTextDecoration: $linkFocusTextDecoration !default;
-$btnLinkActiveTextDecoration: $linkActiveTextDecoration !default;
-$btnLinkDisabledTextDecoration: $btnLinkTextDecoration !default;
+$btn-link-color: $link-color !default;
+$btn-link-text-decoration: $link-text-decoration !default;
+$btn-link-hover-text-decoration: $link-hover-text-decoration !default;
+$btn-link-focus-text-decoration: $link-focus-text-decoration !default;
+$btn-link-active-text-decoration: $link-active-text-decoration !default;
+$btn-link-disabled-text-decoration: $btn-link-text-decoration !default;
 
 @import './button-link/variables';
 @import './button-link/styles';
 
 
 /*
-  In paragraph.css you probably may want to inherit some css style values or create new once:
-    $btnControlColor by button color
-    $btnControlBgColor by button background color
-    $btnControlBorderWidth by button border width
-    $btnControlDisabledOpacity by disabled buton opacity
-    $btnControlTransitionAppearance by button transition apprearance
-    $btnControlTransition by button transition
+  In button-control.css we redefine some variables:
+    $btn-control-color depends on button color;
+    $btn-control-bg-color depends on button background color;
+    $btn-control-border-width depends on button border width;
+    $btn-control-disabled-opacity depends on disabled buton opacity;
+    $btn-control-transition-appearance depends on button transition apprearance;
+    $btn-control-transition depends on button transition.
  */
-$btnControlColor: $btnColor !default;
-$btnControlBgColor: $btnBgColor !default;
-$btnControlBorderWidth: $btnBorderWidth !default;
-$btnControlDisabledOpacity: $btnDisabledOpacity !default;
-$btnControlTransitionAppearance: $btnTransitionAppearance !default;
-$btnControlTransition: $btnTransition !default;
+$btn-control-color: $btn-color !default;
+$btn-control-bg-color: $btn-bg-color !default;
+$btn-control-border-width: $btn-border-width !default;
+$btn-control-disabled-opacity: $btn-disabled-opacity !default;
+$btn-control-transition-appearance: $btn-transition-appearance !default;
+$btn-control-transition: $btn-transition !default;
 
-@import './button-controls/variables';
-@import './button-controls/styles';
+@import './button-control/variables';
+@import './button-control/styles';
+
+
+@import './button-control/variants/default/variables';
+@import './button-control/variants/default/styles';
+
+
+@import './button-control/variants/error/variables';
+@import './button-control/variants/error/styles';
 
 
 @import './buttons/unstyled-button/variables';
@@ -124,17 +136,17 @@ $btnControlTransition: $btnTransition !default;
 
 
 /*
-  Use text.css after list.css cause it specifies some css style values:
+  You should use text.css after list.css cause it overrides some style rules:
     .list/line-height by .text/line-height
 */
 @import './text/variables';
 @import './text/styles';
 
 /*
-  In paragraph.css you probably may want to inherit some css style values or create new once:
-    $paragraphMarginTop by $textLineHeight
+  In paragraph.css we redefine some variables:
+    $paragraph-margin-top depends on $text-line-height
  */
-$paragraphMarginTop: $textLineHeight / 2 !default;
+$paragraph-margin-top: $text-line-height / 2 !default;
 
 @import './paragraph/variables';
 @import './paragraph/styles';

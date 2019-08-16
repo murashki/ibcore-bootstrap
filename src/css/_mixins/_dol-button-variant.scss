@@ -1,0 +1,43 @@
+@import './button-variant';
+
+@mixin DoL-button-variant(
+  $class,
+  $variant-class,
+  $color,
+  $bg-color,
+  $border-color: $bg-color,
+  $hover-color: $color,
+  $hover-bg-color: darken($bg-color, 5%),
+  $hover-border-color: darken($border-color, 7.5%),
+  $focus-color: $color,
+  $focus-bg-color: darken($bg-color, 5%),
+  $focus-border-color: darken($border-color, 7.5%),
+  $focus-box-shadow: 0 0 0 0.2em rgba($focus-border-color, 0.5),
+  $active-color: $color,
+  $active-bg-color: darken($bg-color, 5%),
+  $active-border-color: darken($border-color, 7.5%),
+  $disabled-color: $color,
+  $disabled-bg-color: $bg-color,
+  $disabled-border-color: $border-color
+) {
+  @include button-variant(
+    $class,
+    $variant-class,
+    $color,
+    $bg-color,
+    $border-color,
+    $hover-color,
+    $hover-bg-color,
+    $hover-border-color,
+    $focus-color,
+    $focus-bg-color,
+    $focus-border-color,
+    $focus-box-shadow,
+    $active-color,
+    $active-bg-color,
+    $active-border-color,
+    $disabled-color,
+    $disabled-bg-color,
+    $disabled-border-color
+  );
+}

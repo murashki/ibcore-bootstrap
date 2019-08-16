@@ -1,20 +1,20 @@
 .link {
-  color: $linkColor;
-  text-decoration: $linkTextDecoration;
+  color: $link-color;
+  text-decoration: $link-text-decoration;
 }
 
 .link:visited {
-  color: $linkVisitedColor;
+  color: $link-visited-color;
 }
 
 .link:hover {
-  color: $linkHoverColor;
-  text-decoration: $linkHoverTextDecoration;
+  color: $link-hover-color;
+  text-decoration: $link-hover-text-decoration;
 }
 
 .link:focus {
-  color: $linkFocusColor;
-  text-decoration: $linkFocusTextDecoration;
+  color: $link-focus-color;
+  text-decoration: $link-focus-text-decoration;
   outline: none;
 }
 

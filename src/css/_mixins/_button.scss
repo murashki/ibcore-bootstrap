@@ -1,0 +1,73 @@
+@mixin button(
+  $class,
+  $btn-font-family,
+  $btn-font-size,
+  $btn-font-weight,
+  $btn-line-height,
+  $btn-border-width,
+  $btn-border-radius,
+  $btn-vertical-padding,
+  $btn-horizontal-padding,
+  $btn-disabled-opacity,
+  $btn-transition,
+  $btn-ngb-margin
+) {
+  // >>> Base
+  .#{$class} {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $btn-font-family;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: $btn-border-width solid transparent;
+    padding: $btn-vertical-padding $btn-horizontal-padding;
+    line-height: $btn-line-height;
+    border-radius: $btn-border-radius;
+    cursor: pointer;
+  }
+  // <<< Base
+
+
+  // >>> Focus
+  .#{$class}:focus {
+    outline: none;
+  }
+  // <<< Focus
+
+
+  // >>> Disabled
+  .#{$class}:disabled,
+  .#{$class}.#{$class}--disabled,
+  fieldset:disabled .#{$class} {
+    opacity: $btn-disabled-opacity;
+    cursor: default;
+    pointer-events: none;
+  }
+  // <<< Disabled
+
+
+  // >>> Transition
+  .#{$class} {
+    transition: $btn-transition;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    .#{$class} {
+      transition: none;
+    }
+  }
+  // <<< Transition
+
+
+  // >>> Neighbors
+  .#{$class} + .#{$class} {
+    margin-left: $btn-ngb-margin;
+  }
+  // <<< Neighbors
+}

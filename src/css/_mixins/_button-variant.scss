@@ -1,65 +1,69 @@
 @mixin button-variant(
+  $class,
+  $variant-class,
   $color,
-  $bgColor,
-  $borderColor,
-  $hoverColor,
-  $hoverBgColor,
-  $hoverBorderColor,
-  $focusColor,
-  $focusBgColor,
-  $focusBorderColor,
-  $focusBoxShadow,
-  $activeColor,
-  $activeBgColor,
-  $activeBorderColor,
-  $disabledColor,
-  $disabledBgColor,
-  $disabledBorderColor
+  $bg-color,
+  $border-color,
+  $hover-color,
+  $hover-bg-color,
+  $hover-border-color,
+  $focus-color,
+  $focus-bg-color,
+  $focus-border-color,
+  $focus-box-shadow,
+  $active-color,
+  $activebg-color,
+  $active-border-color,
+  $disabled-color,
+  $disabled-bg-color,
+  $disabled-border-color
 ) {
   // >>> Base
-  color: $color;
-  background-color: $bgColor;
-  border-color: $borderColor;
+  .#{$variant-class} {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color;
+  }
   // <<< Base
 
 
   // >>> Hover
-  &:hover {
-    color: $hoverColor;
-    background-color: $hoverBgColor;
-    border-color: $hoverBorderColor;
+  .#{$variant-class}:hover {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+    border-color: $hover-border-color;
   }
   // <<< Hover
 
 
   // >>> Focus
-  &:focus,
-  &.btn--focus  {
-    color: $focusColor;
-    background-color: $focusBgColor;
-    border-color: $focusBorderColor;
-    box-shadow: $focusBoxShadow;
+  .#{$variant-class}:focus,
+  .#{$variant-class}.#{$class}--focus  {
+    color: $focus-color;
+    background-color: $focus-bg-color;
+    border-color: $focus-border-color;
+    box-shadow: $focus-box-shadow;
   }
   // <<< Focus
 
 
   // >>> Active
-  &:active,
-  &.btn--active {
-    color: $activeColor;
-    background-color: $activeBgColor;
-    border-color: $activeBorderColor;
+  .#{$variant-class}:active,
+  .#{$variant-class}.#{$class}--active {
+    color: $active-color;
+    background-color: $activebg-color;
+    border-color: $active-border-color;
   }
   // <<< Active
 
 
   // >>> Disabled
-  &:disabled,
-  &.btn--disabled,
-  fieldset:disabled & {
-    color: $disabledColor;
-    background-color: $disabledBgColor;
-    border-color: $disabledBorderColor;
+  .#{$variant-class}:disabled,
+  .#{$variant-class}.#{$class}--disabled,
+  fieldset:disabled #{$variant-class} {
+    color: $disabled-color;
+    background-color: $disabled-bg-color;
+    border-color: $disabled-border-color;
     box-shadow: none;
   }
   // <<< Disabled

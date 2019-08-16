@@ -1,22 +1,8 @@
-@import '../../../_mixins/button-variant';
+@import '../../../_mixins/dol-button-variant';
 
-.btn--danger {
-  @include button-variant(
-    $btnDangerColor,
-    $btnDangerBgColor,
-    $btnDangerBorderColor,
-    $btnDangerHoverColor,
-    $btnDangerHoverBgColor,
-    $btnDangerHoverBorderColor,
-    $btnDangerFocusColor,
-    $btnDangerFocusBgColor,
-    $btnDangerFocusBorderColor,
-    $btnDangerFocusBoxShadow,
-    $btnDangerActiveColor,
-    $btnDangerActiveBgColor,
-    $btnDangerActiveBorderColor,
-    $btnDangerDisabledColor,
-    $btnDangerDisabledBgColor,
-    $btnDangerDisabledBorderColor
-  );
-}
+@include DoL-button-variant(
+  "btn",
+  "btn--danger",
+  $btn-danger-color,
+  $btn-danger-bg-color
+);

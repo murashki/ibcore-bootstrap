@@ -1,22 +1,8 @@
-@import '../../../_mixins/button-variant';
+@import '../../../_mixins/dol-button-variant';
 
-.btn--warning {
-  @include button-variant(
-    $btnWarningColor,
-    $btnWarningBgColor,
-    $btnWarningBorderColor,
-    $btnWarningHoverColor,
-    $btnWarningHoverBgColor,
-    $btnWarningHoverBorderColor,
-    $btnWarningFocusColor,
-    $btnWarningFocusBgColor,
-    $btnWarningFocusBorderColor,
-    $btnWarningFocusBoxShadow,
-    $btnWarningActiveColor,
-    $btnWarningActiveBgColor,
-    $btnWarningActiveBorderColor,
-    $btnWarningDisabledColor,
-    $btnWarningDisabledBgColor,
-    $btnWarningDisabledBorderColor
-  );
-}
+@include DoL-button-variant(
+  "btn",
+  "btn--warning",
+  $btn-warning-color,
+  $btn-warning-bg-color
+);

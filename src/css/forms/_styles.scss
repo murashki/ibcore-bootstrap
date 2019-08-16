@@ -1,54 +1,54 @@
 .form {}
 
-.formGroup {
-  margin-bottom: $formGroupMarginBottom;
+.form-group {
+  margin-bottom: $form-group-margin-bottom;
 }
 
-.formGroup--vertical {
+.form-group--vertical {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.formGroup--vertical > * + * {
-  margin-top: $formGroupVerticalNgbMargin;
+.form-group--vertical > * + * {
+  margin-top: $form-group-vertical-ngb-margin;
 }
 
-.formGroup--horizontal {
+.form-group--horizontal {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.formGroup--horizontal > * + * {
-  margin-left: $formGroupHorizontlNgbMargin;
+.form-group--horizontal > * + * {
+  margin-left: $form-group-horizontal-ngb-margin;
 }
 
-.formGroup > .col,
-.formGroup > .col-1,
-.formGroup > .col-2,
-.formGroup > .col-3,
-.formGroup > .col-4,
-.formGroup > .col-5,
-.formGroup > .col-6,
-.formGroup > .col-7,
-.formGroup > .col-8,
-.formGroup > .col-9,
-.formGroup > .col-10,
-.formGroup > .col-11,
-.formGroup > .col-12,
-.formGroup > .col-auto {
+.form-group > .col,
+.form-group > .col-1,
+.form-group > .col-2,
+.form-group > .col-3,
+.form-group > .col-4,
+.form-group > .col-5,
+.form-group > .col-6,
+.form-group > .col-7,
+.form-group > .col-8,
+.form-group > .col-9,
+.form-group > .col-10,
+.form-group > .col-11,
+.form-group > .col-12,
+.form-group > .col-auto {
   display: flex;
   align-items: center;
 }
 
-.formLabel {
+.form-label {
   display: inline-block;
-  font-size: $formLabelFontSize;
-  line-height: $formLabelLineHeight;
+  font-size: $form-label-font-size;
+  line-height: $form-label-line-height;
 }
 
-.formGroup .formLabel {
+.form-group .form-label {
   display: block;
 }
 
@@ -60,82 +60,78 @@
   border: 0;
 }
 
-.formControl,
+.form-control,
 .textarea {
   display: block;
   width: 100%;
-  padding: $formControlVerticalPadding $formControlHorizontalPadding;
-  font-family: $formControlFontFamily;
-  font-size: $formControlFontSize;
-  font-weight: $formControlFontWeight;
-  line-height: $formControlLineHeight;
-  color: $formControlColor;
-  background-color: $formControlBgColor;
+  padding: $form-control-vertical-padding $form-control-horizontal-padding;
+  font-family: $form-control-font-family;
+  font-size: $form-control-font-size;
+  font-weight: $form-control-font-weight;
+  line-height: $form-control-line-height;
+  color: $form-control-color;
+  background-color: $form-control-bg-color;
   background-clip: padding-box;
-  border: $formControlBorderWidth solid $formControlBorderColor;
-  border-radius: $formControlBorderRadius;
-  transition:
-    color $formControlTransitionAppearance,
-    background-color $formControlTransitionAppearance,
-    border-color $formControlTransitionAppearance,
-    box-shadow $formControlTransitionAppearance;
+  border: $form-control-border-width solid $form-control-border-color;
+  border-radius: $form-control-border-radius;
+  transition: $form-control-transition;
 }
 
-.formControl {
-  height: calc(2 * #{$formControlVerticalPadding} + #{$formControlLineHeight}em + 2 * #{$formControlBorderWidth});
+.form-control {
+  height: calc(#{$form-control-vertical-padding} * 2 + #{$form-control-line-height} * #{$form-control-border-width} * 2);
 }
 
 .textarea {
-  height: $textareaHeight;
+  height: $textarea-height;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .formControl,
+  .form-control,
   .textarea {
     transition: none;
   }
 }
 
-.formControl:focus,
+.form-control:focus,
 .textarea:focus {
-  color: $formControlFocusColor;
-  background-color: $formControlFocusBgColor;
-  border-color: $formControlFocusBorderColor;
-  box-shadow: $formControlFocusBoxShadow;
+  color: $form-control-focus-color;
+  background-color: $form-control-focus-bg-color;
+  border-color: $form-control-focus-border-color;
+  box-shadow: $form-control-focus-box-shadow;
   outline: none;
 }
 
-.formControl[readonly],
+.form-control[readonly],
 .textarea[readonly] {
-  color: $formControlReadonlyColor;
-  background-color: $formControlReadonlyBgColor;
-  border-color: $formControlReadonlyBorderColor;
-  opacity: $formControlReadonlyOpacity;
+  color: $form-control-readonly-color;
+  background-color: $form-control-readonly-bg-color;
+  border-color: $form-control-readonly-border-color;
+  opacity: $form-control-readonly-opacity;
   cursor: default;
 }
 
-.formControl:disabled,
+.form-control:disabled,
 .textarea:disabled {
-  color: $formControlDisabledColor;
-  background-color: $formControlDisabledBgColor;
-  border-color: $formControlDisabledBorderColor;
-  opacity: $formControlDisabledOpacity;
+  color: $form-control-disabled-color;
+  background-color: $form-control-disabled-bg-color;
+  border-color: $form-control-disabled-border-color;
+  opacity: $form-control-disabled-opacity;
   cursor: default;
 }
 
-.formControl::placeholder,
+.form-control::placeholder,
 .textarea::placeholder {
   opacity: 1;
-  color: $formControlPlaceholderColor;
+  color: $form-control-placeholder-color;
   user-select: none;
 }
 
-.formControl[readonly]::placeholder,
+.form-control[readonly]::placeholder,
 .textarea[readonly]::placeholder {
-  color: $formControlReadonlyPlaceholderColor;
+  color: $form-control-readonly-placeholder-color;
 }
 
-.formControl:disabled::placeholder,
+.form-control:disabled::placeholder,
 .textarea:disabled::placeholder {
-  color: $formControlDisabledPlaceholderColor;
+  color: $form-control-disabled-placeholder-color;
 }

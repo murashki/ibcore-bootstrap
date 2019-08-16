@@ -1,48 +1,48 @@
 
-//        ┌──────────────────────────────────────────────────────────$containerWidth-max─┐
+//        ┌──────────────────────────────────────────────────────────$container-width-max─┐
 //        └─────────────────────────────────────────────────────────────────────────1400─┘
 //  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─┐
-//        ┌────────────────────────────────────────────$containerWidth-xl─┐        |
+//        ┌────────────────────────────────────────────$container-width-xl─┐        |
 //        └──────────────────────────────────────────────────────────1180─┘        |
 //  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐              |
-//        ┌─────────────────────────────$containerWidth-lg─┐        |              |
+//        ┌─────────────────────────────$container-width-lg─┐        |              |
 //        └────────────────────────────────────────────960─┘        |              |
 //  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─┐              |              |
-//        ┌─────────────$containerWidth-md──┐        |              |              |
+//        ┌─────────────$container-width-md──┐        |              |              |
 //        └─────────────────────────────740─┘        |              |              |
 //  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐              |              |              |
-//        ┌─$containerWidth-sm─┐      |              |              |              |
+//        ┌─$container-width-sm─┐      |              |              |              |
 //        └────────────────540─┘      759            979           1199           1419
 // ┌──────────────────────────sm──────┘┌─────md──────┘┌─────lg──────┘┌─────xl──────┘┌────max──────>
 // 1                         col       |     col      |     col      |     col      |     col
 //                          col-xl     |    col-xl    |    col-xl    |    col-xl    |
 //                          col-lg     |    col-lg    |    col-lg    |              1420
-//                          col-md     |    col-md    |              1200           $gridBreakpoint-xl
-//                          col-sm     |              980            $gridBreakpoint-lg
-//                                    760            $gridBreakpoint-md
-//                                    $gridBreakpoint-sm
+//                          col-md     |    col-md    |              1200           $grid-breakpoint-xl
+//                          col-sm     |              980            $grid-breakpoint-lg
+//                                    760            $grid-breakpoint-md
+//                                    $grid-breakpoint-sm
 
 
-$gridBreakpoint-sm: 760px !default;
-$gridBreakpoint-md: 980px !default;
-$gridBreakpoint-lg: 1200px !default;
-$gridBreakpoint-xl: 1420px !default;
+$grid-breakpoint-sm: 760px !default;
+$grid-breakpoint-md: 980px !default;
+$grid-breakpoint-lg: 1200px !default;
+$grid-breakpoint-xl: 1420px !default;
 
-$containerMinWidth: 540px !default;
-$containerMaxWidth: 1400px !default;
+$container-min-width: 540px !default;
+$container-max-width: 1400px !default;
 
-$containerWidth-sm: $containerMinWidth !default;
-$containerWidth-md: 740px !default;
-$containerWidth-lg: 960px !default;
-$containerWidth-xl: 1180px !default;
-$containerWidth-max: $containerMaxWidth !default;
+$container-width-sm: $container-min-width !default;
+$container-width-md: 740px !default;
+$container-width-lg: 960px !default;
+$container-width-xl: 1180px !default;
+$container-width-max: $container-max-width !default;
 
-$containerGutter-sm: 30px !default;
-$containerGutter-md: 35px !default;
-$containerGutter-lg: 40px !default;
-$containerGutter-xl: 60px !default;
-$containerGutter-max: 80px !default;
+$container-gutter-sm: 30px !default;
+$container-gutter-md: 35px !default;
+$container-gutter-lg: 40px !default;
+$container-gutter-xl: 60px !default;
+$container-gutter-max: 80px !default;
 
-$gridGutter-sm: 10px !default;
-$gridGutter: 20px !default;
-$gridGutter-lg: 30px !default;
+$grid-gutter-sm: 10px !default;
+$grid-gutter: 20px !default;
+$grid-gutter-lg: 30px !default;

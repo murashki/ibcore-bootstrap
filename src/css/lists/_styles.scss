@@ -1,7 +1,7 @@
 .list {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: $listLineHeight;
+  line-height: $list-line-height;
 }
 
 .list--ordered {
@@ -12,7 +12,7 @@
 
 .list--ordered,
 .list--unordered {
-  padding-left: $listPaddingLeft;
+  padding-left: $list-padding-left;
   list-style: none;
 }
 
@@ -26,7 +26,7 @@
   position: absolute;
   right: 100%;
   display: inline-block;
-  margin-right: $listLabelMarginRight;
+  margin-right: $list-label-margin-right;
 }
 
 .list--ordered li:before {
@@ -38,19 +38,19 @@
   content: "•";
 }
 
-.list-resetCounter {
+.list-reset-counter {
   counter-reset: list;
 }
 
-.list-continueCounter {
+.list-continue-counter {
   counter-reset: none;
 }
 
-.list-innerCounter {
+.list-inner-counter {
   counter-reset: list;
 }
 
-.list-innerCounter li:before {
+.list-inner-counter li:before {
   counter-increment: list;
   content: counter(list) ". ";
 }

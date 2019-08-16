@@ -2,7 +2,7 @@
 
 @include DoL-button-variant(
   "btn",
-  "btn--success",
-  $btn-success-color,
-  $btn-success-bg-color
+  "btn",
+  $btn-color,
+  $btn-bg-color
 );

@@ -1,16 +1,2 @@
-$btnSuccessColor: #fff !default;
-$btnSuccessBgColor: #28a745 !default;
-$btnSuccessBorderColor: $btnSuccessBgColor !default;
-$btnSuccessHoverColor: $btnSuccessColor !default;
-$btnSuccessHoverBgColor: darken($btnSuccessBgColor, 5%) !default;
-$btnSuccessHoverBorderColor: darken($btnSuccessHoverBgColor, 2.5%) !default;
-$btnSuccessFocusColor: $btnSuccessColor !default;
-$btnSuccessFocusBgColor: darken($btnSuccessBgColor, 5%) !default;
-$btnSuccessFocusBorderColor: darken($btnSuccessFocusBgColor, 2.5%) !default;
-$btnSuccessFocusBoxShadow: 0 0 0 0.2em rgba($btnSuccessFocusBorderColor, 0.5) !default;
-$btnSuccessActiveColor: $btnSuccessColor !default;
-$btnSuccessActiveBgColor: darken($btnSuccessBgColor, 5%) !default;
-$btnSuccessActiveBorderColor: darken($btnSuccessFocusBgColor, 2.5%) !default;
-$btnSuccessDisabledColor: $btnSuccessColor !default;
-$btnSuccessDisabledBgColor: $btnSuccessBgColor !default;
-$btnSuccessDisabledBorderColor: $btnSuccessBorderColor !default;
+$btn-success-color: #fff !default;
+$btn-success-bg-color: #28a745 !default;

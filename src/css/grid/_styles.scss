@@ -1,62 +1,62 @@
 .container,
-.containerFluid {
-  padding-right: $containerGutter-max / 2;
-  padding-left: $containerGutter-max / 2;
+.container-fluid {
+  padding-right: $container-gutter-max / 2;
+  padding-left: $container-gutter-max / 2;
   margin-right: auto;
   margin-left: auto;
 }
 
 .container {
-  width: $containerWidth-max;
+  width: $container-width-max;
 }
 
-.containerFluid {
+.container-fluid {
   width: 100%;
-  min-width: $containerMinWidth;
-  max-width: $containerMaxWidth;
+  min-width: $container-min-width;
+  max-width: $container-max-width;
 }
 
-@media (max-width: $gridBreakpoint-xl - 1) {
+@media (max-width: $grid-breakpoint-xl - 1) {
   .container,
-  .containerFluid {
-    padding-right: $containerGutter-xl / 2;
-    padding-left: $containerGutter-xl / 2;
+  .container-fluid {
+    padding-right: $container-gutter-xl / 2;
+    padding-left: $container-gutter-xl / 2;
   }
   .container {
-    width: $containerWidth-xl;
-  }
-}
-
-@media (max-width: $gridBreakpoint-lg - 1) {
-  .container,
-  .containerFluid {
-    padding-right: $containerGutter-lg / 2;
-    padding-left: $containerGutter-lg / 2;
-  }
-  .container {
-    width: $containerWidth-lg;
+    width: $container-width-xl;
   }
 }
 
-@media (max-width: $gridBreakpoint-md - 1) {
+@media (max-width: $grid-breakpoint-lg - 1) {
   .container,
-  .containerFluid {
-    padding-right: $containerGutter-md / 2;
-    padding-left: $containerGutter-md / 2;
+  .container-fluid {
+    padding-right: $container-gutter-lg / 2;
+    padding-left: $container-gutter-lg / 2;
   }
   .container {
-    width: $containerWidth-md;
+    width: $container-width-lg;
   }
 }
 
-@media (max-width: $gridBreakpoint-sm - 1) {
+@media (max-width: $grid-breakpoint-md - 1) {
   .container,
-  .containerFluid {
-    padding-right: $containerGutter-sm / 2;
-    padding-left: $containerGutter-sm / 2;
+  .container-fluid {
+    padding-right: $container-gutter-md / 2;
+    padding-left: $container-gutter-md / 2;
   }
   .container {
-    width: $containerWidth-sm;
+    width: $container-width-md;
+  }
+}
+
+@media (max-width: $grid-breakpoint-sm - 1) {
+  .container,
+  .container-fluid {
+    padding-right: $container-gutter-sm / 2;
+    padding-left: $container-gutter-sm / 2;
+  }
+  .container {
+    width: $container-width-sm;
   }
 }
 
@@ -85,8 +85,8 @@
 }
 
 .row {
-  margin-right: -$gridGutter / 2;
-  margin-left: -$gridGutter / 2;
+  margin-right: -$grid-gutter / 2;
+  margin-left: -$grid-gutter / 2;
 }
 
 .col,
@@ -103,13 +103,13 @@
 .col-11,
 .col-12,
 .col-auto {
-  padding-right: $gridGutter / 2;
-  padding-left: $gridGutter / 2;
+  padding-right: $grid-gutter / 2;
+  padding-left: $grid-gutter / 2;
 }
 
 .gutters-sm {
-  margin-right: -$gridGutter-sm / 2;
-  margin-left: -$gridGutter-sm / 2;
+  margin-right: -$grid-gutter-sm / 2;
+  margin-left: -$grid-gutter-sm / 2;
 }
 
 .gutters-sm > .col,
@@ -126,13 +126,13 @@
 .gutters-sm > .col-11,
 .gutters-sm > .col-12,
 .gutters-sm > .col-auto {
-  padding-right: $gridGutter-sm / 2;
-  padding-left: $gridGutter-sm / 2;
+  padding-right: $grid-gutter-sm / 2;
+  padding-left: $grid-gutter-sm / 2;
 }
 
 .gutters-lg {
-  margin-right: -$gridGutter-lg / 2;
-  margin-left: -$gridGutter-lg / 2;
+  margin-right: -$grid-gutter-lg / 2;
+  margin-left: -$grid-gutter-lg / 2;
 }
 
 .gutters-lg > .col,
@@ -149,29 +149,29 @@
 .gutters-lg > .col-11,
 .gutters-lg > .col-12,
 .gutters-lg > .col-auto {
-  padding-right: $gridGutter-lg / 2;
-  padding-left: $gridGutter-lg / 2;
+  padding-right: $grid-gutter-lg / 2;
+  padding-left: $grid-gutter-lg / 2;
 }
 
-.noGutters {
+.no-gutters {
   margin-right: 0;
   margin-left: 0;
 }
 
-.noGutters > .col,
-.noGutters > .col-1,
-.noGutters > .col-2,
-.noGutters > .col-3,
-.noGutters > .col-4,
-.noGutters > .col-5,
-.noGutters > .col-6,
-.noGutters > .col-7,
-.noGutters > .col-8,
-.noGutters > .col-9,
-.noGutters > .col-10,
-.noGutters > .col-11,
-.noGutters > .col-12,
-.noGutters > .col-auto {
+.no-gutters > .col,
+.no-gutters > .col-1,
+.no-gutters > .col-2,
+.no-gutters > .col-3,
+.no-gutters > .col-4,
+.no-gutters > .col-5,
+.no-gutters > .col-6,
+.no-gutters > .col-7,
+.no-gutters > .col-8,
+.no-gutters > .col-9,
+.no-gutters > .col-10,
+.no-gutters > .col-11,
+.no-gutters > .col-12,
+.no-gutters > .col-auto {
   padding-right: 0;
   padding-left: 0;
 }
@@ -292,7 +292,7 @@
   margin-left: 91.666667%;
 }
 
-@media (max-width: $gridBreakpoint-xl - 1) {
+@media (max-width: $grid-breakpoint-xl - 1) {
   .col-xl {
     flex-basis: 0;
     flex-grow: 1;
@@ -390,7 +390,7 @@
   }
 }
 
-@media (max-width: $gridBreakpoint-lg - 1) {
+@media (max-width: $grid-breakpoint-lg - 1) {
   .col-lg {
     flex-basis: 0;
     flex-grow: 1;
@@ -488,7 +488,7 @@
   }
 }
 
-@media (max-width: $gridBreakpoint-md - 1) {
+@media (max-width: $grid-breakpoint-md - 1) {
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
@@ -586,7 +586,7 @@
   }
 }
 
-@media (max-width: $gridBreakpoint-sm - 1) {
+@media (max-width: $grid-breakpoint-sm - 1) {
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
@@ -692,7 +692,7 @@
   display: none;
 }
 
-@media (min-width: $gridBreakpoint-xl) {
+@media (min-width: $grid-breakpoint-xl) {
   .rowBreak-max {
     display: block;
     width: 100%;
@@ -706,7 +706,7 @@
   }
 }
 
-@media (min-width: $gridBreakpoint-lg) and (max-width: $gridBreakpoint-xl - 1) {
+@media (min-width: $grid-breakpoint-lg) and (max-width: $grid-breakpoint-xl - 1) {
   .rowBreak-xl {
     display: block;
     width: 100%;
@@ -720,7 +720,7 @@
   }
 }
 
-@media (min-width: $gridBreakpoint-md) and (max-width: $gridBreakpoint-lg - 1) {
+@media (min-width: $grid-breakpoint-md) and (max-width: $grid-breakpoint-lg - 1) {
   .rowBreak-lg {
     display: block;
     width: 100%;
@@ -734,7 +734,7 @@
   }
 }
 
-@media (min-width: $gridBreakpoint-sm) and (max-width: $gridBreakpoint-md - 1) {
+@media (min-width: $grid-breakpoint-sm) and (max-width: $grid-breakpoint-md - 1) {
   .rowBreak-md {
     display: block;
     width: 100%;
@@ -748,7 +748,7 @@
   }
 }
 
-@media (max-width: $gridBreakpoint-sm - 1) {
+@media (max-width: $grid-breakpoint-sm - 1) {
   .rowBreak-sm {
     display: block;
     width: 100%;

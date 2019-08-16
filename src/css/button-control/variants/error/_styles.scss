@@ -1,0 +1,15 @@
+@import '../../../_mixins/button-control-variant';
+@import '../../../_mixins/button-variant';
+
+@include DoL-button-variant(
+  "btn-control",
+  "btn-control--error",
+  $btn-control-error-color,
+  $btn-control-error-bg-color,
+  $border-color: $btn-control-error-border-color
+);
+
+@include button-control-variant(
+  "btn-control",
+  "btn-control--error"
+);

@@ -1,41 +1,41 @@
-.btnLink {
+.btn-link {
   display: inline;
   padding: 0;
   line-height: inherit;
-  text-decoration: $btnLinkTextDecoration;
+  text-decoration: $btn-link-text-decoration;
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
-  color: $btnLinkColor;
+  color: $btn-link-color;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.btnLink:hover {
-  color: $btnLinkHoverColor;
-  text-decoration: $btnLinkHoverTextDecoration;
+.btn-link:hover {
+  color: $btn-link-hover-color;
+  text-decoration: $btn-link-hover-text-decoration;
 }
 
-.btnLink:focus,
-.btnLink.btn--focus {
-  color: $btnLinkFocusColor;
-  text-decoration: $btnLinkFocusTextDecoration;
+.btn-link:focus,
+.btn-link.btn-link--focus {
+  color: $btn-link-focus-color;
+  text-decoration: $btn-link-focus-text-decoration;
   outline: none;
 }
 
-.btnLink:active,
-.btnLink.btn--active {
-  color: $btnLinkActiveColor;
-  text-decoration: $btnLinkActiveTextDecoration;
+.btn-link:active,
+.btn-link.btn-link--active {
+  color: $btn-link-active-color;
+  text-decoration: $btn-link-active-text-decoration;
 }
 
-.btnLink:disabled,
-.btnLink.btn--disabled,
-fieldset:disabled .btnLink {
-  color: $btnLinkDisabledColor;
-  text-decoration: $btnLinkDisabledTextDecoration;
-  opacity: $btnLinkDisabledOpacity;
+.btn-link:disabled,
+.btn-link.btn-link--disabled,
+fieldset:disabled .btn-link {
+  color: $btn-link-disabled-color;
+  text-decoration: $btn-link-disabled-text-decoration;
+  opacity: $btn-link-disabled-opacity;
   cursor: default;
   pointer-events: none;
 }

@@ -1,38 +1,38 @@
-.btnGroup {
+.btn-group {
   position: relative;
   z-index: 0;
   display: inline-flex;
   vertical-align: middle;
 }
 
-.btnGroup .btn {
+.btn-group .btn {
   position: relative;
   flex: 0 1 auto;
 }
 
-.btnGroup .btn:hover {
+.btn-group .btn:hover {
   z-index: 2;
 }
 
-.btnGroup .btn:focus,
-.btnGroup .btn:active {
+.btn-group .btn:focus,
+.btn-group .btn:active {
   z-index: 1;
 }
 
-.btnGroup .btn + .btn {
-  margin-left: -$btnBorderWidth;
+.btn-group .btn + .btn {
+  margin-left: -$btn-border-width;
 }
 
-.btnGroup .btn:first-child {
+.btn-group .btn:first-child {
   margin-left: 0;
 }
 
-.btnGroup .btn:not(:first-child) {
+.btn-group .btn:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btnGroup .btn:not(:last-child) {
+.btn-group .btn:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }

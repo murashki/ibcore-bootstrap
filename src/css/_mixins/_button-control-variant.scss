@@ -1,87 +1,27 @@
+@import './button-variant';
+
 @mixin button-control-variant(
-  $btnControlColor,
-  $btnControlBgColor,
-  $btnControlBorderColor,
-  $btnControlHoverColor,
-  $btnControlHoverBgColor,
-  $btnControlHoverBorderColor,
-  $btnControlFocusColor,
-  $btnControlFocusBgColor,
-  $btnControlFocusBorderColor,
-  $btnControlFocusBoxShadow,
-  $btnControlActiveColor,
-  $btnControlActiveBgColor,
-  $btnControlActiveBorderColor,
-  $btnControlDisabledColor,
-  $btnControlDisabledBgColor,
-  $btnControlDisabledBorderColor,
-  $btnControlIconBgColor,
-  $btnControlIconBorderColor,
-  $btnControlIconCheckedBgColor,
-  $btnControlIconCheckedBorderColor
+  $class,
+  $variant-class,
+  $icon-bg-color: transparent,
+  $icon-border-color: currentColor,
+  $icon-checked-bg-color: currentColor,
+  $icon-checked-border-color: currentColor
 ) {
-  // >>> Base
-  & {
-    color: $btnControlColor;
-    background-color: $btnControlBgColor;
-    border-color: $btnControlBorderColor;
+  // >>> Icon base
+  .#{$variant-class}:before {
+    background-color: $icon-bg-color;
+    border-color: $icon-border-color;
   }
-
-  &:before {
-    background-color: $btnControlIconBgColor;
-    border-color: $btnControlIconBorderColor;
-  }
-  // <<< Base
-
-
-  // >>> Hover
-  &:hover {
-    color: $btnControlHoverColor;
-    background-color: $btnControlHoverBgColor;
-    border-color: $btnControlHoverBorderColor;
-  }
-  // <<< Hover
-
-
-  // >>> Focus
-  &:focus,
-  &.btnControl--focus  {
-    color: $btnControlFocusColor;
-    background-color: $btnControlFocusBgColor;
-    border-color: $btnControlFocusBorderColor;
-    box-shadow: $btnControlFocusBoxShadow;
-  }
-  // <<< Focus
-
-
-  // >>> Active
-  &:active,
-  &.btnControl--active {
-    color: $btnControlActiveColor;
-    background-color: $btnControlActiveBgColor;
-    border-color: $btnControlActiveBorderColor;
-  }
-  // <<< Active
-
-
-  // >>> Disabled
-  &:disabled,
-  &.btnControl--disabled,
-  fieldset:disabled & {
-    color: $btnControlDisabledColor;
-    background-color: $btnControlDisabledBgColor;
-    border-color: $btnControlDisabledBorderColor;
-    box-shadow: none;
-  }
-  // <<< Disabled
+  // <<< Icon base
 
 
   // >>> Checked
-  &.btnControl--checked {}
+  .#{$variant-class}.#{$class}--checked {}
 
-  &.btnControl--checked:before {
-    background-color: $btnControlIconCheckedBgColor;
-    border-color: $btnControlIconCheckedBorderColor;
+  .#{$variant-class}.#{$class}--checked:before {
+    background-color: $icon-checked-bg-color;
+    border-color: $icon-checked-border-color;
   }
   // <<< Checked
 }

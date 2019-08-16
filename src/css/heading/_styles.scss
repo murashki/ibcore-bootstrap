@@ -5,35 +5,35 @@
 .h5,
 .h6 {
   margin-top: 0;
-  margin-bottom: $headingMarginBottom;
-  font-family: $headingFontFamily;
-  font-weight: $headingFontWeight;
-  line-height: $headingLineHeight;
-  color: $headingColor;
+  margin-bottom: $heading-margin-bottom;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  color: $heading-color;
 }
 
 .h1 {
-  font-size: $heading-1-fontSize;
+  font-size: $heading-1-font-size;
 }
 
 .h2 {
-  font-size: $heading-2-fontSize;
+  font-size: $heading-2-font-size;
 }
 
 .h3 {
-  font-size: $heading-3-fontSize;
+  font-size: $heading-3-font-size;
 }
 
 .h4 {
-  font-size: $heading-4-fontSize;
+  font-size: $heading-4-font-size;
 }
 
 .h5 {
-  font-size: $heading-5-fontSize;
+  font-size: $heading-5-font-size;
 }
 
 .h6 {
-  font-size: $heading-6-fontSize;
+  font-size: $heading-6-font-size;
 }
 
 .h--numbered {

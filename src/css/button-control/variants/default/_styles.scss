@@ -1,0 +1,14 @@
+@import '../../../_mixins/button-control-variant';
+@import '../../../_mixins/dol-button-variant';
+
+@include DoL-button-variant(
+  "btn-control",
+  "btn-control",
+  $btn-control-color,
+  $btn-control-bg-color
+);
+
+@include button-control-variant(
+  "btn-control",
+  "btn-control"
+);

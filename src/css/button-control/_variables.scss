@@ -1,0 +1,24 @@
+$btn-control-font-family: inherit !default;
+$btn-control-font-size: 1em !default;
+$btn-control-font-weight: inherit !default;
+$btn-control-line-height: 1.4em !default;
+$btn-control-border-width: 1px !default;
+$btn-control-border-radius: 0.15em !default;
+$btn-control-vertical-padding: 0.375em !default;
+$btn-control-horizontal-padding: 0.375em !default;
+$btn-control-disabled-opacity: 0.5 !default;
+
+$btn-control-transition-appearance: 0.15s ease-in-out !default;
+$btn-control-transition:
+  color $btn-control-transition-appearance,
+  background-color $btn-control-transition-appearance,
+  border-color $btn-control-transition-appearance,
+  box-shadow $btn-control-transition-appearance !default;
+
+$btn-control-ngb-margin: 1em !default;
+
+$btn-control-icon-opacity: 0.2 !default;
+$btn-control-icon-border-width: 1px !default;
+
+$btn-control-icon-transition-appearance: $btn-control-transition-appearance;
+$btn-control-icon-transition: $btn-control-transition;
