@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "key": "grid",
+      "title": "Grid",
+      "modules": ["grid"]
+    },
+    {
+      "key": "forms",
+      "title": "Forms",
+      "modules": ["forms", "grid"]
+    },
+    {
+      "key": "buttons",
+      "title": "Buttons",
+      "modules": ["button-control", "button-link", "buttons", "forms"]
+    },
+    {
+      "key": "typography",
+      "title": "Typography",
+      "modules": ["heading", "link", "lists", "paragraph", "text"]
+    }
+  ]
+}

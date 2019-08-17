@@ -6,10 +6,6 @@ html {
   overflow-y: scroll;
 }
 
-#content-inner {
-  padding-top: 2em;
-}
-
 .app-head {
   padding: 1em 0;
   background-color: #323442;
@@ -53,8 +49,12 @@ html {
   margin-left: 2em;
 }
 
-.app-content {
+.app-page {
   margin-bottom: 10em;
+}
+
+.app-standalone {
+  padding: 2em 2em 10em;
 }
 
 .app-section + .app-section {

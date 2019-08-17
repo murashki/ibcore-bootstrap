@@ -1,5 +1,5 @@
 *.css.map
-examples/css/compiled/*
+examples/*
 dist
 
 node_modules
