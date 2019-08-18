@@ -1,0 +1,79 @@
+@mixin form-control-variant(
+  $class,
+  $variant-class,
+  $color,
+  $bg-color,
+  $border-color: darken($bg-color, 12%),
+  $placeholder-color: lighten($color, 35%),
+  $focus-color: $color,
+  $focus-bg-color: $bg-color,
+  $focus-border-color: darken($border-color, 7.5%),
+  $focus-box-shadow: 0 0 0 0.2em rgba($focus-border-color, 0.5),
+  $focus-placeholder-color: $placeholder-color,
+  $readonly-color: $color,
+  $readonly-bg-color: darken($bg-color, 2.5%),
+  $readonly-border-color: $border-color,
+  $readonly-placeholder-color: $placeholder-color,
+  $disabled-color: $color,
+  $disabled-bg-color: $bg-color,
+  $disabled-border-color: $border-color,
+  $disabled-placeholder-color: $placeholder-color
+) {
+  // >>> Base
+  .#{$variant-class} {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color;
+  }
+
+  .#{$variant-class}::placeholder {
+    color: $placeholder-color;
+  }
+  // <<< Base
+
+
+  // >>> Focus
+  .#{$variant-class}:focus,
+  .#{$variant-class}.#{$class}--focus {
+    color: $focus-color;
+    background-color: $focus-bg-color;
+    border-color: $focus-border-color;
+    box-shadow: $focus-box-shadow;
+  }
+
+  .#{$variant-class}:focus::placeholder,
+  .#{$variant-class}.#{$class}--focus::placeholder {
+    color: $focus-placeholder-color;
+  }
+  // <<< Focus
+
+
+  // >>> Readonly
+  .#{$variant-class}[readonly] {
+    color: $readonly-color;
+    background-color: $readonly-bg-color;
+    border-color: $readonly-border-color;
+  }
+
+  .#{$variant-class}[readonly]::placeholder {
+    color: $readonly-placeholder-color;
+  }
+  // <<< Readonly
+
+
+  // >>> Disabled
+  .#{$variant-class}:disabled,
+  .#{$variant-class}.#{$class}--disabled,
+  fieldset:disabled .#{$variant-class} {
+    color: $disabled-color;
+    background-color: $disabled-bg-color;
+    border-color: $disabled-border-color;
+  }
+
+  .#{$variant-class}:disabled::placeholder,
+  .#{$variant-class}.#{$class}--disabled::placeholder,
+  fieldset:disabled .#{$variant-class}::placeholder {
+    color: $disabled-placeholder-color;
+  }
+  // <<< Disabled
+}

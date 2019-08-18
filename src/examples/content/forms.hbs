@@ -120,14 +120,6 @@
         </div>
         <div class="row form-group">
           <div class="col-4">
-            <label class="form-label" for="input-text-placeholder">input[type=text] (placeholder)</label>
-          </div>
-          <div class="col-8">
-            <input type="text" id="input-text-placeholder" class="form-control" placeholder="Some placeholder">
-          </div>
-        </div>
-        <div class="row form-group">
-          <div class="col-4">
             <label class="form-label" for="input-url">input[type=url]</label>
           </div>
           <div class="col-8">
@@ -140,6 +132,62 @@
           </div>
           <div class="col-8">
             <textarea id="textarea" class="form-control">Some text</textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="app-section">
+    <h2 class="h2">Readonly controls</h2>
+    <div class="app-sectionBlock">
+      <form class="form">
+        <div class="row form-group">
+          <div class="col-4">
+            <label class="form-label" for="input-email-readonly">input[type=email][readonly]</label>
+          </div>
+          <div class="col-8">
+            <input type="email" id="input-email-readonly" class="form-control" value="example@example.com" readonly>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-4">
+            <label class="form-label" for="input-password-readonly">input[type=password][readonly]</label>
+          </div>
+          <div class="col-8">
+            <input type="password" id="input-password-readonly" class="form-control" value="password" readonly>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-4">
+            <label class="form-label" for="input-tel-readonly">input[type=tel][readonly]</label>
+          </div>
+          <div class="col-8">
+            <input type="tel" id="input-tel-readonly" class="form-control" value="(800) 800-800-800" readonly>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-4">
+            <label class=" form-label" for="input-text-readonly">input[type=text][readonly]</label>
+          </div>
+          <div class="col-8">
+            <input type="text" id="input-text-readonly" class="form-control" value="Some text" readonly>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-4">
+            <label class="form-label" for="input-url-readonly">input[type=url][readonly]</label>
+          </div>
+          <div class="col-8">
+            <input type="url" id="input-url-readonly" class="form-control" value="http://example.com" readonly>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-4">
+            <label class="form-label" for="textarea-readonly">textarea[readonly]</label>
+          </div>
+          <div class="col-8">
+            <textarea id="textarea-readonly" class="form-control" readonly>Some text</textarea>
           </div>
         </div>
       </form>
@@ -184,14 +232,6 @@
         </div>
         <div class="row form-group">
           <div class="col-4">
-            <label class="form-label" for="input-text-placeholder-disabled">input[type=text] (placeholder)</label>
-          </div>
-          <div class="col-8">
-            <input type="text" id="<input-text-placeholder-disabled" class="form-control" placeholder="Some placeholder" disabled>
-          </div>
-        </div>
-        <div class="row form-group">
-          <div class="col-4">
             <label class="form-label" for="input-url-disabled">input[type=url]:disabled</label>
           </div>
           <div class="col-8">
@@ -214,7 +254,7 @@
     <h2 class="h2">Fieldset disabled controls</h2>
     <div class="app-sectionBlock">
       <form class="form">
-        <fieldset disabled class="fieldset">
+        <fieldset class="form-fieldset" disabled>
           <div class="row form-group">
             <div class="col-4">
               <label class="form-label" for="input-email-fieldset">fieldset:disabled input[type=email]</label>
@@ -249,14 +289,6 @@
           </div>
           <div class="row form-group">
             <div class="col-4">
-              <label class="form-label" for="input-text-placeholder-fieldset">fieldset:disabled input[type=text] (placeholder)</label>
-            </div>
-            <div class="col-8">
-              <input type="text" id="input-text-placeholder-fieldset" class="form-control" placeholder="Some placeholder">
-            </div>
-          </div>
-          <div class="row form-group">
-            <div class="col-4">
               <label class="form-label" for="input-url-fieldset">fieldset:disabled input[type=url]</label>
             </div>
             <div class="col-8">
@@ -277,65 +309,97 @@
   </div>
 
   <div class="app-section">
-    <h2 class="h2">Readonly controls</h2>
+    <h2 class="h2">Default form control</h2>
     <div class="app-sectionBlock">
       <form class="form">
-        <div class="row form-group">
-          <div class="col-4">
-            <label class="form-label" for="input-email-readonly">input[type=email][readonly]</label>
-          </div>
-          <div class="col-8">
-            <input type="email" id="input-email-readonly" class="form-control" value="example@example.com" readonly>
-          </div>
+        <div class="form-group">
+          <input type="text" class="form-control" value="Default text">
         </div>
-        <div class="row form-group">
-          <div class="col-4">
-            <label class="form-label" for="input-password-readonly">input[type=password][readonly]</label>
-          </div>
-          <div class="col-8">
-            <input type="password" id="input-password-readonly" class="form-control" value="password" readonly>
-          </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Default placeholder">
         </div>
-        <div class="row form-group">
-          <div class="col-4">
-            <label class="form-label" for="input-tel-readonly">input[type=tel][readonly]</label>
-          </div>
-          <div class="col-8">
-            <input type="tel" id="input-tel-readonly" class="form-control" value="(800) 800-800-800" readonly>
-          </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--focus" value="Focus class text">
         </div>
-        <div class="row form-group">
-          <div class="col-4">
-            <label class=" form-label" for="input-text-readonly">input[type=text][readonly]</label>
-          </div>
-          <div class="col-8">
-            <input type="text" id="input-text-readonly" class="form-control" value="Some text" readonly>
-          </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--focus" placeholder="Focus class placeholder">
         </div>
-        <div class="row form-group">
-          <div class="col-4">
-            <label class="form-label" for="input-text-placeholder-readonly">input[type=text] (placeholder)</label>
-          </div>
-          <div class="col-8">
-            <input type="text" id="<input-text-placeholder-readonly" class="form-control" placeholder="Some placeholder" readonly>
-          </div>
+        <div class="form-group">
+          <input type="text" class="form-control" value="Readonly attribute text" readonly>
         </div>
-        <div class="row form-group">
-          <div class="col-4">
-            <label class="form-label" for="input-url-readonly">input[type=url][readonly]</label>
-          </div>
-          <div class="col-8">
-            <input type="url" id="input-url-readonly" class="form-control" value="http://example.com" readonly>
-          </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Readonly attribute placeholder" readonly>
         </div>
-        <div class="row form-group">
-          <div class="col-4">
-            <label class="form-label" for="textarea-readonly">textarea[readonly]</label>
-          </div>
-          <div class="col-8">
-            <textarea id="textarea-readonly" class="form-control" readonly>Some text</textarea>
-          </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--disabled" value="Disabled class text" tabindex="-1">
         </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--disabled" placeholder="Disabled class placeholder" tabindex="-1">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" value="Disabled attribute text" disabled>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Disabled attribute placeholder" disabled>
+        </div>
+        <fieldset class="form-fieldset" disabled>
+          <div class="form-group">
+            <input type="text" class="form-control" value="Disabled fieldset text">
+          </div>
+        </fieldset>
+        <fieldset class="form-fieldset" disabled>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Disabled fieldset placeholder">
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <div class="app-section">
+    <h2 class="h2">Error form control</h2>
+    <div class="app-sectionBlock">
+      <form class="form">
+        <div class="form-group">
+          <input type="text" class="form-control form-control--error" value="Default text">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--error" placeholder="Default placeholder">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--error form-control--focus" value="Focus class text">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--error form-control--focus" placeholder="Focus class placeholder">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--error" value="Readonly attribute text" readonly>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--error" placeholder="Readonly attribute placeholder" readonly>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--error form-control--disabled" value="Disabled class text" tabindex="-1">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--error form-control--disabled" placeholder="Disabled class placeholder" tabindex="-1">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--error" value="Disabled attribute text" disabled>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control--error" placeholder="Disabled attribute placeholder" disabled>
+        </div>
+        <fieldset class="form-fieldset" disabled>
+          <div class="form-group">
+            <input type="text" class="form-control form-control--error" value="Disabled fieldset text">
+          </div>
+        </fieldset>
+        <fieldset class="form-fieldset" disabled>
+          <div class="form-group">
+            <input type="text" class="form-control form-control--error" placeholder="Disabled fieldset placeholder">
+          </div>
+        </fieldset>
       </form>
     </div>
   </div>

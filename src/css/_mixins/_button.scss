@@ -47,6 +47,9 @@
   fieldset:disabled .#{$class} {
     opacity: $btn-disabled-opacity;
     cursor: default;
+  }
+
+  .#{$class}.#{$class}--disabled {
     pointer-events: none;
   }
   // <<< Disabled

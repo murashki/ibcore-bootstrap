@@ -1,0 +1,19 @@
+$form-control-horizontal-padding: 0.75em !default;
+$form-control-vertical-padding: 0.375em !default;
+$form-control-line-height: 1.4em !default;
+$form-control-font-family: inherit !default;
+$form-control-font-size: 1em !default;
+$form-control-font-weight: inherit !default;
+$form-control-border-width: 1px !default;
+$form-control-border-radius: 0.25em !default;
+$form-control-readonly-opacity: 1 !default;
+$form-control-disabled-opacity: 0.5 !default;
+
+$form-control-transition-appearance: 0.15s ease-in-out !default;
+$form-control-transition:
+  color $form-control-transition-appearance,
+  background-color $form-control-transition-appearance,
+  border-color $form-control-transition-appearance,
+  box-shadow $form-control-transition-appearance !default;
+
+$form-control-textarea-height: 5em !default;

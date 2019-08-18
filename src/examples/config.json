@@ -8,7 +8,7 @@
     {
       "key": "forms",
       "title": "Forms",
-      "modules": ["forms", "grid"]
+      "modules": ["form-control", "forms", "grid"]
     },
     {
       "key": "buttons",

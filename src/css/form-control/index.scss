@@ -1,4 +1,4 @@
-// Forms manually forked from Bootstrap v4.1.1.
+// Form control manually forked from Bootstrap v4.1.1.
 // Bootstrap is licensed MIT. (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 
@@ -14,3 +14,11 @@
 
 @import './variables';
 @import './styles';
+
+
+@import './variants/default/variables';
+@import './variants/default/styles';
+
+
+@import './variants/error/variables';
+@import './variants/error/styles';

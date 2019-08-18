@@ -35,8 +35,16 @@ $control-disabled-opacity: 0.5 !default;
 $form-control-disabled-opacity: $control-disabled-opacity !default;
 $form-control-transition-appearance: $transition-appearance !default;
 
-@import './forms/form-control/variables';
-@import './forms/form-control/styles';
+@import './form-control/variables';
+@import './form-control/styles';
+
+
+@import './form-control/variants/default/variables';
+@import './form-control/variants/default/styles';
+
+
+@import './form-control/variants/error/variables';
+@import './form-control/variants/error/styles';
 
 
 @import './link/variables';
@@ -58,13 +66,7 @@ $btn-transition-appearance: $transition-appearance !default;
 @import './buttons/variables';
 @import './buttons/styles';
 
-/*
-  You should define button variants after buttons.css cause they overrides some style rules:
-    color
-    background-color
-    border-color
-    box-shadow
-*/
+
 @import './buttons/variants/default/variables';
 @import './buttons/variants/default/styles';
 

@@ -8,10 +8,7 @@
   font-size: $form-control-font-size;
   font-weight: $form-control-font-weight;
   line-height: $form-control-line-height;
-  color: $form-control-color;
-  background-color: $form-control-bg-color;
-  background-clip: padding-box;
-  border: $form-control-border-width solid $form-control-border-color;
+  border: $form-control-border-width solid transparent;
   border-radius: $form-control-border-radius;
   transition: $form-control-transition;
 }
@@ -22,7 +19,6 @@ textarea.form-control {
 
 .form-control::placeholder {
   opacity: 1;
-  color: $form-control-placeholder-color;
   user-select: none;
 }
 // <<< Base
@@ -30,10 +26,6 @@ textarea.form-control {
 
 // >>> Focus
 .form-control:focus {
-  color: $form-control-focus-color;
-  background-color: $form-control-focus-bg-color;
-  border-color: $form-control-focus-border-color;
-  box-shadow: $form-control-focus-box-shadow;
   outline: none;
 }
 // <<< Focus
@@ -41,32 +33,21 @@ textarea.form-control {
 
 // >>> Readonly
 .form-control[readonly] {
-  color: $form-control-readonly-color;
-  background-color: $form-control-readonly-bg-color;
-  border-color: $form-control-readonly-border-color;
   opacity: $form-control-readonly-opacity;
   cursor: default;
-}
-
-.form-control[readonly]::placeholder {
-  color: $form-control-readonly-placeholder-color;
 }
 // <<< Readonly
 
 
 // >>> Disabled
 .form-control:disabled,
+.form-control.form-control--disabled,
 fieldset:disabled .form-control {
-  color: $form-control-disabled-color;
-  background-color: $form-control-disabled-bg-color;
-  border-color: $form-control-disabled-border-color;
   opacity: $form-control-disabled-opacity;
   cursor: default;
 }
-
-.form-control:disabled::placeholder,
-fieldset:disabled .form-control::placeholder {
-  color: $form-control-disabled-placeholder-color;
+.form-control.form-control--disabled {
+  pointer-events: none;
 }
 // <<< Disabled
 
