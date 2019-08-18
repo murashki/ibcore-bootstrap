@@ -3,14 +3,14 @@ const path = require('path');
 
 const Handlebars = require('handlebars');
 
-const TEMPLATE_DIR = './src/examples';
+const EXAMPLES_DIR = './src/examples';
 const OUTPUT_DIR = './examples';
 const STANDALONE_OUTPUT_DIR = OUTPUT_DIR + '/standalone';
 
-const CONFIG_PATH = TEMPLATE_DIR + '/config.json';
+const CONFIG_PATH = EXAMPLES_DIR + '/config.json';
 
-const CONTENT_DIR = TEMPLATE_DIR + '/content';
-const LAYOUT_DIR = TEMPLATE_DIR + '/layout';
+const CONTENT_DIR = EXAMPLES_DIR + '/content';
+const LAYOUT_DIR = EXAMPLES_DIR + '/layout';
 const DEFAULT_LAYOUT_PATH = LAYOUT_DIR + '/default.hbs';
 const STANDALONE_LAYOUT_PATH = LAYOUT_DIR + '/standalone.hbs';
 

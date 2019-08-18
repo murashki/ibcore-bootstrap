@@ -18,7 +18,11 @@ $btn-control-transition:
 $btn-control-ngb-margin: 1em !default;
 
 $btn-control-icon-opacity: 0.2 !default;
+$btn-control-icon-bg-color: transparent !default;
 $btn-control-icon-border-width: 1px !default;
+$btn-control-icon-border-color: currentColor !default;
+$btn-control-icon-checked-bg-color: currentColor !default;
+$btn-control-icon-checked-border-color: currentColor !default;
 
 $btn-control-icon-transition-appearance: $btn-control-transition-appearance;
 $btn-control-icon-transition: $btn-control-transition;

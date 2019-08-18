@@ -26,7 +26,8 @@
   display: table; // Guys, i can't explain why, but it's better round off
   height: 1em;
   width: 1em;
-  border: $btn-control-icon-border-width solid transparent;
+  border: $btn-control-icon-border-width solid $btn-control-icon-border-color;
+  background-color: $btn-control-icon-bg-color;
 }
 // <<< Icon base
 
@@ -49,6 +50,8 @@
 
 .btn-control.btn-control--checked:before {
   opacity: 1;
+  background-color: $btn-control-icon-checked-bg-color;
+  border-color: $btn-control-icon-checked-border-color;
 }
 // <<< Checked
 

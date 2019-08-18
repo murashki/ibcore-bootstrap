@@ -49,6 +49,14 @@ html {
   margin-left: 2em;
 }
 
+.app-standaloneMenuLink {
+  display: inline-block;
+}
+
+.app-standaloneMenuLink + .app-standaloneMenuLink {
+  margin-left: 0.5em;
+}
+
 .app-page {
   margin-bottom: 10em;
 }

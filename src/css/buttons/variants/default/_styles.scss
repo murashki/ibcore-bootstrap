@@ -1,6 +1,6 @@
-@import '../../../_mixins/dol-button-variant';
+@import '../../../_mixins/button-variant';
 
-@include DoL-button-variant(
+@include button-variant(
   "btn",
   "btn",
   $btn-color,

@@ -23,16 +23,20 @@ $control-disabled-opacity: 0.5 !default;
 @import './grid/styles';
 
 
+@import './forms/variables';
+@import './forms/styles';
+
+
 /*
-  In forms.css we redefine some variables:
+  In form-control.css we redefine some variables:
     $form-control-disabled-opacity depends on project controls disabled opacity;
     $form-control-transition-appearance depends on project common transition appearance.
  */
 $form-control-disabled-opacity: $control-disabled-opacity !default;
 $form-control-transition-appearance: $transition-appearance !default;
 
-@import './forms/variables';
-@import './forms/styles';
+@import './forms/form-control/variables';
+@import './forms/form-control/styles';
 
 
 @import './link/variables';
@@ -54,7 +58,13 @@ $btn-transition-appearance: $transition-appearance !default;
 @import './buttons/variables';
 @import './buttons/styles';
 
-
+/*
+  You should define button variants after buttons.css cause they overrides some style rules:
+    color
+    background-color
+    border-color
+    box-shadow
+*/
 @import './buttons/variants/default/variables';
 @import './buttons/variants/default/styles';
 
@@ -96,6 +106,7 @@ $btn-link-disabled-text-decoration: $btn-link-text-decoration !default;
     $btn-control-color depends on button color;
     $btn-control-bg-color depends on button background color;
     $btn-control-border-width depends on button border width;
+    $btn-control-border-radius depends on button border radius;
     $btn-control-disabled-opacity depends on disabled buton opacity;
     $btn-control-transition-appearance depends on button transition apprearance;
     $btn-control-transition depends on button transition.
@@ -103,6 +114,7 @@ $btn-link-disabled-text-decoration: $btn-link-text-decoration !default;
 $btn-control-color: $btn-color !default;
 $btn-control-bg-color: $btn-bg-color !default;
 $btn-control-border-width: $btn-border-width !default;
+$btn-control-border-radius: $btn-border-radius !default;
 $btn-control-disabled-opacity: $btn-disabled-opacity !default;
 $btn-control-transition-appearance: $btn-transition-appearance !default;
 $btn-control-transition: $btn-transition !default;
@@ -137,7 +149,7 @@ $btn-control-transition: $btn-transition !default;
 
 /*
   You should use text.css after list.css cause it overrides some style rules:
-    .list/line-height by .text/line-height
+    line-height
 */
 @import './text/variables';
 @import './text/styles';

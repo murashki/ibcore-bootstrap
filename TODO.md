@@ -1,13 +1,14 @@
-* .formControl--error;
+* .form-control--error;
 * Сейчас для каждого модуля мы добавляем normalize.css и box-sizing. Нужно добавлять лишь необходимую часть normalize и box-sizing применять к рутовым классам;
 * Держать руку на пульсе со шрифтами;
-* Alerts;
-* InputGroups;
-* Улучшить код для работы с темами light-on-dark и dark-on-light;
+* Добавить .alert;
+* Добавить .form-control-group (типа .btn-group);
+* .btn-group вместе с .btn-control;
+* Нужно избавиться от упоминания .col-x в forms.css;
 * Компоновка контента в buttons.html в плане fieldset:disabled;
 * Попробовать встроить в .btnControl иконку и посмотреть на сколько удобно определять ее цвет в зависимости от состояния;
-* Возможно стоит упразднить класс .textarea;
 * Нужны ли для .btn-link классы .btn-link--active и т.д...
-* Замечания о том, что варианты кнопок должны располагаться после default варианта;
 * Цвет текста в кнопках берется непонятно от куда. Нужно его сделать оносительно основной темы и белого;
-* .btn-group вместе с .btn-control;
+* Добавить stylelint. Посмотреть порядок свойств здесь:
+    https://github.com/htmlacademy/codeguide/blob/master/.postcss-sorting.json
+    https://github.com/kriasoft/react-starter-kit/blob/v0.3.1/.csscomb.json

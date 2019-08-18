@@ -1,0 +1,84 @@
+// >>> Base
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(#{$form-control-vertical-padding} * 2 + #{$form-control-line-height} * #{$form-control-border-width} * 2);
+  padding: $form-control-vertical-padding $form-control-horizontal-padding;
+  font-family: $form-control-font-family;
+  font-size: $form-control-font-size;
+  font-weight: $form-control-font-weight;
+  line-height: $form-control-line-height;
+  color: $form-control-color;
+  background-color: $form-control-bg-color;
+  background-clip: padding-box;
+  border: $form-control-border-width solid $form-control-border-color;
+  border-radius: $form-control-border-radius;
+  transition: $form-control-transition;
+}
+
+textarea.form-control {
+  height: $form-control-textarea-height;
+}
+
+.form-control::placeholder {
+  opacity: 1;
+  color: $form-control-placeholder-color;
+  user-select: none;
+}
+// <<< Base
+
+
+// >>> Focus
+.form-control:focus {
+  color: $form-control-focus-color;
+  background-color: $form-control-focus-bg-color;
+  border-color: $form-control-focus-border-color;
+  box-shadow: $form-control-focus-box-shadow;
+  outline: none;
+}
+// <<< Focus
+
+
+// >>> Readonly
+.form-control[readonly] {
+  color: $form-control-readonly-color;
+  background-color: $form-control-readonly-bg-color;
+  border-color: $form-control-readonly-border-color;
+  opacity: $form-control-readonly-opacity;
+  cursor: default;
+}
+
+.form-control[readonly]::placeholder {
+  color: $form-control-readonly-placeholder-color;
+}
+// <<< Readonly
+
+
+// >>> Disabled
+.form-control:disabled,
+fieldset:disabled .form-control {
+  color: $form-control-disabled-color;
+  background-color: $form-control-disabled-bg-color;
+  border-color: $form-control-disabled-border-color;
+  opacity: $form-control-disabled-opacity;
+  cursor: default;
+}
+
+.form-control:disabled::placeholder,
+fieldset:disabled .form-control::placeholder {
+  color: $form-control-disabled-placeholder-color;
+}
+// <<< Disabled
+
+
+// >>> Transition
+.form-control {
+  transition: $form-control-transition;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none;
+  }
+}
+// <<< Transition
