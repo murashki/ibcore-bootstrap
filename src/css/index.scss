@@ -8,10 +8,6 @@
 }
 
 
-$transition-appearance: 0.15s ease-in-out !default;
-$control-disabled-opacity: 0.5 !default;
-
-
 @import './fonts';
 
 
@@ -23,17 +19,33 @@ $control-disabled-opacity: 0.5 !default;
 @import './grid/styles';
 
 
+@import './heading/variables';
+@import './heading/styles';
+
+
+@import './link/variables';
+@import './link/styles';
+
+
+@import './link/unstyled-link/variables';
+@import './link/unstyled-link/styles';
+
+
+@import './lists/variables';
+@import './lists/styles';
+
+
+@import './text/variables';
+@import './text/styles';
+
+
+@import './paragraph/variables';
+@import './paragraph/styles';
+
+
 @import './forms/variables';
 @import './forms/styles';
 
-
-/*
-  In form-control.css we redefine some variables:
-    $form-control-disabled-opacity depends on project controls disabled opacity;
-    $form-control-transition-appearance depends on project common transition appearance.
- */
-$form-control-disabled-opacity: $control-disabled-opacity !default;
-$form-control-transition-appearance: $transition-appearance !default;
 
 @import './form-control/variables';
 @import './form-control/styles';
@@ -46,22 +58,6 @@ $form-control-transition-appearance: $transition-appearance !default;
 @import './form-control/variants/error/variables';
 @import './form-control/variants/error/styles';
 
-
-@import './link/variables';
-@import './link/styles';
-
-
-@import './link/unstyled-link/variables';
-@import './link/unstyled-link/styles';
-
-
-/*
-  In buttons.css we redefine some variables:
-    $btn-disabled-opacity depends on project controls disabled opacity;
-    $btn-transition-appearance depends on project common transition appearance.
- */
-$btn-disabled-opacity: $control-disabled-opacity !default;
-$btn-transition-appearance: $transition-appearance !default;
 
 @import './buttons/variables';
 @import './buttons/styles';
@@ -83,43 +79,13 @@ $btn-transition-appearance: $transition-appearance !default;
 @import './buttons/variants/danger/styles';
 
 
-/*
-  In button-link.css we redefine some variables:
-    $btn-link-color depends on link color;
-    $btn-link-text-decoration depends on link text decoration;
-    $btn-link-hover-text-decoration depends on hover link text decoration;
-    $btn-link-focus-text-decoration depends on focus link text decoration;
-    $btn-link-active-text-decoration depends on active link text decoration;
-    $btn-link-disabled-text-decoration depends on disabled link text decoration.
- */
-$btn-link-color: $link-color !default;
-$btn-link-text-decoration: $link-text-decoration !default;
-$btn-link-hover-text-decoration: $link-hover-text-decoration !default;
-$btn-link-focus-text-decoration: $link-focus-text-decoration !default;
-$btn-link-active-text-decoration: $link-active-text-decoration !default;
-$btn-link-disabled-text-decoration: $btn-link-text-decoration !default;
-
-@import './button-link/variables';
-@import './button-link/styles';
+@import './buttons/unstyled-button/variables';
+@import './buttons/unstyled-button/styles';
 
 
-/*
-  In button-control.css we redefine some variables:
-    $btn-control-color depends on button color;
-    $btn-control-bg-color depends on button background color;
-    $btn-control-border-width depends on button border width;
-    $btn-control-border-radius depends on button border radius;
-    $btn-control-disabled-opacity depends on disabled buton opacity;
-    $btn-control-transition-appearance depends on button transition apprearance;
-    $btn-control-transition depends on button transition.
- */
-$btn-control-color: $btn-color !default;
-$btn-control-bg-color: $btn-bg-color !default;
-$btn-control-border-width: $btn-border-width !default;
-$btn-control-border-radius: $btn-border-radius !default;
-$btn-control-disabled-opacity: $btn-disabled-opacity !default;
-$btn-control-transition-appearance: $btn-transition-appearance !default;
-$btn-control-transition: $btn-transition !default;
+@import './buttons/button-group/variables';
+@import './buttons/button-group/styles';
+
 
 @import './button-control/variables';
 @import './button-control/styles';
@@ -133,34 +99,5 @@ $btn-control-transition: $btn-transition !default;
 @import './button-control/variants/error/styles';
 
 
-@import './buttons/unstyled-button/variables';
-@import './buttons/unstyled-button/styles';
-
-
-@import './buttons/button-group/variables';
-@import './buttons/button-group/styles';
-
-
-@import './heading/variables';
-@import './heading/styles';
-
-
-@import './lists/variables';
-@import './lists/styles';
-
-
-/*
-  You should use text.css after list.css cause it overrides some style rules:
-    line-height
-*/
-@import './text/variables';
-@import './text/styles';
-
-/*
-  In paragraph.css we redefine some variables:
-    $paragraph-margin-top depends on $text-line-height
- */
-$paragraph-margin-top: $text-line-height / 2 !default;
-
-@import './paragraph/variables';
-@import './paragraph/styles';
+@import './button-link/variables';
+@import './button-link/styles';

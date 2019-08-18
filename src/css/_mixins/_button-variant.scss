@@ -3,7 +3,7 @@
   $variant-class,
   $color,
   $bg-color,
-  $border-color: $bg-color,
+  $border-color,
   $hover-color: $color,
   $hover-bg-color: darken($bg-color, 5%),
   $hover-border-color: darken($border-color, 7.5%),
