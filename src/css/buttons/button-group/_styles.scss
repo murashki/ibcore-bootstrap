@@ -1,38 +1,7 @@
-.btn-group {
-  position: relative;
-  z-index: 0;
-  display: inline-flex;
-  vertical-align: middle;
-}
+@import '../../_mixins/button-group';
 
-.btn-group .btn {
-  position: relative;
-  flex: 0 1 auto;
-}
-
-.btn-group .btn:hover {
-  z-index: 2;
-}
-
-.btn-group .btn:focus,
-.btn-group .btn:active {
-  z-index: 1;
-}
-
-.btn-group .btn + .btn {
-  margin-left: -$btn-border-width;
-}
-
-.btn-group .btn:first-child {
-  margin-left: 0;
-}
-
-.btn-group .btn:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.btn-group .btn:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
+@include button-group(
+  "btn-group",
+  "btn",
+  $btn-border-width
+);

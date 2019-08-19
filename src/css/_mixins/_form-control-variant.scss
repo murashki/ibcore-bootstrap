@@ -5,6 +5,10 @@
   $bg-color,
   $border-color: darken($bg-color, 12%),
   $placeholder-color: lighten($color, 35%),
+  $hover-color: $color,
+  $hover-bg-color: $bg-color,
+  $hover-border-color: darken($border-color, 7.5%),
+  $hover-placeholder-color: $placeholder-color,
   $focus-color: $color,
   $focus-bg-color: $bg-color,
   $focus-border-color: darken($border-color, 7.5%),
@@ -30,6 +34,19 @@
     color: $placeholder-color;
   }
   // <<< Base
+
+
+  // >>> Hover
+  .#{$variant-class}:hover {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+    border-color: $hover-border-color;
+  }
+
+  .#{$variant-class}:hover::placeholder {
+    color: $hover-placeholder-color;
+  }
+  // <<< Hover
 
 
   // >>> Focus

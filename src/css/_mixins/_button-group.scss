@@ -1,0 +1,46 @@
+@mixin button-group(
+  $group-class,
+  $btn-class,
+  $btn-border-width
+) {
+  .#{$group-class} {
+    position: relative;
+    z-index: 0;
+    display: inline-flex;
+    vertical-align: middle;
+  }
+
+  .#{$group-class} .#{$btn-class} {
+    position: relative;
+    flex: 0 1 auto;
+  }
+
+  .#{$group-class} .#{$btn-class}:hover {
+    z-index: 2;
+  }
+
+  .#{$group-class} .#{$btn-class}:focus,
+  .#{$group-class} .#{$btn-class}--focus,
+  .#{$group-class} .#{$btn-class}:active,
+  .#{$group-class} .#{$btn-class}--active {
+    z-index: 1;
+  }
+
+  .#{$group-class} .#{$btn-class} + .#{$btn-class} {
+    margin-left: -$btn-border-width;
+  }
+
+  .#{$group-class} .#{$btn-class}:first-child {
+    margin-left: 0;
+  }
+
+  .#{$group-class} .#{$btn-class}:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .#{$group-class} .#{$btn-class}:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

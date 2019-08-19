@@ -235,6 +235,10 @@
       <div class="btn-group">
         <button type="button" class="btn">Button</button>
         <input class="btn" type="button" value="Input button">
+        <button type="button" class="btn btn--focus">Focus class</button>
+        <button type="button" class="btn btn--active">Active class</button>
+        <button type="button" class="btn btn--disabled" tabindex="-1">Disabled class</button>
+        <button type="button" class="btn" disabled>Disabled</button>
       </div>
     </div>
   </div>
@@ -248,16 +252,26 @@
   </div>
 
   <div class="app-section">
+    <h2 class="h2">Grouping checkbox buttons</h2>
+    <div class="app-sectionBlock">
+      <div class="btn-control-group">
+        <button type="button" class="btn-control btn-control--has-label">Button</button>
+        <button type="button" class="btn-control btn-control--has-label btn-control--checked">Checked button</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-section">
     <h2 class="h2">Button as a checkbox with labels</h2>
     <div class="app-sectionBlock">
       <form class="form">
         <div class="form-group form-group--horizontal">
-          <button type="button" class="btn-control"></button>
-          <label class="form-label">Button</label>
+          <button type="button" id="button-ch-a" class="btn-control"></button>
+          <label class="form-label" for="button-ch-a">Button</label>
         </div>
         <div class="form-group form-group--horizontal">
-          <button type="button" class="btn-control btn-control--checked"></button>
-          <label class="form-label">Checked button</label>
+          <button type="button" id="button-ch-b" class="btn-control btn-control--checked"></button>
+          <label class="form-label" for="button-ch-b">Checked button</label>
         </div>
       </form>
     </div>
@@ -272,15 +286,25 @@
   </div>
 
   <div class="app-section">
+    <h2 class="h2">Grouping radio buttons</h2>
+    <div class="app-sectionBlock">
+      <div class="btn-control-group">
+        <button type="button" class="btn-control btn-control--radio btn-control--has-label">Button</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked">Checked button</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-section">
     <h2 class="h2">Button as a radio with labels</h2>
     <div class="app-sectionBlock">
       <div class="form-group form-group--horizontal">
-        <button type="button" class="btn-control btn-control--radio"></button>
-        <label class="form-label">Button</label>
+        <button type="button" id="button-rd-a" class="btn-control btn-control--radio"></button>
+        <label class="form-label" for="button-rd-a">Button</label>
       </div>
       <div class="form-group form-group--horizontal">
-        <button type="button" class="btn-control btn-control--radio btn-control--checked"></button>
-        <label class="form-label">Checked button</label>
+        <button type="button" id="button-rd-b" class="btn-control btn-control--radio btn-control--checked"></button>
+        <label class="form-label" for="button-rd-b">Checked button</label>
       </div>
     </div>
   </div>

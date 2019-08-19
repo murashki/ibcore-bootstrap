@@ -1,0 +1,7 @@
+@import '../../_mixins/button-group';
+
+@include button-group(
+  "btn-control-group",
+  "btn-control",
+  $btn-control-border-width
+);
