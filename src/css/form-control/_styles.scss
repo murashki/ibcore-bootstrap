@@ -1,65 +1,17 @@
-// >>> Base
-.form-control {
-  display: block;
-  width: 100%;
-  height: calc(#{$form-control-vertical-padding} * 2 + #{$form-control-line-height} * #{$form-control-border-width} * 2);
-  padding: $form-control-vertical-padding $form-control-horizontal-padding;
-  font-family: $form-control-font-family;
-  font-size: $form-control-font-size;
-  font-weight: $form-control-font-weight;
-  line-height: $form-control-line-height;
-  border: $form-control-border-width solid transparent;
-  border-radius: $form-control-border-radius;
-  transition: $form-control-transition;
-}
+@import '../_mixins/form-control';
 
-textarea.form-control {
-  height: $form-control-textarea-height;
-}
-
-.form-control::placeholder {
-  opacity: 1;
-  user-select: none;
-}
-// <<< Base
-
-
-// >>> Focus
-.form-control:focus {
-  outline: none;
-}
-// <<< Focus
-
-
-// >>> Readonly
-.form-control[readonly] {
-  opacity: $form-control-readonly-opacity;
-  cursor: default;
-}
-// <<< Readonly
-
-
-// >>> Disabled
-.form-control:disabled,
-.form-control.form-control--disabled,
-fieldset:disabled .form-control {
-  opacity: $form-control-disabled-opacity;
-  cursor: default;
-}
-.form-control.form-control--disabled {
-  pointer-events: none;
-}
-// <<< Disabled
-
-
-// >>> Transition
-.form-control {
-  transition: $form-control-transition;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .form-control {
-    transition: none;
-  }
-}
-// <<< Transition
+@include form-control(
+  "form-control",
+  $form-control-horizontal-padding,
+  $form-control-vertical-padding,
+  $form-control-line-height,
+  $form-control-font-family,
+  $form-control-font-size,
+  $form-control-font-weight,
+  $form-control-border-width,
+  $form-control-border-radius,
+  $form-control-readonly-opacity,
+  $form-control-disabled-opacity,
+  $form-control-transition,
+  $form-control-textarea-height
+);

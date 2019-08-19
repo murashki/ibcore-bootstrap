@@ -1,0 +1,83 @@
+@mixin form-control(
+  $class,
+  $horizontal-padding,
+  $vertical-padding,
+  $line-height,
+  $font-family,
+  $font-size,
+  $font-weight,
+  $border-width,
+  $border-radius,
+  $readonly-opacity,
+  $disabled-opacity,
+  $transition,
+  $textarea-height
+) {
+
+  // >>> Base
+  .#{$class} {
+    display: block;
+    width: 100%;
+    height: calc(#{$vertical-padding} * 2 + #{$line-height} * #{$border-width} * 2);
+    padding: $vertical-padding $horizontal-padding;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    border: $border-width solid transparent;
+    border-radius: $border-radius;
+    transition: $transition;
+  }
+
+  textarea.#{$class} {
+    height: $textarea-height;
+  }
+
+  .#{$class}::placeholder {
+    opacity: 1;
+    user-select: none;
+  }
+  // <<< Base
+
+
+  // >>> Focus
+  .#{$class}:focus {
+    outline: none;
+  }
+  // <<< Focus
+
+
+  // >>> Readonly
+  .#{$class}[readonly] {
+    opacity: $readonly-opacity;
+    cursor: default;
+  }
+  // <<< Readonly
+
+
+  // >>> Disabled
+  .#{$class}:disabled,
+  .#{$class}.#{$class}--disabled,
+  fieldset:disabled .form-control {
+    opacity: $disabled-opacity;
+    cursor: default;
+  }
+
+  .#{$class}.#{$class}--disabled {
+    pointer-events: none;
+  }
+  // <<< Disabled
+
+
+  // >>> Transition
+  .#{$class} {
+    transition: $transition;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    .#{$class} {
+      transition: none;
+    }
+  }
+  // <<< Transition
+}

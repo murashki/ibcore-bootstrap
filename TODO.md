@@ -12,4 +12,3 @@
 * Добавить stylelint. Посмотреть порядок свойств здесь:
     https://github.com/htmlacademy/codeguide/blob/master/.postcss-sorting.json
     https://github.com/kriasoft/react-starter-kit/blob/v0.3.1/.csscomb.json
-* Есть некая непонятность с переменными и наследованием. К примеру button-control.default и button-control.error; Может перенести все переменные в корневую папку модуля...
