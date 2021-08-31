@@ -11,6 +11,7 @@
   $readonly-opacity,
   $disabled-opacity,
   $transition,
+  $textarea-line-height,
   $textarea-height
 ) {
 
@@ -31,6 +32,7 @@
 
   textarea.#{$class} {
     height: $textarea-height;
+    line-height: $textarea-line-height;
   }
 
   .#{$class}::placeholder {

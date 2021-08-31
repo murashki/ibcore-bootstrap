@@ -14,6 +14,7 @@
   $active-color: $color,
   $active-bg-color: darken($bg-color, 5%),
   $active-border-color: darken($border-color, 7.5%),
+  $active-box-shadow: 0 0 0 0.2em rgba($active-border-color, 0.5),
   $disabled-color: $color,
   $disabled-bg-color: $bg-color,
   $disabled-border-color: $border-color
@@ -53,6 +54,7 @@
     color: $active-color;
     background-color: $active-bg-color;
     border-color: $active-border-color;
+    box-shadow: $active-box-shadow;
   }
   // <<< Active
 

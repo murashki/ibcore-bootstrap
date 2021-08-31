@@ -16,14 +16,14 @@
   }
 
   .#{$group-class} .#{$btn-class}:hover {
-    z-index: 2;
+    z-index: 1;
   }
 
   .#{$group-class} .#{$btn-class}:focus,
   .#{$group-class} .#{$btn-class}--focus,
   .#{$group-class} .#{$btn-class}:active,
   .#{$group-class} .#{$btn-class}--active {
-    z-index: 1;
+    z-index: 2;
   }
 
   .#{$group-class} .#{$btn-class} + .#{$btn-class} {
