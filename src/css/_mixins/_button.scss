@@ -9,8 +9,7 @@
   $btn-vertical-padding,
   $btn-horizontal-padding,
   $btn-disabled-opacity,
-  $btn-transition,
-  $btn-ngb-margin
+  $btn-transition
 ) {
   // >>> Base
   .#{$class} {
@@ -66,11 +65,4 @@
     }
   }
   // <<< Transition
-
-
-  // >>> Neighbors
-  .#{$class} + .#{$class} {
-    margin-left: $btn-ngb-margin;
-  }
-  // <<< Neighbors
 }
