@@ -3,14 +3,17 @@ const path = require('path');
 
 const Handlebars = require('handlebars');
 
-const EXAMPLES_DIR = './src/examples';
-const OUTPUT_DIR = './examples';
-const STANDALONE_OUTPUT_DIR = OUTPUT_DIR + '/standalone';
+const DOCS_DIR = './src/docs';
 
-const CONFIG_PATH = EXAMPLES_DIR + '/config.json';
+const OUTPUT_DIR = './docs';
+const PAGES_OUTPUT_DIR = OUTPUT_DIR;
+const STANDALONE_PAGES_OUTPUT_DIR = PAGES_OUTPUT_DIR + '/standalone';
 
-const CONTENT_DIR = EXAMPLES_DIR + '/content';
-const LAYOUT_DIR = EXAMPLES_DIR + '/layout';
+const CONFIG_PATH = DOCS_DIR + '/config.json';
+
+const TEMPLATES_DIR = DOCS_DIR + '/templates';
+const PAGES_DIR = TEMPLATES_DIR + '/pages';
+const LAYOUT_DIR = TEMPLATES_DIR + '/layout';
 const DEFAULT_LAYOUT_PATH = LAYOUT_DIR + '/default.hbs';
 const STANDALONE_LAYOUT_PATH = LAYOUT_DIR + '/standalone.hbs';
 
@@ -26,16 +29,16 @@ config.pages.forEach(function (page) {
   const templateFileName = page.key + '.hbs';
   const pageFileName = page.key + '.html';
 
-  const content = fs.readFileSync(path.join(CONTENT_DIR, templateFileName), 'utf8');
+  const content = fs.readFileSync(path.join(PAGES_DIR, templateFileName), 'utf8');
   Handlebars.registerPartial('content', content);
 
-  Handlebars.registerHelper('activePage', function (key, options) {
+  Handlebars.registerHelper('onActivePage', function (key, options) {
     return key === page.key ? options.fn(this) : options.inverse(this);
   });
 
   const defaultPage = render(DEFAULT_LAYOUT_PATH, data);
   const standalonePage = render(STANDALONE_LAYOUT_PATH, data);
 
-  fs.writeFileSync(path.join(OUTPUT_DIR, pageFileName), defaultPage);
-  fs.writeFileSync(path.join(STANDALONE_OUTPUT_DIR, pageFileName), standalonePage);
+  fs.writeFileSync(path.join(PAGES_OUTPUT_DIR, pageFileName), defaultPage);
+  fs.writeFileSync(path.join(STANDALONE_PAGES_OUTPUT_DIR, pageFileName), standalonePage);
 });
