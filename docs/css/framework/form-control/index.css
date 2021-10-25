@@ -1,0 +1,114 @@
+.form-control {
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 0.25em;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: inherit;
+  height: calc(0.375em * 2 + 1.4em * 1px * 2);
+  line-height: 1.4em;
+  padding: 0.375em 0.75em;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%;
+}
+
+textarea.form-control {
+  height: 5em;
+  line-height: 1.4em;
+}
+
+.form-control::placeholder {
+  opacity: 1;
+  user-select: none;
+}
+
+.form-control:focus,
+.form-control.form-control--focus {
+  outline: none;
+}
+
+.form-control[readonly],
+.form-control.form-control--readonly {
+  cursor: default;
+  opacity: 1;
+}
+
+.form-control:disabled,
+.form-control.form-control--disabled,
+fieldset:disabled .form-control {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.form-control {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none;
+  }
+}
+.form-control {
+  background-color: #fff;
+  border-color: #cdced9;
+  color: #323442;
+}
+
+.form-control::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+.form-control:hover,
+.form-control.form-control--hover {
+  background-color: #fff;
+  border-color: rgb(183.2670454545, 184.7017045455, 200.4829545455);
+  color: #323442;
+}
+
+.form-control:hover::placeholder,
+.form-control.form-control--hover::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+.form-control:focus,
+.form-control.form-control--focus {
+  background-color: #fff;
+  border-color: rgb(183.2670454545, 184.7017045455, 200.4829545455);
+  box-shadow: 0 0 0 0.2em rgba(183.2670454545, 184.7017045455, 200.4829545455, 0.5);
+  color: #323442;
+}
+
+.form-control:focus::placeholder,
+.form-control.form-control--focus::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+.form-control[readonly],
+.form-control.form-control--readonly {
+  background-color: rgb(248.625, 248.625, 248.625);
+  border-color: #cdced9;
+  color: #323442;
+}
+
+.form-control[readonly]::placeholder,
+.form-control.form-control--readonly::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+.form-control:disabled,
+.form-control.form-control--disabled,
+fieldset:disabled .form-control {
+  background-color: #fff;
+  border-color: #cdced9;
+  color: #323442;
+}
+
+.form-control:disabled::placeholder,
+.form-control.form-control--disabled::placeholder,
+fieldset:disabled .form-control::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+/*# sourceMappingURL=index.css.map */

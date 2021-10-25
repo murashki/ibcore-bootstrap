@@ -1,9 +1,0 @@
-@import '../../../_mixins/form-control-variant';
-
-@include form-control-variant(
-  "form-control",
-  "form-control",
-  $form-control-color,
-  $form-control-bg-color,
-  $form-control-border-color
-);

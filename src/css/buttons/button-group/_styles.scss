@@ -1,7 +1,0 @@
-@import '../../_mixins/button-group';
-
-@include button-group(
-  "btn-group",
-  "btn",
-  $btn-border-width
-);

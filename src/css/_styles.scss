@@ -1,3 +1,11 @@
+@use './variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   line-height: $line-height;
   background-color: $bg-color;

@@ -1,0 +1,10 @@
+@use '../../../_mixins/button-variant' as *;
+@use './variables' as *;
+
+@include button-variant(
+  "btn",
+  "btn--success",
+  $btn-success-color,
+  $btn-success-bg-color,
+  $btn-success-border-color
+);

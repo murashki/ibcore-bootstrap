@@ -1,0 +1,62 @@
+.form-control--error {
+  background-color: #fff;
+  border-color: #dc3545;
+  color: #323442;
+}
+
+.form-control--error::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+.form-control--error:hover,
+.form-control--error.form-control--hover {
+  background-color: #fff;
+  border-color: rgb(200.082278481, 34.667721519, 50.5158227848);
+  color: #323442;
+}
+
+.form-control--error:hover::placeholder,
+.form-control--error.form-control--hover::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+.form-control--error:focus,
+.form-control--error.form-control--focus {
+  background-color: #fff;
+  border-color: rgb(200.082278481, 34.667721519, 50.5158227848);
+  box-shadow: 0 0 0 0.2em rgba(200.082278481, 34.667721519, 50.5158227848, 0.5);
+  color: #323442;
+}
+
+.form-control--error:focus::placeholder,
+.form-control--error.form-control--focus::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+.form-control--error[readonly],
+.form-control--error.form-control--readonly {
+  background-color: rgb(248.625, 248.625, 248.625);
+  border-color: #dc3545;
+  color: #323442;
+}
+
+.form-control--error[readonly]::placeholder,
+.form-control--error.form-control--readonly::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+.form-control--error:disabled,
+.form-control--error.form-control--disabled,
+fieldset:disabled .form-control--error {
+  background-color: #fff;
+  border-color: #dc3545;
+  color: #323442;
+}
+
+.form-control--error:disabled::placeholder,
+.form-control--error.form-control--disabled::placeholder,
+fieldset:disabled .form-control--error::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+/*# sourceMappingURL=index.css.map */

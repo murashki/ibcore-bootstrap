@@ -1,7 +1,10 @@
+$btn-control-color: #585467 !default;
 $btn-control-font-family: inherit !default;
 $btn-control-font-size: 1em !default;
 $btn-control-font-weight: inherit !default;
 $btn-control-line-height: 1.4em !default;
+$btn-control-bg-color: #edecf1 !default;
+$btn-control-border-color: $btn-control-bg-color !default;
 $btn-control-border-width: 1px !default;
 $btn-control-border-radius: 0.15em !default;
 $btn-control-vertical-padding: 0.375em !default;
@@ -15,12 +18,14 @@ $btn-control-transition:
   border-color $btn-control-transition-appearance,
   box-shadow $btn-control-transition-appearance !default;
 
-$btn-control-icon-opacity: 0.2 !default;
 $btn-control-icon-bg-color: transparent !default;
-$btn-control-icon-border-width: 1px !default;
 $btn-control-icon-border-color: currentColor !default;
+$btn-control-icon-border-width: 1px !default;
+$btn-control-icon-border-radius: calc(#{$btn-control-line-height} / 2 + #{$btn-control-vertical-padding} + #{$btn-control-border-width}) !default;
+$btn-control-icon-opacity: 0.2 !default;
+
+$btn-control-icon-transition-appearance: $btn-control-transition-appearance !default;
+$btn-control-icon-transition: $btn-control-transition !default;
+
 $btn-control-icon-checked-bg-color: currentColor !default;
 $btn-control-icon-checked-border-color: currentColor !default;
-
-$btn-control-icon-transition-appearance: $btn-control-transition-appearance;
-$btn-control-icon-transition: $btn-control-transition;

@@ -1,91 +1,19 @@
-@import './normalize';
+@forward './normalize';
+@forward './styles';
 
-
-*,
-*::before,
-*::after {
- box-sizing: border-box;
-}
-
-
-@import './fonts';
-
-
-@import './variables';
-@import './styles';
-
-
-@import './grid/variables';
-@import './grid/styles';
-
-
-@import './link/variables';
-@import './link/styles';
-
-
-@import './link/unstyled-link/variables';
-@import './link/unstyled-link/styles';
-
-
-@import './forms/variables';
-@import './forms/styles';
-
-
-@import './form-control/variables';
-@import './form-control/styles';
-
-
-@import './form-control/variants/default/variables';
-@import './form-control/variants/default/styles';
-
-
-@import './form-control/variants/error/variables';
-@import './form-control/variants/error/styles';
-
-
-@import './buttons/variables';
-@import './buttons/styles';
-
-
-@import './buttons/variants/default/variables';
-@import './buttons/variants/default/styles';
-
-
-@import './buttons/variants/success/variables';
-@import './buttons/variants/success/styles';
-
-
-@import './buttons/variants/warning/variables';
-@import './buttons/variants/warning/styles';
-
-
-@import './buttons/variants/danger/variables';
-@import './buttons/variants/danger/styles';
-
-
-@import './buttons/unstyled-button/variables';
-@import './buttons/unstyled-button/styles';
-
-
-@import './buttons/button-group/variables';
-@import './buttons/button-group/styles';
-
-
-@import './button-control/variables';
-@import './button-control/styles';
-
-
-@import './button-control/variants/default/variables';
-@import './button-control/variants/default/styles';
-
-
-@import './button-control/variants/error/variables';
-@import './button-control/variants/error/styles';
-
-
-@import './button-control/button-control-group/variables';
-@import './button-control/button-control-group/styles';
-
-
-@import './button-link/variables';
-@import './button-link/styles';
+@forward './grid';
+@forward './link';
+@forward './link-ghost';
+@forward './forms';
+@forward './form-control';
+@forward './form-control/variants/error';
+@forward './button';
+@forward './button/variants/success';
+@forward './button/variants/warning';
+@forward './button/variants/danger';
+@forward './button-control';
+@forward './button-control/variants/error';
+@forward './button-control-group';
+@forward './button-ghost';
+@forward './button-group';
+@forward './button-link';

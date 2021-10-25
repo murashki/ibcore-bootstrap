@@ -1,0 +1,24 @@
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link:visited,
+.link.link--visited {
+  color: #007bff;
+}
+
+.link:hover,
+.link.link--hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.link:focus,
+.link.link--focus {
+  color: #007bff;
+  text-decoration: underline;
+  outline: none;
+}
+
+/*# sourceMappingURL=index.css.map */

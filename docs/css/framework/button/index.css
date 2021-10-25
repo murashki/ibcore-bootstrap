@@ -1,0 +1,96 @@
+.btn {
+  align-items: center;
+  border-radius: 0.15em;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1.2em;
+  font-weight: inherit;
+  justify-content: center;
+  line-height: 1.4em;
+  padding: 0.375em 0.75em;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:disabled,
+.btn.btn--disabled,
+fieldset:disabled .btn {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+.btn {
+  background-color: #e3e4ea;
+  border-color: #e3e4ea;
+  color: #323442;
+}
+
+.btn:hover,
+.btn.btn--hover {
+  background-color: rgb(213.8285714286, 215.2989795918, 224.1214285714);
+  border-color: rgb(205.1428571429, 206.9234693878, 217.6071428571);
+  color: #323442;
+}
+
+.btn:focus,
+.btn.btn--focus {
+  background-color: rgb(212.4285714286, 213.9489795918, 223.0714285714);
+  border-color: rgb(205.1428571429, 206.9234693878, 217.6071428571);
+  box-shadow: 0 0 0 0.2em rgba(205.1428571429, 206.9234693878, 217.6071428571, 0.5);
+  color: #323442;
+}
+
+.btn:active,
+.btn.btn--active {
+  background-color: rgb(212.4285714286, 213.9489795918, 223.0714285714);
+  border-color: rgb(205.1428571429, 206.9234693878, 217.6071428571);
+  box-shadow: 0 0 0 0.2em rgba(205.1428571429, 206.9234693878, 217.6071428571, 0.5);
+  color: #323442;
+}
+
+.btn:disabled,
+.btn.btn--disabled,
+fieldset:disabled btn {
+  background-color: #e3e4ea;
+  border-color: #e3e4ea;
+  box-shadow: none;
+  color: #323442;
+}
+
+.btn--xs {
+  font-size: 0.8em;
+}
+
+.btn--sm {
+  font-size: 1em;
+}
+
+.btn--lg {
+  font-size: 1.4em;
+}
+
+.btn--xl {
+  font-size: 1.8em;
+}
+
+/*# sourceMappingURL=index.css.map */

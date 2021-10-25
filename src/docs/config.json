@@ -3,17 +3,37 @@
     {
       "key": "grid",
       "title": "Grid",
-      "standaloneCssModules": ["grid"]
+      "modules": [
+        "grid"
+      ]
     },
     {
       "key": "forms",
       "title": "Forms",
-      "standaloneCssModules": ["form-control", "forms", "grid"]
+      "modules": [
+        "form-control",
+        "form-control/variants/error",
+        "forms",
+        "grid"
+      ]
     },
     {
       "key": "buttons",
       "title": "Buttons",
-      "standaloneCssModules": ["button-control", "button-link", "buttons"]
+      "modules": [
+        "button",
+        "button/variants/danger",
+        "button/variants/success",
+        "button/variants/warning",
+        "button-control",
+        "button-control/variants/error",
+        "button-control-group",
+        "button-link",
+        "button-ghost",
+        "form-control",
+        "forms",
+        "grid"
+      ]
     }
   ]
 }

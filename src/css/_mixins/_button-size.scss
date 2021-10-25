@@ -1,0 +1,23 @@
+@mixin button-size(
+  $class,
+  $btn-font-size-xs,
+  $btn-font-size-sm,
+  $btn-font-size-lg,
+  $btn-font-size-xl
+) {
+  .#{$class}--xs {
+    font-size: $btn-font-size-xs;
+  }
+
+  .#{$class}--sm {
+    font-size: $btn-font-size-sm;
+  }
+
+  .#{$class}--lg {
+    font-size: $btn-font-size-lg;
+  }
+
+  .#{$class}--xl {
+    font-size: $btn-font-size-xl;
+  }
+}

@@ -1,0 +1,117 @@
+.btn-control {
+  align-items: center;
+  border-radius: 0.15em;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: inherit;
+  justify-content: center;
+  line-height: 1.4em;
+  padding: 0.375em 0.375em;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn-control:focus {
+  outline: none;
+}
+
+.btn-control:disabled,
+.btn-control.btn-control--disabled,
+fieldset:disabled .btn-control {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn-control {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .btn-control {
+    transition: none;
+  }
+}
+.btn-control {
+  background-color: #edecf1;
+  border-color: #edecf1;
+  color: #585467;
+}
+
+.btn-control:hover,
+.btn-control.btn-control--hover {
+  background-color: rgb(223.9909090909, 222.2681818182, 230.8818181818);
+  border-color: rgb(216.1363636364, 213.9772727273, 224.7727272727);
+  color: #585467;
+}
+
+.btn-control:focus,
+.btn-control.btn-control--focus {
+  background-color: rgb(223.0909090909, 221.3181818182, 230.1818181818);
+  border-color: rgb(216.1363636364, 213.9772727273, 224.7727272727);
+  box-shadow: 0 0 0 0.2em rgba(216.1363636364, 213.9772727273, 224.7727272727, 0.5);
+  color: #585467;
+}
+
+.btn-control:active,
+.btn-control.btn-control--active {
+  background-color: rgb(223.0909090909, 221.3181818182, 230.1818181818);
+  border-color: rgb(216.1363636364, 213.9772727273, 224.7727272727);
+  box-shadow: 0 0 0 0.2em rgba(216.1363636364, 213.9772727273, 224.7727272727, 0.5);
+  color: #585467;
+}
+
+.btn-control:disabled,
+.btn-control.btn-control--disabled,
+fieldset:disabled btn-control {
+  background-color: #edecf1;
+  border-color: #edecf1;
+  box-shadow: none;
+  color: #585467;
+}
+
+.btn-control:before {
+  background-color: transparent;
+  border: 1px solid currentColor;
+  content: "";
+  display: block;
+  height: 1em;
+  opacity: 0.2;
+  width: 1em;
+}
+
+.btn-control:before {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .btn-control:before {
+    transition: none;
+  }
+}
+.btn-control--checked:before {
+  background-color: currentColor;
+  border-color: currentColor;
+  opacity: 1;
+}
+
+.btn-control--has-label:before {
+  margin-right: 0.4em;
+}
+
+.btn-control--radio {
+  border-radius: calc(1.4em / 2 + 0.375em + 1px);
+}
+
+.btn-control--radio:before {
+  border-radius: 0.5em;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,53 @@
+@mixin button-control(
+  $class,
+  $btn-control-icon-bg-color,
+  $btn-control-icon-border-color,
+  $btn-control-icon-border-width,
+  $btn-control-icon-border-radius,
+  $btn-control-icon-opacity,
+  $btn-control-icon-transition,
+  $btn-control-icon-checked-bg-color,
+  $btn-control-icon-checked-border-color,
+) {
+  .#{$class}:before {
+    background-color: $btn-control-icon-bg-color;
+    border: $btn-control-icon-border-width solid $btn-control-icon-border-color;
+    content: "";
+    display: block;
+    height: 1em;
+    opacity: $btn-control-icon-opacity;
+    width: 1em;
+  }
+
+  .#{$class}:before {
+    transition: $btn-control-icon-transition;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    .#{$class}:before {
+      transition: none;
+    }
+  }
+
+  .#{$class}--checked {}
+
+  .#{$class}--checked:before {
+    background-color: $btn-control-icon-checked-bg-color;
+    border-color: $btn-control-icon-checked-border-color;
+    opacity: 1;
+  }
+
+  .#{$class}--has-label {}
+
+  .#{$class}--has-label:before {
+    margin-right: 0.4em;
+  }
+
+  .#{$class}--radio {
+    border-radius: $btn-control-icon-border-radius;
+  }
+
+  .#{$class}--radio:before {
+    border-radius: 0.5em;
+  }
+}

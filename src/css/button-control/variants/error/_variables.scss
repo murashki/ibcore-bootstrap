@@ -1,3 +1,5 @@
+@use '../../variables' as *;
+
 $btn-control-error-color: $btn-control-color !default;
 $btn-control-error-bg-color: $btn-control-bg-color !default;
 $btn-control-error-border-color: #dc3545 !default;

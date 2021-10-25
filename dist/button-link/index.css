@@ -1,0 +1,47 @@
+.btn-link {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0;
+  text-decoration: none;
+}
+
+.btn-link:hover,
+.btn-link.class--hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.btn-link:focus,
+.btn-link.btn-link--focus {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.btn-link:focus {
+  outline: none;
+}
+
+.btn-link:active,
+.btn-link.btn-link--active {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.btn-link:disabled,
+.btn-link.btn-link--disabled,
+fieldset:disabled .btn-link {
+  color: #007bff;
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=index.css.map */

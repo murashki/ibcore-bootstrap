@@ -1,4 +1,5 @@
-@import '../../../_mixins/button-variant';
+@use '../../../_mixins/button-variant' as *;
+@use './variables' as *;
 
 @include button-variant(
   "btn-control",

@@ -1,0 +1,60 @@
+.form-group {
+  margin-bottom: 1em;
+}
+
+.form-group--vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group--vertical > * + * {
+  margin-top: 0.32em;
+}
+
+.form-group--horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-group--horizontal > * + * {
+  margin-left: 0.64em;
+}
+
+.form-group > .col,
+.form-group > .col-1,
+.form-group > .col-2,
+.form-group > .col-3,
+.form-group > .col-4,
+.form-group > .col-5,
+.form-group > .col-6,
+.form-group > .col-7,
+.form-group > .col-8,
+.form-group > .col-9,
+.form-group > .col-10,
+.form-group > .col-11,
+.form-group > .col-12,
+.form-group > .col-auto {
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  display: inline-block;
+  font-size: inherit;
+  line-height: 1.2em;
+}
+
+.form-group .form-label {
+  display: block;
+}
+
+.form-fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

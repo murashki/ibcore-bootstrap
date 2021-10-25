@@ -1,0 +1,148 @@
+<html lang="ru">
+<head>
+  <meta charSet="utf-8">
+  <title>Grid</title>
+  <link rel="stylesheet" href="css/framework/normalize.css">
+    <link rel="stylesheet" href="css/framework/grid/index.css">
+  <link rel="stylesheet" href="css/app/index.css">
+</head>
+<body>
+<div class="app-head">
+  <div class="app-menu">
+      <a class="link app-menuLink app-menuLink--active" href="grid.html">
+        Grid
+      </a>
+      <a class="link app-menuLink" href="forms.html">
+        Forms
+      </a>
+      <a class="link app-menuLink" href="buttons.html">
+        Buttons
+      </a>
+  </div>
+</div>
+
+<div class="app-page">
+  <h1 class="h1">Grid</h1>
+  <p class="paragraph">
+    <a class="link" href="standalone/grid.html">
+      Standalone page
+    </a>
+  </p>
+  <div class="app-content">
+    <div class="app-section">
+      <h2 class="h2">Base usage</h2>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col</span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3 col-md-6 col-sm-12">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col-3 col-md-6 col-sm-12</span></div>
+          </div>
+          <div class="col-3 col-md-6 col-sm-12">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col-3 col-md-6 col-sm-12</span></div>
+          </div>
+          <div class="col-6 col-md-12">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col-6 col-md-12</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Nested grid</h2>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col</span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="row">
+              <div class="col-6">
+                <div class="app-cellContent"><span class="app-textTruncate">row > col-6 > row > col-6</span></div>
+              </div>
+              <div class="col-6">
+                <div class="app-cellContent"><span class="app-textTruncate">row > col-6 > row > col-6</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 row">
+            <div class="col-6">
+              <div class="app-cellContent"><span class="app-textTruncate">row > col-6 row > col-6</span></div>
+            </div>
+            <div class="col-6">
+              <div class="app-cellContent"><span class="app-textTruncate">row > col-6 row > col-6</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2"><code class="app-code">.col</code> vs <code class="app-code">.col-auto</code></h2>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col</span></div>
+          </div>
+          <div class="col">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col</span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col-auto</span></div>
+          </div>
+          <div class="col-auto">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col-auto</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Offset</h2>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col offset-6 offset-lg-0">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col offset-6 offset-lg-0</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Row break</h2>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col</span></div>
+          </div>
+          <div class="rowBreak-lg"></div>
+          <div class="col">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="app-breakpoint">
+  <span class="display-max">max</span>
+  <span class="display-xl">xl</span>
+  <span class="display-lg">lg</span>
+  <span class="display-md">md</span>
+  <span class="display-sm">sm</span>
+</div>
+</body>
+</html>

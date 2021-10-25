@@ -1,7 +1,7 @@
 @mixin form-control(
   $class,
-  $horizontal-padding,
   $vertical-padding,
+  $horizontal-padding,
   $line-height,
   $font-family,
   $font-size,
@@ -15,19 +15,19 @@
   $textarea-height
 ) {
 
-  // >>> Base
+  // --> Base
   .#{$class} {
     display: block;
-    width: 100%;
-    height: calc(#{$vertical-padding} * 2 + #{$line-height} * #{$border-width} * 2);
-    padding: $vertical-padding $horizontal-padding;
+    border: $border-width solid transparent;
+    border-radius: $border-radius;
     font-family: $font-family;
     font-size: $font-size;
     font-weight: $font-weight;
+    height: calc(#{$vertical-padding} * 2 + #{$line-height} * #{$border-width} * 2);
     line-height: $line-height;
-    border: $border-width solid transparent;
-    border-radius: $border-radius;
+    padding: $vertical-padding $horizontal-padding;
     transition: $transition;
+    width: 100%;
   }
 
   textarea.#{$class} {
@@ -39,39 +39,38 @@
     opacity: 1;
     user-select: none;
   }
-  // <<< Base
+  // <-- Base
 
 
-  // >>> Focus
-  .#{$class}:focus {
+  // --> Focus
+  .#{$class}:focus,
+  .#{$class}.#{$class}--focus {
     outline: none;
   }
-  // <<< Focus
+  // <-- Focus
 
 
-  // >>> Readonly
-  .#{$class}[readonly] {
-    opacity: $readonly-opacity;
+  // --> Readonly
+  .#{$class}[readonly],
+  .#{$class}.#{$class}--readonly {
     cursor: default;
+    opacity: $readonly-opacity;
   }
-  // <<< Readonly
+  // <-- Readonly
 
 
-  // >>> Disabled
+  // --> Disabled
   .#{$class}:disabled,
   .#{$class}.#{$class}--disabled,
-  fieldset:disabled .form-control {
-    opacity: $disabled-opacity;
+  fieldset:disabled .#{$class} {
     cursor: default;
-  }
-
-  .#{$class}.#{$class}--disabled {
+    opacity: $disabled-opacity;
     pointer-events: none;
   }
-  // <<< Disabled
+  // <-- Disabled
 
 
-  // >>> Transition
+  // --> Transition
   .#{$class} {
     transition: $transition;
   }
@@ -81,5 +80,5 @@
       transition: none;
     }
   }
-  // <<< Transition
+  // <-- Transition
 }
