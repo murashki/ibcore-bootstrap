@@ -1,0 +1,60 @@
+@mixin button-link(
+  $class,
+  $btn-link-color,
+  $btn-link-text-decoration,
+  $btn-link-hover-color,
+  $btn-link-hover-text-decoration,
+  $btn-link-focus-color,
+  $btn-link-focus-text-decoration,
+  $btn-link-active-color,
+  $btn-link-active-text-decoration,
+  $btn-link-disabled-color,
+  $btn-link-disabled-text-decoration,
+  $btn-link-disabled-opacity
+) {
+  .#{$class} {
+    background-color: transparent;
+    border: none;
+    color: $btn-link-color;
+    cursor: pointer;
+    display: inline;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 0;
+    text-decoration: $btn-link-text-decoration;
+  }
+
+  .#{$class}:hover,
+  .#{$class}.#{class}--hover {
+    color: $btn-link-hover-color;
+    text-decoration: $btn-link-hover-text-decoration;
+  }
+
+  .#{$class}:focus,
+  .#{$class}.#{$class}--focus {
+    color: $btn-link-focus-color;
+    text-decoration: $btn-link-focus-text-decoration;
+  }
+
+  .#{$class}:focus {
+    outline: none;
+  }
+
+  .#{$class}:active,
+  .#{$class}.#{$class}--active {
+    color: $btn-link-active-color;
+    text-decoration: $btn-link-active-text-decoration;
+  }
+
+  .#{$class}:disabled,
+  .#{$class}.#{$class}--disabled,
+  fieldset:disabled .#{$class} {
+    color: $btn-link-disabled-color;
+    cursor: default;
+    opacity: $btn-link-disabled-opacity;
+    pointer-events: none;
+    text-decoration: $btn-link-disabled-text-decoration;
+  }
+}

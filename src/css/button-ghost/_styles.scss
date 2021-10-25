@@ -1,0 +1,6 @@
+@import '../_mixins/button-ghost';
+
+@include button-ghost(
+  "btn-ghost",
+  $btn-disabled-opacity
+);

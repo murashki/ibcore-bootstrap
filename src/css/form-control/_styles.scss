@@ -1,9 +1,10 @@
 @import '../_mixins/form-control';
+@import '../_mixins/form-control-variant';
 
 @include form-control(
   "form-control",
-  $form-control-horizontal-padding,
   $form-control-vertical-padding,
+  $form-control-horizontal-padding,
   $form-control-line-height,
   $form-control-font-family,
   $form-control-font-size,
@@ -15,4 +16,12 @@
   $form-control-transition,
   $form-control-textarea-line-height,
   $form-control-textarea-height
+);
+
+@include form-control-variant(
+  "form-control",
+  "form-control",
+  $form-control-color,
+  $form-control-bg-color,
+  $form-control-border-color
 );

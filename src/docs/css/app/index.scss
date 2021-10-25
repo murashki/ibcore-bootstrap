@@ -1,15 +1,23 @@
-/*
- * Base color: #272e56
- */
+$btn-space: 0.4em;
 
 html {
   overflow-y: scroll;
+  font-family: "Roboto Mono";
+}
+
+h1 {
+  margin: 1.6em 0 2em;
+}
+
+h2 {
+  margin: 1.6em 0;
 }
 
 .app-head {
-  padding: 1em 0;
   background-color: #323442;
+  font-size: 1.2em;
   margin-bottom: 1em;
+  padding: 1.2em 0;
 }
 
 .app-menu {
@@ -59,6 +67,10 @@ html {
 
 .app-page {
   margin-bottom: 10em;
+}
+
+.app-standalonePageLink {
+  margin-top: -2.6em;
 }
 
 .app-standalone {
@@ -117,4 +129,13 @@ html {
   padding: 0 1.2em;
   background-color: #f5f5f7;
   border: 1px solid #dadbe2;
+}
+
+.app-buttonSpace {
+  margin: -$btn-space;
+}
+
+.app-buttonSpace > .btn,
+.app-buttonSpace > .btn-ghost {
+  margin: $btn-space;
 }

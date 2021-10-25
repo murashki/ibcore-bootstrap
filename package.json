@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean-dist": "rm -rf dist/*",
+    "clean-docs": "npm-run-all --parallel clean-docs-*",
     "clean-docs-framework-css": "rm -rf docs/css/framework",
     "clean-docs-app-css": "rm -rf docs/css/app",
-    "clean-docs-html": "rm -f docs/*.html docs/standalone/*.html",
-    "clean-docs": "npm-run-all --parallel clean-docs-*",
+    "clean-docs-html": "rm -rf docs/*.html docs/standalone/*.html",
     "clean-sources": "rm -rf src/__bootstrap-sources/compiled/*",
     "compile-dist": "npm run clean-dist && node-sass --output-style expanded --output dist src/css",
     "compile-docs-framework-css": "npm run clean-docs-framework-css && node-sass --output-style expanded --output docs/css/framework src/css",

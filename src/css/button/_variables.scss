@@ -1,11 +1,14 @@
+$btn-color: #323442 !default;
 $btn-font-family: inherit !default;
-$btn-font-size: 1.2em !default;
 $btn-font-size-xs: 0.8em !default;
 $btn-font-size-sm: 1em !default;
+$btn-font-size: 1.2em !default;
 $btn-font-size-lg: 1.4em !default;
 $btn-font-size-xl: 1.8em !default;
 $btn-font-weight: inherit !default;
 $btn-line-height: 1.4em !default;
+$btn-bg-color: #e3e4ea !default;
+$btn-border-color: $btn-bg-color !default;
 $btn-border-width: 1px !default;
 $btn-border-radius: 0.15em !default;
 $btn-vertical-padding: 0.375em !default;

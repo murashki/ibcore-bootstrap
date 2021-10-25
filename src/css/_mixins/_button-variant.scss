@@ -1,6 +1,6 @@
 @mixin button-variant(
   $class,
-  $variant-class,
+  $modifier-class,
   $color,
   $bg-color,
   $border-color,
@@ -19,54 +19,41 @@
   $disabled-bg-color: $bg-color,
   $disabled-border-color: $border-color
 ) {
-  // >>> Base
-  .#{$variant-class} {
-    color: $color;
+  .#{$modifier-class} {
     background-color: $bg-color;
     border-color: $border-color;
+    color: $color;
   }
-  // <<< Base
 
-
-  // >>> Hover
-  .#{$variant-class}:hover {
-    color: $hover-color;
+  .#{$modifier-class}:hover,
+  .#{$modifier-class}.#{$class}--hover {
     background-color: $hover-bg-color;
     border-color: $hover-border-color;
+    color: $hover-color;
   }
-  // <<< Hover
 
-
-  // >>> Focus
-  .#{$variant-class}:focus,
-  .#{$variant-class}.#{$class}--focus  {
-    color: $focus-color;
+  .#{$modifier-class}:focus,
+  .#{$modifier-class}.#{$class}--focus  {
     background-color: $focus-bg-color;
     border-color: $focus-border-color;
     box-shadow: $focus-box-shadow;
+    color: $focus-color;
   }
-  // <<< Focus
 
-
-  // >>> Active
-  .#{$variant-class}:active,
-  .#{$variant-class}.#{$class}--active {
-    color: $active-color;
+  .#{$modifier-class}:active,
+  .#{$modifier-class}.#{$class}--active {
     background-color: $active-bg-color;
     border-color: $active-border-color;
     box-shadow: $active-box-shadow;
+    color: $active-color;
   }
-  // <<< Active
 
-
-  // >>> Disabled
-  .#{$variant-class}:disabled,
-  .#{$variant-class}.#{$class}--disabled,
-  fieldset:disabled #{$variant-class} {
-    color: $disabled-color;
+  .#{$modifier-class}:disabled,
+  .#{$modifier-class}.#{$class}--disabled,
+  fieldset:disabled #{$modifier-class} {
     background-color: $disabled-bg-color;
     border-color: $disabled-border-color;
     box-shadow: none;
+    color: $disabled-color;
   }
-  // <<< Disabled
 }

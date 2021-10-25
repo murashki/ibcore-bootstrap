@@ -1,7 +1,7 @@
 @import '../_mixins/button';
+@import '../_mixins/button-variant';
+@import '../_mixins/button-control';
 
-
-// >>> Base
 @include button(
   "btn-control",
   $btn-control-font-family,
@@ -15,61 +15,23 @@
   $btn-control-disabled-opacity,
   $btn-control-transition
 );
-// <<< Base
 
+@include button-variant(
+  "btn-control",
+  "btn-control",
+  $btn-control-color,
+  $btn-control-bg-color,
+  $btn-control-border-color
+);
 
-// >>> Icon base
-.btn-control:before {
-  content: "";
-  opacity: $btn-control-icon-opacity;
-  display: table; // Guys, i can't explain why, but it's better round off
-  height: 1em;
-  width: 1em;
-  border: $btn-control-icon-border-width solid $btn-control-icon-border-color;
-  background-color: $btn-control-icon-bg-color;
-}
-// <<< Icon base
-
-
-// >>> Icon transition
-.btn-control:before {
-  transition: $btn-control-icon-transition;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .btn-control:before {
-    transition: none;
-  }
-}
-// <<< Icon transition
-
-
-// >>> Checked
-.btn-control.btn-control--checked {}
-
-.btn-control.btn-control--checked:before {
-  opacity: 1;
-  background-color: $btn-control-icon-checked-bg-color;
-  border-color: $btn-control-icon-checked-border-color;
-}
-// <<< Checked
-
-
-// >>> With labels
-.btn-control.btn-control--has-label {}
-
-.btn-control.btn-control--has-label:before {
-  margin-right: 0.4em;
-}
-// <<< With labels
-
-
-// >>> Radio button
-.btn-control.btn-control--radio {
-  border-radius: calc(#{$btn-control-line-height} / 2 + #{$btn-control-vertical-padding} + #{$btn-control-border-width});
-}
-
-.btn-control.btn-control--radio:before {
-  border-radius: $btn-control-line-height / 2;
-}
-// <<< Radio button
+@include button-control(
+  "btn-control",
+  $btn-control-icon-bg-color,
+  $btn-control-icon-border-color,
+  $btn-control-icon-border-width,
+  $btn-control-icon-border-radius,
+  $btn-control-icon-opacity,
+  $btn-control-icon-transition,
+  $btn-control-icon-checked-bg-color,
+  $btn-control-icon-checked-border-color,
+)

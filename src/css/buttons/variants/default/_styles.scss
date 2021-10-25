@@ -1,9 +1,0 @@
-@import '../../../_mixins/button-variant';
-
-@include button-variant(
-  "btn",
-  "btn",
-  $btn-color,
-  $btn-bg-color,
-  $btn-border-color
-);

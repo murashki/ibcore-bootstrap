@@ -1,0 +1,33 @@
+@import '../_mixins/button';
+@import '../_mixins/button-variant';
+@import '../_mixins/button-size';
+
+@include button(
+  "btn",
+  $btn-font-family,
+  $btn-font-size,
+  $btn-font-weight,
+  $btn-line-height,
+  $btn-border-width,
+  $btn-border-radius,
+  $btn-vertical-padding,
+  $btn-horizontal-padding,
+  $btn-disabled-opacity,
+  $btn-transition
+);
+
+@include button-variant(
+  "btn",
+  "btn",
+  $btn-color,
+  $btn-bg-color,
+  $btn-border-color
+);
+
+@include button-size(
+  "btn",
+  $btn-font-size-xs,
+  $btn-font-size-sm,
+  $btn-font-size-lg,
+  $btn-font-size-xl
+);

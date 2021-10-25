@@ -1,6 +1,6 @@
 @mixin form-control-variant(
   $class,
-  $variant-class,
+  $modifier-class,
   $color,
   $bg-color,
   $border-color: darken($bg-color, 12%),
@@ -23,74 +23,64 @@
   $disabled-border-color: $border-color,
   $disabled-placeholder-color: $placeholder-color
 ) {
-  // >>> Base
-  .#{$variant-class} {
-    color: $color;
+  .#{$modifier-class} {
     background-color: $bg-color;
     border-color: $border-color;
+    color: $color;
   }
 
-  .#{$variant-class}::placeholder {
+  .#{$modifier-class}::placeholder {
     color: $placeholder-color;
   }
-  // <<< Base
 
-
-  // >>> Hover
-  .#{$variant-class}:hover {
-    color: $hover-color;
+  .#{$modifier-class}:hover,
+  .#{$modifier-class}.#{$class}--hover {
     background-color: $hover-bg-color;
     border-color: $hover-border-color;
+    color: $hover-color;
   }
 
-  .#{$variant-class}:hover::placeholder {
+  .#{$modifier-class}:hover::placeholder,
+  .#{$modifier-class}.#{$class}--hover::placeholder {
     color: $hover-placeholder-color;
   }
-  // <<< Hover
 
-
-  // >>> Focus
-  .#{$variant-class}:focus,
-  .#{$variant-class}.#{$class}--focus {
-    color: $focus-color;
+  .#{$modifier-class}:focus,
+  .#{$modifier-class}.#{$class}--focus {
     background-color: $focus-bg-color;
     border-color: $focus-border-color;
     box-shadow: $focus-box-shadow;
+    color: $focus-color;
   }
 
-  .#{$variant-class}:focus::placeholder,
-  .#{$variant-class}.#{$class}--focus::placeholder {
+  .#{$modifier-class}:focus::placeholder,
+  .#{$modifier-class}.#{$class}--focus::placeholder {
     color: $focus-placeholder-color;
   }
-  // <<< Focus
 
-
-  // >>> Readonly
-  .#{$variant-class}[readonly] {
-    color: $readonly-color;
+  .#{$modifier-class}[readonly],
+  .#{$modifier-class}.#{$class}--readonly {
     background-color: $readonly-bg-color;
     border-color: $readonly-border-color;
+    color: $readonly-color;
   }
 
-  .#{$variant-class}[readonly]::placeholder {
+  .#{$modifier-class}[readonly]::placeholder,
+  .#{$modifier-class}.#{$class}--readonly::placeholder {
     color: $readonly-placeholder-color;
   }
-  // <<< Readonly
 
-
-  // >>> Disabled
-  .#{$variant-class}:disabled,
-  .#{$variant-class}.#{$class}--disabled,
-  fieldset:disabled .#{$variant-class} {
-    color: $disabled-color;
+  .#{$modifier-class}:disabled,
+  .#{$modifier-class}.#{$class}--disabled,
+  fieldset:disabled .#{$modifier-class} {
     background-color: $disabled-bg-color;
     border-color: $disabled-border-color;
+    color: $disabled-color;
   }
 
-  .#{$variant-class}:disabled::placeholder,
-  .#{$variant-class}.#{$class}--disabled::placeholder,
-  fieldset:disabled .#{$variant-class}::placeholder {
+  .#{$modifier-class}:disabled::placeholder,
+  .#{$modifier-class}.#{$class}--disabled::placeholder,
+  fieldset:disabled .#{$modifier-class}::placeholder {
     color: $disabled-placeholder-color;
   }
-  // <<< Disabled
 }
