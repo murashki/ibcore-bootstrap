@@ -3,17 +3,17 @@
     {
       "key": "grid",
       "title": "Grid",
-      "standaloneCssModules": ["grid"]
+      "modules": ["grid"]
     },
     {
       "key": "forms",
       "title": "Forms",
-      "standaloneCssModules": ["form-control", "forms", "grid"]
+      "modules": ["form-control", "forms", "grid"]
     },
     {
       "key": "buttons",
       "title": "Buttons",
-      "standaloneCssModules": ["button-control", "button-link", "buttons"]
+      "modules": ["button-control", "button-link", "buttons"]
     }
   ]
 }

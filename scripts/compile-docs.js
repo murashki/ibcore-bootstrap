@@ -32,7 +32,7 @@ config.pages.forEach(function (page) {
   const content = fs.readFileSync(path.join(PAGES_DIR, templateFileName), 'utf8');
   Handlebars.registerPartial('content', content);
 
-  Handlebars.registerHelper('onActivePage', function (key, options) {
+  Handlebars.registerHelper('activePage', function (key, options) {
     return key === page.key ? options.fn(this) : options.inverse(this);
   });
 
