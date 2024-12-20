@@ -1,0 +1,31 @@
+<html lang="ru">
+<head>
+  <meta charSet="utf-8">
+  <title>{{ title }}</title>
+
+  {{#each modules}}
+    <link rel="stylesheet" href="../css/framework/{{ this }}/index.css">
+  {{/each}}
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+<div class="app-standalone">
+  <div class="app-sectionBlock">
+    {{#each pages}}
+      <a class="app-standaloneMenuLink" href="{{key}}.html">
+        {{ title }}
+      </a>
+    {{/each}}
+  </div>
+
+  <h1 class="h1">{{ title }}</h1>
+  <p class="paragraph">
+    <a class="link" href="../{{key}}.html" target="_blank">
+      Default page
+    </a>
+  </p>
+
+  {{> content }}
+</div>
+</body>
+</html>
