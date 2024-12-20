@@ -3,7 +3,7 @@ const path = require('path');
 
 const Handlebars = require('handlebars');
 
-const DOCS_DIR = './src/docs';
+const DOCS_DIR = './src/examples';
 
 const OUTPUT_DIR = './docs';
 const PAGES_OUTPUT_DIR = OUTPUT_DIR;
