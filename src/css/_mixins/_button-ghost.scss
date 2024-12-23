@@ -1,6 +1,6 @@
 @mixin button-ghost(
   $class,
-  $btn-disabled-opacity,
+  $disabled-opacity,
 ) {
   .#{$class} {
     align-items: center;
@@ -44,7 +44,7 @@
   .#{$class}.#{$class}--disabled,
   fieldset:disabled .#{$class} {
     cursor: default;
-    opacity: $btn-disabled-opacity;
+    opacity: $disabled-opacity;
     pointer-events: none;
   }
 }

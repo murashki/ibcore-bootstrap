@@ -1388,7 +1388,8 @@ fieldset:disabled .form-control--error::placeholder {
   white-space: nowrap;
 }
 
-.btn:focus {
+.btn:focus,
+.btn.btn--focus {
   outline: none;
 }
 
@@ -1448,11 +1449,15 @@ fieldset:disabled btn {
 }
 
 .btn--xs {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .btn--sm {
   font-size: 1em;
+}
+
+.btn--md {
+  font-size: 1.2em;
 }
 
 .btn--lg {
@@ -1460,7 +1465,7 @@ fieldset:disabled btn {
 }
 
 .btn--xl {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 .btn--success {
@@ -1597,7 +1602,8 @@ fieldset:disabled btn--danger {
   white-space: nowrap;
 }
 
-.btn-control:focus {
+.btn-control:focus,
+.btn-control.btn-control--focus {
   outline: none;
 }
 
@@ -1690,7 +1696,7 @@ fieldset:disabled btn-control {
 }
 
 .btn-control--radio:before {
-  border-radius: 0.5em;
+  border-radius: calc(0.5em + 1px);
 }
 
 .btn-control--error {

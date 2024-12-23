@@ -3,15 +3,15 @@
 
 @include button-link(
   "btn-link",
-  $btn-link-color,
-  $btn-link-text-decoration,
-  $btn-link-hover-color,
-  $btn-link-hover-text-decoration,
-  $btn-link-focus-color,
-  $btn-link-focus-text-decoration,
-  $btn-link-active-color,
-  $btn-link-active-text-decoration,
-  $btn-link-disabled-color,
-  $btn-link-disabled-text-decoration,
-  $btn-link-disabled-opacity
+  $color: $btn-link-color,
+  $text-decoration: $btn-link-text-decoration,
+  $hover-color: $btn-link-hover-color,
+  $hover-text-decoration: $btn-link-hover-text-decoration,
+  $focus-color: $btn-link-focus-color,
+  $focus-text-decoration: $btn-link-focus-text-decoration,
+  $active-color: $btn-link-active-color,
+  $active-text-decoration: $btn-link-active-text-decoration,
+  $disabled-color: $btn-link-disabled-color,
+  $disabled-text-decoration: $btn-link-disabled-text-decoration,
+  $disabled-opacity: $btn-link-disabled-opacity,
 )

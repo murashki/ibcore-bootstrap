@@ -4,7 +4,7 @@
 @include button-variant(
   "btn",
   "btn--success",
-  $btn-success-color,
-  $btn-success-bg-color,
-  $btn-success-border-color
+  $color: $btn-success-color,
+  $bg-color: $btn-success-bg-color,
+  $border-color: $btn-success-border-color,
 );

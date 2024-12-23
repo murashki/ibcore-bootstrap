@@ -18,7 +18,8 @@
   white-space: nowrap;
 }
 
-.btn-control:focus {
+.btn-control:focus,
+.btn-control.btn-control--focus {
   outline: none;
 }
 
@@ -111,7 +112,7 @@ fieldset:disabled btn-control {
 }
 
 .btn-control--radio:before {
-  border-radius: 0.5em;
+  border-radius: calc(0.5em + 1px);
 }
 
 /*# sourceMappingURL=index.css.map */

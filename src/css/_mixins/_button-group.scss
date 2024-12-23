@@ -1,7 +1,7 @@
 @mixin button-group(
   $group-class,
-  $btn-class,
-  $btn-border-width
+  $class,
+  $border-width
 ) {
   .#{$group-class} {
     display: inline-flex;
@@ -10,30 +10,30 @@
     z-index: 0;
   }
 
-  .#{$group-class} .#{$btn-class} {
+  .#{$group-class} .#{$class} {
     flex: 0 1 auto;
     position: relative;
   }
 
-  .#{$group-class} .#{$btn-class}:hover,
-  .#{$group-class} .#{$btn-class}.#{$btn-class}--hover {
+  .#{$group-class} .#{$class}:hover,
+  .#{$group-class} .#{$class}.#{$class}--hover {
     z-index: 1;
   }
 
-  .#{$group-class} .#{$btn-class}:focus,
-  .#{$group-class} .#{$btn-class}--focus,
-  .#{$group-class} .#{$btn-class}:active,
-  .#{$group-class} .#{$btn-class}--active {
+  .#{$group-class} .#{$class}:focus,
+  .#{$group-class} .#{$class}--focus,
+  .#{$group-class} .#{$class}:active,
+  .#{$group-class} .#{$class}--active {
     z-index: 2;
   }
 
-  .#{$group-class} .#{$btn-class}:not(:first-child) {
+  .#{$group-class} .#{$class}:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    margin-left: -$btn-border-width;
+    margin-left: -$border-width;
   }
 
-  .#{$group-class} .#{$btn-class}:not(:last-child) {
+  .#{$group-class} .#{$class}:not(:last-child) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
   }

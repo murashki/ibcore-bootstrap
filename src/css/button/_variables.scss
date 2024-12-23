@@ -1,10 +1,13 @@
+@use '../_functions/smart-round' as *;
+
 $btn-color: #323442 !default;
 $btn-font-family: inherit !default;
-$btn-font-size-xs: 0.8em !default;
-$btn-font-size-sm: 1em !default;
 $btn-font-size: 1.2em !default;
-$btn-font-size-lg: 1.4em !default;
-$btn-font-size-xl: 1.8em !default;
+$btn-font-size-xs: smart_round($btn-font-size * 0.75) !default;
+$btn-font-size-sm: smart_round($btn-font-size * 0.833) !default;
+$btn-font-size-md: $btn-font-size !default;
+$btn-font-size-lg: smart_round($btn-font-size * 1.166) !default;
+$btn-font-size-xl: smart_round($btn-font-size * 1.333) !default;
 $btn-font-weight: inherit !default;
 $btn-line-height: 1.4em !default;
 $btn-bg-color: #e3e4ea !default;

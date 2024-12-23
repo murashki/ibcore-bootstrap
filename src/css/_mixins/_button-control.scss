@@ -1,26 +1,26 @@
 @mixin button-control(
   $class,
-  $btn-control-icon-bg-color,
-  $btn-control-icon-border-color,
-  $btn-control-icon-border-width,
-  $btn-control-icon-border-radius,
-  $btn-control-icon-opacity,
-  $btn-control-icon-transition,
-  $btn-control-icon-checked-bg-color,
-  $btn-control-icon-checked-border-color,
+  $icon-bg-color,
+  $icon-border-color,
+  $icon-border-width,
+  $icon-border-radius,
+  $icon-opacity,
+  $icon-transition,
+  $icon-checked-bg-color,
+  $icon-checked-border-color,
 ) {
   .#{$class}:before {
-    background-color: $btn-control-icon-bg-color;
-    border: $btn-control-icon-border-width solid $btn-control-icon-border-color;
+    background-color: $icon-bg-color;
+    border: $icon-border-width solid $icon-border-color;
     content: "";
     display: block;
     height: 1em;
-    opacity: $btn-control-icon-opacity;
+    opacity: $icon-opacity;
     width: 1em;
   }
 
   .#{$class}:before {
-    transition: $btn-control-icon-transition;
+    transition: $icon-transition;
   }
 
   @media screen and (prefers-reduced-motion: reduce) {
@@ -32,8 +32,8 @@
   .#{$class}--checked {}
 
   .#{$class}--checked:before {
-    background-color: $btn-control-icon-checked-bg-color;
-    border-color: $btn-control-icon-checked-border-color;
+    background-color: $icon-checked-bg-color;
+    border-color: $icon-checked-border-color;
     opacity: 1;
   }
 
@@ -44,10 +44,10 @@
   }
 
   .#{$class}--radio {
-    border-radius: $btn-control-icon-border-radius;
+    border-radius: $icon-border-radius;
   }
 
   .#{$class}--radio:before {
-    border-radius: 0.5em;
+    border-radius: calc(0.5em + #{$icon-border-width});
   }
 }

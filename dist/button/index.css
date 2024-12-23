@@ -18,7 +18,8 @@
   white-space: nowrap;
 }
 
-.btn:focus {
+.btn:focus,
+.btn.btn--focus {
   outline: none;
 }
 
@@ -78,11 +79,15 @@ fieldset:disabled btn {
 }
 
 .btn--xs {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .btn--sm {
   font-size: 1em;
+}
+
+.btn--md {
+  font-size: 1.2em;
 }
 
 .btn--lg {
@@ -90,7 +95,7 @@ fieldset:disabled btn {
 }
 
 .btn--xl {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 /*# sourceMappingURL=index.css.map */

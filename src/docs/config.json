@@ -28,8 +28,9 @@
         "button-control",
         "button-control/variants/error",
         "button-control-group",
-        "button-link",
         "button-ghost",
+        "button-group",
+        "button-link",
         "form-control",
         "forms",
         "grid"

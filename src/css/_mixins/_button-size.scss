@@ -1,23 +1,28 @@
 @mixin button-size(
   $class,
-  $btn-font-size-xs,
-  $btn-font-size-sm,
-  $btn-font-size-lg,
-  $btn-font-size-xl
+  $font-size-xs,
+  $font-size-sm,
+  $font-size-md,
+  $font-size-lg,
+  $font-size-xl
 ) {
   .#{$class}--xs {
-    font-size: $btn-font-size-xs;
+    font-size: $font-size-xs;
   }
 
   .#{$class}--sm {
-    font-size: $btn-font-size-sm;
+    font-size: $font-size-sm;
+  }
+
+  .#{$class}--md {
+    font-size: $font-size-md;
   }
 
   .#{$class}--lg {
-    font-size: $btn-font-size-lg;
+    font-size: $font-size-lg;
   }
 
   .#{$class}--xl {
-    font-size: $btn-font-size-xl;
+    font-size: $font-size-xl;
   }
 }

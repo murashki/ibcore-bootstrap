@@ -4,19 +4,19 @@
 
 @include form-control(
   "form-control",
-  $form-control-vertical-padding,
-  $form-control-horizontal-padding,
-  $form-control-line-height,
-  $form-control-font-family,
-  $form-control-font-size,
-  $form-control-font-weight,
-  $form-control-border-width,
-  $form-control-border-radius,
-  $form-control-readonly-opacity,
-  $form-control-disabled-opacity,
-  $form-control-transition,
-  $form-control-textarea-line-height,
-  $form-control-textarea-height
+  $vertical-padding: $form-control-vertical-padding,
+  $horizontal-padding: $form-control-horizontal-padding,
+  $line-height: $form-control-line-height,
+  $font-family: $form-control-font-family,
+  $font-size: $form-control-font-size,
+  $font-weight: $form-control-font-weight,
+  $border-width: $form-control-border-width,
+  $border-radius: $form-control-border-radius,
+  $readonly-opacity: $form-control-readonly-opacity,
+  $disabled-opacity: $form-control-disabled-opacity,
+  $transition: $form-control-transition,
+  $textarea-line-height: $form-control-textarea-line-height,
+  $textarea-height: $form-control-textarea-height,
 );
 
 @include form-control-variant(

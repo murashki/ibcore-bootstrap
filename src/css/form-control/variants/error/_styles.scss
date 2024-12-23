@@ -4,7 +4,7 @@
 @include form-control-variant(
   "form-control",
   "form-control--error",
-  $form-control-error-color,
-  $form-control-error-bg-color,
-  $form-control-error-border-color
+  $color: $form-control-error-color,
+  $bg-color: $form-control-error-bg-color,
+  $border-color: $form-control-error-border-color,
 );

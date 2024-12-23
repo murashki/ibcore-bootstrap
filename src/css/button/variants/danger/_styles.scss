@@ -4,7 +4,7 @@
 @include button-variant(
   "btn",
   "btn--danger",
-  $btn-danger-color,
-  $btn-danger-bg-color,
-  $btn-danger-border-color
+  $color: $btn-danger-color,
+  $bg-color: $btn-danger-bg-color,
+  $border-color: $btn-danger-border-color,
 );

@@ -4,7 +4,7 @@
 @include button-variant(
   "btn",
   "btn--warning",
-  $btn-warning-color,
-  $btn-warning-bg-color,
-  $btn-warning-border-color
+  $color: $btn-warning-color,
+  $bg-color: $btn-warning-bg-color,
+  $border-color: $btn-warning-border-color,
 );

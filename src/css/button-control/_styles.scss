@@ -5,34 +5,34 @@
 
 @include button(
   "btn-control",
-  $btn-control-font-family,
-  $btn-control-font-size,
-  $btn-control-font-weight,
-  $btn-control-line-height,
-  $btn-control-border-width,
-  $btn-control-border-radius,
-  $btn-control-vertical-padding,
-  $btn-control-horizontal-padding,
-  $btn-control-disabled-opacity,
-  $btn-control-transition
+  $font-family: $btn-control-font-family,
+  $font-size: $btn-control-font-size,
+  $font-weight: $btn-control-font-weight,
+  $line-height: $btn-control-line-height,
+  $border-width: $btn-control-border-width,
+  $border-radius: $btn-control-border-radius,
+  $vertical-padding: $btn-control-vertical-padding,
+  $horizontal-padding: $btn-control-horizontal-padding,
+  $disabled-opacity: $btn-control-disabled-opacity,
+  $transition: $btn-control-transition,
 );
 
 @include button-variant(
   "btn-control",
   "btn-control",
-  $btn-control-color,
-  $btn-control-bg-color,
-  $btn-control-border-color
+  $color: $btn-control-color,
+  $bg-color: $btn-control-bg-color,
+  $border-color: $btn-control-border-color,
 );
 
 @include button-control(
   "btn-control",
-  $btn-control-icon-bg-color,
-  $btn-control-icon-border-color,
-  $btn-control-icon-border-width,
-  $btn-control-icon-border-radius,
-  $btn-control-icon-opacity,
-  $btn-control-icon-transition,
-  $btn-control-icon-checked-bg-color,
-  $btn-control-icon-checked-border-color,
+  $icon-bg-color: $btn-control-icon-bg-color,
+  $icon-border-color: $btn-control-icon-border-color,
+  $icon-border-width: $btn-control-icon-border-width,
+  $icon-border-radius: $btn-control-icon-border-radius,
+  $icon-opacity: $btn-control-icon-opacity,
+  $icon-transition: $btn-control-icon-transition,
+  $icon-checked-bg-color: $btn-control-icon-checked-bg-color,
+  $icon-checked-border-color: $btn-control-icon-checked-border-color,
 )

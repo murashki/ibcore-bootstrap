@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function smart-round($value) {
+  @return math.round(($value + 0.001) * 100) * 0.01;
+}

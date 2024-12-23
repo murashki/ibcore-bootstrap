@@ -5,30 +5,31 @@
 
 @include button(
   "btn",
-  $btn-font-family,
-  $btn-font-size,
-  $btn-font-weight,
-  $btn-line-height,
-  $btn-border-width,
-  $btn-border-radius,
-  $btn-vertical-padding,
-  $btn-horizontal-padding,
-  $btn-disabled-opacity,
-  $btn-transition
+  $font-family: $btn-font-family,
+  $font-size: $btn-font-size,
+  $font-weight: $btn-font-weight,
+  $line-height: $btn-line-height,
+  $border-width: $btn-border-width,
+  $border-radius: $btn-border-radius,
+  $vertical-padding: $btn-vertical-padding,
+  $horizontal-padding: $btn-horizontal-padding,
+  $disabled-opacity: $btn-disabled-opacity,
+  $transition: $btn-transition,
 );
 
 @include button-variant(
   "btn",
   "btn",
-  $btn-color,
-  $btn-bg-color,
-  $btn-border-color
+  $color: $btn-color,
+  $bg-color: $btn-bg-color,
+  $border-color: $btn-border-color
 );
 
 @include button-size(
   "btn",
-  $btn-font-size-xs,
-  $btn-font-size-sm,
-  $btn-font-size-lg,
-  $btn-font-size-xl
+  $font-size-xs: $btn-font-size-xs,
+  $font-size-sm: $btn-font-size-sm,
+  $font-size-md: $btn-font-size,
+  $font-size-lg: $btn-font-size-lg,
+  $font-size-xl: $btn-font-size-xl
 );

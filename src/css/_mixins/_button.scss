@@ -1,29 +1,29 @@
 @mixin button(
   $class,
-  $btn-font-family,
-  $btn-font-size,
-  $btn-font-weight,
-  $btn-line-height,
-  $btn-border-width,
-  $btn-border-radius,
-  $btn-vertical-padding,
-  $btn-horizontal-padding,
-  $btn-disabled-opacity,
-  $btn-transition
+  $font-family,
+  $font-size,
+  $font-weight,
+  $line-height,
+  $border-width,
+  $border-radius,
+  $vertical-padding,
+  $horizontal-padding,
+  $disabled-opacity,
+  $transition
 ) {
   .#{$class} {
     align-items: center;
-    border-radius: $btn-border-radius;
+    border-radius: $border-radius;
     border-style: solid;
-    border-width: $btn-border-width;
+    border-width: $border-width;
     cursor: pointer;
     display: inline-flex;
-    font-family: $btn-font-family;
-    font-size: $btn-font-size;
-    font-weight: $btn-font-weight;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
     justify-content: center;
-    line-height: $btn-line-height;
-    padding: $btn-vertical-padding $btn-horizontal-padding;
+    line-height: $line-height;
+    padding: $vertical-padding $horizontal-padding;
     text-align: center;
     text-decoration: none;
     user-select: none;
@@ -31,7 +31,8 @@
     white-space: nowrap;
   }
 
-  .#{$class}:focus {
+  .#{$class}:focus,
+  .#{$class}.#{$class}--focus {
     outline: none;
   }
 
@@ -39,12 +40,12 @@
   .#{$class}.#{$class}--disabled,
   fieldset:disabled .#{$class} {
     cursor: default;
-    opacity: $btn-disabled-opacity;
+    opacity: $disabled-opacity;
     pointer-events: none;
   }
 
   .#{$class} {
-    transition: $btn-transition;
+    transition: $transition;
   }
 
   @media screen and (prefers-reduced-motion: reduce) {

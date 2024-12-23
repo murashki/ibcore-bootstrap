@@ -4,5 +4,5 @@
 @include button-group(
   "btn-control-group",
   "btn-control",
-  $btn-control-border-width
+  $border-width: $btn-control-border-width,
 );

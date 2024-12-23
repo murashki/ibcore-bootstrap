@@ -3,5 +3,5 @@
 
 @include button-ghost(
   "btn-ghost",
-  $btn-disabled-opacity
+  $disabled-opacity: $btn-disabled-opacity,
 );
