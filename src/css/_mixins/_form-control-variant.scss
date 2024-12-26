@@ -1,4 +1,4 @@
-@use 'sass:color';
+@use "sass:color";
 
 @mixin form-control-variant(
   $class,
@@ -35,45 +35,38 @@
     color: $placeholder-color;
   }
 
-  .#{$modifier-class}:hover,
-  .#{$modifier-class}.#{$class}--hover {
+  .#{$modifier-class}:hover {
     background-color: $hover-bg-color;
     border-color: $hover-border-color;
     color: $hover-color;
   }
 
-  .#{$modifier-class}:hover::placeholder,
-  .#{$modifier-class}.#{$class}--hover::placeholder {
+  .#{$modifier-class}:hover::placeholder {
     color: $hover-placeholder-color;
   }
 
-  .#{$modifier-class}:focus,
-  .#{$modifier-class}.#{$class}--focus {
+  .#{$modifier-class}:focus {
     background-color: $focus-bg-color;
     border-color: $focus-border-color;
     box-shadow: $focus-box-shadow;
     color: $focus-color;
   }
 
-  .#{$modifier-class}:focus::placeholder,
-  .#{$modifier-class}.#{$class}--focus::placeholder {
+  .#{$modifier-class}:focus::placeholder {
     color: $focus-placeholder-color;
   }
 
-  .#{$modifier-class}[readonly],
-  .#{$modifier-class}.#{$class}--readonly {
+  .#{$modifier-class}[readonly] {
     background-color: $readonly-bg-color;
     border-color: $readonly-border-color;
     color: $readonly-color;
   }
 
-  .#{$modifier-class}[readonly]::placeholder,
-  .#{$modifier-class}.#{$class}--readonly::placeholder {
+  .#{$modifier-class}[readonly]::placeholder {
     color: $readonly-placeholder-color;
   }
 
   .#{$modifier-class}:disabled,
-  .#{$modifier-class}.#{$class}--disabled,
   fieldset:disabled .#{$modifier-class} {
     background-color: $disabled-bg-color;
     border-color: $disabled-border-color;
@@ -81,7 +74,6 @@
   }
 
   .#{$modifier-class}:disabled::placeholder,
-  .#{$modifier-class}.#{$class}--disabled::placeholder,
   fieldset:disabled .#{$modifier-class}::placeholder {
     color: $disabled-placeholder-color;
   }

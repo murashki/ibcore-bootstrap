@@ -1,0 +1,30 @@
+@mixin label-group(
+  $group-class,
+  $vertical-group-member-margin,
+  $horizontal-group-member-margin
+) {
+  .#{$group-class} {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .#{$group-class}--vertical {
+    align-items: flex-start;
+  }
+
+  .#{$group-class} > *:not(.#{$group-class}-ignored) {
+    margin-left: $horizontal-group-member-margin;
+  }
+
+  .#{$group-class} > *:not(.#{$group-class}-ignored):first-of-type {
+    margin-left: 0;
+  }
+
+  .#{$group-class}--vertical > *:not(.#{$group-class}-ignored) {
+    margin-top: $vertical-group-member-margin;
+  }
+
+  .#{$group-class}--vertical > *:not(.#{$group-class}-ignored):first-of-type {
+    margin-top: 0;
+  }
+}

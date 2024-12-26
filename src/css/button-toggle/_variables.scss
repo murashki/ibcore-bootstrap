@@ -1,0 +1,42 @@
+@use "sass:color";
+@use "../_functions/smart-round" as *;
+@use "../button/variables" as *;
+@use "../variables" as *;
+
+$btn-toggle-icon-size: 1em !default;
+
+$btn-toggle-color: $btn-color !default;
+$btn-toggle-font-family: $btn-font-family !default;
+$btn-toggle-font-size: $btn-font-size !default;
+  $btn-toggle-font-size-xs: get-btn-font-size-xs($btn-toggle-font-size) !default;
+  $btn-toggle-font-size-sm: get-btn-font-size-sm($btn-toggle-font-size) !default;
+  $btn-toggle-font-size-md: get-btn-font-size-md($btn-toggle-font-size) !default;
+  $btn-toggle-font-size-lg: get-btn-font-size-lg($btn-toggle-font-size) !default;
+  $btn-toggle-font-size-xl: get-btn-font-size-xl($btn-toggle-font-size) !default;
+$btn-toggle-font-weight: $btn-font-weight !default;
+$btn-toggle-line-height: $btn-line-height !default;
+$btn-toggle-bg-color: $btn-bg-color !default;
+  $btn-toggle-border-color: get-btn-border-color($btn-toggle-bg-color) !default;
+$btn-toggle-border-width: $btn-border-width !default;
+$btn-toggle-border-radius: $btn-border-radius !default;
+$btn-toggle-vertical-padding: $btn-vertical-padding !default;
+$btn-toggle-horizontal-padding: calc($btn-toggle-vertical-padding + ($btn-toggle-line-height - $btn-toggle-icon-size) / 2) !default;
+$btn-toggle-inner-text-left-padding: $btn-horizontal-padding !default;
+$btn-toggle-disabled-opacity: $btn-disabled-opacity !default;
+
+$btn-toggle-transition-appearance: $btn-transition-appearance !default;
+  $btn-toggle-transition: get-btn-transition($btn-transition-appearance) !default;
+
+$btn-toggle-icon-bg-color: transparent !default;
+$btn-toggle-icon-border-color: color.adjust($btn-toggle-color, $lightness: 50%) !default;
+$btn-toggle-icon-border-width: $btn-border-width !default;
+$btn-toggle-icon-checked-bg-color: color.adjust($btn-toggle-color, $lightness: 30%) !default;
+$btn-toggle-icon-checked-border-color: color.adjust($btn-toggle-color, $lightness: 15%) !default;
+
+$btn-toggle-icon-transition-appearance: $btn-toggle-transition-appearance !default;
+$btn-toggle-icon-transition: $btn-toggle-transition !default;
+
+$btn-toggle-label-line-height: $line-height !default;
+$btn-toggle-label-left-padding: $btn-horizontal-padding !default;
+
+$btn-toggle-group-ngb-margin: 1em !default;

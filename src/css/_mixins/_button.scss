@@ -1,5 +1,7 @@
+@use "./common" as *;
+
 @mixin button(
-  $class,
+  $class-name,
   $font-family,
   $font-size,
   $font-weight,
@@ -8,49 +10,30 @@
   $border-radius,
   $vertical-padding,
   $horizontal-padding,
+  $transition,
   $disabled-opacity,
-  $transition
 ) {
-  .#{$class} {
-    align-items: center;
-    border-radius: $border-radius;
-    border-style: solid;
-    border-width: $border-width;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: $font-family;
-    font-size: $font-size;
-    font-weight: $font-weight;
-    justify-content: center;
-    line-height: $line-height;
-    padding: $vertical-padding $horizontal-padding;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    vertical-align: middle;
+  $button: ".#{$class-name}";
+
+  //
+  // Кнопка
+  //
+  @include use($button) {
     white-space: nowrap;
-  }
 
-  .#{$class}:focus,
-  .#{$class}.#{$class}--focus {
-    outline: none;
-  }
+    @include cursor-style(pointer, $user-select: none);
+    @include display-style(flex, center, center);
+    @include font-style(--UNDEFINED, $font-size, $font-weight, $font-family, $line-height, none);
+    @include layout-style(--UNDEFINED, --UNDEFINED, $border-width, solid, $border-radius);
+    @include padding-style($vertical-padding, $horizontal-padding);
+    @include transition-style($transition);
 
-  .#{$class}:disabled,
-  .#{$class}.#{$class}--disabled,
-  fieldset:disabled .#{$class} {
-    cursor: default;
-    opacity: $disabled-opacity;
-    pointer-events: none;
-  }
-
-  .#{$class} {
-    transition: $transition;
-  }
-
-  @media screen and (prefers-reduced-motion: reduce) {
-    .#{$class} {
-      transition: none;
+    //
+    // Кнопка в неактивной части формы или когда заблокирована
+    //
+    @include exactly(that-is(--DISABLED) that-is-inside("fieldset:disabled") that-is(".disabled")) {
+      @include cursor-style(default, none);
+      @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
     }
   }
 }

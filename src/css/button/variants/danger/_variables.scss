@@ -1,3 +1,5 @@
-$btn-danger-color: #fff !default;
-$btn-danger-bg-color: #dc3545 !default;
+@use "../../variables" as *;
+
+$btn-danger-color: $btn-color !default;
+$btn-danger-bg-color: #f63030 !default;
 $btn-danger-border-color: $btn-danger-bg-color !default;

@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="css/framework/button/variants/danger/index.css">
     <link rel="stylesheet" href="css/framework/button/variants/success/index.css">
     <link rel="stylesheet" href="css/framework/button/variants/warning/index.css">
-    <link rel="stylesheet" href="css/framework/button-control/index.css">
-    <link rel="stylesheet" href="css/framework/button-control/variants/error/index.css">
-    <link rel="stylesheet" href="css/framework/button-control-group/index.css">
-    <link rel="stylesheet" href="css/framework/button-ghost/index.css">
-    <link rel="stylesheet" href="css/framework/button-group/index.css">
+    <link rel="stylesheet" href="css/framework/button-toggle/index.css">
+    <link rel="stylesheet" href="css/framework/button-toggle/variants/danger/index.css">
     <link rel="stylesheet" href="css/framework/button-link/index.css">
-    <link rel="stylesheet" href="css/framework/form-control/index.css">
+    <link rel="stylesheet" href="css/framework/form-group/index.css">
     <link rel="stylesheet" href="css/framework/forms/index.css">
+    <link rel="stylesheet" href="css/framework/label-group/index.css">
     <link rel="stylesheet" href="css/framework/grid/index.css">
   <link rel="stylesheet" href="css/app/index.css">
 </head>
@@ -37,460 +35,724 @@
   <h1 class="h1">Buttons</h1>
   <div class="app-content">
     <div class="app-section">
-      <h2 class="h2">Button variants</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn">Button primary</button>
-        <button type="button" class="btn btn--success">Success button</button>
-        <button type="button" class="btn btn--warning">Warning button</button>
-        <button type="button" class="btn btn--danger">Danger button</button>
-      </div>
-    </div>
-  
-    <div class="app-section">
       <h2 class="h2">Button size</h2>
       <div class="app-sectionBlock">
         <p style="width: 34em;">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="app-block">
-          <button type="button" class="btn btn--xs">Button xs</button>
-          <button type="button" class="btn btn--sm">Button sm</button>
-          <button type="button" class="btn">Button</button>
-          <button type="button" class="btn btn--lg">Button lg</button>
-          <button type="button" class="btn btn--xl">Button xl</button>
+          <button type="button" class="btn btn--xs">button.btn.btn--xs</button>
+          <button type="button" class="btn btn--sm">button.btn.btn--sm</button>
+          <button type="button" class="btn">button.btn</button>
+          <button type="button" class="btn btn--md">button.btn.btn--md</button>
+          <button type="button" class="btn btn--lg">button.btn.btn--lg</button>
+          <button type="button" class="btn btn--xl">button.btn.btn--xl</button>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Button tags</h2>
+      <h2 class="h2">Button</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn">Button</button>
-        <input class="btn" type="button" value="Input tag button">
-        <a class="btn" href="#" role="button">Link as a button</a>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Button states</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn">Button</button>
-        <button type="button" class="btn btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--active">Button active class</button>
-        <button type="button" class="btn btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn">Fieldset disabled button</button>
-          </fieldset>
-        </form>
+        <button type="button" class="btn">button.btn</button>
+        <input type="button" class="btn" value="input[type=button].btn">
+        <input type="submit" class="btn" value="input[type=submit].btn">
+        <input type="reset" class="btn" value="input[type=reset].btn">
+        <a class="btn" href="#" role="button">a.btn[href][role=button]</a>
       </div>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--success">Button</button>
-        <button type="button" class="btn btn--success btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--success btn--active">Button active class</button>
-        <button type="button" class="btn btn--success btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn btn--success" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn btn--success">Fieldset disabled button</button>
-          </fieldset>
-        </form>
+        <button type="button" class="btn btn--success">button.btn.btn--success</button>
+        <input type="button" class="btn btn--success" value="input[type=button].btn.btn--success">
+        <input type="submit" class="btn btn--success" value="input[type=submit].btn.btn--success">
+        <input type="reset" class="btn btn--success" value="input[type=reset].btn.btn--success">
+        <a class="btn btn--success" href="#" role="button">a.btn.btn--success[href][role=button]</a>
       </div>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--warning">Button</button>
-        <button type="button" class="btn btn--warning btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--warning btn--active">Button active class</button>
-        <button type="button" class="btn btn--warning btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn btn--warning" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn btn--warning">Fieldset disabled button</button>
-          </fieldset>
-        </form>
+        <button type="button" class="btn btn--warning">button.btn.btn--warning</button>
+        <input type="button" class="btn btn--warning" value="input[type=button].btn.btn--warning">
+        <input type="submit" class="btn btn--warning" value="input[type=submit].btn.btn--warning">
+        <input type="reset" class="btn btn--warning" value="input[type=reset].btn.btn--warning">
+        <a class="btn btn--warning" href="#" role="button">a.btn.btn--warning[href][role=button]</a>
       </div>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--danger">Button</button>
-        <button type="button" class="btn btn--danger btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--danger btn--active">Button active class</button>
-        <button type="button" class="btn btn--danger btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn btn--danger" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn btn--danger">Fieldset disabled button</button>
-          </fieldset>
-        </form>
+        <button type="button" class="btn btn--danger">button.btn.btn--danger</button>
+        <input type="button" class="btn btn--danger" value="input[type=button].btn.btn--danger">
+        <input type="submit" class="btn btn--danger" value="input[type=submit].btn.btn--danger">
+        <input type="reset" class="btn btn--danger" value="input[type=reset].btn.btn--danger">
+        <a class="btn btn--danger" href="#" role="button">a.btn.btn--danger[href][role=button]</a>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Focus class buttons</h2>
+      <h2 class="h2">Button disabled state</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--focus">Button</button>
-        <input class="btn btn--focus" type="button" value="Input tag button">
-        <a class="btn btn--focus" href="#" role="button">Link as a button</a>
+        <button type="button" class="btn" disabled>button.btn:disabled</button>
+        <input type="button" class="btn" value="input[type=button].btn:disabled" disabled>
+        <input type="submit" class="btn" value="input[type=submit].btn:disabled" disabled>
+        <input type="reset" class="btn" value="input[type=reset].btn:disabled" disabled>
+        <a class="btn disabled" role="button" aria-disabled="true">a.btn.disabled[role=button][aria-disabled=true]:not([href])</a>
       </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Active class buttons</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--active">Button</button>
-        <input class="btn btn--active" type="button" value="Input tag button">
-        <a class="btn btn--active" href="#" role="button">Link as a button</a>
+        <button type="button" class="btn btn--success" disabled>button.btn.btn--success:disabled</button>
+        <input type="button" class="btn btn--success" value="input[type=button].btn.btn--success:disabled" disabled>
+        <input type="submit" class="btn btn--success" value="input[type=submit].btn.btn--success:disabled" disabled>
+        <input type="reset" class="btn btn--success" value="input[type=reset].btn.btn--success:disabled" disabled>
+        <a class="btn btn--success disabled" role="button" aria-disabled="true">a.btn.btn--success.disabled[role=button][aria-disabled=true]:not([href])</a>
       </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Disabled class buttons</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--disabled" tabindex="-1">Button</button>
-        <input class="btn btn--disabled" type="button" value="Input tag button" tabindex="-1">
-        <a class="btn btn--disabled" href="#" tabindex="-1" role="button">Link as a button</a>
+        <button type="button" class="btn btn--warning" disabled>button.btn.btn--warning:disabled</button>
+        <input type="button" class="btn btn--warning" value="input[type=button].btn.btn--warning:disabled" disabled>
+        <input type="submit" class="btn btn--warning" value="input[type=submit].btn.btn--warning:disabled" disabled>
+        <input type="reset" class="btn btn--warning" value="input[type=reset].btn.btn--warning:disabled" disabled>
+        <a class="btn btn--warning disabled" role="button" aria-disabled="true">a.btn.btn--warning.disabled[role=button][aria-disabled=true]:not([href])</a>
       </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Disabled buttons</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn" disabled>Button</button>
-        <input class="btn btn--disabled" type="button" value="Input tag button" disabled>
+        <button type="button" class="btn btn--danger" disabled>button.btn.btn--danger:disabled</button>
+        <input type="button" class="btn btn--danger" value="input[type=button].btn.btn--danger:disabled" disabled>
+        <input type="submit" class="btn btn--danger" value="input[type=submit].btn.btn--danger:disabled" disabled>
+        <input type="reset" class="btn btn--danger" value="input[type=reset].btn.btn--danger:disabled" disabled>
+        <a class="btn btn--danger disabled" role="button" aria-disabled="true">a.btn.btn--danger.disabled[role=button][aria-disabled=true]:not([href])</a>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Disabled fieldset buttons</h2>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <div class="app-block">
-              <button type="button" class="btn">Button</button>
-              <input class="btn" type="button" value="Input tag button">
-              <a class="btn" href="#" tabindex="-1" role="button">Link as a button</a>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Unstyled button tags</h2>
-      <div class="app-sectionBlock">
-        <p style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="app-block app-block">
-          <button type="button" class="btn btn--unstyled">Unstyled button</button>
-          <input type="button" class="btn btn--unstyled" value="Unstyled input tag button">
-          <a class="btn btn--unstyled" href="#" role="button">Link as a unstyled button</a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Focus class unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="app-block">
-          <button type="button" class="btn btn--unstyled btn--focus">Unstyled button</button>
-          <input class="btn btn--unstyled btn--focus" type="button" value="Unstyled input tag button">
-          <a class="btn btn--unstyled btn--focus" href="#" role="button">Link as a unstyled button</a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Active class unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="app-block">
-          <button type="button" class="btn btn--unstyled btn--active">Unstyled button</button>
-          <input class="btn btn--unstyled btn--active" type="button" value="Unstyled input tag button">
-          <a class="btn btn--unstyled btn--active" href="#" role="button">Link as a unstyled button</a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Disabled class unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="app-block">
-          <button type="button" class="btn btn--unstyled btn--disabled" tabindex="-1">Unstyled button</button>
-          <input class="btn btn--unstyled btn--disabled" type="button" value="Unstyled input tag button" tabindex="-1">
-          <a class="btn btn--unstyled btn--disabled" href="#" tabindex="-1" role="button">Link as a unstyled button</a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Disabled unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <div class="app-block">
-          <button type="button" class="btn btn--unstyled" disabled>Unstyled button</button>
-          <input type="button" class="btn btn--unstyled" value="Unstyled input tag button" disabled>
-        </div>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Disabled fielset unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-          <form class="form">
-            <fieldset class="form-fieldset" disabled>
-              <div class="app-block">
-                <button type="button" class="btn btn--unstyled">Unstyled button</button>
-                <input class="btn btn--unstyled" type="button" value="Unstyled input tag button">
-                <a class="btn btn--unstyled" href="#" tabindex="-1" role="button">Link as an unstyled button</a>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
+      <form class="form">
+        <fieldset class="form-fieldset" disabled>
+          <h2 class="h2">Button fieldset disabled</h2>
+          <div class="app-sectionBlock app-block">
+            <button type="button" class="btn">fieldset[disabled] button.btn</button>
+            <input type="button" class="btn" value="fieldset[disabled] input[type=button].btn">
+            <input type="submit" class="btn" value="fieldset[submit] input[type=button].btn">
+            <input type="reset" class="btn" value="fieldset[reset] input[type=button].btn">
+            <a class="btn" role="button" aria-disabled="true">fieldset[disabled] a.btn[role=button][aria-disabled=true]:not([href])</a>
+          </div>
+          <div class="app-sectionBlock app-block">
+            <button type="button" class="btn btn--success">fieldset[disabled] button.btn.btn--success</button>
+            <input type="button" class="btn btn--success" value="fieldset[disabled] input[type=button].btn.btn--success">
+            <input type="submit" class="btn btn--success" value="fieldset[disabled] input[type=submit].btn.btn--success">
+            <input type="reset" class="btn btn--success" value="fieldset[disabled] input[type=reset].btn.btn--success">
+            <a class="btn btn--success" role="button" aria-disabled="true">fieldset[disabled] a.btn.btn--success[role=button][aria-disabled=true]:not([href])</a>
+          </div>
+          <div class="app-sectionBlock app-block">
+            <button type="button" class="btn btn--warning">fieldset[disabled] button.btn.btn--warning</button>
+            <input type="button" class="btn btn--warning" value="fieldset[disabled] input[type=button].btn.btn--warning">
+            <input type="submit" class="btn btn--warning" value="fieldset[disabled] input[type=submit].btn.btn--warning">
+            <input type="reset" class="btn btn--warning" value="fieldset[disabled] input[type=reset].btn.btn--warning">
+            <a class="btn btn--warning" role="button" aria-disabled="true">fieldset[disabled] a.btn.btn--warning[role=button][aria-disabled=true]:not([href])</a>
+          </div>
+          <div class="app-sectionBlock app-block">
+            <button type="button" class="btn btn--danger">fieldset[disabled] button.btn.btn--danger</button>
+            <input type="button" class="btn btn--danger" value="fieldset[disabled] input[type=button].btn.btn--danger">
+            <input type="submit" class="btn btn--danger" value="fieldset[disabled] input[type=submit].btn.btn--danger">
+            <input type="reset" class="btn btn--danger" value="fieldset[disabled] input[type=reset].btn.btn--danger">
+            <a class="btn btn--danger" role="button" aria-disabled="true">fieldset[disabled] a.btn.btn--danger[role=button][aria-disabled=true]:not([href])</a>
+          </div>
+        </fieldset>
+      </form>
     </div>
   
     <div class="app-section">
       <h2 class="h2">Button group</h2>
       <div class="app-sectionBlock">
-        <div class="btn-group">
-          <button type="button" class="btn">Button</button>
-          <input class="btn" type="button" value="Input button">
-          <button type="button" class="btn btn--focus">Focus class</button>
-          <button type="button" class="btn btn--active">Active class</button>
-          <button type="button" class="btn btn--disabled" tabindex="-1">Disabled class</button>
-          <button type="button" class="btn" disabled>Disabled</button>
+        <div class="form-group">
+          <button type="button" class="btn">button.btn</button>
+          <input class="btn" type="button" value="input[type=button].btn">
+          <input class="btn" type="submit" value="input[type=submit].btn">
+          <input class="btn" type="reset" value="input[type=reset].btn">
+          <a class="btn" href="#" role="button">a.btn[role=button]</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <button type="button" class="btn btn--success">button.btn.btn--success</button>
+          <input class="btn btn--success" type="button" value="input[type=button].btn.btn--success">
+          <input class="btn btn--success" type="submit" value="input[type=submit].btn.btn--success">
+          <input class="btn btn--success" type="reset" value="input[type=reset].btn.btn--success">
+          <a class="btn btn--success" href="#" role="button">a.btn.btn--success[role=button]</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <button type="button" class="btn btn--warning">button.btn.btn--warning</button>
+          <input class="btn btn--warning" type="button" value="input[type=button].btn.btn--warning">
+          <input class="btn btn--warning" type="submit" value="input[type=submit].btn.btn--warning">
+          <input class="btn btn--warning" type="reset" value="input[type=reset].btn.btn--warning">
+          <a class="btn btn--warning" href="#" role="button">a.btn.btn--warning[role=button]</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <button type="button" class="btn btn--danger">button.btn.btn--danger</button>
+          <input class="btn btn--danger" type="button" value="input[type=button].btn.btn--danger">
+          <input class="btn btn--danger" type="submit" value="input[type=submit].btn.btn--danger">
+          <input class="btn btn--danger" type="reset" value="input[type=reset].btn.btn--danger">
+          <a class="btn btn--danger" href="#" role="button">a.btn.btn--danger[role=button]</a>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Button as a checkbox</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--checked">Checked button</button>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Grouping checkbox buttons</h2>
+      <h2 class="h2">Button group disabled</h2>
       <div class="app-sectionBlock">
-        <div class="btn-control-group">
-          <button type="button" class="btn-control btn-control--has-label">Button</button>
-          <button type="button" class="btn-control btn-control--has-label btn-control--checked">Checked button</button>
+        <div class="form-group">
+          <button type="button" class="btn" disabled>button.btn:disabled</button>
+          <input class="btn" type="button" value="input[type=button].btn:disabled" disabled>
+          <input class="btn" type="submit" value="input[type=submit].btn:disabled" disabled>
+          <input class="btn" type="reset" value="input[type=reset].btn:disabled" disabled>
+          <a class="btn disabled" role="button" aria-disabled="true">a.btn.disabled[role=button][aria-disabled=true]:not([href])</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <button type="button" class="btn btn--success" disabled>button.btn.btn--success:disabled</button>
+          <input class="btn btn--success" type="button" value="input[type=button].btn.btn--success:disabled" disabled>
+          <input class="btn btn--success" type="submit" value="input[type=submit].btn.btn--success:disabled" disabled>
+          <input class="btn btn--success" type="reset" value="input[type=reset].btn.btn--success:disabled" disabled>
+          <a class="btn disabled btn--success" role="button" aria-disabled="true">a.btn.disabled.btn--success[role=button][aria-disabled=true]:not([href])</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <button type="button" class="btn btn--warning" disabled>button.btn.btn--warning:disabled</button>
+          <input class="btn btn--warning" type="button" value="input[type=button].btn.btn--warning:disabled" disabled>
+          <input class="btn btn--warning" type="submit" value="input[type=submit].btn.btn--warning:disabled" disabled>
+          <input class="btn btn--warning" type="reset" value="input[type=reset].btn.btn--warning:disabled" disabled>
+          <a class="btn disabled btn--warning" role="button" aria-disabled="true">a.btn.disabled.btn--warning[role=button][aria-disabled=true]:not([href])</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <button type="button" class="btn btn--danger" disabled>button.btn.btn--danger:disabled</button>
+          <input class="btn btn--danger" type="button" value="input[type=button].btn.btn--danger:disabled" disabled>
+          <input class="btn btn--danger" type="submit" value="input[type=submit].btn.btn--danger:disabled" disabled>
+          <input class="btn btn--danger" type="reset" value="input[type=reset].btn.btn--danger:disabled" disabled>
+          <a class="btn disabled btn--danger" role="button" aria-disabled="true">a.btn.disabled.btn--danger[role=button][aria-disabled=true]:not([href])</a>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Button as a checkbox with labels</h2>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <div class="form-group form-group--horizontal">
-            <button type="button" id="button-ch-a" class="btn-control"></button>
-            <label class="form-label" for="button-ch-a">Button</label>
+      <form class="form">
+        <fieldset class="form-fieldset" disabled>
+          <h2 class="h2">Button group fieldset disabled</h2>
+          <div class="app-sectionBlock">
+            <div class="form-group">
+              <button type="button" class="btn">fieldset:disabled button.btn</button>
+              <input class="btn" type="button" value="fieldset:disabled input[type=button].btn">
+              <input class="btn" type="submit" value="fieldset:disabled input[type=submit].btn">
+              <input class="btn" type="reset" value="fieldset:disabled input[type=reset].btn">
+              <a class="btn" role="button" aria-disabled="true">a.btn[role=button][aria-disabled=true]:not([href])</a>
+            </div>
           </div>
-          <div class="form-group form-group--horizontal">
-            <button type="button" id="button-ch-b" class="btn-control btn-control--checked"></button>
-            <label class="form-label" for="button-ch-b">Checked button</label>
+          <div class="app-sectionBlock">
+            <div class="form-group">
+              <button type="button" class="btn btn--success">fieldset:disabled button.btn.btn--success</button>
+              <input class="btn btn--success" type="button" value="fieldset:disabled input[type=button].btn.btn--success">
+              <input class="btn btn--success" type="submit" value="fieldset:disabled input[type=submit].btn.btn--success">
+              <input class="btn btn--success" type="reset" value="fieldset:disabled input[type=reset].btn.btn--success">
+              <a class="btn btn--success" role="button" aria-disabled="true">a.btn.btn--success[role=button][aria-disabled=true]:not([href])</a>
+            </div>
           </div>
-        </form>
-      </div>
+          <div class="app-sectionBlock">
+            <div class="form-group">
+              <button type="button" class="btn btn--warning">fieldset:disabled button.btn.btn--warning</button>
+              <input class="btn btn--warning" type="button" value="fieldset:disabled input[type=button].btn.btn--warning">
+              <input class="btn btn--warning" type="submit" value="fieldset:disabled input[type=submit].btn.btn--warning">
+              <input class="btn btn--warning" type="reset" value="fieldset:disabled input[type=reset].btn.btn--warning">
+              <a class="btn btn--warning" role="button" aria-disabled="true">a.btn.btn--warning[role=button][aria-disabled=true]:not([href])</a>
+            </div>
+          </div>
+          <div class="app-sectionBlock">
+            <div class="form-group">
+              <button type="button" class="btn btn--danger">fieldset:disabled button.btn.btn--danger</button>
+              <input class="btn btn--danger" type="button" value="fieldset:disabled input[type=button].btn.btn--danger">
+              <input class="btn btn--danger" type="submit" value="fieldset:disabled input[type=submit].btn.btn--danger">
+              <input class="btn btn--danger" type="reset" value="fieldset:disabled input[type=reset].btn.btn--danger">
+              <a class="btn btn--danger" role="button" aria-disabled="true">a.btn.btn--danger[role=button][aria-disabled=true]:not([href])</a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Button as a radio</h2>
+      <h2 class="h2">Toggle button</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked">Checked button</button>
+        <label class="btn-toggle">
+          <input type="checkbox">
+          <span class="btn-toggle-text">label.btn-toggle input[type=checkbox]</span>
+        </label>
+        <label class="btn-toggle">
+          <input type="checkbox" checked>
+          <span class="btn-toggle-text">label.btn-toggle input[type=checkbox]:checked</span>
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-toggle btn-toggle--danger">
+          <input type="checkbox">
+          <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]</span>
+        </label>
+        <label class="btn-toggle btn-toggle--danger">
+          <input type="checkbox" checked>
+          <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]:checked</span>
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-toggle">
+          <input type="radio" name="toggle-button">
+          <span class="btn-toggle-text">label.btn-toggle input[type=radio]</span>
+        </label>
+        <label class="btn-toggle">
+          <input type="radio" name="toggle-button" checked>
+          <span class="btn-toggle-text">label.btn-toggle input[type=radio]:checked</span>
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-toggle btn-toggle--danger">
+          <input type="radio" name="toggle-button-danger">
+          <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]</span>
+        </label>
+        <label class="btn-toggle btn-toggle--danger">
+          <input type="radio" name="toggle-button-danger" checked>
+          <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]:checked</span>
+        </label>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Grouping radio buttons</h2>
+      <h2 class="h2">Toggle button disabled</h2>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-toggle">
+          <input type="checkbox" disabled>
+          <span class="btn-toggle-text">label.btn-toggle input[type=checkbox]:disabled</span>
+        </label>
+        <label class="btn-toggle">
+          <input type="checkbox" disabled checked>
+          <span class="btn-toggle-text">label.btn-toggle input[type=checkbox]:checked:disabled</span>
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-toggle btn-toggle--danger">
+          <input type="checkbox" disabled>
+          <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]:disabled</span>
+        </label>
+        <label class="btn-toggle btn-toggle--danger">
+          <input type="checkbox" disabled checked>
+          <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]:checked:disabled</span>
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-toggle">
+          <input type="radio" name="toggle-button-disabled" disabled>
+          <span class="btn-toggle-text">label.btn-toggle input[type=radio]:disabled</span>
+        </label>
+        <label class="btn-toggle">
+          <input type="radio" name="toggle-button-disabled" disabled checked>
+          <span class="btn-toggle-text">label.btn-toggle input[type=radio]:checked:disabled</span>
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-toggle btn-toggle--danger">
+          <input type="radio" name="toggle-button-disabled-danger" disabled>
+          <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=radio]:disabled</span>
+        </label>
+        <label class="btn-toggle btn-toggle--danger">
+          <input type="radio" name="toggle-button-disabled-danger" disabled checked>
+          <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=radio]:checked:disabled</span>
+        </label>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <form class="form">
+        <fieldset class="form-fieldset" disabled>
+          <h2 class="h2">Toggle button fieldset disabled</h2>
+          <div class="app-sectionBlock app-block">
+            <label class="btn-toggle">
+              <input type="checkbox">
+              <span class="btn-toggle-text">fieldset:disabled label.btn-toggle input[type=checkbox]</span>
+            </label>
+            <label class="btn-toggle">
+              <input type="checkbox" checked>
+              <span class="btn-toggle-text">fieldset:disabled label.btn-toggle input[type=checkbox]:checked</span>
+            </label>
+          </div>
+          <div class="app-sectionBlock app-block">
+            <label class="btn-toggle btn-toggle--danger">
+              <input type="checkbox">
+              <span class="btn-toggle-text">fieldset:disabled label.btn-toggle.btn-toggle--danger input[type=checkbox]</span>
+            </label>
+            <label class="btn-toggle btn-toggle--danger">
+              <input type="checkbox" checked>
+              <span class="btn-toggle-text">fieldset:disabled label.btn-toggle.btn-toggle--danger input[type=checkbox]:checked</span>
+            </label>
+          </div>
+          <div class="app-sectionBlock app-block">
+            <label class="btn-toggle">
+              <input type="radio" name="toggle-button-fieldset-disabled">
+              <span class="btn-toggle-text">fieldset:disabled label.btn-toggle input[type=radio]</span>
+            </label>
+            <label class="btn-toggle">
+              <input type="radio" name="toggle-button-fieldset-disabled" checked>
+              <span class="btn-toggle-text">fieldset:disabled label.btn-toggle input[type=radio]:checked</span>
+            </label>
+          </div>
+          <div class="app-sectionBlock app-block">
+            <label class="btn-toggle btn-toggle--danger">
+              <input type="radio" name="toggle-button-fieldset-disabled-danger">
+              <span class="btn-toggle-text">fieldset:disabled label.btn-toggle.btn-toggle--danger input[type=radio]</span>
+            </label>
+            <label class="btn-toggle btn-toggle--danger">
+              <input type="radio" name="toggle-button-fieldset-disabled-danger" checked>
+              <span class="btn-toggle-text">fieldset:disabled label.btn-toggle.btn-toggle--danger input[type=radio]:checked</span>
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Toggle button group</h2>
       <div class="app-sectionBlock">
-        <div class="btn-control-group">
-          <button type="button" class="btn-control btn-control--radio btn-control--has-label">Button</button>
-          <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked">Checked button</button>
+        <div class="form-group">
+          <label class="btn-toggle">
+            <input type="checkbox">
+            <span class="btn-toggle-text">label.btn-toggle input[type=checkbox]</span>
+          </label>
+          <label class="btn-toggle">
+            <input type="checkbox" checked>
+            <span class="btn-toggle-text">label.btn-toggle input[type=checkbox]:checked</span>
+          </label>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="checkbox">
+            <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]</span>
+          </label>
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="checkbox" checked>
+            <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]:checked</span>
+          </label>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <label class="btn-toggle">
+            <input type="radio" name="toggle-button-group">
+            <span class="btn-toggle-text">label.btn-toggle input[type=radio]</span>
+          </label>
+          <label class="btn-toggle">
+            <input type="radio" name="toggle-button-group" checked>
+            <span class="btn-toggle-text">label.btn-toggle input[type=radio]:checked</span>
+          </label>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="radio" name="toggle-button-group-danger">
+            <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]</span>
+          </label>
+          <label class="btn-toggle  btn-toggle--danger">
+            <input type="radio" name="toggle-button-group-danger" checked>
+            <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]:checked</span>
+          </label>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Button as a radio with labels</h2>
+      <h2 class="h2">Toggle button group disabled</h2>
       <div class="app-sectionBlock">
-        <div class="form-group form-group--horizontal">
-          <button type="button" id="button-rd-a" class="btn-control btn-control--radio"></button>
-          <label class="form-label" for="button-rd-a">Button</label>
+        <div class="form-group">
+          <label class="btn-toggle">
+            <input type="checkbox" disabled>
+            <span class="btn-toggle-text">label.btn-toggle input[type=checkbox]:disabled</span>
+          </label>
+          <label class="btn-toggle">
+            <input type="checkbox" disabled checked>
+            <span class="btn-toggle-text">label.btn-toggle input[type=checkbox]:checked:disabled</span>
+          </label>
         </div>
-        <div class="form-group form-group--horizontal">
-          <button type="button" id="button-rd-b" class="btn-control btn-control--radio btn-control--checked"></button>
-          <label class="form-label" for="button-rd-b">Checked button</label>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="checkbox" disabled>
+            <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]:disabled</span>
+          </label>
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="checkbox" disabled checked>
+            <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=checkbox]:checked:disabled</span>
+          </label>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <label class="btn-toggle">
+            <input type="radio" name="toggle-button-group-disabled" disabled>
+            <span class="btn-toggle-text">label.btn-toggle input[type=radio]:disabled</span>
+          </label>
+          <label class="btn-toggle">
+            <input type="radio" name="toggle-button-group-disabled" disabled checked>
+            <span class="btn-toggle-text">label.btn-toggle input[type=radio]:checked:disabled</span>
+          </label>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="form-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="radio" name="toggle-button-disabled-danger" disabled>
+            <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=radio]:disabled</span>
+          </label>
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="radio" name="toggle-button-disabled-danger" disabled checked>
+            <span class="btn-toggle-text">label.btn-toggle.btn-toggle--danger input[type=radio]:checked:disabled</span>
+          </label>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Control button states</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn-control btn-control--has-label" disabled>Button disabled</button>
+      <form class="form">
+        <fieldset class="form-fieldset" disabled>
+          <h2 class="h2">Toggle button group fieldset disabled</h2>
+          <div class="app-sectionBlock">
+            <div class="form-group">
+              <label class="btn-toggle">
+                <input type="checkbox">
+                <span class="btn-toggle-text">fieldset:disabled label.btn-toggle input[type=checkbox]</span>
+              </label>
+              <label class="btn-toggle">
+                <input type="checkbox" checked>
+                <span class="btn-toggle-text">fieldset:disabled label.btn-toggle input[type=checkbox]:checked</span>
+              </label>
+            </div>
+          </div>
+          <div class="app-sectionBlock">
+            <div class="form-group">
+              <label class="btn-toggle btn-toggle--danger">
+                <input type="checkbox">
+                <span class="btn-toggle-text">fieldset:disabled label.btn-toggle.btn-toggle--danger input[type=checkbox]</span>
+              </label>
+              <label class="btn-toggle btn-toggle--danger">
+                <input type="checkbox" checked>
+                <span class="btn-toggle-text">fieldset:disabled label.btn-toggle.btn-toggle--danger input[type=checkbox]:checked</span>
+              </label>
+            </div>
+          </div>
+          <div class="app-sectionBlock">
+            <div class="form-group">
+              <label class="btn-toggle">
+                <input type="radio" name="toggle-button-group-fieldset-disabled">
+                <span class="btn-toggle-text">fieldset:disabled label.btn-toggle input[type=radio]</span>
+              </label>
+              <label class="btn-toggle">
+                <input type="radio" name="toggle-button-group-fieldset-disabled" checked>
+                <span class="btn-toggle-text">fieldset:disabled label.btn-toggle input[type=radio]:checked</span>
+              </label>
+            </div>
+          </div>
+          <div class="app-sectionBlock">
+            <div class="form-group">
+              <label class="btn-toggle btn-toggle--danger">
+                <input type="radio" name="toggle-button-group-fieldset-disabled-danger">
+                <span class="btn-toggle-text">fieldset:disabled label.btn-toggle.btn-toggle--danger input[type=radio]</span>
+              </label>
+              <label class="btn-toggle btn-toggle--danger">
+                <input type="radio" name="toggle-button-group-fieldset-disabled-danger" checked>
+                <span class="btn-toggle-text">fieldset:disabled label.btn-toggle.btn-toggle--danger input[type=radio]:checked</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Toggle button in label group</h2>
+      <div class="app-sectionBlock">
+        <div class="btn-toggle-group">
+          <label class="btn-toggle">
+            <input type="checkbox" id="toggle-button-in-btn-toggle-group-1">
+          </label>
+          <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-1">.btn-toggle-group (label.btn-toggle input[type=checkbox], label.btn-toggle-label)</label>
+        </div>
+        <div class="btn-toggle-group">
+          <label class="btn-toggle">
+            <input type="checkbox" id="toggle-button-in-btn-toggle-group-2" checked>
+          </label>
+          <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-2">.btn-toggle-group (label.btn-toggle input[type=checkbox]:checked, label.btn-toggle-label)</label>
+        </div>
       </div>
       <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn-control btn-control--has-label">Fieldset disabled button</button>
-          </fieldset>
-        </form>
+        <div class="btn-toggle-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="checkbox" id="toggle-button-in-btn-toggle-group-3">
+          </label>
+          <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-3">.btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=checkbox], label.btn-toggle-label)</label>
+        </div>
+        <div class="btn-toggle-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="checkbox" id="toggle-button-in-btn-toggle-group-4" checked>
+          </label>
+          <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-4">.btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=checkbox]:checked, label.btn-toggle-label)</label>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-toggle-group">
+          <label class="btn-toggle">
+            <input type="radio" id="toggle-button-in-btn-toggle-group-5" name="toggle-button-in-btn-toggle-group">
+          </label>
+          <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-5">.btn-toggle-group (label.btn-toggle input[type=radio], label.btn-toggle-label)</label>
+        </div>
+        <div class="btn-toggle-group">
+          <label class="btn-toggle">
+            <input type="radio" id="toggle-button-in-btn-toggle-group-6" name="toggle-button-in-btn-toggle-group" checked>
+          </label>
+          <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-6">.btn-toggle-group (label.btn-toggle input[type=radio]:checked, label.btn-toggle-label)</label>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-toggle-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="radio" id="toggle-button-in-btn-toggle-group-7" name="toggle-button-in-btn-toggle-group-danger">
+          </label>
+          <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-7">.btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=radio], label.btn-toggle-label)</label>
+        </div>
+        <div class="btn-toggle-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="radio" id="toggle-button-in-btn-toggle-group-8" name="toggle-button-in-btn-toggle-group-danger" checked>
+          </label>
+          <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-8">.btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=radio]:checked, label.btn-toggle-label)</label>
+        </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Control button states</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label" disabled>Button disabled</button>
+      <h2 class="h2">Toggle button in label group disabled</h2>
+      <div class="app-sectionBlock">
+        <div class="btn-toggle-group">
+          <label class="btn-toggle">
+            <input type="checkbox" id="toggle-button-in-btn-toggle-group-disabled-1" disabled>
+          </label>
+          <label class="btn-toggle-label disabled" for="toggle-button-in-btn-toggle-group-disabled-1">.btn-toggle-group (label.btn-toggle input[type=checkbox]:disabled, label.btn-toggle-label.disabled)</label>
+        </div>
+        <div class="btn-toggle-group">
+          <label class="btn-toggle">
+            <input type="checkbox" id="toggle-button-in-btn-toggle-group-disabled-2" disabled checked>
+          </label>
+          <label class="btn-toggle-label disabled" for="toggle-button-in-btn-toggle-group-disabled-2">.btn-toggle-group (label.btn-toggle input[type=checkbox]:disabled:checked, label.btn-toggle-label.disabled)</label>
+        </div>
       </div>
       <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn-control btn-control--radio btn-control--has-label">Fieldset disabled button</button>
-          </fieldset>
-        </form>
+        <div class="btn-toggle-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="checkbox" id="toggle-button-in-btn-toggle-group-disabled-3" disabled>
+          </label>
+          <label class="btn-toggle-label disabled" for="toggle-button-in-btn-toggle-group-disabled-3">.btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=checkbox]:disabled, label.btn-toggle-label.disabled)</label>
+        </div>
+        <div class="btn-toggle-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="checkbox" id="toggle-button-in-btn-toggle-group-disabled-4" disabled checked>
+          </label>
+          <label class="btn-toggle-label disabled" for="toggle-button-in-btn-toggle-group-disabled-4">.btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=checkbox]:disabled:checked, label.btn-toggle-label.disabled)</label>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-toggle-group">
+          <label class="btn-toggle">
+            <input type="radio" id="toggle-button-in-btn-toggle-group-disabled-5" name="toggle-button-in-btn-toggle-group-disabled" disabled>
+          </label>
+          <label class="btn-toggle-label disabled" for="toggle-button-in-btn-toggle-group-disabled-5">.btn-toggle-group (label.btn-toggle input[type=radio]:disabled, label.btn-toggle-label.disabled)</label>
+        </div>
+        <div class="btn-toggle-group">
+          <label class="btn-toggle">
+            <input type="radio" id="toggle-button-in-btn-toggle-group-disabled-6" name="toggle-button-in-btn-toggle-group-disabled" disabled checked>
+          </label>
+          <label class="btn-toggle-label disabled" for="toggle-button-in-btn-toggle-group-disabled-6">.btn-toggle-group (label.btn-toggle input[type=radio]:disabled:checked, label.btn-toggle-label.disabled)</label>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-toggle-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="radio" id="toggle-button-in-btn-toggle-group-disabled-7" name="toggle-button-in-btn-toggle-group-disabled-danger" disabled>
+          </label>
+          <label class="btn-toggle-label disabled" for="toggle-button-in-btn-toggle-group-disabled-7">.btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=radio]:disabled, label.btn-toggle-label.disabled)</label>
+        </div>
+        <div class="btn-toggle-group">
+          <label class="btn-toggle btn-toggle--danger">
+            <input type="radio" id="toggle-button-in-btn-toggle-group-disabled-8" name="toggle-button-in-btn-toggle-group-disabled-danger" disabled checked>
+          </label>
+          <label class="btn-toggle-label disabled" for="toggle-button-in-btn-toggle-group-disabled-8">.btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=radio]:disabled:checked, label.btn-toggle-label.disabled)</label>
+        </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Checked control button states</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--has-label btn-control--checked">Button</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--checked btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--checked btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--checked btn-control--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--checked" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn-control btn-control--has-label btn-control--checked">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Checked control button states</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked">Button</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked btn-control--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Error control button states</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--error btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn-control btn-control--error btn-control--has-label">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Error control button states</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Error checked control button states</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked">Button</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked btn-control--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Error checked control button states</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked">Button</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked btn-control--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked">Fieldset disabled button</button>
-          </fieldset>
-        </form>
-      </div>
+      <form class="form">
+        <fieldset class="form-fieldset" disabled>
+          <h2 class="h2">Toggle button in label group fieldset disabled</h2>
+          <div class="app-sectionBlock">
+            <div class="btn-toggle-group">
+              <label class="btn-toggle">
+                <input type="checkbox" id="toggle-button-in-btn-toggle-group-fieldset-disabled-1">
+              </label>
+              <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-fieldset-disabled-1">fieldset:disabled .btn-toggle-group (label.btn-toggle input[type=checkbox], label.btn-toggle-label)</label>
+            </div>
+            <div class="btn-toggle-group">
+              <label class="btn-toggle">
+                <input type="checkbox" id="toggle-button-in-btn-toggle-group-fieldset-disabled-2" checked>
+              </label>
+              <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-fieldset-disabled-2">fieldset:disabled .btn-toggle-group (label.btn-toggle input[type=checkbox]:checked, label.btn-toggle-label)</label>
+            </div>
+          </div>
+          <div class="app-sectionBlock">
+            <div class="btn-toggle-group">
+              <label class="btn-toggle btn-toggle--danger">
+                <input type="checkbox" id="toggle-button-in-btn-toggle-group-fieldset-disabled-3">
+              </label>
+              <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-fieldset-disabled-3">fieldset:disabled .btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=checkbox], label.btn-toggle-label)</label>
+            </div>
+            <div class="btn-toggle-group">
+              <label class="btn-toggle btn-toggle--danger">
+                <input type="checkbox" id="toggle-button-in-btn-toggle-group-fieldset-disabled-4" checked>
+              </label>
+              <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-fieldset-disabled-4">fieldset:disabled .btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=checkbox]:checked, label.btn-toggle-label)</label>
+            </div>
+          </div>
+          <div class="app-sectionBlock">
+            <div class="btn-toggle-group">
+              <label class="btn-toggle">
+                <input type="radio" id="toggle-button-in-btn-toggle-group-fieldset-disabled-5" name="toggle-button-in-btn-toggle-group-disabled">
+              </label>
+              <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-fieldset-disabled-5">fieldset:disabled .btn-toggle-group (label.btn-toggle input[type=radio], label.btn-toggle-label)</label>
+            </div>
+            <div class="btn-toggle-group">
+              <label class="btn-toggle">
+                <input type="radio" id="toggle-button-in-btn-toggle-group-fieldset-disabled-6" name="toggle-button-in-btn-toggle-group-disabled" checked>
+              </label>
+              <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-fieldset-disabled-6">fieldset:disabled .btn-toggle-group (label.btn-toggle input[type=radio]:checked, label.btn-toggle-label)</label>
+            </div>
+          </div>
+          <div class="app-sectionBlock">
+            <div class="btn-toggle-group">
+              <label class="btn-toggle btn-toggle--danger">
+                <input type="radio" id="toggle-button-in-btn-toggle-group-fieldset-disabled-7" name="toggle-button-in-btn-toggle-group-disabled-danger">
+              </label>
+              <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-fieldset-disabled-7">fieldset:disabled .btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=radio], label.btn-toggle-label)</label>
+            </div>
+            <div class="btn-toggle-group">
+              <label class="btn-toggle btn-toggle--danger">
+                <input type="radio" id="toggle-button-in-btn-toggle-group-fieldset-disabled-8" name="toggle-button-in-btn-toggle-group-disabled-danger" checked>
+              </label>
+              <label class="btn-toggle-label" for="toggle-button-in-btn-toggle-group-fieldset-disabled-8">fieldset:disabled .btn-toggle-group (label.btn-toggle.btn-toggle--danger input[type=radio]:checked, label.btn-toggle-label)</label>
+            </div>
+          </div>
+        </fieldset>
+      </form>
     </div>
   
     <div class="app-section">

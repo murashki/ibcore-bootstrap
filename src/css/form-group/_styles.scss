@@ -1,0 +1,7 @@
+@use "../_mixins/form-group" as *;
+@use "./variables" as *;
+
+@include form-group(
+  "form-group",
+  $compensating-margin: -$btn-border-width,
+);

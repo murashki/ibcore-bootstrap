@@ -1,0 +1,15 @@
+@use "./common" as *;
+
+@mixin button-size(
+  $class-name,
+  $font-size
+) {
+  $button: ".#{$class-name}";
+
+  //
+  // Кнопка
+  //
+  @include use($button) {
+    @include font-style(--UNDEFINED, $font-size);
+  }
+}

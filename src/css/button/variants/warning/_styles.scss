@@ -1,8 +1,7 @@
-@use '../../../_mixins/button-variant' as *;
-@use './variables' as *;
+@use "../../../_mixins/button.variant" as *;
+@use "./variables" as *;
 
 @include button-variant(
-  "btn",
   "btn--warning",
   $color: $btn-warning-color,
   $bg-color: $btn-warning-bg-color,

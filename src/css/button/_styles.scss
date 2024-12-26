@@ -1,7 +1,7 @@
-@use '../_mixins/button' as *;
-@use '../_mixins/button-variant' as *;
-@use '../_mixins/button-size' as *;
-@use './variables' as *;
+@use "../_mixins/button" as *;
+@use "../_mixins/button.size" as *;
+@use "../_mixins/button.variant" as *;
+@use "./variables" as *;
 
 @include button(
   "btn",
@@ -13,23 +13,38 @@
   $border-radius: $btn-border-radius,
   $vertical-padding: $btn-vertical-padding,
   $horizontal-padding: $btn-horizontal-padding,
-  $disabled-opacity: $btn-disabled-opacity,
   $transition: $btn-transition,
+  $disabled-opacity: $btn-disabled-opacity
 );
 
 @include button-variant(
   "btn",
-  "btn",
   $color: $btn-color,
   $bg-color: $btn-bg-color,
-  $border-color: $btn-border-color
+  $border-color: $btn-border-color,
 );
 
 @include button-size(
-  "btn",
-  $font-size-xs: $btn-font-size-xs,
-  $font-size-sm: $btn-font-size-sm,
-  $font-size-md: $btn-font-size,
-  $font-size-lg: $btn-font-size-lg,
-  $font-size-xl: $btn-font-size-xl
+  "btn--xs",
+  $font-size: $btn-font-size-xs,
+);
+
+@include button-size(
+  "btn--sm",
+  $font-size: $btn-font-size-sm,
+);
+
+@include button-size(
+  "btn--md",
+  $font-size: $btn-font-size,
+);
+
+@include button-size(
+  "btn--lg",
+  $font-size: $btn-font-size-lg,
+);
+
+@include button-size(
+  "btn--xl",
+  $font-size: $btn-font-size-xl,
 );

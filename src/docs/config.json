@@ -25,14 +25,12 @@
         "button/variants/danger",
         "button/variants/success",
         "button/variants/warning",
-        "button-control",
-        "button-control/variants/error",
-        "button-control-group",
-        "button-ghost",
-        "button-group",
+        "button-toggle",
+        "button-toggle/variants/danger",
         "button-link",
-        "form-control",
+        "form-group",
         "forms",
+        "label-group",
         "grid"
       ]
     }

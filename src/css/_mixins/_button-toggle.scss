@@ -1,0 +1,163 @@
+@use "./button" as *;
+@use "./common" as *;
+
+@mixin button-toggle(
+  $class-name,
+  $font-family,
+  $font-size,
+  $font-weight,
+  $line-height,
+  $border-width,
+  $border-radius,
+  $vertical-padding,
+  $horizontal-padding,
+  $inner-text-left-padding,
+  $transition,
+  $icon-size,
+  $icon-bg-color,
+  $icon-border-color,
+  $icon-border-width,
+  $icon-transition,
+  $icon-checked-bg-color,
+  $icon-checked-border-color,
+  $label-line-height,
+  $label-left-padding,
+  $group-ngb-margin,
+  $disabled-opacity,
+) {
+  $button: ".#{$class-name}";
+  $button-group: ".#{$class-name}-group";
+  $button-text: ".#{$class-name}-text";
+  $button-label: ".#{$class-name}-label";
+  $checkbox: "input[type=checkbox]";
+  $radio: "input[type=radio]";
+
+  //
+  // Кнопка
+  //
+  @include use($button) {
+    position: relative;
+    white-space: nowrap;
+
+    @include cursor-style(pointer, $user-select: none);
+    @include display-style(flex, center, center);
+    @include font-style(--UNDEFINED, $font-size, $font-weight, $font-family, $line-height, none);
+    @include layout-style(--UNDEFINED, --UNDEFINED, $border-width, solid, $border-radius);
+    @include padding-style($vertical-padding, $horizontal-padding);
+    @include transition-style($transition);
+
+    //
+    // Кнопка внутри группы с ярлыком
+    //
+    @include exactly(that-is-inside($button-group)) {
+      @include padding-style($vertical-padding, $vertical-padding);
+    }
+
+    //
+    // Кнопка с заблокированным крыжиком или кружком  или когда в неактивной части формы
+    //
+    @include exactly(that-has($checkbox $radio, that-is(--DISABLED)) that-is-inside("fieldset:disabled")) {
+      @include cursor-style(default, none);
+      @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
+    }
+
+    //
+    // Кнопка с крыжиком
+    //
+    @include exactly(that-has($checkbox)) {}
+
+    //
+    // Кнопка с кружком
+    //
+    @include exactly(that-has($radio)) {
+      $border-radius: calc($line-height / 2 + $vertical-padding + $border-width);
+
+      @include layout-style(--UNDEFINED, --UNDEFINED, $border-radius: $border-radius);
+    }
+  }
+
+  //
+  // Крыжик и кружок
+  //
+  @include use($checkbox $radio, that-is-inside($button)) {
+    appearance: none;
+    content: "";
+    // Not removed via appearance
+    margin: 0;
+
+    @include cursor-style(inherit, inherit);
+    @include display-style(block);
+    @include layout-style($icon-bg-color, $icon-border-color, $icon-border-width, solid);
+    @include size-style($icon-size, $icon-size);
+    @include transition-style($transition);
+
+    //
+    // Крыжик и кружок в фокусе
+    //
+    @include exactly(that-is(--FOCUS)) {
+      outline: none;
+    }
+
+    //
+    // Выбранный крыжик или кружок
+    //
+    @include exactly(that-is(--CHECKED)) {
+      @include layout-style($icon-checked-bg-color, $icon-checked-border-color);
+    }
+  }
+
+  //
+  // Крыжик
+  //
+  @include use($checkbox, that-is-inside($button)) {}
+
+  //
+  // Кружок
+  //
+  @include use($radio, that-is-inside($button)) {
+    @include layout-style(--UNDEFINED, --UNDEFINED, $border-radius: 50%);
+  }
+
+  //
+  // Текст кнопки
+  //
+  @include use($button-text) {
+    padding-left: $inner-text-left-padding;
+  }
+
+  //
+  // Группа
+  //
+  @include use($button-group) {
+    display: flex;
+    align-items: flex-start;
+
+    //
+    // Группа стоящая на одном уровне после такой же группы
+    //
+    @include exactly(that-is-subsequent-to($button-group)) {
+      margin-top: $group-ngb-margin;
+    }
+  }
+
+  //
+  // Ярлык группы
+  //
+  @include use($button-label) {
+    $padding-top: calc($vertical-padding + $border-width - (($label-line-height - $icon-size) / 2));
+
+    line-height: $label-line-height;
+    padding-left: $label-left-padding;
+    padding-top: $padding-top;
+
+    @include cursor-style(pointer);
+
+    //
+    // Ярлык группы в неактивной части формы или когда заблокирован
+    //
+    @include exactly(that-is-inside("fieldset:disabled") that-is(".disabled")) {
+      @include cursor-style(default, none);
+      @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
+    }
+  }
+}

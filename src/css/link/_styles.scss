@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 .link {
   color: $link-color;
@@ -6,18 +6,16 @@
 }
 
 .link:visited,
-.link.link--visited {
+.link.visited {
   color: $link-visited-color;
 }
 
-.link:hover,
-.link.link--hover {
+.link:hover {
   color: $link-hover-color;
   text-decoration: $link-hover-text-decoration;
 }
 
-.link:focus,
-.link.link--focus {
+.link:focus {
   color: $link-focus-color;
   text-decoration: $link-focus-text-decoration;
   outline: none;

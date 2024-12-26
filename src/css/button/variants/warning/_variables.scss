@@ -1,3 +1,5 @@
-$btn-warning-color: #323442 !default;
+@use "../../variables" as *;
+
+$btn-warning-color: $btn-color !default;
 $btn-warning-bg-color: #ffc107 !default;
 $btn-warning-border-color: $btn-warning-bg-color !default;

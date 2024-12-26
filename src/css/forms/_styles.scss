@@ -1,45 +1,45 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 .form {}
 
-.form-group {
-  margin-bottom: $form-group-margin-bottom;
+.label-group {
+  margin-bottom: $label-group-margin-bottom;
 }
 
-.form-group--vertical {
+.label-group--vertical {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.form-group--vertical > * + * {
-  margin-top: $form-group-vertical-ngb-margin;
+.label-group--vertical > * + * {
+  margin-top: $label-group-vertical-ngb-margin;
 }
 
-.form-group--horizontal {
+.label-group--horizontal {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.form-group--horizontal > * + * {
-  margin-left: $form-group-horizontal-ngb-margin;
+.label-group--horizontal > * + * {
+  margin-left: $label-group-horizontal-ngb-margin;
 }
 
-.form-group > .col,
-.form-group > .col-1,
-.form-group > .col-2,
-.form-group > .col-3,
-.form-group > .col-4,
-.form-group > .col-5,
-.form-group > .col-6,
-.form-group > .col-7,
-.form-group > .col-8,
-.form-group > .col-9,
-.form-group > .col-10,
-.form-group > .col-11,
-.form-group > .col-12,
-.form-group > .col-auto {
+.label-group > .col,
+.label-group > .col-1,
+.label-group > .col-2,
+.label-group > .col-3,
+.label-group > .col-4,
+.label-group > .col-5,
+.label-group > .col-6,
+.label-group > .col-7,
+.label-group > .col-8,
+.label-group > .col-9,
+.label-group > .col-10,
+.label-group > .col-11,
+.label-group > .col-12,
+.label-group > .col-auto {
   display: flex;
   align-items: center;
 }
@@ -50,7 +50,7 @@
   line-height: $form-label-line-height;
 }
 
-.form-group .form-label {
+.label-group .form-label {
   display: block;
 }
 

@@ -1,26 +1,55 @@
-@use '../_functions/smart-round' as *;
+@use "../_functions/smart-round" as *;
+@use "../variables" as *;
 
-$btn-color: #323442 !default;
+@function get-btn-font-size-xs($btn-font-size) {
+  @return smart_round($btn-font-size * 0.75);
+}
+
+@function get-btn-font-size-sm($btn-font-size) {
+  @return smart_round($btn-font-size * 0.833);
+}
+
+@function get-btn-font-size-md($btn-font-size) {
+  @return $btn-font-size;
+}
+
+@function get-btn-font-size-lg($btn-font-size) {
+  @return smart_round($btn-font-size * 1.166);
+}
+
+@function get-btn-font-size-xl($btn-font-size) {
+  @return smart_round($btn-font-size * 1.333);
+}
+
+@function get-btn-border-color($btn-bg-color) {
+  @return $btn-bg-color;
+}
+
+@function get-btn-transition($btn-transition-appearance) {
+  @return
+    color $btn-transition-appearance,
+    background-color $btn-transition-appearance,
+    border-color $btn-transition-appearance,
+    box-shadow $btn-transition-appearance;
+}
+
+$btn-color: $color !default;
 $btn-font-family: inherit !default;
-$btn-font-size: 1.2em !default;
-$btn-font-size-xs: smart_round($btn-font-size * 0.75) !default;
-$btn-font-size-sm: smart_round($btn-font-size * 0.833) !default;
-$btn-font-size-md: $btn-font-size !default;
-$btn-font-size-lg: smart_round($btn-font-size * 1.166) !default;
-$btn-font-size-xl: smart_round($btn-font-size * 1.333) !default;
+$btn-font-size: 1em !default;
+  $btn-font-size-xs: get-btn-font-size-xs($btn-font-size) !default;
+  $btn-font-size-sm: get-btn-font-size-sm($btn-font-size) !default;
+  $btn-font-size-md: get-btn-font-size-md($btn-font-size) !default;
+  $btn-font-size-lg: get-btn-font-size-lg($btn-font-size) !default;
+  $btn-font-size-xl: get-btn-font-size-xl($btn-font-size) !default;
 $btn-font-weight: inherit !default;
-$btn-line-height: 1.4em !default;
+$btn-line-height: $line-height !default;
 $btn-bg-color: #e3e4ea !default;
-$btn-border-color: $btn-bg-color !default;
-$btn-border-width: 1px !default;
+  $btn-border-color: get-btn-border-color($btn-bg-color) !default;
+$btn-border-width: 2px !default;
 $btn-border-radius: 0.15em !default;
 $btn-vertical-padding: 0.375em !default;
-$btn-horizontal-padding: 0.75em !default;
+$btn-horizontal-padding: 0.575em !default;
 $btn-disabled-opacity: 0.5 !default;
 
 $btn-transition-appearance: 0.15s ease-in-out !default;
-$btn-transition:
-  color $btn-transition-appearance,
-  background-color $btn-transition-appearance,
-  border-color $btn-transition-appearance,
-  box-shadow $btn-transition-appearance !default;
+  $btn-transition: get-btn-transition($btn-transition-appearance) !default;

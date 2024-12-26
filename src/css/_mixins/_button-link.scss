@@ -26,30 +26,24 @@
     text-decoration: $text-decoration;
   }
 
-  .#{$class}:hover,
-  .#{$class}.#{class}--hover {
+  .#{$class}:hover {
     color: $hover-color;
     text-decoration: $hover-text-decoration;
   }
 
-  .#{$class}:focus,
-  .#{$class}.#{$class}--focus {
+  .#{$class}:focus {
     color: $focus-color;
+    outline: none;
     text-decoration: $focus-text-decoration;
   }
 
-  .#{$class}:focus {
-    outline: none;
-  }
-
-  .#{$class}:active,
-  .#{$class}.#{$class}--active {
+  .#{$class}:active {
     color: $active-color;
     text-decoration: $active-text-decoration;
   }
 
   .#{$class}:disabled,
-  .#{$class}.#{$class}--disabled,
+  .#{$class}.disabled,
   fieldset:disabled .#{$class} {
     color: $disabled-color;
     cursor: default;

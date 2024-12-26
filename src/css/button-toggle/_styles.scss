@@ -1,0 +1,35 @@
+@use "../_mixins/button-toggle" as *;
+@use "../_mixins/button-toggle.variant" as *;
+@use "./variables" as *;
+
+@include button-toggle(
+  "btn-toggle",
+  $font-family: $btn-toggle-font-family,
+  $font-size: $btn-toggle-font-size,
+  $font-weight: $btn-toggle-font-weight,
+  $line-height: $btn-toggle-line-height,
+  $border-width: $btn-toggle-border-width,
+  $border-radius: $btn-toggle-border-radius,
+  $vertical-padding: $btn-toggle-vertical-padding,
+  $horizontal-padding: $btn-toggle-horizontal-padding,
+  $inner-text-left-padding: $btn-toggle-inner-text-left-padding,
+  $transition: $btn-toggle-transition,
+  $icon-size: $btn-toggle-icon-size,
+  $icon-bg-color: $btn-toggle-icon-bg-color,
+  $icon-border-color: $btn-toggle-icon-border-color,
+  $icon-border-width: $btn-toggle-icon-border-width,
+  $icon-transition: $btn-toggle-icon-transition,
+  $icon-checked-bg-color: $btn-toggle-icon-checked-bg-color,
+  $icon-checked-border-color: $btn-toggle-icon-checked-border-color,
+  $label-line-height: $btn-toggle-label-line-height,
+  $label-left-padding: $btn-toggle-label-left-padding,
+  $group-ngb-margin: $btn-toggle-group-ngb-margin,
+  $disabled-opacity: $btn-toggle-disabled-opacity,
+);
+
+@include button-toggle-variant(
+  "btn-toggle",
+  $color: $btn-toggle-color,
+  $bg-color: $btn-toggle-bg-color,
+  $border-color: $btn-toggle-border-color,
+);

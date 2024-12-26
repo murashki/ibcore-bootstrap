@@ -1,0 +1,8 @@
+@use "../_mixins/label-group" as *;
+@use "./variables" as *;
+
+@include label-group(
+  "label-group",
+  $label-group-vertical-member-margin,
+  $label-group-horizontal-member-margin,
+);

@@ -12,30 +12,24 @@
   text-decoration: none;
 }
 
-.btn-link:hover,
-.btn-link.class--hover {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-.btn-link:focus,
-.btn-link.btn-link--focus {
+.btn-link:hover {
   color: #007bff;
   text-decoration: underline;
 }
 
 .btn-link:focus {
+  color: #007bff;
   outline: none;
+  text-decoration: underline;
 }
 
-.btn-link:active,
-.btn-link.btn-link--active {
+.btn-link:active {
   color: #007bff;
   text-decoration: underline;
 }
 
 .btn-link:disabled,
-.btn-link.btn-link--disabled,
+.btn-link.disabled,
 fieldset:disabled .btn-link {
   color: #007bff;
   cursor: default;

@@ -14,8 +14,6 @@
   $textarea-line-height,
   $textarea-height
 ) {
-
-  // --> Base
   .#{$class} {
     display: block;
     border: $border-width solid transparent;
@@ -39,38 +37,25 @@
     opacity: 1;
     user-select: none;
   }
-  // <-- Base
 
-
-  // --> Focus
-  .#{$class}:focus,
-  .#{$class}.#{$class}--focus {
+  .#{$class}:focus {
     outline: none;
   }
-  // <-- Focus
 
-
-  // --> Readonly
-  .#{$class}[readonly],
-  .#{$class}.#{$class}--readonly {
+  .#{$class}[readonly] {
     cursor: default;
     opacity: $readonly-opacity;
   }
-  // <-- Readonly
 
-
-  // --> Disabled
   .#{$class}:disabled,
-  .#{$class}.#{$class}--disabled,
   fieldset:disabled .#{$class} {
     cursor: default;
     opacity: $disabled-opacity;
     pointer-events: none;
   }
-  // <-- Disabled
 
+  // Transition
 
-  // --> Transition
   .#{$class} {
     transition: $transition;
   }
@@ -80,5 +65,4 @@
       transition: none;
     }
   }
-  // <-- Transition
 }

@@ -1,8 +1,0 @@
-@use '../_mixins/button-group' as *;
-@use './variables' as *;
-
-@include button-group(
-  "btn-control-group",
-  "btn-control",
-  $border-width: $btn-control-border-width,
-);

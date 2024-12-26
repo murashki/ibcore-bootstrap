@@ -1,5 +1,5 @@
-@use '../../../_mixins/form-control-variant' as *;
-@use './variables' as *;
+@use "../../../_mixins/form-control-variant" as *;
+@use "./variables" as *;
 
 @include form-control-variant(
   "form-control",

@@ -1,5 +1,5 @@
-@use '../_mixins/button-link' as *;
-@use './variables' as *;
+@use "../_mixins/button-link" as *;
+@use "./variables" as *;
 
 @include button-link(
   "btn-link",

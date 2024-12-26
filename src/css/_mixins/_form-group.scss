@@ -1,0 +1,43 @@
+@use "./common" as *;
+
+@mixin form-group(
+  $group-class,
+  $compensating-margin,
+) {
+  $group: ".#{$group-class}";
+  $ignored-member: ".#{$group-class}-ignored";
+
+  @include use($group) {
+    position: relative;
+    z-index: 0;
+
+    @include display-style(flex);
+  }
+
+  @include use("*", that-is-not($ignored-member), that-is-child-of($group)) {
+    position: relative;
+
+    @include exactly(that-is(--HOVER)) {
+      z-index: 1;
+    }
+
+    @include exactly(that-is(--ACTIVE)) {
+      z-index: 3;
+    }
+
+    @include exactly(that-is(--FOCUS)) {
+      z-index: 2;
+    }
+
+    @include exactly(that-is-not(--FIRST-CHILD)) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      margin-left: $compensating-margin;
+    }
+
+    @include exactly(that-is-not(--LAST-CHILD)) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}
