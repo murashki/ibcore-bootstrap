@@ -1,5 +1,5 @@
 @use '../_mixins/button' as *;
-@use '../_mixins/button-variant' as *;
+@use '../_mixins/button.variant' as *;
 @use '../_mixins/button-control' as *;
 @use './variables' as *;
 
@@ -13,7 +13,6 @@
   $border-radius: $btn-control-border-radius,
   $vertical-padding: $btn-control-vertical-padding,
   $horizontal-padding: $btn-control-horizontal-padding,
-  $disabled-opacity: $btn-control-disabled-opacity,
   $transition: $btn-control-transition,
 );
 
@@ -23,6 +22,7 @@
   $color: $btn-control-color,
   $bg-color: $btn-control-bg-color,
   $border-color: $btn-control-border-color,
+  $disabled-opacity: $btn-control-disabled-opacity,
 );
 
 @include button-control(

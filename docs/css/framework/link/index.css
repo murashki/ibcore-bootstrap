@@ -4,18 +4,18 @@
 }
 
 .link:visited,
-.link.link--visited {
+.link.state-visited {
   color: #007bff;
 }
 
 .link:hover,
-.link.link--hover {
+.link.state-hover {
   color: #007bff;
   text-decoration: underline;
 }
 
 .link:focus,
-.link.link--focus {
+.link.state-focus {
   color: #007bff;
   text-decoration: underline;
   outline: none;

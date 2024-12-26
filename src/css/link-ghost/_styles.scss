@@ -2,16 +2,16 @@
 
 .link-ghost,
 .link-ghost:visited,
-.link-ghost.link--visited,
+.link-ghost.state-visited,
 .link-ghost:hover,
-.link-ghost.link--hover,
+.link-ghost.state-hover,
 .link-ghost:focus,
-.link-ghost.link--focus {
+.link-ghost.state-focus {
   color: inherit;
   text-decoration: none;
 }
 
-.link-ghost:focus
-.link-ghost.link--focus {
+.link-ghost:focus,
+.link-ghost.state-focus {
   outline: none;
 }

@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="css/framework/button/variants/danger/index.css">
     <link rel="stylesheet" href="css/framework/button/variants/success/index.css">
     <link rel="stylesheet" href="css/framework/button/variants/warning/index.css">
+    <link rel="stylesheet" href="css/framework/button-check/index.css">
     <link rel="stylesheet" href="css/framework/button-control/index.css">
     <link rel="stylesheet" href="css/framework/button-control/variants/error/index.css">
     <link rel="stylesheet" href="css/framework/button-control-group/index.css">
-    <link rel="stylesheet" href="css/framework/button-ghost/index.css">
+    <link rel="stylesheet" href="css/framework/button-unstyled/index.css">
     <link rel="stylesheet" href="css/framework/button-group/index.css">
     <link rel="stylesheet" href="css/framework/button-link/index.css">
     <link rel="stylesheet" href="css/framework/form-control/index.css">
@@ -37,259 +38,710 @@
   <h1 class="h1">Buttons</h1>
   <div class="app-content">
     <div class="app-section">
-      <h2 class="h2">Button variants</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn">Button primary</button>
-        <button type="button" class="btn btn--success">Success button</button>
-        <button type="button" class="btn btn--warning">Warning button</button>
-        <button type="button" class="btn btn--danger">Danger button</button>
-      </div>
-    </div>
-  
-    <div class="app-section">
       <h2 class="h2">Button size</h2>
       <div class="app-sectionBlock">
         <p style="width: 34em;">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="app-block">
-          <button type="button" class="btn btn--xs">Button xs</button>
-          <button type="button" class="btn btn--sm">Button sm</button>
-          <button type="button" class="btn">Button</button>
-          <button type="button" class="btn btn--lg">Button lg</button>
-          <button type="button" class="btn btn--xl">Button xl</button>
+          <button type="button" class="btn btn--xs">button.btn.btn--xs</button>
+          <button type="button" class="btn btn--sm">button.btn.btn--sm</button>
+          <button type="button" class="btn">button.btn</button>
+          <button type="button" class="btn btn--md">button.btn.btn--md</button>
+          <button type="button" class="btn btn--lg">button.btn.btn--lg</button>
+          <button type="button" class="btn btn--xl">button.btn.btn--xl</button>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Button tags</h2>
+      <h2 class="h2">Button</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn">Button</button>
-        <input class="btn" type="button" value="Input tag button">
-        <a class="btn" href="#" role="button">Link as a button</a>
+        <button type="button" class="btn">button.btn</button>
+        <input type="button" class="btn" value="input[type=button].btn">
+        <input type="submit" class="btn" value="input[type=submit].btn">
+        <input type="reset" class="btn" value="input[type=reset].btn">
+        <a class="btn" href="#" role="button">a.btn</a>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn btn--success">button.btn.btn--success</button>
+        <input type="button" class="btn btn--success" value="input[type=button].btn.btn--success">
+        <input type="submit" class="btn btn--success" value="input[type=submit].btn.btn--success">
+        <input type="reset" class="btn btn--success" value="input[type=reset].btn.btn--success">
+        <a class="btn btn--success" href="#" role="button">a.btn.btn--success</a>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn btn--warning">button.btn.btn--warning</button>
+        <input type="button" class="btn btn--warning" value="input[type=button].btn.btn--warning">
+        <input type="submit" class="btn btn--warning" value="input[type=submit].btn.btn--warning">
+        <input type="reset" class="btn btn--warning" value="input[type=reset].btn.btn--warning">
+        <a class="btn btn--warning" href="#" role="button">a.btn.btn--warning</a>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn btn--danger">button.btn.btn--danger</button>
+        <input type="button" class="btn btn--danger" value="input[type=button].btn.btn--danger">
+        <input type="submit" class="btn btn--danger" value="input[type=submit].btn.btn--danger">
+        <input type="reset" class="btn btn--danger" value="input[type=reset].btn.btn--danger">
+        <a class="btn btn--danger" href="#" role="button">a.btn.btn--danger</a>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Button states</h2>
+      <h2 class="h2">Button active class</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn">Button</button>
-        <button type="button" class="btn btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--active">Button active class</button>
-        <button type="button" class="btn btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn">Fieldset disabled button</button>
-          </fieldset>
-        </form>
+        <button type="button" class="btn state-active">button.btn.state-active</button>
+        <input type="button" class="btn state-active" value="input[type=button].btn.state-active">
+        <input type="submit" class="btn state-active" value="input[type=submit].btn.state-active">
+        <input type="reset" class="btn state-active" value="input[type=reset].btn.state-active">
+        <a class="btn state-active" href="#" role="button">a.btn.state-active</a>
       </div>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--success">Button</button>
-        <button type="button" class="btn btn--success btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--success btn--active">Button active class</button>
-        <button type="button" class="btn btn--success btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn btn--success" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn btn--success">Fieldset disabled button</button>
-          </fieldset>
-        </form>
+        <button type="button" class="btn btn--success state-active">button.btn.btn--success.state-active</button>
+        <input type="button" class="btn btn--success state-active" value="input[type=button].btn.btn--success.state-active">
+        <input type="submit" class="btn btn--success state-active" value="input[type=submit].btn.btn--success.state-active">
+        <input type="reset" class="btn btn--success state-active" value="input[type=reset].btn.btn--success.state-active">
+        <a class="btn btn--success state-active" href="#" role="button">a.btn.btn--success.state-active</a>
       </div>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--warning">Button</button>
-        <button type="button" class="btn btn--warning btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--warning btn--active">Button active class</button>
-        <button type="button" class="btn btn--warning btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn btn--warning" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn btn--warning">Fieldset disabled button</button>
-          </fieldset>
-        </form>
+        <button type="button" class="btn btn--warning state-active">button.btn.btn--warning.state-active</button>
+        <input type="button" class="btn btn--warning state-active" value="input[type=button].btn.btn--warning.state-active">
+        <input type="submit" class="btn btn--warning state-active" value="input[type=submit].btn.btn--warning.state-active">
+        <input type="reset" class="btn btn--warning state-active" value="input[type=reset].btn.btn--warning.state-active">
+        <a class="btn btn--warning state-active" href="#" role="button">a.btn.btn--warning.state-active</a>
       </div>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--danger">Button</button>
-        <button type="button" class="btn btn--danger btn--focus">Button focus class</button>
-        <button type="button" class="btn btn--danger btn--active">Button active class</button>
-        <button type="button" class="btn btn--danger btn--disabled" tabindex="-1">Button disabled class</button>
-        <button type="button" class="btn btn--danger" disabled>Button disabled</button>
-      </div>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <button type="button" class="btn btn--danger">Fieldset disabled button</button>
-          </fieldset>
-        </form>
+        <button type="button" class="btn btn--danger state-active">button.btn.btn--danger.state-active</button>
+        <input type="button" class="btn btn--danger state-active" value="input[type=button].btn.btn--danger.state-active">
+        <input type="submit" class="btn btn--danger state-active" value="input[type=submit].btn.btn--danger.state-active">
+        <input type="reset" class="btn btn--danger state-active" value="input[type=reset].btn.btn--danger.state-active">
+        <a class="btn btn--danger state-active" href="#" role="button">a.btn.btn--danger.state-active</a>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Focus class buttons</h2>
+      <h2 class="h2">Button focus class</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--focus">Button</button>
-        <input class="btn btn--focus" type="button" value="Input tag button">
-        <a class="btn btn--focus" href="#" role="button">Link as a button</a>
+        <button type="button" class="btn state-focus">button.btn.state-focus</button>
+        <input type="button" class="btn state-focus" value="input[type=button].btn.state-focus">
+        <input type="submit" class="btn state-focus" value="input[type=submit].btn.state-focus">
+        <input type="reset" class="btn state-focus" value="input[type=reset].btn.state-focus">
+        <a class="btn state-focus" href="#" role="button">a.btn.state-focus</a>
       </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Active class buttons</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--active">Button</button>
-        <input class="btn btn--active" type="button" value="Input tag button">
-        <a class="btn btn--active" href="#" role="button">Link as a button</a>
+        <button type="button" class="btn btn--success state-focus">button.btn.btn--success.state-focus</button>
+        <input type="button" class="btn btn--success state-focus" value="input[type=button].btn.btn--success.state-focus">
+        <input type="submit" class="btn btn--success state-focus" value="input[type=submit].btn.btn--success.state-focus">
+        <input type="reset" class="btn btn--success state-focus" value="input[type=reset].btn.btn--success.state-focus">
+        <a class="btn btn--success state-focus" href="#" role="button">a.btn.btn--success.state-focus</a>
       </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Disabled class buttons</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn btn--disabled" tabindex="-1">Button</button>
-        <input class="btn btn--disabled" type="button" value="Input tag button" tabindex="-1">
-        <a class="btn btn--disabled" href="#" tabindex="-1" role="button">Link as a button</a>
+        <button type="button" class="btn btn--warning state-focus">button.btn.btn--warning.state-focus</button>
+        <input type="button" class="btn btn--warning state-focus" value="input[type=button].btn.btn--warning.state-focus">
+        <input type="submit" class="btn btn--warning state-focus" value="input[type=submit].btn.btn--warning.state-focus">
+        <input type="reset" class="btn btn--warning state-focus" value="input[type=reset].btn.btn--warning.state-focus">
+        <a class="btn btn--warning state-focus" href="#" role="button">a.btn.btn--warning.state-focus</a>
       </div>
-    </div>
-  
-    <div class="app-section">
-      <h2 class="h2">Disabled buttons</h2>
       <div class="app-sectionBlock app-block">
-        <button type="button" class="btn" disabled>Button</button>
-        <input class="btn btn--disabled" type="button" value="Input tag button" disabled>
+        <button type="button" class="btn btn--danger state-focus">button.btn.btn--danger.state-focus</button>
+        <input type="button" class="btn btn--danger state-focus" value="input[type=button].btn.btn--danger.state-focus">
+        <input type="submit" class="btn btn--danger state-focus" value="input[type=submit].btn.btn--danger.state-focus">
+        <input type="reset" class="btn btn--danger state-focus" value="input[type=reset].btn.btn--danger.state-focus">
+        <a class="btn btn--danger state-focus" href="#" role="button">a.btn.btn--danger.state-focus</a>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Disabled fieldset buttons</h2>
-      <div class="app-sectionBlock">
-        <form class="form">
-          <fieldset class="form-fieldset" disabled>
-            <div class="app-block">
-              <button type="button" class="btn">Button</button>
-              <input class="btn" type="button" value="Input tag button">
-              <a class="btn" href="#" tabindex="-1" role="button">Link as a button</a>
-            </div>
-          </fieldset>
-        </form>
+      <h2 class="h2">Button disabled class</h2>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn state-disabled">button.btn.state-disabled</button>
+        <input type="button" class="btn state-disabled" value="input[type=button].btn.state-disabled">
+        <input type="submit" class="btn state-disabled" value="input[type=submit].btn.state-disabled">
+        <input type="reset" class="btn state-disabled" value="input[type=reset].btn.state-disabled">
+        <a class="btn state-disabled" href="#" role="button">a.btn.state-disabled</a>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn btn--success state-disabled">button.btn.btn--success.state-disabled</button>
+        <input type="button" class="btn btn--success state-disabled" value="input[type=button].btn.btn--success.state-disabled">
+        <input type="submit" class="btn btn--success state-disabled" value="input[type=submit].btn.btn--success.state-disabled">
+        <input type="reset" class="btn btn--success state-disabled" value="input[type=reset].btn.btn--success.state-disabled">
+        <a class="btn btn--success state-disabled" href="#" role="button">a.btn.btn--success.state-disabled</a>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn btn--warning state-disabled">button.btn.btn--warning.state-disabled</button>
+        <input type="button" class="btn btn--warning state-disabled" value="input[type=button].btn.btn--warning.state-disabled">
+        <input type="submit" class="btn btn--warning state-disabled" value="input[type=submit].btn.btn--warning.state-disabled">
+        <input type="reset" class="btn btn--warning state-disabled" value="input[type=reset].btn.btn--warning.state-disabled">
+        <a class="btn btn--warning state-disabled" href="#" role="button">a.btn.btn--warning.state-disabled</a>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn btn--danger state-disabled">button.btn.btn--danger.state-disabled</button>
+        <input type="button" class="btn btn--danger state-disabled" value="input[type=button].btn.btn--danger.state-disabled">
+        <input type="submit" class="btn btn--danger state-disabled" value="input[type=submit].btn.btn--danger.state-disabled">
+        <input type="reset" class="btn btn--danger state-disabled" value="input[type=reset].btn.btn--danger.state-disabled">
+        <a class="btn btn--danger state-disabled" href="#" role="button">a.btn.btn--danger.state-disabled</a>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Unstyled button tags</h2>
+      <h2 class="h2">Button disabled state</h2>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn" disabled>button.btn:disabled</button>
+        <input type="button" class="btn" value="input[type=button].btn:disabled" disabled>
+        <input type="submit" class="btn" value="input[type=submit].btn:disabled" disabled>
+        <input type="reset" class="btn" value="input[type=reset].btn:disabled" disabled>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn btn--success" disabled>button.btn.btn--success:disabled</button>
+        <input type="button" class="btn btn--success" value="input[type=button].btn.btn--success:disabled" disabled>
+        <input type="submit" class="btn btn--success" value="input[type=submit].btn.btn--success:disabled" disabled>
+        <input type="reset" class="btn btn--success" value="input[type=reset].btn.btn--success:disabled" disabled>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn btn--warning" disabled>button.btn.btn--warning:disabled</button>
+        <input type="button" class="btn btn--warning" value="input[type=button].btn.btn--warning:disabled" disabled>
+        <input type="submit" class="btn btn--warning" value="input[type=submit].btn.btn--warning:disabled" disabled>
+        <input type="reset" class="btn btn--warning" value="input[type=reset].btn.btn--warning:disabled" disabled>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <button type="button" class="btn btn--danger" disabled>button.btn.btn--danger:disabled</button>
+        <input type="button" class="btn btn--danger" value="input[type=button].btn.btn--danger:disabled" disabled>
+        <input type="submit" class="btn btn--danger" value="input[type=submit].btn.btn--danger:disabled" disabled>
+        <input type="reset" class="btn btn--danger" value="input[type=reset].btn.btn--danger:disabled" disabled>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <form class="form">
+        <fieldset class="form-fieldset" disabled>
+          <h2 class="h2">Button fieldset disabled</h2>
+          <div class="app-sectionBlock app-block">
+            <button type="button" class="btn">fieldset[disabled] button.btn</button>
+            <input type="button" class="btn" value="fieldset[disabled] input[type=button].btn">
+            <input type="submit" class="btn" value="fieldset[submit] input[type=button].btn">
+            <input type="reset" class="btn" value="fieldset[reset] input[type=button].btn">
+            <a class="btn" href="#" role="button">fieldset[disabled] a.btn</a>
+          </div>
+          <div class="app-sectionBlock app-block">
+            <button type="button" class="btn btn--success">fieldset[disabled] button.btn.btn--success</button>
+            <input type="button" class="btn btn--success" value="fieldset[disabled] input[type=button].btn.btn--success">
+            <input type="submit" class="btn btn--success" value="fieldset[disabled] input[type=submit].btn.btn--success">
+            <input type="reset" class="btn btn--success" value="fieldset[disabled] input[type=reset].btn.btn--success">
+            <a class="btn btn--success" href="#" role="button">fieldset[disabled] a.btn.btn--success</a>
+          </div>
+          <div class="app-sectionBlock app-block">
+            <button type="button" class="btn btn--warning">fieldset[disabled] button.btn.btn--warning</button>
+            <input type="button" class="btn btn--warning" value="fieldset[disabled] input[type=button].btn.btn--warning">
+            <input type="submit" class="btn btn--warning" value="fieldset[disabled] input[type=submit].btn.btn--warning">
+            <input type="reset" class="btn btn--warning" value="fieldset[disabled] input[type=reset].btn.btn--warning">
+            <a class="btn btn--warning" href="#" role="button">fieldset[disabled] a.btn.btn--warning</a>
+          </div>
+          <div class="app-sectionBlock app-block">
+            <button type="button" class="btn btn--danger">fieldset[disabled] button.btn.btn--danger</button>
+            <input type="button" class="btn btn--danger" value="fieldset[disabled] input[type=button].btn.btn--danger">
+            <input type="submit" class="btn btn--danger" value="fieldset[disabled] input[type=submit].btn.btn--danger">
+            <input type="reset" class="btn btn--danger" value="fieldset[disabled] input[type=reset].btn.btn--danger">
+            <a class="btn btn--danger" href="#" role="button">fieldset[disabled] a.btn.btn--danger</a>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Unstyled button</h2>
       <div class="app-sectionBlock">
         <p style="width: 34em;">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="app-block app-block">
-          <button type="button" class="btn btn--unstyled">Unstyled button</button>
-          <input type="button" class="btn btn--unstyled" value="Unstyled input tag button">
-          <a class="btn btn--unstyled" href="#" role="button">Link as a unstyled button</a>
+          <button type="button" class="btn-unstyled">button.btn-unstyled</button>
+          <input type="button" class="btn-unstyled" value="input[type=button].btn-unstyled">
+          <input type="submit" class="btn-unstyled" value="input[type=submit].btn-unstyled">
+          <input type="reset" class="btn-unstyled" value="input[type=reset].btn-unstyled">
+          <a class="btn-unstyled" href="#" role="button">a.btn-unstyled</a>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Focus class unstyled buttons</h2>
+      <h2 class="h2">Unstyled button active class</h2>
       <div class="app-sectionBlock">
         <p style="width: 34em;">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="app-block">
-          <button type="button" class="btn btn--unstyled btn--focus">Unstyled button</button>
-          <input class="btn btn--unstyled btn--focus" type="button" value="Unstyled input tag button">
-          <a class="btn btn--unstyled btn--focus" href="#" role="button">Link as a unstyled button</a>
+          <button type="button" class="btn-unstyled state-active">button.btn-unstyled.state-active</button>
+          <input type="button" class="btn-unstyled state-active" value="input[type=button].btn-unstyled.state-active">
+          <input type="submit" class="btn-unstyled state-active" value="input[type=submit].btn-unstyled.state-active">
+          <input type="reset" class="btn-unstyled state-active" value="input[type=reset].btn-unstyled.state-active">
+          <a class="btn-unstyled state-active" href="#" role="button">a.btn-unstyled.state-active</a>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Active class unstyled buttons</h2>
+      <h2 class="h2">Unstyled button focus class</h2>
       <div class="app-sectionBlock">
         <p style="width: 34em;">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="app-block">
-          <button type="button" class="btn btn--unstyled btn--active">Unstyled button</button>
-          <input class="btn btn--unstyled btn--active" type="button" value="Unstyled input tag button">
-          <a class="btn btn--unstyled btn--active" href="#" role="button">Link as a unstyled button</a>
+          <button type="button" class="btn-unstyled state-focus">button.btn-unstyled.state-focus</button>
+          <input type="button" class="btn-unstyled state-focus" value="input[type=button].btn-unstyled.state-focus">
+          <input type="submit" class="btn-unstyled state-focus" value="input[type=submit].btn-unstyled.state-focus">
+          <input type="reset" class="btn-unstyled state-focus" value="input[type=reset].btn-unstyled.state-focus">
+          <a class="btn-unstyled state-focus" href="#" role="button">a.btn-unstyled.state-focus</a>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Disabled class unstyled buttons</h2>
+      <h2 class="h2">Unstyled button disabled class</h2>
       <div class="app-sectionBlock">
         <p style="width: 34em;">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="app-block">
-          <button type="button" class="btn btn--unstyled btn--disabled" tabindex="-1">Unstyled button</button>
-          <input class="btn btn--unstyled btn--disabled" type="button" value="Unstyled input tag button" tabindex="-1">
-          <a class="btn btn--unstyled btn--disabled" href="#" tabindex="-1" role="button">Link as a unstyled button</a>
+          <button type="button" class="btn-unstyled state-disabled">button.btn-unstyled.state-disabled</button>
+          <input type="button" class="btn-unstyled state-disabled" value="input[type=button].btn-unstyled.state-disabled">
+          <input type="submit" class="btn-unstyled state-disabled" value="input[type=submit].btn-unstyled.state-disabled">
+          <input type="reset" class="btn-unstyled state-disabled" value="input[type=reset].btn-unstyled.state-disabled">
+          <a class="btn-unstyled state-disabled" href="#" role="button">a.btn-unstyled.state-disabled</a>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Disabled unstyled buttons</h2>
+      <h2 class="h2">Unstyled button disabled state</h2>
       <div class="app-sectionBlock">
         <p style="width: 34em;">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="app-block">
-          <button type="button" class="btn btn--unstyled" disabled>Unstyled button</button>
-          <input type="button" class="btn btn--unstyled" value="Unstyled input tag button" disabled>
+          <button type="button" class="btn-unstyled" disabled>button.btn-unstyled:disabled</button>
+          <input type="button" class="btn-unstyled" value="input[type=button].btn-unstyled:disabled" disabled>
+          <input type="submit" class="btn-unstyled" value="input[type=submit].btn-unstyled:disabled" disabled>
+          <input type="reset" class="btn-unstyled" value="input[type=reset].btn-unstyled:disabled" disabled>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Disabled fielset unstyled buttons</h2>
-      <div class="app-sectionBlock">
-        <p style="width: 34em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-          <form class="form">
-            <fieldset class="form-fieldset" disabled>
-              <div class="app-block">
-                <button type="button" class="btn btn--unstyled">Unstyled button</button>
-                <input class="btn btn--unstyled" type="button" value="Unstyled input tag button">
-                <a class="btn btn--unstyled" href="#" tabindex="-1" role="button">Link as an unstyled button</a>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
+      <form class="form">
+        <fieldset class="form-fieldset" disabled>
+          <h2 class="h2">Unstyled button fieldset disabled</h2>
+          <div class="app-sectionBlock">
+            <p style="width: 34em;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="app-block">
+              <button type="button" class="btn-unstyled">fieldset:disabled button.btn-unstyled</button>
+              <input type="button" class="btn-unstyled" value="fieldset:disabled input[type=button].btn-unstyled">
+              <input type="submit" class="btn-unstyled" value="fieldset:disabled input[type=submit].btn-unstyled">
+              <input type="reset" class="btn-unstyled" value="fieldset:disabled input[type=reset].btn-unstyled">
+              <a class="btn-unstyled" href="#" role="button">fieldset:disabled a.btn-unstyled</a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
     </div>
   
     <div class="app-section">
       <h2 class="h2">Button group</h2>
       <div class="app-sectionBlock">
         <div class="btn-group">
-          <button type="button" class="btn">Button</button>
-          <input class="btn" type="button" value="Input button">
-          <button type="button" class="btn btn--focus">Focus class</button>
-          <button type="button" class="btn btn--active">Active class</button>
-          <button type="button" class="btn btn--disabled" tabindex="-1">Disabled class</button>
-          <button type="button" class="btn" disabled>Disabled</button>
+          <button type="button" class="btn">button.btn</button>
+          <input class="btn" type="button" value="input[type=button].btn">
+          <input class="btn" type="submit" value="input[type=submit].btn">
+          <input class="btn" type="reset" value="input[type=reset].btn">
+          <a class="btn" href="#" role="button">a.btn</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn btn--success">button.btn.btn--success</button>
+          <input class="btn btn--success" type="button" value="input[type=button].btn.btn--success">
+          <input class="btn btn--success" type="submit" value="input[type=submit].btn.btn--success">
+          <input class="btn btn--success" type="reset" value="input[type=reset].btn.btn--success">
+          <a class="btn btn--success" href="#" role="button">a.btn.btn--success</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn btn--warning">button.btn.btn--warning</button>
+          <input class="btn btn--warning" type="button" value="input[type=button].btn.btn--warning">
+          <input class="btn btn--warning" type="submit" value="input[type=submit].btn.btn--warning">
+          <input class="btn btn--warning" type="reset" value="input[type=reset].btn.btn--warning">
+          <a class="btn btn--warning" href="#" role="button">a.btn.btn--warning</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn btn--danger">button.btn.btn--danger</button>
+          <input class="btn btn--danger" type="button" value="input[type=button].btn.btn--danger">
+          <input class="btn btn--danger" type="submit" value="input[type=submit].btn.btn--danger">
+          <input class="btn btn--danger" type="reset" value="input[type=reset].btn.btn--danger">
+          <a class="btn btn--danger" href="#" role="button">a.btn.btn--danger</a>
         </div>
       </div>
     </div>
   
     <div class="app-section">
-      <h2 class="h2">Button as a checkbox</h2>
-      <div class="app-sectionBlock app-block">
-        <button type="button" class="btn-control btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--checked">Checked button</button>
+      <h2 class="h2">Button group active class</h2>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-active">button.btn.state-active</button>
+          <input class="btn state-active" type="button" value="input[type=button].btn.state-active">
+          <input class="btn state-active" type="submit" value="input[type=submit].btn.state-active">
+          <input class="btn state-active" type="reset" value="input[type=reset].btn.state-active">
+          <a class="btn state-active" href="#" role="button">a.btn.state-active</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-active btn--success">button.btn.state-active.btn--success</button>
+          <input class="btn state-active btn--success" type="button" value="input[type=button].btn.state-active.btn--success">
+          <input class="btn state-active btn--success" type="submit" value="input[type=submit].btn.state-active.btn--success">
+          <input class="btn state-active btn--success" type="reset" value="input[type=reset].btn.state-active.btn--success">
+          <a class="btn state-active btn--success" href="#" role="button">a.btn.state-active.btn--success</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-active btn--warning">button.btn.state-active.btn--warning</button>
+          <input class="btn state-active btn--warning" type="button" value="input[type=button].btn.state-active.btn--warning">
+          <input class="btn state-active btn--warning" type="submit" value="input[type=submit].btn.state-active.btn--warning">
+          <input class="btn state-active btn--warning" type="reset" value="input[type=reset].btn.state-active.btn--warning">
+          <a class="btn state-active btn--warning" href="#" role="button">a.btn.state-active.btn--warning</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-active btn--danger">button.btn.state-active.btn--danger</button>
+          <input class="btn state-active btn--danger" type="button" value="input[type=button].btn.state-active.btn--danger">
+          <input class="btn state-active btn--danger" type="submit" value="input[type=submit].btn.state-active.btn--danger">
+          <input class="btn state-active btn--danger" type="reset" value="input[type=reset].btn.state-active.btn--danger">
+          <a class="btn state-active btn--danger" href="#" role="button">a.btn.state-active.btn--danger</a>
+        </div>
       </div>
     </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Button group focus class</h2>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-focus">button.btn.state-focus</button>
+          <input class="btn state-focus" type="button" value="input[type=button].btn.state-focus">
+          <input class="btn state-focus" type="submit" value="input[type=submit].btn.state-focus">
+          <input class="btn state-focus" type="reset" value="input[type=reset].btn.state-focus">
+          <a class="btn state-focus" href="#" role="button">a.btn.state-focus</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-focus btn--success">button.btn.state-focus.btn--success</button>
+          <input class="btn state-focus btn--success" type="button" value="input[type=button].btn.state-focus.btn--success">
+          <input class="btn state-focus btn--success" type="submit" value="input[type=submit].btn.state-focus.btn--success">
+          <input class="btn state-focus btn--success" type="reset" value="input[type=reset].btn.state-focus.btn--success">
+          <a class="btn state-focus btn--success" href="#" role="button">a.btn.state-focus.btn--success</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-focus btn--warning">button.btn.state-focus.btn--warning</button>
+          <input class="btn state-focus btn--warning" type="button" value="input[type=button].btn.state-focus.btn--warning">
+          <input class="btn state-focus btn--warning" type="submit" value="input[type=submit].btn.state-focus.btn--warning">
+          <input class="btn state-focus btn--warning" type="reset" value="input[type=reset].btn.state-focus.btn--warning">
+          <a class="btn state-focus btn--warning" href="#" role="button">a.btn.state-focus.btn--warning</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-focus btn--danger">button.btn.state-focus.btn--danger</button>
+          <input class="btn state-focus btn--danger" type="button" value="input[type=button].btn.state-focus.btn--danger">
+          <input class="btn state-focus btn--danger" type="submit" value="input[type=submit].btn.state-focus.btn--danger">
+          <input class="btn state-focus btn--danger" type="reset" value="input[type=reset].btn.state-focus.btn--danger">
+          <a class="btn state-focus btn--danger" href="#" role="button">a.btn.state-focus.btn--danger</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Button group disabled class</h2>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-disabled">button.btn.state-disabled</button>
+          <input class="btn state-disabled" type="button" value="input[type=button].btn.state-disabled">
+          <input class="btn state-disabled" type="submit" value="input[type=submit].btn.state-disabled">
+          <input class="btn state-disabled" type="reset" value="input[type=reset].btn.state-disabled">
+          <a class="btn state-disabled" href="#" role="button">a.btn.state-disabled</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-disabled btn--success">button.btn.state-disabled.btn--success</button>
+          <input class="btn state-disabled btn--success" type="button" value="input[type=button].btn.state-disabled.btn--success">
+          <input class="btn state-disabled btn--success" type="submit" value="input[type=submit].btn.state-disabled.btn--success">
+          <input class="btn state-disabled btn--success" type="reset" value="input[type=reset].btn.state-disabled.btn--success">
+          <a class="btn state-disabled btn--success" href="#" role="button">a.btn.state-disabled.btn--success</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-disabled btn--warning">button.btn.state-disabled.btn--warning</button>
+          <input class="btn state-disabled btn--warning" type="button" value="input[type=button].btn.state-disabled.btn--warning">
+          <input class="btn state-disabled btn--warning" type="submit" value="input[type=submit].btn.state-disabled.btn--warning">
+          <input class="btn state-disabled btn--warning" type="reset" value="input[type=reset].btn.state-disabled.btn--warning">
+          <a class="btn state-disabled btn--warning" href="#" role="button">a.btn.state-disabled.btn--warning</a>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn state-disabled btn--danger">button.btn.state-disabled.btn--danger</button>
+          <input class="btn state-disabled btn--danger" type="button" value="input[type=button].btn.state-disabled.btn--danger">
+          <input class="btn state-disabled btn--danger" type="submit" value="input[type=submit].btn.state-disabled.btn--danger">
+          <input class="btn state-disabled btn--danger" type="reset" value="input[type=reset].btn.state-disabled.btn--danger">
+          <a class="btn state-disabled btn--danger" href="#" role="button">a.btn.state-disabled.btn--danger</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Button group disabled state</h2>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn" disabled>button.btn:disabled</button>
+          <input class="btn" type="button" value="input[type=button].btn:disabled" disabled>
+          <input class="btn" type="submit" value="input[type=submit].btn:disabled" disabled>
+          <input class="btn" type="reset" value="input[type=reset].btn:disabled" disabled>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn btn--success" disabled>button.btn.btn--success:disabled</button>
+          <input class="btn btn--success" type="button" value="input[type=button].btn.btn--success:disabled" disabled>
+          <input class="btn btn--success" type="submit" value="input[type=submit].btn.btn--success:disabled" disabled>
+          <input class="btn btn--success" type="reset" value="input[type=reset].btn.btn--success:disabled" disabled>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn btn--warning" disabled>button.btn.btn--warning:disabled</button>
+          <input class="btn btn--warning" type="button" value="input[type=button].btn.btn--warning:disabled" disabled>
+          <input class="btn btn--warning" type="submit" value="input[type=submit].btn.btn--warning:disabled" disabled>
+          <input class="btn btn--warning" type="reset" value="input[type=reset].btn.btn--warning:disabled" disabled>
+        </div>
+      </div>
+      <div class="app-sectionBlock">
+        <div class="btn-group">
+          <button type="button" class="btn btn--danger" disabled>button.btn.btn--danger:disabled</button>
+          <input class="btn btn--danger" type="button" value="input[type=button].btn.btn--danger:disabled" disabled>
+          <input class="btn btn--danger" type="submit" value="input[type=submit].btn.btn--danger:disabled" disabled>
+          <input class="btn btn--danger" type="reset" value="input[type=reset].btn.btn--danger:disabled" disabled>
+        </div>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <form class="form">
+        <fieldset class="form-fieldset" disabled>
+          <h2 class="h2">Button group fieldset disabled</h2>
+          <div class="app-sectionBlock">
+            <div class="btn-group">
+              <button type="button" class="btn">fieldset:disabled button.btn</button>
+              <input class="btn" type="button" value="fieldset:disabled input[type=button].btn">
+              <input class="btn" type="submit" value="fieldset:disabled input[type=submit].btn">
+              <input class="btn" type="reset" value="fieldset:disabled input[type=reset].btn">
+              <a class="btn" href="#" role="button">fieldset:disabled a.btn</a>
+            </div>
+          </div>
+          <div class="app-sectionBlock">
+            <div class="btn-group">
+              <button type="button" class="btn btn--success">fieldset:disabled button.btn.btn--success</button>
+              <input class="btn btn--success" type="button" value="fieldset:disabled input[type=button].btn.btn--success">
+              <input class="btn btn--success" type="submit" value="fieldset:disabled input[type=submit].btn.btn--success">
+              <input class="btn btn--success" type="reset" value="fieldset:disabled input[type=reset].btn.btn--success">
+              <a class="btn btn--success" href="#" role="button">fieldset:disabled a.btn.btn--success</a>
+            </div>
+          </div>
+          <div class="app-sectionBlock">
+            <div class="btn-group">
+              <button type="button" class="btn btn--warning">fieldset:disabled button.btn.btn--warning</button>
+              <input class="btn btn--warning" type="button" value="fieldset:disabled input[type=button].btn.btn--warning">
+              <input class="btn btn--warning" type="submit" value="fieldset:disabled input[type=submit].btn.btn--warning">
+              <input class="btn btn--warning" type="reset" value="fieldset:disabled input[type=reset].btn.btn--warning">
+              <a class="btn btn--warning" href="#" role="button">fieldset:disabled a.btn.btn--warning</a>
+            </div>
+          </div>
+          <div class="app-sectionBlock">
+            <div class="btn-group">
+              <button type="button" class="btn btn--danger">fieldset:disabled button.btn.btn--danger</button>
+              <input class="btn btn--danger" type="button" value="fieldset:disabled input[type=button].btn.btn--danger">
+              <input class="btn btn--danger" type="submit" value="fieldset:disabled input[type=submit].btn.btn--danger">
+              <input class="btn btn--danger" type="reset" value="fieldset:disabled input[type=reset].btn.btn--danger">
+              <a class="btn btn--danger" href="#" role="button">fieldset:disabled a.btn.btn--danger</a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Check button</h2>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-check">
+          <input type="checkbox" />
+          label.btn-check input[type=checkbox]
+        </label>
+        <label class="btn-check">
+          <input type="checkbox" checked />
+          label.btn-check input[type=checkbox]:checked
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-check">
+          <input type="radio" name="radio-button" />
+          label.btn-check input[type=radio]
+        </label>
+        <label class="btn-check">
+          <input type="radio" name="radio-button" checked />
+          label.btn-check input[type=radio]:checked
+        </label>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Check button active class</h2>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-check state-active">
+          <input type="checkbox" />
+          label.btn-check.state-active input[type=checkbox]
+        </label>
+        <label class="btn-check state-active">
+          <input type="checkbox" checked />
+          label.btn-check.state-active input[type=checkbox]:checked
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-check state-active">
+          <input type="radio" name="radio-button-active-class" />
+          label.btn-check.state-active input[type=radio]
+        </label>
+        <label class="btn-check state-active">
+          <input type="radio" name="radio-button-active-class" checked />
+          label.btn-check.state-active input[type=radio]:checked
+        </label>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Check button focus class</h2>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-check state-focus">
+          <input type="checkbox" />
+          label.btn-check.state-focus input[type=checkbox]
+        </label>
+        <label class="btn-check state-focus">
+          <input type="checkbox" checked />
+          label.btn-check.state-focus input[type=checkbox]:checked
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-check state-focus">
+          <input type="radio" name="radio-button-focus-class" />
+          label.btn-check.state-focus input[type=radio]
+        </label>
+        <label class="btn-check state-focus">
+          <input type="radio" name="radio-button-focus-class" checked />
+          label.btn-check.state-focus input[type=radio]:checked
+        </label>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Check button disabled class</h2>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-check state-disabled">
+          <input type="checkbox" />
+          label.btn-check.state-disabled input[type=checkbox]
+        </label>
+        <label class="btn-check state-disabled">
+          <input type="checkbox" checked />
+          label.btn-check.state-disabled input[type=checkbox]:checked
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-check state-disabled">
+          <input type="radio" name="radio-button-disabled-class" />
+          label.btn-check.state-disabled input[type=radio]
+        </label>
+        <label class="btn-check state-disabled">
+          <input type="radio" name="radio-button-disabled-class" checked />
+          label.btn-check.state-disabled input[type=radio]:checked
+        </label>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Checkbox button disabled state</h2>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-check">
+          <input type="checkbox" disabled />
+          label.btn-check input[type=checkbox]:disabled
+        </label>
+        <label class="btn-check">
+          <input type="checkbox" disabled checked />
+          label.btn-check input[type=checkbox]:checked:disabled
+        </label>
+      </div>
+      <div class="app-sectionBlock app-block">
+        <label class="btn-check">
+          <input type="radio" name="radio-button-disabled-state" disabled />
+          label.btn-check input[type=radio]:disabled
+        </label>
+        <label class="btn-check">
+          <input type="radio" name="radio-button-disabled-state" disabled checked />
+          label.btn-check input[type=radio]:checked:disabled
+        </label>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <form class="form">
+        <fieldset class="form-fieldset" disabled>
+          <h2 class="h2">Checkbox button fieldset disabled</h2>
+          <div class="app-sectionBlock app-block">
+            <label class="btn-check">
+              <input type="checkbox" />
+              fieldset:disabled label.btn-check input[type=checkbox]
+            </label>
+            <label class="btn-check">
+              <input type="checkbox" checked />
+              fieldset:disabled label.btn-check input[type=checkbox]:checked
+            </label>
+          </div>
+          <div class="app-sectionBlock app-block">
+            <label class="btn-check">
+              <input type="radio" name="radio-button-fieldset-disabled" />
+              fieldset:disabled label.btn-check input[type=radio]
+            </label>
+            <label class="btn-check">
+              <input type="radio" name="radio-button-fieldset-disabled" checked />
+              fieldset:disabled label.btn-check input[type=radio]:checked
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   
     <div class="app-section">
       <h2 class="h2">Grouping checkbox buttons</h2>
@@ -353,9 +805,9 @@
       <h2 class="h2">Control button states</h2>
       <div class="app-sectionBlock app-block">
         <button type="button" class="btn-control btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--disabled" tabindex="-1">Button disabled class</button>
+        <button type="button" class="btn-control btn-control--has-label state-focus">Button focus class</button>
+        <button type="button" class="btn-control btn-control--has-label state-active">Button active class</button>
+        <button type="button" class="btn-control btn-control--has-label state-disabled" tabindex="-1">Button disabled class</button>
         <button type="button" class="btn-control btn-control--has-label" disabled>Button disabled</button>
       </div>
       <div class="app-sectionBlock">
@@ -371,9 +823,9 @@
       <h2 class="h2">Control button states</h2>
       <div class="app-sectionBlock app-block">
         <button type="button" class="btn-control btn-control--radio btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--disabled" tabindex="-1">Button disabled class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--has-label state-focus">Button focus class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--has-label state-active">Button active class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--has-label state-disabled" tabindex="-1">Button disabled class</button>
         <button type="button" class="btn-control btn-control--radio btn-control--has-label" disabled>Button disabled</button>
       </div>
       <div class="app-sectionBlock">
@@ -389,9 +841,9 @@
       <h2 class="h2">Checked control button states</h2>
       <div class="app-sectionBlock app-block">
         <button type="button" class="btn-control btn-control--has-label btn-control--checked">Button</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--checked btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--checked btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--has-label btn-control--checked btn-control--disabled" tabindex="-1">Button disabled class</button>
+        <button type="button" class="btn-control btn-control--has-label btn-control--checked state-focus">Button focus class</button>
+        <button type="button" class="btn-control btn-control--has-label btn-control--checked state-active">Button active class</button>
+        <button type="button" class="btn-control btn-control--has-label btn-control--checked state-disabled" tabindex="-1">Button disabled class</button>
         <button type="button" class="btn-control btn-control--has-label btn-control--checked" disabled>Button disabled</button>
       </div>
       <div class="app-sectionBlock">
@@ -407,9 +859,9 @@
       <h2 class="h2">Checked control button states</h2>
       <div class="app-sectionBlock app-block">
         <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked">Button</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked btn-control--disabled" tabindex="-1">Button disabled class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked state-focus">Button focus class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked state-active">Button active class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked state-disabled" tabindex="-1">Button disabled class</button>
         <button type="button" class="btn-control btn-control--radio btn-control--has-label btn-control--checked" disabled>Button disabled</button>
       </div>
       <div class="app-sectionBlock">
@@ -425,9 +877,9 @@
       <h2 class="h2">Error control button states</h2>
       <div class="app-sectionBlock app-block">
         <button type="button" class="btn-control btn-control--error btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--disabled" tabindex="-1">Button disabled class</button>
+        <button type="button" class="btn-control btn-control--error btn-control--has-label state-focus">Button focus class</button>
+        <button type="button" class="btn-control btn-control--error btn-control--has-label state-active">Button active class</button>
+        <button type="button" class="btn-control btn-control--error btn-control--has-label state-disabled" tabindex="-1">Button disabled class</button>
         <button type="button" class="btn-control btn-control--error btn-control--has-label" disabled>Button disabled</button>
       </div>
       <div class="app-sectionBlock">
@@ -443,9 +895,9 @@
       <h2 class="h2">Error control button states</h2>
       <div class="app-sectionBlock app-block">
         <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label">Button</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--disabled" tabindex="-1">Button disabled class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label state-focus">Button focus class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label state-active">Button active class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label state-disabled" tabindex="-1">Button disabled class</button>
         <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label" disabled>Button disabled</button>
       </div>
       <div class="app-sectionBlock">
@@ -461,9 +913,9 @@
       <h2 class="h2">Error checked control button states</h2>
       <div class="app-sectionBlock app-block">
         <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked">Button</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked btn-control--disabled" tabindex="-1">Button disabled class</button>
+        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked state-focus">Button focus class</button>
+        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked state-active">Button active class</button>
+        <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked state-disabled" tabindex="-1">Button disabled class</button>
         <button type="button" class="btn-control btn-control--error btn-control--has-label btn-control--checked" disabled>Button disabled</button>
       </div>
       <div class="app-sectionBlock">
@@ -479,9 +931,9 @@
       <h2 class="h2">Error checked control button states</h2>
       <div class="app-sectionBlock app-block">
         <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked">Button</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked btn-control--focus">Button focus class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked btn-control--active">Button active class</button>
-        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked btn-control--disabled" tabindex="-1">Button disabled class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked state-focus">Button focus class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked state-active">Button active class</button>
+        <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked state-disabled" tabindex="-1">Button disabled class</button>
         <button type="button" class="btn-control btn-control--radio btn-control--error btn-control--has-label btn-control--checked" disabled>Button disabled</button>
       </div>
       <div class="app-sectionBlock">

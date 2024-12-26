@@ -1,0 +1,88 @@
+@use '../_mixins/button' as *;
+
+@mixin button-check(
+  $class,
+  $font-family,
+  $font-size,
+  $font-weight,
+  $line-height,
+  $border-width,
+  $border-radius,
+  $vertical-padding,
+  $horizontal-padding,
+  $transition,
+  $icon-bg-color,
+  $icon-border-color,
+  $icon-border-width,
+  $icon-border-radius,
+  $icon-opacity,
+  $icon-transition,
+  $icon-checked-bg-color,
+  $icon-checked-border-color,
+) {
+  @include button(
+    $class,
+    $font-family,
+    $font-size,
+    $font-weight,
+    $line-height,
+    $border-width,
+    $border-radius,
+    $vertical-padding,
+    $horizontal-padding,
+    $transition,
+  );
+
+  .#{$class}:has(input:disabled),
+  fieldset:disabled .#{$class}:has(input) {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  // 1. Not removed via appearance
+  .#{$class} input {
+    appearance: none;
+    background-color: $icon-bg-color;
+    border: $icon-border-width solid $icon-border-color;
+    content: "";
+    cursor: inherit;
+    display: block;
+    height: 1em;
+    margin: 0; // 1
+    margin-right: 0.4em;
+    opacity: $icon-opacity;
+    pointer-events: inherit;
+    width: 1em;
+  }
+
+  .#{$class} input:checked {
+    background-color: $icon-checked-bg-color;
+    border-color: $icon-checked-border-color;
+    // TODO Возможно стоит избавиться, либо добавить переменную
+    opacity: 1;
+  }
+
+  .#{$class} input:focus {
+    outline: none;
+  }
+
+  // Transition
+
+  .#{$class} input {
+    transition: $icon-transition;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    .#{$class} input {
+      transition: none;
+    }
+  }
+
+  .#{$class}:has(input[type="radio"]) {
+    border-radius: $icon-border-radius;
+  }
+
+  .#{$class} input[type="radio"] {
+    border-radius: 50%;
+  }
+}

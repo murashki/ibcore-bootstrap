@@ -23,18 +23,18 @@ textarea.form-control {
 }
 
 .form-control:focus,
-.form-control.form-control--focus {
+.form-control.state-focus {
   outline: none;
 }
 
 .form-control[readonly],
-.form-control.form-control--readonly {
+.form-control.state-readonly {
   cursor: default;
   opacity: 1;
 }
 
 .form-control:disabled,
-.form-control.form-control--disabled,
+.form-control.state-disabled,
 fieldset:disabled .form-control {
   cursor: default;
   opacity: 0.5;
@@ -51,7 +51,7 @@ fieldset:disabled .form-control {
   }
 }
 .form-control {
-  background-color: #fff;
+  background-color: #f5f5f8;
   border-color: #cdced9;
   color: #323442;
 }
@@ -61,52 +61,52 @@ fieldset:disabled .form-control {
 }
 
 .form-control:hover,
-.form-control.form-control--hover {
-  background-color: #fff;
+.form-control.state-hover {
+  background-color: #f5f5f8;
   border-color: rgb(183.2670454545, 184.7017045455, 200.4829545455);
   color: #323442;
 }
 
 .form-control:hover::placeholder,
-.form-control.form-control--hover::placeholder {
+.form-control.state-hover::placeholder {
   color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
 }
 
 .form-control:focus,
-.form-control.form-control--focus {
-  background-color: #fff;
+.form-control.state-focus {
+  background-color: #f5f5f8;
   border-color: rgb(183.2670454545, 184.7017045455, 200.4829545455);
   box-shadow: 0 0 0 0.2em rgba(183.2670454545, 184.7017045455, 200.4829545455, 0.5);
   color: #323442;
 }
 
 .form-control:focus::placeholder,
-.form-control.form-control--focus::placeholder {
+.form-control.state-focus::placeholder {
   color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
 }
 
 .form-control[readonly],
-.form-control.form-control--readonly {
-  background-color: rgb(248.625, 248.625, 248.625);
+.form-control.state-readonly {
+  background-color: rgb(237.5, 237.5, 242.75);
   border-color: #cdced9;
   color: #323442;
 }
 
 .form-control[readonly]::placeholder,
-.form-control.form-control--readonly::placeholder {
+.form-control.state-readonly::placeholder {
   color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
 }
 
 .form-control:disabled,
-.form-control.form-control--disabled,
+.form-control.state-disabled,
 fieldset:disabled .form-control {
-  background-color: #fff;
+  background-color: #f5f5f8;
   border-color: #cdced9;
   color: #323442;
 }
 
 .form-control:disabled::placeholder,
-.form-control.form-control--disabled::placeholder,
+.form-control.state-disabled::placeholder,
 fieldset:disabled .form-control::placeholder {
   color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
 }

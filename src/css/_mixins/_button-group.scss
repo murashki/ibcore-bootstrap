@@ -4,36 +4,39 @@
   $border-width
 ) {
   .#{$group-class} {
-    display: inline-flex;
+    align-items: center;
+    display: flex;
     position: relative;
-    vertical-align: middle;
     z-index: 0;
   }
 
-  .#{$group-class} .#{$class} {
+  .#{$group-class} > .#{$class} {
     flex: 0 1 auto;
     position: relative;
   }
 
-  .#{$group-class} .#{$class}:hover,
-  .#{$group-class} .#{$class}.#{$class}--hover {
+  .#{$group-class} > .#{$class}:hover,
+  .#{$group-class} > .state-hover {
     z-index: 1;
   }
 
-  .#{$group-class} .#{$class}:focus,
-  .#{$group-class} .#{$class}--focus,
-  .#{$group-class} .#{$class}:active,
-  .#{$group-class} .#{$class}--active {
+  .#{$group-class} > .#{$class}:focus,
+  .#{$group-class} > .state-focus {
     z-index: 2;
   }
 
-  .#{$group-class} .#{$class}:not(:first-child) {
+  .#{$group-class} > .#{$class}:active,
+  .#{$group-class} > .state-active {
+    z-index: 3;
+  }
+
+  .#{$group-class} > .#{$class}:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     margin-left: -$border-width;
   }
 
-  .#{$group-class} .#{$class}:not(:last-child) {
+  .#{$group-class} > .#{$class}:not(:last-child) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
   }

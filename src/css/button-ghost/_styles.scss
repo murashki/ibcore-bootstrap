@@ -1,7 +1,0 @@
-@use '../_mixins/button-ghost' as *;
-@use './variables' as *;
-
-@include button-ghost(
-  "btn-ghost",
-  $disabled-opacity: $btn-disabled-opacity,
-);

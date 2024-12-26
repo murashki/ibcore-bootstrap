@@ -8,7 +8,6 @@
   $border-radius,
   $vertical-padding,
   $horizontal-padding,
-  $disabled-opacity,
   $transition
 ) {
   .#{$class} {
@@ -31,18 +30,14 @@
     white-space: nowrap;
   }
 
-  .#{$class}:focus,
-  .#{$class}.#{$class}--focus {
-    outline: none;
-  }
-
   .#{$class}:disabled,
-  .#{$class}.#{$class}--disabled,
+  .#{$class}.state-disabled,
   fieldset:disabled .#{$class} {
     cursor: default;
-    opacity: $disabled-opacity;
     pointer-events: none;
   }
+
+  // Transition
 
   .#{$class} {
     transition: $transition;

@@ -1,0 +1,33 @@
+@use '../_mixins/button-check' as *;
+@use '../_mixins/button-check.variant' as *;
+@use './variables' as *;
+
+@include button-check(
+  "btn-check",
+  $font-family: $btn-check-font-family,
+  $font-size: $btn-check-font-size,
+  $font-weight: $btn-check-font-weight,
+  $line-height: $btn-check-line-height,
+  $border-width: $btn-check-border-width,
+  $border-radius: $btn-check-border-radius,
+  $vertical-padding: $btn-check-vertical-padding,
+  $horizontal-padding: $btn-check-horizontal-padding,
+  $transition: $btn-check-transition,
+  $icon-bg-color: $btn-check-icon-bg-color,
+  $icon-border-color: $btn-check-icon-border-color,
+  $icon-border-width: $btn-check-icon-border-width,
+  $icon-border-radius: $btn-check-icon-border-radius,
+  $icon-opacity: $btn-check-icon-opacity,
+  $icon-transition: $btn-check-icon-transition,
+  $icon-checked-bg-color: $btn-check-icon-checked-bg-color,
+  $icon-checked-border-color: $btn-check-icon-checked-border-color,
+);
+
+@include button-check-variant(
+  "btn-check",
+  "btn-check",
+  $color: $btn-check-color,
+  $bg-color: $btn-check-bg-color,
+  $border-color: $btn-check-border-color,
+  $disabled-opacity: $btn-check-disabled-opacity,
+);

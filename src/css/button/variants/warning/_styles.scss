@@ -1,4 +1,4 @@
-@use '../../../_mixins/button-variant' as *;
+@use '../../../_mixins/button.variant' as *;
 @use './variables' as *;
 
 @include button-variant(
@@ -7,4 +7,5 @@
   $color: $btn-warning-color,
   $bg-color: $btn-warning-bg-color,
   $border-color: $btn-warning-border-color,
+  $disabled-opacity: $btn-warning-disabled-opacity,
 );

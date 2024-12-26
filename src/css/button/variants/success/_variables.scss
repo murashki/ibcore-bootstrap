@@ -1,3 +1,6 @@
+@use '../../variables' as *;
+
 $btn-success-color: #fff !default;
 $btn-success-bg-color: #28a745 !default;
 $btn-success-border-color: $btn-success-bg-color !default;
+$btn-success-disabled-opacity: $btn-disabled-opacity !default;

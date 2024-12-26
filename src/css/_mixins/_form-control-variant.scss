@@ -36,19 +36,19 @@
   }
 
   .#{$modifier-class}:hover,
-  .#{$modifier-class}.#{$class}--hover {
+  .#{$modifier-class}.state-hover {
     background-color: $hover-bg-color;
     border-color: $hover-border-color;
     color: $hover-color;
   }
 
   .#{$modifier-class}:hover::placeholder,
-  .#{$modifier-class}.#{$class}--hover::placeholder {
+  .#{$modifier-class}.state-hover::placeholder {
     color: $hover-placeholder-color;
   }
 
   .#{$modifier-class}:focus,
-  .#{$modifier-class}.#{$class}--focus {
+  .#{$modifier-class}.state-focus {
     background-color: $focus-bg-color;
     border-color: $focus-border-color;
     box-shadow: $focus-box-shadow;
@@ -56,24 +56,24 @@
   }
 
   .#{$modifier-class}:focus::placeholder,
-  .#{$modifier-class}.#{$class}--focus::placeholder {
+  .#{$modifier-class}.state-focus::placeholder {
     color: $focus-placeholder-color;
   }
 
   .#{$modifier-class}[readonly],
-  .#{$modifier-class}.#{$class}--readonly {
+  .#{$modifier-class}.state-readonly {
     background-color: $readonly-bg-color;
     border-color: $readonly-border-color;
     color: $readonly-color;
   }
 
   .#{$modifier-class}[readonly]::placeholder,
-  .#{$modifier-class}.#{$class}--readonly::placeholder {
+  .#{$modifier-class}.state-readonly::placeholder {
     color: $readonly-placeholder-color;
   }
 
   .#{$modifier-class}:disabled,
-  .#{$modifier-class}.#{$class}--disabled,
+  .#{$modifier-class}.state-disabled,
   fieldset:disabled .#{$modifier-class} {
     background-color: $disabled-bg-color;
     border-color: $disabled-border-color;
@@ -81,7 +81,7 @@
   }
 
   .#{$modifier-class}:disabled::placeholder,
-  .#{$modifier-class}.#{$class}--disabled::placeholder,
+  .#{$modifier-class}.state-disabled::placeholder,
   fieldset:disabled .#{$modifier-class}::placeholder {
     color: $disabled-placeholder-color;
   }

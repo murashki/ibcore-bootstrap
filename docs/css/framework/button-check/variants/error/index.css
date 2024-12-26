@@ -1,0 +1,41 @@
+.btn-check--error {
+  background-color: #e3e4ea;
+  border-color: #dc3545;
+  color: #323442;
+}
+
+.btn-check--error[hover],
+.btn-check--error.state-hover {
+  background-color: rgb(213.8285714286, 215.2989795918, 224.1214285714);
+  border-color: rgb(200.082278481, 34.667721519, 50.5158227848);
+  color: #323442;
+}
+
+.btn-check--error:focus,
+.btn-check--error.state-focus {
+  background-color: rgb(212.4285714286, 213.9489795918, 223.0714285714);
+  border-color: rgb(200.082278481, 34.667721519, 50.5158227848);
+  box-shadow: 0 0 0 0.2em rgba(200.082278481, 34.667721519, 50.5158227848, 0.5);
+  color: #323442;
+  outline: none;
+}
+
+.btn-check--error:active,
+.btn-check--error.state-active {
+  background-color: rgb(212.4285714286, 213.9489795918, 223.0714285714);
+  border-color: rgb(200.082278481, 34.667721519, 50.5158227848);
+  box-shadow: 0 0 0 0.2em rgba(200.082278481, 34.667721519, 50.5158227848, 0.5);
+  color: #323442;
+}
+
+.btn-check--error:disabled,
+.btn-check--error.state-disabled,
+fieldset:disabled .btn-check--error {
+  background-color: #e3e4ea;
+  border-color: #dc3545;
+  box-shadow: none;
+  color: #323442;
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=index.css.map */

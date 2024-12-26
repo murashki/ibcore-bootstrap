@@ -13,13 +13,13 @@
 }
 
 .btn-link:hover,
-.btn-link.class--hover {
+.btn-link.state-hover {
   color: #007bff;
   text-decoration: underline;
 }
 
 .btn-link:focus,
-.btn-link.btn-link--focus {
+.btn-link.state-focus {
   color: #007bff;
   text-decoration: underline;
 }
@@ -29,13 +29,13 @@
 }
 
 .btn-link:active,
-.btn-link.btn-link--active {
+.btn-link.state-active {
   color: #007bff;
   text-decoration: underline;
 }
 
 .btn-link:disabled,
-.btn-link.btn-link--disabled,
+.btn-link.state-disabled,
 fieldset:disabled .btn-link {
   color: #007bff;
   cursor: default;

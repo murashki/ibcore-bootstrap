@@ -16,11 +16,8 @@
     display: block;
     height: 1em;
     opacity: $icon-opacity;
-    width: 1em;
-  }
-
-  .#{$class}:before {
     transition: $icon-transition;
+    width: 1em;
   }
 
   @media screen and (prefers-reduced-motion: reduce) {
@@ -29,13 +26,14 @@
     }
   }
 
-  .#{$class}--checked {}
-
-  .#{$class}--checked:before {
-    background-color: $icon-checked-bg-color;
-    border-color: $icon-checked-border-color;
-    opacity: 1;
-  }
+  // TODO - такого класса не должно быть
+  //.#{$class}--checked {}
+  //
+  //.#{$class}--checked:before {
+  //  background-color: $icon-checked-bg-color;
+  //  border-color: $icon-checked-border-color;
+  //  opacity: 1;
+  //}
 
   .#{$class}--has-label {}
 

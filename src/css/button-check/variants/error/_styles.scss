@@ -1,0 +1,11 @@
+@use '../../../_mixins/button.variant' as *;
+@use './variables' as *;
+
+@include button-variant(
+  "btn-check",
+  "btn-check--error",
+  $color: $btn-check-error-color,
+  $bg-color: $btn-check-error-bg-color,
+  $border-color: $btn-check-error-border-color,
+  $disabled-opacity: $btn-check-error-disabled-opacity,
+);

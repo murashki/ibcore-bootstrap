@@ -4,23 +4,24 @@
   color: #fff;
 }
 
-.btn--danger:hover,
-.btn--danger.btn--hover {
+.btn--danger[hover],
+.btn--danger.state-hover {
   background-color: rgb(217.9841772152, 41.3658227848, 58.2873417722);
   border-color: rgb(200.082278481, 34.667721519, 50.5158227848);
   color: #fff;
 }
 
 .btn--danger:focus,
-.btn--danger.btn--focus {
+.btn--danger.state-focus {
   background-color: rgb(210.9493670886, 36.5506329114, 53.2594936709);
   border-color: rgb(200.082278481, 34.667721519, 50.5158227848);
   box-shadow: 0 0 0 0.2em rgba(200.082278481, 34.667721519, 50.5158227848, 0.5);
   color: #fff;
+  outline: none;
 }
 
 .btn--danger:active,
-.btn--danger.btn--active {
+.btn--danger.state-active {
   background-color: rgb(210.9493670886, 36.5506329114, 53.2594936709);
   border-color: rgb(200.082278481, 34.667721519, 50.5158227848);
   box-shadow: 0 0 0 0.2em rgba(200.082278481, 34.667721519, 50.5158227848, 0.5);
@@ -28,12 +29,13 @@
 }
 
 .btn--danger:disabled,
-.btn--danger.btn--disabled,
-fieldset:disabled btn--danger {
+.btn--danger.state-disabled,
+fieldset:disabled .btn--danger {
   background-color: #dc3545;
   border-color: #dc3545;
   box-shadow: none;
   color: #fff;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=index.css.map */

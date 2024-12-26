@@ -1,4 +1,4 @@
-@mixin button-ghost(
+@mixin button-unstyled(
   $class,
   $disabled-opacity,
 ) {
@@ -14,25 +14,22 @@
     justify-content: center;
     line-height: inherit;
     padding: 0;
-    text-align: center;
     text-decoration: none;
-    vertical-align: middle;
-    white-space: nowrap;
     transition: none;
+    white-space: nowrap;
   }
 
   .#{$class},
   .#{$class}:hover,
-  .#{$class}.#{$class}--hover,
+  .#{$class}.state-hover,
   .#{$class}:focus,
-  .#{$class}.#{$class}--focus,
+  .#{$class}.state-focus,
   .#{$class}:active,
-  .#{$class}.#{$class}--active,
+  .#{$class}.state-active,
   .#{$class}:disabled,
-  .#{$class}.#{$class}--disabled,
+  .#{$class}.state-disabled,
   fieldset:disabled .#{$class} {
     background-color: transparent;
-    box-shadow: none;
     color: inherit;
   }
 
@@ -41,7 +38,7 @@
   }
 
   .#{$class}:disabled,
-  .#{$class}.#{$class}--disabled,
+  .#{$class}.state-disabled,
   fieldset:disabled .#{$class} {
     cursor: default;
     opacity: $disabled-opacity;

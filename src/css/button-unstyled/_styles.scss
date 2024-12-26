@@ -1,0 +1,7 @@
+@use '../_mixins/button-unstyled' as *;
+@use './variables' as *;
+
+@include button-unstyled(
+  "btn-unstyled",
+  $disabled-opacity: $btn-disabled-opacity,
+);

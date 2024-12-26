@@ -1,0 +1,35 @@
+@use '../_functions/smart-round' as *;
+@use '../button/variables' as *;
+
+$btn-check-color: $btn-color !default;
+$btn-check-font-family: $btn-font-family !default;
+$btn-check-font-size: 1em !default;
+  $btn-check-font-size-xs: get-btn-font-size-xs($btn-check-font-size) !default;
+  $btn-check-font-size-sm: get-btn-font-size-sm($btn-check-font-size) !default;
+  $btn-check-font-size-md: get-btn-font-size-md($btn-check-font-size) !default;
+  $btn-check-font-size-lg: get-btn-font-size-lg($btn-check-font-size) !default;
+  $btn-check-font-size-xl: get-btn-font-size-xl($btn-check-font-size) !default;
+$btn-check-font-weight: $btn-font-weight !default;
+$btn-check-line-height: $btn-line-height !default;
+$btn-check-bg-color: $btn-bg-color !default;
+  $btn-check-border-color: get-btn-border-color($btn-check-bg-color) !default;
+$btn-check-border-width: $btn-border-width !default;
+$btn-check-border-radius: $btn-border-radius !default;
+$btn-check-vertical-padding: $btn-vertical-padding !default;
+$btn-check-horizontal-padding: $btn-horizontal-padding !default;
+$btn-check-disabled-opacity: $btn-disabled-opacity !default;
+
+$btn-check-transition-appearance: $btn-transition-appearance !default;
+  $btn-check-transition: get-btn-transition($btn-transition-appearance) !default;
+
+$btn-check-icon-bg-color: transparent !default;
+$btn-check-icon-border-color: $btn-check-color !default;
+$btn-check-icon-border-width: 1px !default;
+$btn-check-icon-border-radius: calc(#{$btn-check-line-height} / 2 + #{$btn-check-vertical-padding} + #{$btn-check-border-width}) !default;
+$btn-check-icon-opacity: 0.2 !default;
+
+$btn-check-icon-transition-appearance: $btn-check-transition-appearance !default;
+$btn-check-icon-transition: $btn-check-transition !default;
+
+$btn-check-icon-checked-bg-color: $btn-check-color !default;
+$btn-check-icon-checked-border-color: $btn-check-color !default;

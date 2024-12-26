@@ -1,0 +1,6 @@
+@use '../../variables' as *;
+
+$btn-check-error-color: $btn-check-color !default;
+$btn-check-error-bg-color: $btn-check-bg-color !default;
+$btn-check-error-border-color: #dc3545 !default;
+$btn-check-error-disabled-opacity: $btn-check-disabled-opacity !default;
