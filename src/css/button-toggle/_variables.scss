@@ -1,5 +1,4 @@
 @use "sass:color";
-@use "../_functions/smart-round" as *;
 @use "../button/variables" as *;
 @use "../variables" as *;
 
@@ -20,7 +19,7 @@ $btn-toggle-bg-color: $btn-bg-color !default;
 $btn-toggle-border-width: $btn-border-width !default;
 $btn-toggle-border-radius: $btn-border-radius !default;
 $btn-toggle-vertical-padding: $btn-vertical-padding !default;
-$btn-toggle-horizontal-padding: calc($btn-toggle-vertical-padding + ($btn-toggle-line-height - $btn-toggle-icon-size) / 2) !default;
+$btn-toggle-horizontal-padding: calc($btn-toggle-vertical-padding + (1lh - $btn-toggle-icon-size) / 2) !default;
 $btn-toggle-inner-text-left-padding: $btn-horizontal-padding !default;
 $btn-toggle-disabled-opacity: $btn-disabled-opacity !default;
 

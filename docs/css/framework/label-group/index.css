@@ -1,26 +1,32 @@
+.label-group, .label-group-row, .label-group-column {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: baseline;
+}
+
 .label-group {
   display: flex;
   align-items: baseline;
 }
 
-.label-group--vertical {
-  align-items: flex-start;
+.label-group-column {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
 }
 
-.label-group > *:not(.label-group-ignored) {
-  margin-left: 0.64em;
+.label-group-column > *:first-child {
+  margin-bottom: 0.32em;
 }
 
-.label-group > *:not(.label-group-ignored):first-of-type {
-  margin-left: 0;
+.label-group-row {
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
 }
 
-.label-group--vertical > *:not(.label-group-ignored) {
-  margin-top: 0.32m;
-}
-
-.label-group--vertical > *:not(.label-group-ignored):first-of-type {
-  margin-top: 0;
+.label-group-row > *:first-child {
+  margin-right: 0.64em;
 }
 
 /*# sourceMappingURL=index.css.map */

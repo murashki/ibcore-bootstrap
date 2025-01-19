@@ -1,0 +1,5 @@
+@use "../../variables" as *;
+
+$btn-toggle-error-color: $btn-toggle-color !default;
+$btn-toggle-error-bg-color: #f63030 !default;;
+$btn-toggle-error-border-color: $btn-toggle-error-bg-color !default;

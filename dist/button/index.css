@@ -1,5 +1,4 @@
 .btn {
-  white-space: nowrap;
   cursor: pointer;
   user-select: none;
   display: flex;
@@ -10,6 +9,8 @@
   font-weight: inherit;
   line-height: 1.4em;
   text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
   border-width: 2px;
   border-style: solid;
   border-radius: 0.15em;
@@ -21,6 +22,7 @@
     transition: none;
   }
 }
+
 .btn:disabled, fieldset:disabled .btn, .btn.disabled {
   cursor: default;
   pointer-events: none;
@@ -32,6 +34,7 @@
   border-color: #e3e4ea;
   color: #000;
 }
+
 .btn:hover {
   background-color: rgb(212.4285714286, 213.9489795918, 223.0714285714);
   border-color: rgb(205.1428571429, 206.9234693878, 217.6071428571);

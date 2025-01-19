@@ -3,6 +3,7 @@
 
 @include label-group(
   "label-group",
-  $label-group-vertical-member-margin,
-  $label-group-horizontal-member-margin,
+  $label-group-ngb-margin,
+  $label-group-label-right-margin,
+  $label-group-label-bottom-margin,
 );

@@ -1,6 +1,4 @@
 @use "../_mixins/button" as *;
-@use "../_mixins/button.size" as *;
-@use "../_mixins/button.variant" as *;
 @use "./variables" as *;
 
 @include button(

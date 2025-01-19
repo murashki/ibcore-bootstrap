@@ -1,5 +1,4 @@
 @use "../_mixins/form-control" as *;
-@use "../_mixins/form-control-variant" as *;
 @use "./variables" as *;
 
 @include form-control(
@@ -21,8 +20,7 @@
 
 @include form-control-variant(
   "form-control",
-  "form-control",
-  $form-control-color,
-  $form-control-bg-color,
-  $form-control-border-color
+  $color: $form-control-color,
+  $bg-color: $form-control-bg-color,
+  $border-color: $form-control-border-color
 );

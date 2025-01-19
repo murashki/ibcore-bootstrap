@@ -1,0 +1,243 @@
+@use "../_tools/common" as *;
+
+//
+// Переключатель
+//
+@mixin BUTTON-TOGGLE($class-name) {
+  $BUTTON: ".#{$class-name}";
+
+  @include use($BUTTON) {
+    @content;
+  }
+}
+
+//
+// Переключатель внутри группы
+//
+@mixin BUTTON-TOGGLE--INSIDE-GROUP($class-name) {
+  $BUTTON-GROUP: ".#{$class-name}-group";
+
+  @include BUTTON-TOGGLE($class-name) {
+    @include exactly(that-is-inside($BUTTON-GROUP)) {
+      @content;
+    }
+  }
+}
+
+//
+// Переключатель с крыжиком
+//
+@mixin BUTTON-TOGGLE--WITH-CHECKBOX($class-name) {
+  $CHECKBOX: "[type=checkbox]";
+
+  @include BUTTON-TOGGLE($class-name) {
+    @include exactly(that-has($CHECKBOX)) {
+      @content;
+    }
+  }
+}
+
+//
+// Переключатель с кружком
+//
+@mixin BUTTON-TOGGLE--WITH-RADIO($class-name) {
+  $RADIO: "[type=radio]";
+
+  @include BUTTON-TOGGLE($class-name) {
+    @include exactly(that-has($RADIO)) {
+      @content;
+    }
+  }
+}
+
+//
+// Переключатель при наведении
+//
+@mixin BUTTON-TOGGLE--HOVER($class-name) {
+  @include BUTTON-TOGGLE($class-name) {
+    @include exactly(that-is(--HOVER)) {
+      @content;
+    }
+  }
+}
+
+//
+// Переключатель когда крыжик или кружок активные
+//
+@mixin BUTTON-TOGGLE--ACTIVE($class-name) {
+  $CHECKBOX: "[type=checkbox]";
+  $RADIO: "[type=radio]";
+
+  @include BUTTON-TOGGLE($class-name) {
+    @include exactly(that-has($CHECKBOX $RADIO, that-is(--ACTIVE))) {
+      @content;
+    }
+  }
+}
+
+//
+// Переключатель когда крыжик или кружок в фокусе
+//
+@mixin BUTTON-TOGGLE--FOCUS($class-name) {
+  $CHECKBOX: "[type=checkbox]";
+  $RADIO: "[type=radio]";
+
+  @include BUTTON-TOGGLE($class-name) {
+    @include exactly(that-has($CHECKBOX $RADIO, that-is(--FOCUS))) {
+      @content;
+    }
+  }
+}
+
+//
+// Переключатель когда крыжик или кружок выбраны
+//
+@mixin BUTTON-TOGGLE--CHECKED($class-name) {
+  $CHECKBOX: "[type=checkbox]";
+  $RADIO: "[type=radio]";
+
+  @include BUTTON-TOGGLE($class-name) {
+    @include exactly(that-has($CHECKBOX $RADIO, that-is(--CHECKED))) {
+      @content;
+    }
+  }
+}
+
+//
+// Переключатель с заблокированным крыжиком или кружком или когда в неактивной части формы
+//
+@mixin BUTTON-TOGGLE--DISABLED($class-name) {
+  $CHECKBOX: "[type=checkbox]";
+  $RADIO: "[type=radio]";
+
+  @include BUTTON-TOGGLE($class-name) {
+    @include exactly(that-has($CHECKBOX $RADIO, that-is(--DISABLED)) that-is-inside("fieldset:disabled")) {
+      @content;
+    }
+  }
+}
+
+//
+// Крыжик в переключателе
+//
+@mixin BUTTON-TOGGLE--CHECKBOX($class-name) {
+  $BUTTON: ".#{$class-name}";
+  $CHECKBOX: "[type=checkbox]";
+
+  @include use($CHECKBOX, that-is-inside($BUTTON)) {
+    @content;
+  }
+}
+
+//
+// Кружок в переключателе
+//
+@mixin BUTTON-TOGGLE--RADIO($class-name) {
+  $BUTTON: ".#{$class-name}";
+  $RADIO: "[type=radio]";
+
+  @include use($RADIO, that-is-inside($BUTTON)) {
+    @content;
+  }
+}
+
+//
+// Крыжик и кружок в переключателе
+//
+@mixin BUTTON-TOGGLE--CONTROL($class-name) {
+  $BUTTON: ".#{$class-name}";
+  $CHECKBOX: "[type=checkbox]";
+  $RADIO: "[type=radio]";
+
+  @include use($CHECKBOX $RADIO, that-is-inside($BUTTON)) {
+    @content;
+  }
+}
+
+//
+// Крыжик и кружок в переключателе при наведении
+//
+@mixin BUTTON-TOGGLE--CONTROL--HOVER($class-name) {
+  @include BUTTON-TOGGLE--CONTROL($class-name) {
+    @include exactly(that-is(--HOVER)) {
+      @content;
+    }
+  }
+}
+
+//
+// Крыжик и кружок в переключателе когда активные
+//
+@mixin BUTTON-TOGGLE--CONTROL--ACTIVE($class-name) {
+  @include BUTTON-TOGGLE--CONTROL($class-name) {
+    @include exactly(that-is(--ACTIVE)) {
+      @content;
+    }
+  }
+}
+
+//
+// Крыжик и кружок в переключателе когда в фокусе
+//
+@mixin BUTTON-TOGGLE--CONTROL--FOCUS($class-name) {
+  @include BUTTON-TOGGLE--CONTROL($class-name) {
+    @include exactly(that-is(--FOCUS)) {
+      @content;
+    }
+  }
+}
+
+//
+// Выбранные крыжик или кружок в переключателе
+//
+@mixin BUTTON-TOGGLE--CONTROL--CHECKED($class-name) {
+  @include BUTTON-TOGGLE--CONTROL($class-name) {
+    @include exactly(that-is(--CHECKED)) {
+      @content;
+    }
+  }
+}
+
+//
+// Текст переключателя
+//
+@mixin BUTTON-TOGGLE--TEXT($class-name) {
+  $BUTTON-TEXT: ".#{$class-name}-text";
+
+  @include use($BUTTON-TEXT) {
+    @content;
+  }
+}
+
+//
+// Группа переключателей
+//
+@mixin BUTTON-TOGGLE--GROUP($class-name) {
+  $BUTTON-GROUP: ".#{$class-name}-group";
+
+  @include use($BUTTON-GROUP) {
+    @content;
+  }
+}
+
+//
+// Ярлык группы переключателей
+//
+@mixin BUTTON-TOGGLE--GROUP--LABEL($class-name) {
+  $BUTTON-GROUP-LABEL: ".#{$class-name}-label";
+
+  @include use($BUTTON-GROUP-LABEL) {
+    @content;
+  }
+}
+
+//
+// Ярлык группы переключателей в неактивной группе полей или когда заблокирован
+//
+@mixin BUTTON-TOGGLE--GROUP--LABEL--DISABLED($class-name) {
+  @include BUTTON-TOGGLE--GROUP--LABEL($class-name) {
+    @include exactly(that-is-inside("fieldset:disabled") that-is(".disabled")) {
+      @content;
+    }
+  }
+}

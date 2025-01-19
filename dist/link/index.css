@@ -3,20 +3,20 @@
   text-decoration: none;
 }
 
-.link:visited,
-.link.visited {
-  color: #007bff;
-}
-
 .link:hover {
   color: #007bff;
   text-decoration: underline;
 }
 
 .link:focus {
+  outline: none;
   color: #007bff;
   text-decoration: underline;
-  outline: none;
+}
+
+.link:visited, .link.visited {
+  color: #007bff;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=index.css.map */

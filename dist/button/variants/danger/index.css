@@ -3,6 +3,7 @@
   border-color: #f63030;
   color: #000;
 }
+
 .btn--danger:hover {
   background-color: rgb(244.9375, 23.5625, 23.5625);
   border-color: rgb(244.40625, 11.34375, 11.34375);

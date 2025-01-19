@@ -1,0 +1,93 @@
+@use "../_tools/common" as *;
+
+//
+// Базовая группа с ярлыком
+//
+@mixin LABEL-GROUP-COMMON($class-name) {
+  $LABEL-GROUP: ".#{$class-name}";
+
+  @include use($LABEL-GROUP) {
+    @content;
+  }
+}
+
+//
+// Горизонтальная группа с ярлыком
+//
+@mixin LABEL-GROUP-ROW($class-name) {
+  $LABEL-GROUP-ROW: ".#{$class-name}-row";
+
+  @include use($LABEL-GROUP-ROW) {
+    @content;
+  }
+}
+
+//
+// Вертикальная группа с ярлыком
+//
+@mixin LABEL-GROUP-COLUMN($class-name) {
+  $LABEL-GROUP-COLUMN: ".#{$class-name}-column";
+
+  @include use($LABEL-GROUP-COLUMN) {
+    @content;
+  }
+}
+
+//
+// Любая группы с ярлыком
+//
+@mixin LABEL-GROUP($class-name) {
+  $LABEL-GROUP: ".#{$class-name}";
+  $LABEL-GROUP-ROW: ".#{$class-name}-row";
+  $LABEL-GROUP-COLUMN: ".#{$class-name}-column";
+
+  @include use($LABEL-GROUP $LABEL-GROUP-ROW $LABEL-GROUP-COLUMN) {
+    @content;
+  }
+}
+
+//
+// Ярлык базовой группы
+//
+@mixin LABEL-GROUP-COMMON--LABEL($class-name) {
+  $LABEL-GROUP-COMMON: ".#{$class-name}";
+
+  @include use(--ANY, that-is(--LAST-CHILD), that-is-child-of($LABEL-GROUP-COMMON)) {
+    @content;
+  }
+}
+
+//
+// Ярлык горизонтальной группы
+//
+@mixin LABEL-GROUP-ROW--LABEL($class-name) {
+  $LABEL-GROUP-ROW: ".#{$class-name}-row";
+
+  @include use(--ANY, that-is(--FIRST-CHILD), that-is-child-of($LABEL-GROUP-ROW)) {
+    @content;
+  }
+}
+
+//
+// Ярлык вертикальной группы
+//
+@mixin LABEL-GROUP-COLUMN--LABEL($class-name) {
+  $LABEL-GROUP-COLUMN: ".#{$class-name}-column";
+
+  @include use(--ANY, that-is(--FIRST-CHILD), that-is-child-of($LABEL-GROUP-COLUMN)) {
+    @content;
+  }
+}
+
+//
+// Ярлык любой группы
+//
+@mixin LABEL-GROUP--LABEL($class-name) {
+  $LABEL-GROUP: ".#{$class-name}";
+  $LABEL-GROUP-ROW: ".#{$class-name}-row";
+  $LABEL-GROUP-COLUMN: ".#{$class-name}-column";
+
+  @include use(--ANY, that-is(--FIRST-CHILD), that-is-child-of($LABEL-GROUP $LABEL-GROUP-ROW $LABEL-GROUP-COLUMN)) {
+    @content;
+  }
+}

@@ -4,34 +4,21 @@
       "key": "grid",
       "title": "Grid",
       "modules": [
-        "grid"
+        "index.css"
       ]
     },
     {
       "key": "forms",
       "title": "Forms",
       "modules": [
-        "form-control",
-        "form-control/variants/error",
-        "forms",
-        "grid"
+        "index.css"
       ]
     },
     {
       "key": "buttons",
       "title": "Buttons",
       "modules": [
-        "button",
-        "button/variants/danger",
-        "button/variants/success",
-        "button/variants/warning",
-        "button-toggle",
-        "button-toggle/variants/danger",
-        "button-link",
-        "form-group",
-        "forms",
-        "label-group",
-        "grid"
+        "index.css"
       ]
     }
   ]

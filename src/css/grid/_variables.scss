@@ -11,9 +11,9 @@
 //         ┌────────$container-width-md─────────┐-10/120-|              |              |
 //         └────────────────740─────────────────┘        |              |              |
 // ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─┐              |              |              |
-//         ┌─$container-width-sm─┐--0/10--|              |              |              |
+//         ┌─$container-width-sm─┐--0/110-|              |              |              |
 //         └─────────540─────────┘        759            979            1199           1419
-// ───────────────────────────────sm──────┘┌─────md──────┘┌─────lg──────┘┌─────xl──────┘┌─────max──────>
+// ───────────────────────────────sm──────┘┌─────md──────┘┌─────lg──────┘┌─────xl──────┘┌─────xxl──────>
 //                                col      |     col      |     col      |     col      |     col
 //                               col-x     |    col-xl    |    col-xl    |    col-xl    |
 //                               col-lg    |    col-lg    |    col-lg    |              1420
@@ -35,14 +35,14 @@ $container-width-sm: $container-min-width !default;
 $container-width-md: 740px !default;
 $container-width-lg: 960px !default;
 $container-width-xl: 1180px !default;
-$container-width-max: $container-max-width !default;
+$container-width-xxl: $container-max-width !default;
 
-$container-gutter-sm: 30px !default;
-$container-gutter-md: 35px !default;
+$container-gutter-sm: 20px !default;
+$container-gutter-md: 30px !default;
 $container-gutter-lg: 40px !default;
 $container-gutter-xl: 60px !default;
-$container-gutter-max: 80px !default;
+$container-gutter-xxl: 80px !default;
 
 $grid-gutter-sm: 10px !default;
-$grid-gutter: 20px !default;
+$grid-gutter-md: 20px !default;
 $grid-gutter-lg: 30px !default;

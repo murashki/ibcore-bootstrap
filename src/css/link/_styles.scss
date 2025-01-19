@@ -1,22 +1,14 @@
+@use '../_mixins/link' as *;
 @use "./variables" as *;
 
-.link {
-  color: $link-color;
-  text-decoration: $link-text-decoration;
-}
-
-.link:visited,
-.link.visited {
-  color: $link-visited-color;
-}
-
-.link:hover {
-  color: $link-hover-color;
-  text-decoration: $link-hover-text-decoration;
-}
-
-.link:focus {
-  color: $link-focus-color;
-  text-decoration: $link-focus-text-decoration;
-  outline: none;
-}
+@include link(
+  "link",
+  $link-color,
+  $link-text-decoration,
+  $link-hover-color,
+  $link-hover-text-decoration,
+  $link-focus-color,
+  $link-focus-text-decoration,
+  $link-visited-color,
+  $link-visited-text-decoration,
+);

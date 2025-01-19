@@ -1,5 +1,62 @@
-@use "./button" as *;
-@use "./common" as *;
+@use "sass:color";
+@use "../_skeletons/button-toggle" as *;
+@use "../_tools/style" as *;
+
+@function get-hover-color($color) {
+  @return $color;
+}
+
+@function get-hover-bg-color($bg-color) {
+  @return color.adjust($bg-color, $lightness: -5%);
+}
+
+@function get-hover-border-color($border-color) {
+  @return color.adjust($border-color, $lightness: -7.5%);
+}
+
+@function get-focus-color($color) {
+  @return $color;
+}
+
+@function get-focus-bg-color($bg-color) {
+  @return color.adjust($bg-color, $lightness: -5%);
+}
+
+@function get-focus-border-color($border-color) {
+  @return color.adjust($border-color, $lightness: -7.5%);
+}
+
+@function get-focus-box-shadow($focus-border-color) {
+  @return 0 0 0 0.2em rgba($focus-border-color, 0.5);
+}
+
+@function get-active-color($color) {
+  @return $color;
+}
+
+@function get-active-bg-color($bg-color) {
+  @return color.adjust($bg-color, $lightness: -5%);
+}
+
+@function get-active-border-color($border-color) {
+  @return color.adjust($border-color, $lightness: -7.5%);
+}
+
+@function get-active-box-shadow($active-border-color) {
+  @return 0 0 0 0.2em rgba($active-border-color, 0.5);
+}
+
+@function get-disabled-color($color) {
+  @return $color;
+}
+
+@function get-disabled-bg-color($bg-color) {
+  @return $bg-color;
+}
+
+@function get-disabled-border-color($border-color) {
+  @return $border-color;
+}
 
 @mixin button-toggle(
   $class-name,
@@ -25,139 +82,119 @@
   $group-ngb-margin,
   $disabled-opacity,
 ) {
-  $button: ".#{$class-name}";
-  $button-group: ".#{$class-name}-group";
-  $button-text: ".#{$class-name}-text";
-  $button-label: ".#{$class-name}-label";
-  $checkbox: "input[type=checkbox]";
-  $radio: "input[type=radio]";
-
-  //
-  // Кнопка
-  //
-  @include use($button) {
+  @include BUTTON-TOGGLE($class-name) {
     position: relative;
-    white-space: nowrap;
-
     @include cursor-style(pointer, $user-select: none);
     @include display-style(flex, center, center);
-    @include font-style(--UNDEFINED, $font-size, $font-weight, $font-family, $line-height, none);
+    @include font-style(--UNDEFINED, $font-size, $font-weight, $font-family, $line-height, none, $white-space: nowrap);
     @include layout-style(--UNDEFINED, --UNDEFINED, $border-width, solid, $border-radius);
     @include padding-style($vertical-padding, $horizontal-padding);
     @include transition-style($transition);
-
-    //
-    // Кнопка внутри группы с ярлыком
-    //
-    @include exactly(that-is-inside($button-group)) {
-      @include padding-style($vertical-padding, $vertical-padding);
-    }
-
-    //
-    // Кнопка с заблокированным крыжиком или кружком  или когда в неактивной части формы
-    //
-    @include exactly(that-has($checkbox $radio, that-is(--DISABLED)) that-is-inside("fieldset:disabled")) {
-      @include cursor-style(default, none);
-      @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
-    }
-
-    //
-    // Кнопка с крыжиком
-    //
-    @include exactly(that-has($checkbox)) {}
-
-    //
-    // Кнопка с кружком
-    //
-    @include exactly(that-has($radio)) {
-      $border-radius: calc($line-height / 2 + $vertical-padding + $border-width);
-
-      @include layout-style(--UNDEFINED, --UNDEFINED, $border-radius: $border-radius);
-    }
   }
 
-  //
-  // Крыжик и кружок
-  //
-  @include use($checkbox $radio, that-is-inside($button)) {
+  @include BUTTON-TOGGLE--INSIDE-GROUP($class-name) {
+    @include padding-style($vertical-padding, $vertical-padding);
+  }
+
+  @include BUTTON-TOGGLE--DISABLED($class-name) {
+    @include cursor-style(default, none);
+    @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
+  }
+
+  @include BUTTON-TOGGLE--WITH-RADIO($class-name) {
+    @include layout-style(--UNDEFINED, --UNDEFINED, $border-radius: calc(1lh / 2 + $vertical-padding + $border-width));
+  }
+
+  @include BUTTON-TOGGLE--CONTROL($class-name) {
     appearance: none;
     content: "";
     // Not removed via appearance
     margin: 0;
-
     @include cursor-style(inherit, inherit);
     @include display-style(block);
     @include layout-style($icon-bg-color, $icon-border-color, $icon-border-width, solid);
     @include size-style($icon-size, $icon-size);
     @include transition-style($transition);
-
-    //
-    // Крыжик и кружок в фокусе
-    //
-    @include exactly(that-is(--FOCUS)) {
-      outline: none;
-    }
-
-    //
-    // Выбранный крыжик или кружок
-    //
-    @include exactly(that-is(--CHECKED)) {
-      @include layout-style($icon-checked-bg-color, $icon-checked-border-color);
-    }
   }
 
-  //
-  // Крыжик
-  //
-  @include use($checkbox, that-is-inside($button)) {}
+  @include BUTTON-TOGGLE--CONTROL--FOCUS($class-name) {
+    outline: none;
+  }
 
-  //
-  // Кружок
-  //
-  @include use($radio, that-is-inside($button)) {
+  @include BUTTON-TOGGLE--CONTROL--CHECKED($class-name) {
+    @include layout-style($icon-checked-bg-color, $icon-checked-border-color);
+  }
+
+  @include BUTTON-TOGGLE--RADIO($class-name) {
     @include layout-style(--UNDEFINED, --UNDEFINED, $border-radius: 50%);
   }
 
-  //
-  // Текст кнопки
-  //
-  @include use($button-text) {
+  @include BUTTON-TOGGLE--TEXT($class-name) {
     padding-left: $inner-text-left-padding;
+    @include font-style(--UNDEFINED, $text-align: center);
   }
 
-  //
-  // Группа
-  //
-  @include use($button-group) {
-    display: flex;
-    align-items: flex-start;
-
-    //
-    // Группа стоящая на одном уровне после такой же группы
-    //
-    @include exactly(that-is-subsequent-to($button-group)) {
-      margin-top: $group-ngb-margin;
-    }
+  @include BUTTON-TOGGLE--GROUP($class-name) {
+    margin-bottom: $group-ngb-margin;
+    @include display-style(flex, flex-start);
   }
 
-  //
-  // Ярлык группы
-  //
-  @include use($button-label) {
-    $padding-top: calc($vertical-padding + $border-width - (($label-line-height - $icon-size) / 2));
-
-    line-height: $label-line-height;
+  @include BUTTON-TOGGLE--GROUP--LABEL($class-name) {
     padding-left: $label-left-padding;
-    padding-top: $padding-top;
+    padding-top: calc($vertical-padding + $border-width - ((1lh - $icon-size) / 2));
+    @include font-style(--UNDEFINED, $line-height: $label-line-height);
+    @include cursor-style(pointer, $user-select: none);
+  }
 
-    @include cursor-style(pointer);
+  @include BUTTON-TOGGLE--GROUP--LABEL--DISABLED($class-name) {
+    @include cursor-style(default, none);
+    @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
+  }
+}
 
-    //
-    // Ярлык группы в неактивной части формы или когда заблокирован
-    //
-    @include exactly(that-is-inside("fieldset:disabled") that-is(".disabled")) {
-      @include cursor-style(default, none);
-      @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
-    }
+@mixin button-toggle-variant(
+  $class-name,
+  $color,
+  $bg-color,
+  $border-color,
+  $hover-color: get-hover-color($color),
+  $hover-bg-color: get-hover-bg-color($bg-color),
+  $hover-border-color: get-hover-border-color($border-color),
+  $focus-color: get-focus-color($color),
+  $focus-bg-color: get-focus-bg-color($bg-color),
+  $focus-border-color: get-focus-border-color($border-color),
+  $focus-box-shadow: get-focus-box-shadow($focus-border-color),
+  $active-color: get-active-color($color),
+  $active-bg-color: get-active-bg-color($bg-color),
+  $active-border-color: get-active-border-color($border-color),
+  $active-box-shadow: get-active-box-shadow($active-border-color),
+  $disabled-color: get-disabled-color($color),
+  $disabled-bg-color: get-disabled-bg-color($bg-color),
+  $disabled-border-color: get-disabled-border-color($border-color),
+) {
+  @include BUTTON-TOGGLE($class-name) {
+    @include layout-style($bg-color, $border-color);
+    @include font-style($color);
+  }
+
+  @include BUTTON-TOGGLE--HOVER($class-name) {
+    @include layout-style($hover-bg-color, $hover-border-color);
+    @include font-style($hover-color);
+  }
+
+  @include BUTTON-TOGGLE--FOCUS($class-name) {
+    outline: none;
+    @include layout-style($focus-bg-color, $focus-border-color, $box-shadow: $focus-box-shadow);
+    @include font-style($focus-color);
+  }
+
+  @include BUTTON-TOGGLE--ACTIVE($class-name) {
+    @include layout-style($active-bg-color, $active-border-color, $box-shadow: $active-box-shadow);
+    @include font-style($active-color);
+  }
+
+  @include BUTTON-TOGGLE--DISABLED($class-name) {
+    @include font-style($disabled-color);
+    @include layout-style($disabled-bg-color, $disabled-border-color, $box-shadow: none);
   }
 }

@@ -1,4 +1,4 @@
-@use "../_functions/smart-round" as *;
+@use "../_tools/smart-round" as *;
 @use "../variables" as *;
 
 @function get-btn-font-size-xs($btn-font-size) {

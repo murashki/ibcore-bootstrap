@@ -1,30 +1,34 @@
+@use "../_skeletons/label-group" as *;
+@use "../_tools/style" as *;
+
 @mixin label-group(
-  $group-class,
-  $vertical-group-member-margin,
-  $horizontal-group-member-margin
+  $class-name,
+  $ngb-margin,
+  $label-right-margin,
+  $label-bottom-margin,
 ) {
-  .#{$group-class} {
-    display: flex;
-    align-items: baseline;
+  @include LABEL-GROUP($class-name) {
+    margin-bottom: $ngb-margin;
+    @include display-style(flex, baseline);
   }
 
-  .#{$group-class}--vertical {
-    align-items: flex-start;
+  @include LABEL-GROUP-COMMON($class-name) {
+    @include display-style(flex, baseline);
   }
 
-  .#{$group-class} > *:not(.#{$group-class}-ignored) {
-    margin-left: $horizontal-group-member-margin;
+  @include LABEL-GROUP-COLUMN($class-name) {
+    @include display-style(flex, baseline, $flex-direction: column);
   }
 
-  .#{$group-class} > *:not(.#{$group-class}-ignored):first-of-type {
-    margin-left: 0;
+  @include LABEL-GROUP-COLUMN--LABEL($class-name) {
+    margin-bottom: $label-bottom-margin;
   }
 
-  .#{$group-class}--vertical > *:not(.#{$group-class}-ignored) {
-    margin-top: $vertical-group-member-margin;
+  @include LABEL-GROUP-ROW($class-name) {
+    @include display-style(flex, baseline, $flex-direction: row);
   }
 
-  .#{$group-class}--vertical > *:not(.#{$group-class}-ignored):first-of-type {
-    margin-top: 0;
+  @include LABEL-GROUP-ROW--LABEL($class-name) {
+    margin-right: $label-right-margin;
   }
 }

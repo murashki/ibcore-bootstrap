@@ -1,25 +1,30 @@
 .form-control {
   display: block;
-  border: 1px solid transparent;
-  border-radius: 0.25em;
   font-family: inherit;
   font-size: 1em;
   font-weight: inherit;
-  height: calc(0.375em * 2 + 1.4em * 1px * 2);
   line-height: 1.4em;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.3em;
   padding: 0.375em 0.75em;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   width: 100%;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none;
+  }
 }
 
 textarea.form-control {
-  height: 5em;
   line-height: 1.4em;
+  height: 5em;
 }
 
 .form-control::placeholder {
-  opacity: 1;
   user-select: none;
+  opacity: 1;
 }
 
 .form-control:focus {
@@ -31,26 +36,16 @@ textarea.form-control {
   opacity: 1;
 }
 
-.form-control:disabled,
-fieldset:disabled .form-control {
+.form-control:disabled, fieldset:disabled .form-control {
   cursor: default;
-  opacity: 0.5;
   pointer-events: none;
+  opacity: 0.5;
 }
 
 .form-control {
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .form-control {
-    transition: none;
-  }
-}
-.form-control {
-  background-color: #f5f5f8;
-  border-color: #cdced9;
   color: #323442;
+  background-color: #f5f5f8;
+  border-color: #ebebef;
 }
 
 .form-control::placeholder {
@@ -58,9 +53,9 @@ fieldset:disabled .form-control {
 }
 
 .form-control:hover {
-  background-color: #f5f5f8;
-  border-color: rgb(183.2670454545, 184.7017045455, 200.4829545455);
   color: #323442;
+  background-color: #f5f5f8;
+  border-color: rgb(213.75, 213.75, 222);
 }
 
 .form-control:hover::placeholder {
@@ -68,10 +63,10 @@ fieldset:disabled .form-control {
 }
 
 .form-control:focus {
-  background-color: #f5f5f8;
-  border-color: rgb(183.2670454545, 184.7017045455, 200.4829545455);
-  box-shadow: 0 0 0 0.2em rgba(183.2670454545, 184.7017045455, 200.4829545455, 0.5);
   color: #323442;
+  background-color: #f5f5f8;
+  border-color: rgb(213.75, 213.75, 222);
+  box-shadow: 0 0 0 0.2em rgba(213.75, 213.75, 222, 0.5);
 }
 
 .form-control:focus::placeholder {
@@ -79,24 +74,22 @@ fieldset:disabled .form-control {
 }
 
 .form-control[readonly] {
-  background-color: rgb(237.5, 237.5, 242.75);
-  border-color: #cdced9;
   color: #323442;
+  background-color: rgb(237.5, 237.5, 242.75);
+  border-color: #ebebef;
 }
 
 .form-control[readonly]::placeholder {
   color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
 }
 
-.form-control:disabled,
-fieldset:disabled .form-control {
-  background-color: #f5f5f8;
-  border-color: #cdced9;
+.form-control:disabled, fieldset:disabled .form-control {
   color: #323442;
+  background-color: #f5f5f8;
+  border-color: #ebebef;
 }
 
-.form-control:disabled::placeholder,
-fieldset:disabled .form-control::placeholder {
+.form-control[readonly]::placeholder {
   color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
 }
 

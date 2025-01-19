@@ -1,8 +1,7 @@
-@use "../../../_mixins/form-control-variant" as *;
+@use "../../../_mixins/form-control" as *;
 @use "./variables" as *;
 
 @include form-control-variant(
-  "form-control",
   "form-control--error",
   $color: $form-control-error-color,
   $bg-color: $form-control-error-bg-color,

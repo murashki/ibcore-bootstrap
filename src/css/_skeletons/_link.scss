@@ -1,0 +1,45 @@
+@use "../_tools/common" as *;
+
+//
+// Ссылка
+//
+@mixin LINK($class-name) {
+  $LINK: ".#{$class-name}";
+
+  @include use($LINK) {
+    @content;
+  }
+}
+
+//
+// Ссылка при наведении
+//
+@mixin LINK--HOVER($class-name) {
+  @include LINK($class-name) {
+    @include exactly(that-is(--HOVER)) {
+      @content;
+    }
+  }
+}
+
+//
+// Ссылка когда в фокусе
+//
+@mixin LINK--FOCUS($class-name) {
+  @include LINK($class-name) {
+    @include exactly(that-is(--FOCUS))  {
+      @content;
+    }
+  }
+}
+
+//
+// Посещенная ссылка
+//
+@mixin LINK--VISITED($class-name) {
+  @include LINK($class-name) {
+    @include exactly(that-is(--VISITED) that-is(".visited")) {
+      @content;
+    }
+  }
+}

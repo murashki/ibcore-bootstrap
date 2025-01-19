@@ -3,10 +3,7 @@
   <meta charSet="utf-8">
   <title>Forms</title>
   <link rel="stylesheet" href="css/framework/normalize.css">
-    <link rel="stylesheet" href="css/framework/form-control/index.css">
-    <link rel="stylesheet" href="css/framework/form-control/variants/error/index.css">
-    <link rel="stylesheet" href="css/framework/forms/index.css">
-    <link rel="stylesheet" href="css/framework/grid/index.css">
+    <link rel="stylesheet" href="css/framework/index.css">
   <link rel="stylesheet" href="css/app/index.css">
 </head>
 <body>
@@ -31,11 +28,11 @@
       <h2 class="h2">Vertical and horizontal form groups</h2>
       <div class="app-sectionBlock">
         <form class="form">
-          <div class="form-group form-group--vertical">
+          <div class="label-group-column">
             <label class="form-label" for="input-text-frgv-frl-01">Lorem</label>
             <input type="text" id="input-text-frgv-frl-01" class="form-control" value="Some text">
           </div>
-          <div class="form-group form-group--vertical">
+          <div class="label-group-column">
             <label class="form-label" for="input-text-frgv-frl-02">Ipsum dolor</label>
             <input type="text" id="input-text-frgv-frl-02" class="form-control" value="Some text">
           </div>
@@ -43,20 +40,15 @@
       </div>
       <div class="app-sectionBlock">
         <form class="form">
-          <div class="form-group form-group--horizontal">
+          <div class="label-group-row">
             <label class="form-label" style="width: 10em;" for="input-text-frgh-frl-01">Lorem</label>
             <input type="text" id="input-text-frgh-frl-01" class="form-control" value="Some text">
           </div>
-          <div class="form-group form-group--horizontal">
+          <div class="label-group-row">
             <label class="form-label" style="width: 10em;" for="input-text-frgh-frl-02">Ipsum dolor</label>
             <input type="text" id="input-text-frgh-frl-02" class="form-control" value="Some text">
           </div>
         </form>
-      </div>
-      <div class="app-sectionBlock">
-        <p class="paragraph text">
-          You should always use <code class="app-code">.form-group--vertical</code> or <code class="app-code">.form-group--horizontal</code>, cause labels there have more accurate width and position.
-        </p>
       </div>
     </div>
   
@@ -64,49 +56,41 @@
       <h2 class="h2">Forms with grid</h2>
       <div class="app-sectionBlock">
         <form class="form">
-          <div class="row form-group">
-            <div class="col-2 col-lg-3">
+          <div class="row label-group">
+            <div class="col-2 col-lg-3 col-sm-12">
               <label class="form-label" for="input-text-fg-01">Label</label>
             </div>
-            <div class="col-10 col-lg-9">
+            <div class="col-10 col-lg-9 col-sm-12">
               <input type="text" id="input-text-fg-01" class="form-control" value="Some text">
             </div>
           </div>
           <div class="row">
-            <div class="col-6 col-md-12 row form-group">
-              <div class="col-4 col-lg-6 col-md-3">
+            <div class="col-6 col-md-12 row label-group">
+              <div class="col-4 col-lg-6 col-md-3 col-sm-12">
                 <label class="form-label" for="input-text-fg-02">Label</label>
               </div>
-              <div class="col-8 col-lg-6 col-md-9">
+              <div class="col-8 col-lg-6 col-md-9 col-sm-12">
                 <input type="text" id="input-text-fg-02" class="form-control" value="Some text">
               </div>
             </div>
-            <div class="col-6 col-md-12 row form-group">
-              <div class="col-4 col-lg-6 col-md-3">
+            <div class="col-6 col-md-12 row label-group">
+              <div class="col-4 col-lg-6 col-md-3 col-sm-12">
                 <label class="form-label" for="input-text-fg-03">Label</label>
               </div>
-              <div class="col-8 col-lg-6 col-md-9">
+              <div class="col-8 col-lg-6 col-md-9 col-sm-12">
                 <input type="text" id="input-text-fg-03" class="form-control" value="Some text">
               </div>
             </div>
           </div>
-          <div class="row form-group">
-            <div class="col-2 col-lg-3">
+          <div class="row label-group">
+            <div class="col-2 col-lg-3 col-sm-12">
               <label class="form-label" for="textarea-fg">Label</label>
             </div>
-            <div class="col-10 col-lg-9">
+            <div class="col-10 col-lg-9 col-sm-12">
               <textarea id="textarea-fg" class="form-control">Some text</textarea>
             </div>
           </div>
         </form>
-      </div>
-      <div class="app-sectionBlock">
-        <p class="paragraph text">
-          You should always place <code class="app-code">label.form-label</code> inside <code class="app-code">div.col-x</code>, so that label would have more accurate width and position.
-        </p>
-        <p class="paragraph text">
-          Also, no <code class="app-code">.form-group--vertical</code> or <code class="app-code">.form-group--horizontal</code> needed with a grid.
-        </p>
       </div>
     </div>
   
@@ -114,7 +98,7 @@
       <h2 class="h2">Supported controls</h2>
       <div class="app-sectionBlock">
         <form class="form">
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-email">input[type=email]</label>
             </div>
@@ -122,7 +106,7 @@
               <input type="email" id="input-email" class="form-control" value="example@example.com">
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-password">input[type=password]</label>
             </div>
@@ -130,7 +114,7 @@
               <input type="password" id="input-password" class="form-control" value="password">
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-tel">input[type=tel]</label>
             </div>
@@ -138,7 +122,7 @@
               <input type="tel" id="input-tel" class="form-control" value="(800) 800-800-800">
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-text">input[type=text]</label>
             </div>
@@ -146,7 +130,7 @@
               <input type="text" id="input-text" class="form-control" value="Some text">
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-url">input[type=url]</label>
             </div>
@@ -154,7 +138,7 @@
               <input type="url" id="input-url" class="form-control" value="http://example.com">
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="textarea">textarea</label>
             </div>
@@ -170,7 +154,7 @@
       <h2 class="h2">Readonly controls</h2>
       <div class="app-sectionBlock">
         <form class="form">
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-email-readonly">input[type=email][readonly]</label>
             </div>
@@ -178,7 +162,7 @@
               <input type="email" id="input-email-readonly" class="form-control" value="example@example.com" readonly>
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-password-readonly">input[type=password][readonly]</label>
             </div>
@@ -186,7 +170,7 @@
               <input type="password" id="input-password-readonly" class="form-control" value="password" readonly>
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-tel-readonly">input[type=tel][readonly]</label>
             </div>
@@ -194,7 +178,7 @@
               <input type="tel" id="input-tel-readonly" class="form-control" value="(800) 800-800-800" readonly>
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class=" form-label" for="input-text-readonly">input[type=text][readonly]</label>
             </div>
@@ -202,7 +186,7 @@
               <input type="text" id="input-text-readonly" class="form-control" value="Some text" readonly>
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-url-readonly">input[type=url][readonly]</label>
             </div>
@@ -210,7 +194,7 @@
               <input type="url" id="input-url-readonly" class="form-control" value="http://example.com" readonly>
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="textarea-readonly">textarea[readonly]</label>
             </div>
@@ -226,7 +210,7 @@
       <h2 class="h2">Disabled controls</h2>
       <div class="app-sectionBlock">
         <form class="form">
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-email-disabled">input[type=email]:disabled</label>
             </div>
@@ -234,7 +218,7 @@
               <input type="email" id="input-email-disabled" class="form-control" value="example@example.com" disabled>
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-password-disabled">input[type=password]:disabled</label>
             </div>
@@ -242,7 +226,7 @@
               <input type="password" id="input-password-disabled" class="form-control" value="password" disabled>
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-tel-disabled">input[type=tel]:disabled</label>
             </div>
@@ -250,7 +234,7 @@
               <input type="tel" id="input-tel-disabled" class="form-control" value="(800) 800-800-800" disabled>
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-text-disabled">input[type=text]:disabled</label>
             </div>
@@ -258,7 +242,7 @@
               <input type="text" id="input-text-disabled" class="form-control" value="Some text" disabled>
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="input-url-disabled">input[type=url]:disabled</label>
             </div>
@@ -266,7 +250,7 @@
               <input type="url" id="input-url-disabled" class="form-control" value="http://example.com" disabled>
             </div>
           </div>
-          <div class="row form-group">
+          <div class="row label-group">
             <div class="col-4">
               <label class="form-label" for="textarea-disabled">textarea:disabled</label>
             </div>
@@ -283,7 +267,7 @@
       <div class="app-sectionBlock">
         <form class="form">
           <fieldset class="form-fieldset" disabled>
-            <div class="row form-group">
+            <div class="row label-group">
               <div class="col-4">
                 <label class="form-label" for="input-email-fieldset">fieldset:disabled input[type=email]</label>
               </div>
@@ -291,7 +275,7 @@
                 <input type="email" id="input-email-fieldset" class="form-control" value="example@example.com">
               </div>
             </div>
-            <div class="row form-group">
+            <div class="row label-group">
               <div class="col-4">
                 <label class="form-label" for="input-password-fieldset">fieldset:disabled input[type=password]</label>
               </div>
@@ -299,7 +283,7 @@
                 <input type="password" id="input-password-fieldset" class="form-control" value="password">
               </div>
             </div>
-            <div class="row form-group">
+            <div class="row label-group">
               <div class="col-4">
                 <label class="form-label" for="input-tel-fieldset">fieldset:disabled input[type=tel]</label>
               </div>
@@ -307,7 +291,7 @@
                 <input type="tel" id="input-tel-fieldset" class="form-control" value="(800) 800-800-800">
               </div>
             </div>
-            <div class="row form-group">
+            <div class="row label-group">
               <div class="col-4">
                 <label class="form-label" for="input-text-fieldset">fieldset:disabled input[type=text]</label>
               </div>
@@ -315,7 +299,7 @@
                 <input type="text" id="input-text-fieldset" class="form-control" value="Some text">
               </div>
             </div>
-            <div class="row form-group">
+            <div class="row label-group">
               <div class="col-4">
                 <label class="form-label" for="input-url-fieldset">fieldset:disabled input[type=url]</label>
               </div>
@@ -323,7 +307,7 @@
                 <input type="url" id="input-url-fieldset" class="form-control" value="http://example.com">
               </div>
             </div>
-            <div class="row form-group">
+            <div class="row label-group">
               <div class="col-4">
                 <label class="form-label" for="textarea-fieldset">fieldset:disabled textarea</label>
               </div>
@@ -340,44 +324,32 @@
       <h2 class="h2">Default form control</h2>
       <div class="app-sectionBlock">
         <form class="form">
-          <div class="form-group">
+          <div class="label-group">
             <input type="text" class="form-control" value="Default text">
           </div>
-          <div class="form-group">
+          <div class="label-group">
             <input type="text" class="form-control" placeholder="Default placeholder">
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--focus" value="Focus class text">
+          <div class="label-group">
+            <input type="text" class="form-control" value="Readonly text" readonly>
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--focus" placeholder="Focus class placeholder">
+          <div class="label-group">
+            <input type="text" class="form-control" placeholder="Readonly placeholder" readonly>
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control" value="Readonly attribute text" readonly>
+          <div class="label-group">
+            <input type="text" class="form-control" value="Disabled text" disabled>
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Readonly attribute placeholder" readonly>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--disabled" value="Disabled class text" tabindex="-1">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--disabled" placeholder="Disabled class placeholder" tabindex="-1">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" value="Disabled attribute text" disabled>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Disabled attribute placeholder" disabled>
+          <div class="label-group">
+            <input type="text" class="form-control" placeholder="Disabled placeholder" disabled>
           </div>
           <fieldset class="form-fieldset" disabled>
-            <div class="form-group">
-              <input type="text" class="form-control" value="Disabled fieldset text">
+            <div class="label-group">
+              <input type="text" class="form-control" value="Fieldset disabled text">
             </div>
           </fieldset>
           <fieldset class="form-fieldset" disabled>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Disabled fieldset placeholder">
+            <div class="label-group">
+              <input type="text" class="form-control" placeholder="Fieldset disabled placeholder">
             </div>
           </fieldset>
         </form>
@@ -388,44 +360,32 @@
       <h2 class="h2">Error form control</h2>
       <div class="app-sectionBlock">
         <form class="form">
-          <div class="form-group">
+          <div class="label-group">
             <input type="text" class="form-control form-control--error" value="Default text">
           </div>
-          <div class="form-group">
+          <div class="label-group">
             <input type="text" class="form-control form-control--error" placeholder="Default placeholder">
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--error form-control--focus" value="Focus class text">
+          <div class="label-group">
+            <input type="text" class="form-control form-control--error" value="Readonly text" readonly>
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--error form-control--focus" placeholder="Focus class placeholder">
+          <div class="label-group">
+            <input type="text" class="form-control form-control--error" placeholder="Readonly placeholder" readonly>
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--error" value="Readonly attribute text" readonly>
+          <div class="label-group">
+            <input type="text" class="form-control form-control--error" value="Disabled text" disabled>
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--error" placeholder="Readonly attribute placeholder" readonly>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--error form-control--disabled" value="Disabled class text" tabindex="-1">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--error form-control--disabled" placeholder="Disabled class placeholder" tabindex="-1">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--error" value="Disabled attribute text" disabled>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--error" placeholder="Disabled attribute placeholder" disabled>
+          <div class="label-group">
+            <input type="text" class="form-control form-control--error" placeholder="Disabled placeholder" disabled>
           </div>
           <fieldset class="form-fieldset" disabled>
-            <div class="form-group">
-              <input type="text" class="form-control form-control--error" value="Disabled fieldset text">
+            <div class="label-group">
+              <input type="text" class="form-control form-control--error" value="Fieldset disabled text">
             </div>
           </fieldset>
           <fieldset class="form-fieldset" disabled>
-            <div class="form-group">
-              <input type="text" class="form-control form-control--error" placeholder="Disabled fieldset placeholder">
+            <div class="label-group">
+              <input type="text" class="form-control form-control--error" placeholder="Fieldset disabled placeholder">
             </div>
           </fieldset>
         </form>
@@ -435,7 +395,7 @@
 </div>
 
 <div class="app-breakpoint">
-  <span class="display-max">max</span>
+  <span class="display-xxl">xxl</span>
   <span class="display-xl">xl</span>
   <span class="display-lg">lg</span>
   <span class="display-md">md</span>

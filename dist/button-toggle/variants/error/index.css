@@ -1,15 +1,16 @@
-.btn-toggle--danger {
+.btn-toggle--error {
   background-color: #f63030;
   border-color: #f63030;
   color: #000;
 }
-.btn-toggle--danger:hover {
+
+.btn-toggle--error:hover {
   background-color: rgb(244.9375, 23.5625, 23.5625);
   border-color: rgb(244.40625, 11.34375, 11.34375);
   color: #000;
 }
 
-.btn-toggle--danger:has(input[type=checkbox]:focus, input[type=radio]:focus) {
+.btn-toggle--error:has([type=checkbox]:focus, [type=radio]:focus) {
   outline: none;
   background-color: rgb(244.9375, 23.5625, 23.5625);
   border-color: rgb(244.40625, 11.34375, 11.34375);
@@ -17,14 +18,14 @@
   color: #000;
 }
 
-.btn-toggle--danger:has(input[type=checkbox]:active, input[type=radio]:active) {
+.btn-toggle--error:has([type=checkbox]:active, [type=radio]:active) {
   background-color: rgb(244.9375, 23.5625, 23.5625);
   border-color: rgb(244.40625, 11.34375, 11.34375);
   box-shadow: 0 0 0 0.2em rgba(244.40625, 11.34375, 11.34375, 0.5);
   color: #000;
 }
 
-.btn-toggle--danger:has(input[type=checkbox]:disabled, input[type=radio]:disabled), fieldset:disabled .btn-toggle--danger {
+.btn-toggle--error:has([type=checkbox]:disabled, [type=radio]:disabled), fieldset:disabled .btn-toggle--error {
   color: #000;
   background-color: #f63030;
   border-color: #f63030;

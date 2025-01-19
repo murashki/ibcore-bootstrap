@@ -1,0 +1,177 @@
+@use "../_tools/common" as *;
+
+//
+// Контроллер
+//
+@mixin FORM-CONTROL($class-name) {
+  $FORM-CONTROL: ".#{$class-name}";
+
+  @include use($FORM-CONTROL) {
+    @content;
+  }
+}
+
+//
+// Контроллер при наведении
+//
+@mixin FORM-CONTROL--HOVER($class-name) {
+  @include FORM-CONTROL($class-name) {
+    @include exactly(that-is(--HOVER)) {
+      @content;
+    }
+  }
+}
+
+//
+// Контроллер когда активный
+//
+@mixin FORM-CONTROL--ACTIVE($class-name) {
+  @include FORM-CONTROL($class-name) {
+    @include exactly(that-is(--ACTIVE)) {
+      @content;
+    }
+  }
+}
+
+//
+// Контроллер когда в фокусе
+//
+@mixin FORM-CONTROL--FOCUS($class-name) {
+  @include FORM-CONTROL($class-name) {
+    @include exactly(that-is(--FOCUS)) {
+      @content;
+    }
+  }
+}
+
+//
+// Контроллер когда только для чтения
+//
+@mixin FORM-CONTROL--READONLY($class-name) {
+  @include FORM-CONTROL($class-name) {
+    @include exactly(that-is(--READONLY)) {
+      @content;
+    }
+  }
+}
+
+//
+// Контроллер в неактивной группе полей или когда заблокирована
+//
+@mixin FORM-CONTROL--DISABLED($class-name) {
+  @include FORM-CONTROL($class-name) {
+    @include exactly(that-is(--DISABLED) that-is-inside("fieldset:disabled")) {
+      @content;
+    }
+  }
+}
+
+//
+// Заглушка контроллера
+//
+@mixin FORM-CONTROL--PLACEHOLDER($class-name) {
+  @include FORM-CONTROL($class-name) {
+    @include use-placeholder() {
+      @content;
+    }
+  }
+}
+
+//
+// Заглушка контроллера при наведении
+//
+@mixin FORM-CONTROL--HOVER--PLACEHOLDER($class-name) {
+  @include FORM-CONTROL--HOVER($class-name) {
+    @include use-placeholder() {
+      @content;
+    }
+  }
+}
+
+//
+// Заглушка контроллера когда активный
+//
+@mixin FORM-CONTROL--ACTIVE--PLACEHOLDER($class-name) {
+  @include FORM-CONTROL--ACTIVE($class-name) {
+    @include use-placeholder() {
+      @content;
+    }
+  }
+}
+
+//
+// Заглушка контроллера когда в фокусе
+//
+@mixin FORM-CONTROL--FOCUS--PLACEHOLDER($class-name) {
+  @include FORM-CONTROL--FOCUS($class-name) {
+    @include use-placeholder() {
+      @content;
+    }
+  }
+}
+
+//
+// Заглушка контроллера
+//
+@mixin FORM-CONTROL--READONLY--PLACEHOLDER($class-name) {
+  @include FORM-CONTROL--READONLY($class-name) {
+    @include use-placeholder() {
+      @content;
+    }
+  }
+}
+
+//
+// Заглушка контроллера
+//
+@mixin FORM-CONTROL--DISABLED--PLACEHOLDER($class-name) {
+  @include FORM-CONTROL--READONLY($class-name) {
+    @include use-placeholder() {
+      @content;
+    }
+  }
+}
+
+//
+// Контроллер, если он input
+//
+@mixin FORM-CONTROL-INPUT($class-name) {
+  $FORM-CONTROL: ".#{$class-name}";
+
+  @include use("input", that-is($FORM-CONTROL)) {
+    @content;
+  }
+}
+
+//
+// Заглушка контроллера, если он input
+//
+@mixin FORM-CONTROL-INPUT--PLACEHOLDER($class-name) {
+  @include FORM-CONTROL-INPUT($class-name) {
+    @include use-placeholder() {
+      @content;
+    }
+  }
+}
+
+//
+// Контроллер, если он textarea
+//
+@mixin FORM-CONTROL-TEXTAREA($class-name) {
+  $FORM-CONTROL: ".#{$class-name}";
+
+  @include use("textarea", that-is($FORM-CONTROL)) {
+    @content;
+  }
+}
+
+//
+// Заглушка контроллера, если он textarea
+//
+@mixin FORM-CONTROL-TEXTAREA--PLACEHOLDER($class-name) {
+  @include FORM-CONTROL-TEXTAREA($class-name) {
+    @include use-placeholder() {
+      @content;
+    }
+  }
+}

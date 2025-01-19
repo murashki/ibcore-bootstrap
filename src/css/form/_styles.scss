@@ -1,0 +1,8 @@
+@use "../_mixins/form" as *;
+@use "./variables" as *;
+
+@include form(
+  "form",
+  $form-label-font-size,
+  $form-label-line-height,
+);

@@ -1,9 +1,0 @@
-@use "../../../_mixins/button-toggle.variant" as *;
-@use "./variables" as *;
-
-@include button-toggle-variant(
-  "btn-toggle--danger",
-  $color: $btn-toggle-danger-color,
-  $bg-color: $btn-toggle-danger-bg-color,
-  $border-color: $btn-toggle-danger-border-color,
-);

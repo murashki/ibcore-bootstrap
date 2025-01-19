@@ -1,5 +1,4 @@
 @use "../_mixins/button-toggle" as *;
-@use "../_mixins/button-toggle.variant" as *;
 @use "./variables" as *;
 
 @include button-toggle(

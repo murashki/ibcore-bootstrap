@@ -3,7 +3,7 @@
   <meta charSet="utf-8">
   <title>Grid</title>
   <link rel="stylesheet" href="css/framework/normalize.css">
-    <link rel="stylesheet" href="css/framework/grid/index.css">
+    <link rel="stylesheet" href="css/framework/index.css">
   <link rel="stylesheet" href="css/app/index.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
   <h1 class="h1">Grid</h1>
   <div class="app-content">
     <div class="app-section">
-      <h2 class="h2">Base usage</h2>
+      <h2 class="h2">Common usage</h2>
       <div class="app-sectionBlock">
         <div class="row">
           <div class="col">
@@ -83,7 +83,7 @@
     </div>
   
     <div class="app-section">
-      <h2 class="h2"><code class="app-code">.col</code> vs <code class="app-code">.col-auto</code></h2>
+      <h2 class="h2">Column width</h2>
       <div class="app-sectionBlock">
         <div class="row">
           <div class="col">
@@ -99,6 +99,20 @@
           </div>
           <div class="col-auto">
             <div class="app-cellContent"><span class="app-textTruncate">row > col-auto</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Column height</h2>
+      <div class="app-sectionBlock">
+        <div class="row">
+          <div class="col">
+            <div class="app-cellContent"><span class="app-textTruncate">row<br>><br>col</span></div>
+          </div>
+          <div class="col">
+            <div class="app-cellContent"><span class="app-textTruncate">row > col</span></div>
           </div>
         </div>
       </div>
@@ -133,7 +147,7 @@
 </div>
 
 <div class="app-breakpoint">
-  <span class="display-max">max</span>
+  <span class="display-xxl">xxl</span>
   <span class="display-xl">xl</span>
   <span class="display-lg">lg</span>
   <span class="display-md">md</span>

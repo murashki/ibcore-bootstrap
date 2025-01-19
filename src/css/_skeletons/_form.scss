@@ -1,0 +1,34 @@
+@use "../_tools/common" as *;
+
+//
+// Форма
+//
+@mixin FORM($class-name) {
+  $FORM: ".#{$class-name}";
+
+  @include use($FORM) {
+    @content;
+  }
+}
+
+//
+// Ярлык формы
+//
+@mixin FORM--LABEL($class-name) {
+  $FORM-LABEL: ".#{$class-name}-label";
+
+  @include use($FORM-LABEL) {
+    @content;
+  }
+}
+
+//
+// Группа полей
+//
+@mixin FORM--FIELDSET($class-name) {
+  $FORM-LABEL: ".#{$class-name}-fieldset";
+
+  @include use($FORM-LABEL) {
+    @content;
+  }
+}

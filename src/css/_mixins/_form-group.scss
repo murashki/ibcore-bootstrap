@@ -1,43 +1,40 @@
-@use "./common" as *;
+@use "../_skeletons/form-group" as *;
+@use "../_tools/style" as *;
 
 @mixin form-group(
-  $group-class,
+  $class-name,
   $compensating-margin,
 ) {
-  $group: ".#{$group-class}";
-  $ignored-member: ".#{$group-class}-ignored";
-
-  @include use($group) {
+  @include FORM-GROUP($class-name) {
     position: relative;
     z-index: 0;
-
     @include display-style(flex);
   }
 
-  @include use("*", that-is-not($ignored-member), that-is-child-of($group)) {
+  @include FORM-GROUP--CHILD($class-name) {
     position: relative;
+  }
 
-    @include exactly(that-is(--HOVER)) {
-      z-index: 1;
-    }
+  @include FORM-GROUP--CHILD--HOVER($class-name) {
+    z-index: 1;
+  }
 
-    @include exactly(that-is(--ACTIVE)) {
-      z-index: 3;
-    }
+  @include FORM-GROUP--CHILD--ACTIVE($class-name) {
+    z-index: 3;
+  }
 
-    @include exactly(that-is(--FOCUS)) {
-      z-index: 2;
-    }
+  @include FORM-GROUP--CHILD--FOCUS($class-name) {
+    z-index: 2;
+  }
 
-    @include exactly(that-is-not(--FIRST-CHILD)) {
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-      margin-left: $compensating-margin;
-    }
+  @include FORM-GROUP--CHILD--NOT-FIRST($class-name) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: $compensating-margin;
+  }
 
-    @include exactly(that-is-not(--LAST-CHILD)) {
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
-    }
+  @include FORM-GROUP--CHILD--NOT-LAST($class-name) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
   }
 }
