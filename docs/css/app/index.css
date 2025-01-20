@@ -70,19 +70,14 @@ h2 {
 
 .app-breakpoint {
   background-color: #ddd;
-  border-radius: 2px;
-  bottom: 8px;
+  border-radius: 0.1em;
+  bottom: 0.5em;
   color: #2c2c2c;
-  height: 40px;
-  line-height: 40px;
+  line-height: 1.4em;
+  padding: 0.6em 0.8em;
   position: fixed;
-  right: 6px;
+  right: 0.4em;
   text-align: center;
-  width: 40px;
-}
-
-.app-breakpoint > * {
-  display: block;
 }
 
 .app-textTruncate {

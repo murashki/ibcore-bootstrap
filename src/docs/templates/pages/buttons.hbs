@@ -23,28 +23,28 @@
       <input type="button" class="btn" value="input[type=button].btn">
       <input type="submit" class="btn" value="input[type=submit].btn">
       <input type="reset" class="btn" value="input[type=reset].btn">
-      <a class="btn" href="#" role="button">a.btn[href][role=button]</a>
+      <a class="btn" href="#">a.btn[href]</a>
     </div>
     <div class="app-sectionBlock app-block">
       <button type="button" class="btn btn--success">button.btn.btn--success</button>
       <input type="button" class="btn btn--success" value="input[type=button].btn.btn--success">
       <input type="submit" class="btn btn--success" value="input[type=submit].btn.btn--success">
       <input type="reset" class="btn btn--success" value="input[type=reset].btn.btn--success">
-      <a class="btn btn--success" href="#" role="button">a.btn.btn--success[href][role=button]</a>
+      <a class="btn btn--success" href="#">a.btn.btn--success[href]</a>
     </div>
     <div class="app-sectionBlock app-block">
       <button type="button" class="btn btn--warning">button.btn.btn--warning</button>
       <input type="button" class="btn btn--warning" value="input[type=button].btn.btn--warning">
       <input type="submit" class="btn btn--warning" value="input[type=submit].btn.btn--warning">
       <input type="reset" class="btn btn--warning" value="input[type=reset].btn.btn--warning">
-      <a class="btn btn--warning" href="#" role="button">a.btn.btn--warning[href][role=button]</a>
+      <a class="btn btn--warning" href="#">a.btn.btn--warning[href]</a>
     </div>
     <div class="app-sectionBlock app-block">
       <button type="button" class="btn btn--danger">button.btn.btn--danger</button>
       <input type="button" class="btn btn--danger" value="input[type=button].btn.btn--danger">
       <input type="submit" class="btn btn--danger" value="input[type=submit].btn.btn--danger">
       <input type="reset" class="btn btn--danger" value="input[type=reset].btn.btn--danger">
-      <a class="btn btn--danger" href="#" role="button">a.btn.btn--danger[href][role=button]</a>
+      <a class="btn btn--danger" href="#">a.btn.btn--danger[href]</a>
     </div>
   </div>
 
@@ -55,62 +55,62 @@
       <input type="button" class="btn" value="input[type=button].btn:disabled" disabled>
       <input type="submit" class="btn" value="input[type=submit].btn:disabled" disabled>
       <input type="reset" class="btn" value="input[type=reset].btn:disabled" disabled>
-      <a class="btn disabled" role="button" aria-disabled="true">a.btn.disabled[role=button][aria-disabled=true]:not([href])</a>
+      <a class="btn disabled" tabindex="-1" aria-disabled="true">a.btn.disabled:not([href])[tabindex=-1][aria-disabled=true]</a>
     </div>
     <div class="app-sectionBlock app-block">
       <button type="button" class="btn btn--success" disabled>button.btn.btn--success:disabled</button>
       <input type="button" class="btn btn--success" value="input[type=button].btn.btn--success:disabled" disabled>
       <input type="submit" class="btn btn--success" value="input[type=submit].btn.btn--success:disabled" disabled>
       <input type="reset" class="btn btn--success" value="input[type=reset].btn.btn--success:disabled" disabled>
-      <a class="btn btn--success disabled" role="button" aria-disabled="true">a.btn.btn--success.disabled[role=button][aria-disabled=true]:not([href])</a>
+      <a class="btn btn--success disabled" tabindex="-1" aria-disabled="true">a.btn.btn--success.disabled:not([href])[tabindex=-1][aria-disabled=true]</a>
     </div>
     <div class="app-sectionBlock app-block">
       <button type="button" class="btn btn--warning" disabled>button.btn.btn--warning:disabled</button>
       <input type="button" class="btn btn--warning" value="input[type=button].btn.btn--warning:disabled" disabled>
       <input type="submit" class="btn btn--warning" value="input[type=submit].btn.btn--warning:disabled" disabled>
       <input type="reset" class="btn btn--warning" value="input[type=reset].btn.btn--warning:disabled" disabled>
-      <a class="btn btn--warning disabled" role="button" aria-disabled="true">a.btn.btn--warning.disabled[role=button][aria-disabled=true]:not([href])</a>
+      <a class="btn btn--warning disabled" tabindex="-1" aria-disabled="true">a.btn.btn--warning.disabled:not([href])[tabindex=-1][aria-disabled=true]</a>
     </div>
     <div class="app-sectionBlock app-block">
       <button type="button" class="btn btn--danger" disabled>button.btn.btn--danger:disabled</button>
       <input type="button" class="btn btn--danger" value="input[type=button].btn.btn--danger:disabled" disabled>
       <input type="submit" class="btn btn--danger" value="input[type=submit].btn.btn--danger:disabled" disabled>
       <input type="reset" class="btn btn--danger" value="input[type=reset].btn.btn--danger:disabled" disabled>
-      <a class="btn btn--danger disabled" role="button" aria-disabled="true">a.btn.btn--danger.disabled[role=button][aria-disabled=true]:not([href])</a>
+      <a class="btn btn--danger disabled" tabindex="-1" aria-disabled="true">a.btn.btn--danger.disabled:not([href])[tabindex=-1][aria-disabled=true]</a>
     </div>
   </div>
 
   <div class="app-section">
+    <h2 class="h2">Button fieldset disabled</h2>
     <form class="form">
       <fieldset class="form-fieldset" disabled>
-        <h2 class="h2">Button fieldset disabled</h2>
         <div class="app-sectionBlock app-block">
           <button type="button" class="btn">fieldset[disabled] button.btn</button>
           <input type="button" class="btn" value="fieldset[disabled] input[type=button].btn">
           <input type="submit" class="btn" value="fieldset[submit] input[type=button].btn">
           <input type="reset" class="btn" value="fieldset[reset] input[type=button].btn">
-          <a class="btn" role="button" aria-disabled="true">fieldset[disabled] a.btn[role=button][aria-disabled=true]:not([href])</a>
+          <a class="btn" tabindex="-1" aria-disabled="true">fieldset[disabled] a.btn:not([href])[tabindex=-1][aria-disabled=true]</a>
         </div>
         <div class="app-sectionBlock app-block">
           <button type="button" class="btn btn--success">fieldset[disabled] button.btn.btn--success</button>
           <input type="button" class="btn btn--success" value="fieldset[disabled] input[type=button].btn.btn--success">
           <input type="submit" class="btn btn--success" value="fieldset[disabled] input[type=submit].btn.btn--success">
           <input type="reset" class="btn btn--success" value="fieldset[disabled] input[type=reset].btn.btn--success">
-          <a class="btn btn--success" role="button" aria-disabled="true">fieldset[disabled] a.btn.btn--success[role=button][aria-disabled=true]:not([href])</a>
+          <a class="btn btn--success" tabindex="-1" aria-disabled="true">fieldset[disabled] a.btn.btn--success:not([href])[tabindex=-1][aria-disabled=true]</a>
         </div>
         <div class="app-sectionBlock app-block">
           <button type="button" class="btn btn--warning">fieldset[disabled] button.btn.btn--warning</button>
           <input type="button" class="btn btn--warning" value="fieldset[disabled] input[type=button].btn.btn--warning">
           <input type="submit" class="btn btn--warning" value="fieldset[disabled] input[type=submit].btn.btn--warning">
           <input type="reset" class="btn btn--warning" value="fieldset[disabled] input[type=reset].btn.btn--warning">
-          <a class="btn btn--warning" role="button" aria-disabled="true">fieldset[disabled] a.btn.btn--warning[role=button][aria-disabled=true]:not([href])</a>
+          <a class="btn btn--warning" tabindex="-1" aria-disabled="true">fieldset[disabled] a.btn.btn--warning:not([href])[tabindex=-1][aria-disabled=true]</a>
         </div>
         <div class="app-sectionBlock app-block">
           <button type="button" class="btn btn--danger">fieldset[disabled] button.btn.btn--danger</button>
           <input type="button" class="btn btn--danger" value="fieldset[disabled] input[type=button].btn.btn--danger">
           <input type="submit" class="btn btn--danger" value="fieldset[disabled] input[type=submit].btn.btn--danger">
           <input type="reset" class="btn btn--danger" value="fieldset[disabled] input[type=reset].btn.btn--danger">
-          <a class="btn btn--danger" role="button" aria-disabled="true">fieldset[disabled] a.btn.btn--danger[role=button][aria-disabled=true]:not([href])</a>
+          <a class="btn btn--danger" tabindex="-1" aria-disabled="true">fieldset[disabled] a.btn.btn--danger:not([href])[tabindex=-1][aria-disabled=true]</a>
         </div>
       </fieldset>
     </form>
@@ -124,7 +124,7 @@
         <input class="btn" type="button" value="input[type=button].btn">
         <input class="btn" type="submit" value="input[type=submit].btn">
         <input class="btn" type="reset" value="input[type=reset].btn">
-        <a class="btn" href="#" role="button">a.btn[role=button]</a>
+        <a class="btn" href="#">a.btn</a>
       </div>
     </div>
     <div class="app-sectionBlock">
@@ -133,7 +133,7 @@
         <input class="btn btn--success" type="button" value="input[type=button].btn.btn--success">
         <input class="btn btn--success" type="submit" value="input[type=submit].btn.btn--success">
         <input class="btn btn--success" type="reset" value="input[type=reset].btn.btn--success">
-        <a class="btn btn--success" href="#" role="button">a.btn.btn--success[role=button]</a>
+        <a class="btn btn--success" href="#">a.btn.btn--success</a>
       </div>
     </div>
     <div class="app-sectionBlock">
@@ -142,7 +142,7 @@
         <input class="btn btn--warning" type="button" value="input[type=button].btn.btn--warning">
         <input class="btn btn--warning" type="submit" value="input[type=submit].btn.btn--warning">
         <input class="btn btn--warning" type="reset" value="input[type=reset].btn.btn--warning">
-        <a class="btn btn--warning" href="#" role="button">a.btn.btn--warning[role=button]</a>
+        <a class="btn btn--warning" href="#">a.btn.btn--warning</a>
       </div>
     </div>
     <div class="app-sectionBlock">
@@ -151,7 +151,7 @@
         <input class="btn btn--danger" type="button" value="input[type=button].btn.btn--danger">
         <input class="btn btn--danger" type="submit" value="input[type=submit].btn.btn--danger">
         <input class="btn btn--danger" type="reset" value="input[type=reset].btn.btn--danger">
-        <a class="btn btn--danger" href="#" role="button">a.btn.btn--danger[role=button]</a>
+        <a class="btn btn--danger" href="#">a.btn.btn--danger</a>
       </div>
     </div>
   </div>
@@ -164,7 +164,7 @@
         <input class="btn" type="button" value="input[type=button].btn:disabled" disabled>
         <input class="btn" type="submit" value="input[type=submit].btn:disabled" disabled>
         <input class="btn" type="reset" value="input[type=reset].btn:disabled" disabled>
-        <a class="btn disabled" role="button" aria-disabled="true">a.btn.disabled[role=button][aria-disabled=true]:not([href])</a>
+        <a class="btn disabled" tabindex="-1" aria-disabled="true">a.btn.disabled:not([href])[tabindex=-1][aria-disabled=true]</a>
       </div>
     </div>
     <div class="app-sectionBlock">
@@ -173,7 +173,7 @@
         <input class="btn btn--success" type="button" value="input[type=button].btn.btn--success:disabled" disabled>
         <input class="btn btn--success" type="submit" value="input[type=submit].btn.btn--success:disabled" disabled>
         <input class="btn btn--success" type="reset" value="input[type=reset].btn.btn--success:disabled" disabled>
-        <a class="btn disabled btn--success" role="button" aria-disabled="true">a.btn.disabled.btn--success[role=button][aria-disabled=true]:not([href])</a>
+        <a class="btn disabled btn--success" tabindex="-1" aria-disabled="true">a.btn.disabled.btn--success:not([href])[tabindex=-1][aria-disabled=true]</a>
       </div>
     </div>
     <div class="app-sectionBlock">
@@ -182,7 +182,7 @@
         <input class="btn btn--warning" type="button" value="input[type=button].btn.btn--warning:disabled" disabled>
         <input class="btn btn--warning" type="submit" value="input[type=submit].btn.btn--warning:disabled" disabled>
         <input class="btn btn--warning" type="reset" value="input[type=reset].btn.btn--warning:disabled" disabled>
-        <a class="btn disabled btn--warning" role="button" aria-disabled="true">a.btn.disabled.btn--warning[role=button][aria-disabled=true]:not([href])</a>
+        <a class="btn disabled btn--warning" tabindex="-1" aria-disabled="true">a.btn.disabled.btn--warning:not([href])[tabindex=-1][aria-disabled=true]</a>
       </div>
     </div>
     <div class="app-sectionBlock">
@@ -191,22 +191,22 @@
         <input class="btn btn--danger" type="button" value="input[type=button].btn.btn--danger:disabled" disabled>
         <input class="btn btn--danger" type="submit" value="input[type=submit].btn.btn--danger:disabled" disabled>
         <input class="btn btn--danger" type="reset" value="input[type=reset].btn.btn--danger:disabled" disabled>
-        <a class="btn disabled btn--danger" role="button" aria-disabled="true">a.btn.disabled.btn--danger[role=button][aria-disabled=true]:not([href])</a>
+        <a class="btn disabled btn--danger" tabindex="-1" aria-disabled="true">a.btn.disabled.btn--danger:not([href])[tabindex=-1][aria-disabled=true]</a>
       </div>
     </div>
   </div>
 
   <div class="app-section">
+    <h2 class="h2">Button group fieldset disabled</h2>
     <form class="form">
       <fieldset class="form-fieldset" disabled>
-        <h2 class="h2">Button group fieldset disabled</h2>
         <div class="app-sectionBlock">
           <div class="form-group">
             <button type="button" class="btn">fieldset:disabled button.btn</button>
             <input class="btn" type="button" value="fieldset:disabled input[type=button].btn">
             <input class="btn" type="submit" value="fieldset:disabled input[type=submit].btn">
             <input class="btn" type="reset" value="fieldset:disabled input[type=reset].btn">
-            <a class="btn" role="button" aria-disabled="true">a.btn[role=button][aria-disabled=true]:not([href])</a>
+            <a class="btn" tabindex="-1" aria-disabled="true">fieldset:disabled a.btn:not([href])[tabindex=-1][aria-disabled=true]</a>
           </div>
         </div>
         <div class="app-sectionBlock">
@@ -215,7 +215,7 @@
             <input class="btn btn--success" type="button" value="fieldset:disabled input[type=button].btn.btn--success">
             <input class="btn btn--success" type="submit" value="fieldset:disabled input[type=submit].btn.btn--success">
             <input class="btn btn--success" type="reset" value="fieldset:disabled input[type=reset].btn.btn--success">
-            <a class="btn btn--success" role="button" aria-disabled="true">a.btn.btn--success[role=button][aria-disabled=true]:not([href])</a>
+            <a class="btn btn--success" tabindex="-1" aria-disabled="true">fieldset:disabled a.btn.btn--success:not([href])[tabindex=-1][aria-disabled=true]</a>
           </div>
         </div>
         <div class="app-sectionBlock">
@@ -224,7 +224,7 @@
             <input class="btn btn--warning" type="button" value="fieldset:disabled input[type=button].btn.btn--warning">
             <input class="btn btn--warning" type="submit" value="fieldset:disabled input[type=submit].btn.btn--warning">
             <input class="btn btn--warning" type="reset" value="fieldset:disabled input[type=reset].btn.btn--warning">
-            <a class="btn btn--warning" role="button" aria-disabled="true">a.btn.btn--warning[role=button][aria-disabled=true]:not([href])</a>
+            <a class="btn btn--warning" tabindex="-1" aria-disabled="true">fieldset:disabled a.btn.btn--warning:not([href])[tabindex=-1][aria-disabled=true]</a>
           </div>
         </div>
         <div class="app-sectionBlock">
@@ -233,7 +233,7 @@
             <input class="btn btn--danger" type="button" value="fieldset:disabled input[type=button].btn.btn--danger">
             <input class="btn btn--danger" type="submit" value="fieldset:disabled input[type=submit].btn.btn--danger">
             <input class="btn btn--danger" type="reset" value="fieldset:disabled input[type=reset].btn.btn--danger">
-            <a class="btn btn--danger" role="button" aria-disabled="true">a.btn.btn--danger[role=button][aria-disabled=true]:not([href])</a>
+            <a class="btn btn--danger" tabindex="-1" aria-disabled="true">fieldset:disabled a.btn.btn--danger:not([href])[tabindex=-1][aria-disabled=true]</a>
           </div>
         </div>
       </fieldset>
@@ -329,9 +329,9 @@
   </div>
 
   <div class="app-section">
+    <h2 class="h2">Toggle button fieldset disabled</h2>
     <form class="form">
       <fieldset class="form-fieldset" disabled>
-        <h2 class="h2">Toggle button fieldset disabled</h2>
         <div class="app-sectionBlock app-block">
           <label class="btn-toggle">
             <input type="checkbox">
@@ -481,9 +481,9 @@
   </div>
 
   <div class="app-section">
+    <h2 class="h2">Toggle button group fieldset disabled</h2>
     <form class="form">
       <fieldset class="form-fieldset" disabled>
-        <h2 class="h2">Toggle button group fieldset disabled</h2>
         <div class="app-sectionBlock">
           <div class="form-group">
             <label class="btn-toggle">
@@ -657,9 +657,9 @@
   </div>
 
   <div class="app-section">
+    <h2 class="h2">Toggle button in label group fieldset disabled</h2>
     <form class="form">
       <fieldset class="form-fieldset" disabled>
-        <h2 class="h2">Toggle button in label group fieldset disabled</h2>
         <div class="app-sectionBlock">
           <div class="btn-toggle-group">
             <label class="btn-toggle">
@@ -718,17 +718,5 @@
         </div>
       </fieldset>
     </form>
-  </div>
-
-  <div class="app-section">
-    <h2 class="h2">Button as a link</h2>
-    <div class="app-sectionBlock" style="width: 34em;">
-      <p>
-        Lorem ipsum dolor sit amet, <button type="button" class="btn-link">button</button> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, <input type="button" class="btn-link" value="input tag button"> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </div>
   </div>
 </div>

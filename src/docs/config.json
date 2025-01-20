@@ -20,6 +20,13 @@
       "modules": [
         "index.css"
       ]
+    },
+    {
+      "key": "link",
+      "title": "Link",
+      "modules": [
+        "index.css"
+      ]
     }
   ]
 }

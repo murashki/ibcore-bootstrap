@@ -25,7 +25,7 @@
   color: #000;
 }
 
-.btn--warning:disabled, fieldset:disabled .btn--warning, .btn--warning.disabled {
+.btn--warning:disabled, .btn--warning.disabled, fieldset:disabled .btn--warning {
   color: #000;
   background-color: #ffc107;
   border-color: #ffc107;

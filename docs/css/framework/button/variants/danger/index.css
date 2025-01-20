@@ -25,7 +25,7 @@
   color: #000;
 }
 
-.btn--danger:disabled, fieldset:disabled .btn--danger, .btn--danger.disabled {
+.btn--danger:disabled, .btn--danger.disabled, fieldset:disabled .btn--danger {
   color: #000;
   background-color: #f63030;
   border-color: #f63030;

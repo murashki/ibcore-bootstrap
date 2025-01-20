@@ -1,0 +1,62 @@
+<div class="app-content">
+  <div class="app-section">
+    <h2 class="h2">Link</h2>
+    <div class="app-sectionBlock" style="white-space: nowrap">
+      <p>
+        Lorem ipsum dolor
+        <a class="link" href="#">a.link[href]</a>
+        sit amet,
+        <button class="link">button.link</button>
+        consectetur adipiscing
+        <input type="button" class="link" value="input[type=button].link">
+        elit, sed do
+        <input type="submit" class="link" value="input[type=submit].link">
+        eiusmod tempor
+        <input type="reset" class="link" value="input[type=reset].link">
+        incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+
+  <div class="app-section">
+    <h2 class="h2">Link disabled</h2>
+    <div class="app-sectionBlock" style="white-space: nowrap">
+      <p>
+        Lorem ipsum dolor
+        <a class="link disabled" tabindex="-1" aria-disabled="true">a.link.disabled:not([href])[tabindex=-1][aria-disabled=true]</a>
+        sit amet,
+        <button class="link" disabled>button.link</button>
+        consectetur adipiscing
+        <input type="button" class="link" disabled value="input[type=button].link">
+        elit, sed do
+        <input type="submit" class="link" disabled value="input[type=submit].link">
+        eiusmod tempor
+        <input type="reset" class="link" disabled value="input[type=reset].link">
+        incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+  </div>
+
+  <div class="app-section">
+    <h2 class="h2">Link fieldset disabled</h2>
+    <form class="form">
+      <fieldset class="form-fieldset" disabled>
+        <div class="app-sectionBlock" style="white-space: nowrap">
+          <p>
+            Lorem ipsum dolor
+            <a class="link" tabindex="-1" aria-disabled="true">fieldset:disabled a.link:not([href])[tabindex=-1][aria-disabled=true]</a>
+            sit amet,
+            <button class="link" disabled>fieldset:disabled button.link</button>
+            consectetur adipiscing
+            <input type="button" class="link" value="fieldset:disabled input[type=button].link">
+            elit, sed do
+            <input type="submit" class="link" value="fieldset:disabled input[type=submit].link">
+            eiusmod tempor
+            <input type="reset" class="link" value="fieldset:disabled input[type=reset].link">
+            incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

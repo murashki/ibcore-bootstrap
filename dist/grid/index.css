@@ -433,6 +433,9 @@
   .offset-xl-11 {
     margin-left: 91.666666%;
   }
+  .offset-xl-12 {
+    margin-left: 100%;
+  }
 }
 @media (max-width: 1199px) {
   .col-lg {
@@ -528,6 +531,9 @@
   }
   .offset-lg-11 {
     margin-left: 91.666666%;
+  }
+  .offset-lg-12 {
+    margin-left: 100%;
   }
 }
 @media (max-width: 979px) {
@@ -625,6 +631,9 @@
   .offset-md-11 {
     margin-left: 91.666666%;
   }
+  .offset-md-12 {
+    margin-left: 100%;
+  }
 }
 @media (max-width: 759px) {
   .col-sm {
@@ -721,8 +730,11 @@
   .offset-sm-11 {
     margin-left: 91.666666%;
   }
+  .offset-sm-12 {
+    margin-left: 100%;
+  }
 }
-.row-break-xxl,
+.row-break,
 .row-break-xl,
 .row-break-lg,
 .row-break-md,
@@ -731,62 +743,67 @@
 }
 
 @media (min-width: 1420px) {
-  .row-break-xxl {
+  .row-break:not(.row-break-unset) {
     display: block;
     width: 100%;
   }
-  .display-sm:not(.display-xxl),
-  .display-md:not(.display-xxl),
-  .display-lg:not(.display-xxl),
-  .display-xl:not(.display-xxl) {
+  .hide:not(.hide-unset) {
     display: none !important;
   }
 }
 @media (min-width: 1200px) and (max-width: 1419px) {
-  .row-break-xl {
+  .row-break:not(.row-break-unset):not(.row-break-unset-xl),
+  .row-break-xl:not(.row-break-unset-xl) {
     display: block;
     width: 100%;
   }
-  .display-sm:not(.display-xl),
-  .display-md:not(.display-xl),
-  .display-lg:not(.display-xl),
-  .display-xxl:not(.display-xl) {
+  .hide:not(.hide-unset):not(.hide-unset-xl),
+  .hide-xl:not(.hide-unset-xl) {
     display: none !important;
   }
 }
 @media (min-width: 980px) and (max-width: 1199px) {
-  .row-break-lg {
+  .row-break:not(.row-break-unset):not(.row-break-unset-xl):not(.row-break-unset-lg),
+  .row-break-xl:not(.row-break-unset-xl):not(.row-break-unset-lg),
+  .row-break-lg:not(.row-break-unset-lg) {
     display: block;
     width: 100%;
   }
-  .display-sm:not(.display-lg),
-  .display-md:not(.display-lg),
-  .display-xl:not(.display-lg),
-  .display-xxl:not(.display-lg) {
+  .hide:not(.hide-unset):not(.hide-unset-xl):not(.hide-unset-lg),
+  .hide-xl:not(.hide-unset-xl):not(.hide-unset-lg),
+  .hide-lg:not(.hide-unset-lg) {
     display: none !important;
   }
 }
 @media (min-width: 760px) and (max-width: 979px) {
-  .row-break-md {
+  .row-break:not(.row-break-unset):not(.row-break-unset-xl):not(.row-break-unset-lg):not(.row-break-unset-md),
+  .row-break-xl:not(.row-break-unset-xl):not(.row-break-unset-lg):not(.row-break-unset-md),
+  .row-break-lg:not(.row-break-unset-lg):not(.row-break-unset-md),
+  .row-break-md:not(.row-break-unset-md) {
     display: block;
     width: 100%;
   }
-  .display-sm:not(.display-md),
-  .display-lg:not(.display-md),
-  .display-xl:not(.display-md),
-  .display-xxl:not(.display-md) {
+  .hide:not(.hide-unset):not(.hide-unset-xl):not(.hide-unset-lg):not(.hide-unset-md),
+  .hide-xl:not(.hide-unset-xl):not(.hide-unset-lg):not(.hide-unset-md),
+  .hide-lg:not(.hide-unset-lg):not(.hide-unset-md),
+  .hide-md:not(.hide-unset-md) {
     display: none !important;
   }
 }
 @media (max-width: 759px) {
-  .row-break-sm {
+  .row-break:not(.row-break-unset):not(.row-break-unset-xl):not(.row-break-unset-lg):not(.row-break-unset-md):not(.row-break-unset-sm),
+  .row-break-xl:not(.row-break-unset-xl):not(.row-break-unset-lg):not(.row-break-unset-md):not(.row-break-unset-sm),
+  .row-break-lg:not(.row-break-unset-lg):not(.row-break-unset-md):not(.row-break-unset-sm),
+  .row-break-md:not(.row-break-unset-md):not(.row-break-unset-sm),
+  .row-break-sm:not(.row-break-unset-sm) {
     display: block;
     width: 100%;
   }
-  .display-md:not(.display-sm),
-  .display-lg:not(.display-sm),
-  .display-xl:not(.display-sm),
-  .display-xxl:not(.display-sm) {
+  .hide:not(.hide-unset):not(.hide-unset-xl):not(.hide-unset-lg):not(.hide-unset-md):not(.hide-unset-sm),
+  .hide-xl:not(.hide-unset-xl):not(.hide-unset-lg):not(.hide-unset-md):not(.hide-unset-sm),
+  .hide-lg:not(.hide-unset-lg):not(.hide-unset-md):not(.hide-unset-sm),
+  .hide-md:not(.hide-unset-md):not(.hide-unset-sm),
+  .hide-sm:not(.hide-unset-sm) {
     display: none !important;
   }
 }

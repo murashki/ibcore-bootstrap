@@ -8,8 +8,8 @@
   @if $selector == --ANY {
     @return "*";
   }
-  @else if $selector == --SELF {
-    @return "&";
+  @else if $selector == --THAT {
+    @return ":is(*)";
   }
   @else if $selector == --HOVER {
     @return ":hover";
@@ -139,6 +139,14 @@
       @content;
     }
   }
+}
+
+// Следующие селекторы работают некорректно, когда им передают несколько селекторов
+
+@function optionally(
+  $selector,
+) {
+  @return "&, #{$selector}";
 }
 
 @function that-is(

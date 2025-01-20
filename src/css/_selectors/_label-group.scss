@@ -1,4 +1,4 @@
-@use "../_tools/common" as *;
+@use "../_tools/selector" as *;
 
 //
 // Базовая группа с ярлыком
@@ -52,7 +52,7 @@
 @mixin LABEL-GROUP-COMMON--LABEL($class-name) {
   $LABEL-GROUP-COMMON: ".#{$class-name}";
 
-  @include use(--ANY, that-is(--LAST-CHILD), that-is-child-of($LABEL-GROUP-COMMON)) {
+  @include use(--ANY, that-is(--FIRST-CHILD), that-is-child-of($LABEL-GROUP-COMMON)) {
     @content;
   }
 }

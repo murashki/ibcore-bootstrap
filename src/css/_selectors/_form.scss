@@ -1,0 +1,46 @@
+@use "../_tools/selector" as *;
+
+//
+// Форма
+//
+@mixin FORM($class-name) {
+  $FORM: ".#{$class-name}";
+
+  @include use($FORM) {
+    @content;
+  }
+}
+
+//
+// Ярлык формы
+//
+@mixin FORM-LABEL($class-name) {
+  $FORM-LABEL: ".#{$class-name}-label";
+
+  @include use($FORM-LABEL) {
+    @content;
+  }
+}
+
+//
+// Группа полей
+//
+@mixin FORM-FIELDSET($class-name) {
+  $FORM-FIELDSET: ".#{$class-name}-fieldset";
+
+  @include use($FORM-FIELDSET) {
+    @content;
+  }
+}
+
+//
+// Неактивная группа полей
+//
+@mixin FORM-FIELDSET--DISABLED($class-name) {
+
+  @include FORM-FIELDSET($class-name) {
+    @include exactly(that-is(--DISABLED)) {
+      @content;
+    }
+  }
+}

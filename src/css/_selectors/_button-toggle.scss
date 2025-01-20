@@ -1,4 +1,4 @@
-@use "../_tools/common" as *;
+@use "../_tools/selector" as *;
 
 //
 // Переключатель
@@ -118,6 +118,22 @@
 }
 
 //
+// Переключатель в неактивной части формы
+//
+@mixin BUTTON-TOGGLE--FIELDSET-DISABLED($class-name) {
+  $CHECKBOX: "[type=checkbox]";
+  $RADIO: "[type=radio]";
+
+  @include BUTTON-TOGGLE($class-name) {
+    // Гарантированно повысим специфичность за счет изменения предыдущего селектора добавив
+    // вложенности
+    @include exactly(that-has($CHECKBOX $RADIO, that-is(--THAT)), that-is-inside("fieldset:disabled")) {
+      @content;
+    }
+  }
+}
+
+//
 // Крыжик в переключателе
 //
 @mixin BUTTON-TOGGLE--CHECKBOX($class-name) {
@@ -201,7 +217,7 @@
 //
 // Текст переключателя
 //
-@mixin BUTTON-TOGGLE--TEXT($class-name) {
+@mixin BUTTON-TOGGLE-TEXT($class-name) {
   $BUTTON-TEXT: ".#{$class-name}-text";
 
   @include use($BUTTON-TEXT) {
@@ -212,7 +228,7 @@
 //
 // Группа переключателей
 //
-@mixin BUTTON-TOGGLE--GROUP($class-name) {
+@mixin BUTTON-TOGGLE-GROUP($class-name) {
   $BUTTON-GROUP: ".#{$class-name}-group";
 
   @include use($BUTTON-GROUP) {
@@ -223,7 +239,7 @@
 //
 // Ярлык группы переключателей
 //
-@mixin BUTTON-TOGGLE--GROUP--LABEL($class-name) {
+@mixin BUTTON-TOGGLE-LABEL($class-name) {
   $BUTTON-GROUP-LABEL: ".#{$class-name}-label";
 
   @include use($BUTTON-GROUP-LABEL) {
@@ -232,11 +248,24 @@
 }
 
 //
-// Ярлык группы переключателей в неактивной группе полей или когда заблокирован
+// Ярлык группы переключателей когда заблокирован или когда в неактивной группе полей
 //
-@mixin BUTTON-TOGGLE--GROUP--LABEL--DISABLED($class-name) {
-  @include BUTTON-TOGGLE--GROUP--LABEL($class-name) {
-    @include exactly(that-is-inside("fieldset:disabled") that-is(".disabled")) {
+@mixin BUTTON-TOGGLE-LABEL--DISABLED($class-name) {
+  @include BUTTON-TOGGLE-LABEL($class-name) {
+    @include exactly(that-is(".disabled") that-is-inside("fieldset:disabled")) {
+      @content;
+    }
+  }
+}
+
+//
+// Ярлык группы переключателей в неактивной группе полей
+//
+@mixin BUTTON-TOGGLE-LABEL--FIELDSET-DISABLED($class-name) {
+  @include BUTTON-TOGGLE-LABEL($class-name) {
+    // Гарантированно повысим специфичность за счет изменения предыдущего селектора добавив
+    // вложенности
+    @include exactly(optionally(that-is(".disabled")), that-is-inside("fieldset:disabled")) {
       @content;
     }
   }

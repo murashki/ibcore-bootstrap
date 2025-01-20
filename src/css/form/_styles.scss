@@ -3,6 +3,7 @@
 
 @include form(
   "form",
-  $form-label-font-size,
-  $form-label-line-height,
+  $fieldset-disabled-opacity: $form-fieldset-disabled-opacity,
+  $label-font-size: $form-label-font-size,
+  $label-line-height: $form-label-line-height,
 );

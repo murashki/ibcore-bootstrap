@@ -25,7 +25,7 @@
   color: #000;
 }
 
-.btn--success:disabled, fieldset:disabled .btn--success, .btn--success.disabled {
+.btn--success:disabled, .btn--success.disabled, fieldset:disabled .btn--success {
   color: #000;
   background-color: #34c353;
   border-color: #34c353;

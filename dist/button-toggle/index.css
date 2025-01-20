@@ -33,6 +33,10 @@
   opacity: 0.5;
 }
 
+fieldset:disabled .btn-toggle:has([type=checkbox]:is(*), [type=radio]:is(*)) {
+  opacity: 1;
+}
+
 .btn-toggle:has([type=radio]) {
   border-radius: calc(0.5lh + 0.375em + 2px);
 }
@@ -90,10 +94,14 @@
   user-select: none;
 }
 
-fieldset:disabled .btn-toggle-label, .btn-toggle-label.disabled {
+.btn-toggle-label.disabled, fieldset:disabled .btn-toggle-label {
   cursor: default;
   pointer-events: none;
   opacity: 0.5;
+}
+
+fieldset:disabled .btn-toggle-label, fieldset:disabled .btn-toggle-label.disabled {
+  opacity: 1;
 }
 
 .btn-toggle {

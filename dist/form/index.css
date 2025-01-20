@@ -11,4 +11,8 @@
   padding: 0 0;
 }
 
+.form-fieldset:disabled {
+  opacity: 0.5;
+}
+
 /*# sourceMappingURL=index.css.map */

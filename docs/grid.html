@@ -18,6 +18,9 @@
       <a class="link app-menuLink" href="buttons.html">
         Buttons
       </a>
+      <a class="link app-menuLink" href="link.html">
+        Link
+      </a>
   </div>
 </div>
 
@@ -143,15 +146,60 @@
         </div>
       </div>
     </div>
+  
+  
+    <div class="app-section">
+      <h2 class="h2">Row break</h2>
+      <div class="app-sectionBlock" style="display: flex; align-items: center; height: 4em;">
+        Break on MAX: <b class="row row--sm" style="display: inline-flex; margin-left: 0"><span class="col-auto">Hello</span><span class="row-break row-break-unset-xl"></span><span class="col-auto">world!</span></b>
+      </div>
+      <div class="app-sectionBlock" style="display: flex; align-items: center; height: 4em;">
+        Break on XL, LG, MD and SM: <b class="row row--sm" style="display: inline-flex; margin-left: 0"><span class="col-auto">Hello</span><span class="row-break-xl"></span><span class="col-auto">world!</span></b>
+      </div>
+      <div class="app-sectionBlock" style="display: flex; align-items: center; height: 4em;">
+        Break on MAX, XL, LG and MD: <b class="row row--sm" style="display: inline-flex; margin-left: 0"><span class="col-auto">Hello</span><span class="row-break row-break-unset-sm"></span><span class="col-auto">world!</span></b>
+      </div>
+      <div class="app-sectionBlock" style="display: flex; align-items: center; height: 4em;">
+        Break on SM: <b class="row row--sm" style="display: inline-flex; margin-left: 0"><span class="col-auto">Hello</span><span class="row-break-sm"></span><span class="col-auto">world!</span></b>
+      </div>
+      <div class="app-sectionBlock" style="display: flex; align-items: center; height: 4em;">
+        Break on MAX, LG and SM: <b class="row row--sm" style="display: inline-flex; margin-left: 0"><span class="col-auto">Hello</span><span class="row-break row-break-unset-xl row-break-lg row-break-unset-md row-break-sm"></span><span class="col-auto">world!</span></b>
+      </div>
+      <div class="app-sectionBlock" style="display: flex; align-items: center; height: 4em;">
+        Break on XL and MD: <b class="row row--sm" style="display: inline-flex; margin-left: 0"><span class="col-auto">Hello</span><span class="row-break-xl row-break-unset-lg row-break-md row-break-unset-sm"></span><span class="col-auto">world!</span></b>
+      </div>
+    </div>
+  
+    <div class="app-section">
+      <h2 class="h2">Display</h2>
+      <div class="app-sectionBlock">
+        Display on MAX: <b class="hide-xl">Hello world!</b>
+      </div>
+      <div class="app-sectionBlock">
+        Display on XL, LG, MD and SM: <b class="hide hide-unset-xl">Hello world!</b>
+      </div>
+      <div class="app-sectionBlock">
+        Display on MAX, XL, LG and MD: <b class="hide-sm">Hello world!</b>
+      </div>
+      <div class="app-sectionBlock">
+        Display on SM: <b class="hide hide-unset-sm">Hello world!</b>
+      </div>
+      <div class="app-sectionBlock">
+        Display on MAX, LG and SM: <b class="hide-xl hide-unset-lg hide-md hide-unset-sm">Hello world!</b>
+      </div>
+      <div class="app-sectionBlock">
+        Display on XL and MD: <b class="hide hide-unset-xl hide-lg hide-unset-md hide-sm">Hello world!</b>
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="app-breakpoint">
-  <span class="display-xxl">xxl</span>
-  <span class="display-xl">xl</span>
-  <span class="display-lg">lg</span>
-  <span class="display-md">md</span>
-  <span class="display-sm">sm</span>
+  <div class="hide-xl">MAX</div>
+  <div class="hide hide-unset-xl hide-lg">XL</div>
+  <div class="hide hide-unset-lg hide-md">LG</div>
+  <div class="hide hide-unset-md hide-sm">MD</div>
+  <div class="hide hide-unset-sm">SM</div>
 </div>
 </body>
 </html>

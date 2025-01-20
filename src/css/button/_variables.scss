@@ -50,6 +50,7 @@ $btn-border-radius: 0.15em !default;
 $btn-vertical-padding: 0.375em !default;
 $btn-horizontal-padding: 0.575em !default;
 $btn-disabled-opacity: 0.5 !default;
+$btn-fieldset-disabled-opacity: 1 !default;
 
 $btn-transition-appearance: 0.15s ease-in-out !default;
   $btn-transition: get-btn-transition($btn-transition-appearance) !default;

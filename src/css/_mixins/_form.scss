@@ -1,20 +1,27 @@
-@use "../_skeletons/form" as *;
+@use "../_selectors/form" as *;
 @use "../_tools/style" as *;
 
 @mixin form(
   $class-name,
+  $fieldset-disabled-opacity,
   $label-font-size,
   $label-line-height,
 ) {
-  @include FORM--LABEL($class-name) {
+  @include FORM($class-name) {}
+
+  @include FORM-LABEL($class-name) {
     @include display-style(inline-block);
     @include font-style(--UNDEFINED, $label-font-size, $line-height: $label-line-height);
   }
 
-  @include FORM--FIELDSET($class-name) {
+  @include FORM-FIELDSET($class-name) {
     min-width: 0;
     @include layout-style(--UNDEFINED, --UNDEFINED, 0);
     @include margin-style(0, 0);
     @include padding-style(0, 0);
+  }
+
+  @include FORM-FIELDSET--DISABLED($class-name) {
+    @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $fieldset-disabled-opacity);
   }
 }

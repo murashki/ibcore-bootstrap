@@ -1,9 +1,23 @@
 .link {
+  cursor: pointer;
+  display: inline;
   color: #007bff;
-  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  background-color: transparent;
+  border-width: 0;
+  padding: 0 0;
 }
 
 .link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.link:active {
   color: #007bff;
   text-decoration: underline;
 }
@@ -16,7 +30,19 @@
 
 .link:visited, .link.visited {
   color: #007bff;
+  text-decoration: underline;
+}
+
+.link:disabled, .link.disabled, fieldset:disabled .link {
+  cursor: default;
+  pointer-events: none;
+  color: #007bff;
   text-decoration: none;
+  opacity: 0.5;
+}
+
+fieldset:disabled .link:is(*), fieldset:disabled .link.disabled {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=index.css.map */

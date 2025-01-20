@@ -1,6 +1,6 @@
 @use "sass:color";
 @use "../_tools/style" as *;
-@use "../_skeletons/form-control" as *;
+@use "../_selectors/form-control" as *;
 
 @mixin form-control(
   $class-name,

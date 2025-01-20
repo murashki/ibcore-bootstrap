@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "../_skeletons/button" as *;
+@use "../_selectors/button" as *;
 @use "../_tools/style" as *;
 
 @function get-hover-color($color) {
@@ -70,6 +70,7 @@
   $horizontal-padding,
   $transition,
   $disabled-opacity,
+  $fieldset-disabled-opacity,
 ) {
   @include BUTTON($class-name) {
     @include cursor-style(pointer, $user-select: none);
@@ -84,14 +85,9 @@
     @include cursor-style(default, none);
     @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
   }
-}
 
-@mixin button-size(
-  $class-name,
-  $font-size,
-) {
-  @include BUTTON($class-name) {
-    @include font-style(--UNDEFINED, $font-size);
+  @include BUTTON--FIELDSET-DISABLED($class-name) {
+    @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $fieldset-disabled-opacity);
   }
 }
 
@@ -139,5 +135,14 @@
   @include BUTTON--DISABLED($class-name) {
     @include font-style($disabled-color);
     @include layout-style($disabled-bg-color, $disabled-border-color, $box-shadow: none);
+  }
+}
+
+@mixin button-size(
+  $class-name,
+  $font-size,
+) {
+  @include BUTTON($class-name) {
+    @include font-style(--UNDEFINED, $font-size);
   }
 }

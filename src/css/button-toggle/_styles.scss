@@ -24,6 +24,7 @@
   $label-left-padding: $btn-toggle-label-left-padding,
   $group-ngb-margin: $btn-toggle-group-ngb-margin,
   $disabled-opacity: $btn-toggle-disabled-opacity,
+  $fieldset-disabled-opacity: $btn-toggle-fieldset-disabled-opacity,
 );
 
 @include button-toggle-variant(

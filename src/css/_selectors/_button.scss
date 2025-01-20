@@ -1,4 +1,4 @@
-@use "../_tools/common" as *;
+@use "../_tools/selector" as *;
 
 //
 // Кнопка
@@ -45,11 +45,24 @@
 }
 
 //
-// Кнопка в неактивной группе полей или когда заблокирована
+// Кнопка когда заблокирована или когда в неактивной группе полей
 //
 @mixin BUTTON--DISABLED($class-name) {
   @include BUTTON($class-name) {
-    @include exactly(that-is(--DISABLED) that-is-inside("fieldset:disabled") that-is(".disabled")) {
+    @include exactly(that-is(--DISABLED) that-is(".disabled") that-is-inside("fieldset:disabled")) {
+      @content;
+    }
+  }
+}
+
+//
+// Кнопка в неактивной группе полей
+//
+@mixin BUTTON--FIELDSET-DISABLED($class-name) {
+  @include BUTTON($class-name) {
+    // Гарантированно повысим специфичность за счет изменения предыдущего селектора добавив
+    // вложенности
+    @include exactly(that-is(--THAT) that-is(".disabled"), that-is-inside("fieldset:disabled")) {
       @content;
     }
   }

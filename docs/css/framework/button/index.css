@@ -23,10 +23,14 @@
   }
 }
 
-.btn:disabled, fieldset:disabled .btn, .btn.disabled {
+.btn:disabled, .btn.disabled, fieldset:disabled .btn {
   cursor: default;
   pointer-events: none;
   opacity: 0.5;
+}
+
+fieldset:disabled .btn:is(*), fieldset:disabled .btn.disabled {
+  opacity: 1;
 }
 
 .btn {
@@ -56,7 +60,7 @@
   color: #000;
 }
 
-.btn:disabled, fieldset:disabled .btn, .btn.disabled {
+.btn:disabled, .btn.disabled, fieldset:disabled .btn {
   color: #000;
   background-color: #e3e4ea;
   border-color: #e3e4ea;

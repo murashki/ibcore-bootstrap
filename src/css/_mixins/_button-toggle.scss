@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "../_skeletons/button-toggle" as *;
+@use "../_selectors/button-toggle" as *;
 @use "../_tools/style" as *;
 
 @function get-hover-color($color) {
@@ -81,6 +81,7 @@
   $label-left-padding,
   $group-ngb-margin,
   $disabled-opacity,
+  $fieldset-disabled-opacity,
 ) {
   @include BUTTON-TOGGLE($class-name) {
     position: relative;
@@ -99,6 +100,10 @@
   @include BUTTON-TOGGLE--DISABLED($class-name) {
     @include cursor-style(default, none);
     @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
+  }
+
+  @include BUTTON-TOGGLE--FIELDSET-DISABLED($class-name) {
+    @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $fieldset-disabled-opacity);
   }
 
   @include BUTTON-TOGGLE--WITH-RADIO($class-name) {
@@ -129,26 +134,30 @@
     @include layout-style(--UNDEFINED, --UNDEFINED, $border-radius: 50%);
   }
 
-  @include BUTTON-TOGGLE--TEXT($class-name) {
+  @include BUTTON-TOGGLE-TEXT($class-name) {
     padding-left: $inner-text-left-padding;
     @include font-style(--UNDEFINED, $text-align: center);
   }
 
-  @include BUTTON-TOGGLE--GROUP($class-name) {
+  @include BUTTON-TOGGLE-GROUP($class-name) {
     margin-bottom: $group-ngb-margin;
     @include display-style(flex, flex-start);
   }
 
-  @include BUTTON-TOGGLE--GROUP--LABEL($class-name) {
+  @include BUTTON-TOGGLE-LABEL($class-name) {
     padding-left: $label-left-padding;
     padding-top: calc($vertical-padding + $border-width - ((1lh - $icon-size) / 2));
     @include font-style(--UNDEFINED, $line-height: $label-line-height);
     @include cursor-style(pointer, $user-select: none);
   }
 
-  @include BUTTON-TOGGLE--GROUP--LABEL--DISABLED($class-name) {
+  @include BUTTON-TOGGLE-LABEL--DISABLED($class-name) {
     @include cursor-style(default, none);
     @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
+  }
+
+  @include BUTTON-TOGGLE-LABEL--FIELDSET-DISABLED($class-name) {
+    @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $fieldset-disabled-opacity);
   }
 }
 
