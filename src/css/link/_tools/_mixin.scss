@@ -1,0 +1,58 @@
+@use "../../_tools/style" as *;
+@use "./selector" as *;
+
+@mixin link(
+  $class-name,
+  $color,
+  $text-decoration,
+  $hover-color,
+  $hover-text-decoration,
+  $active-color,
+  $active-text-decoration,
+  $focus-color,
+  $focus-text-decoration,
+  $disabled-color,
+  $disabled-text-decoration,
+  $disabled-opacity,
+  $fieldset-disabled-opacity,
+  $visited-color,
+  $visited-text-decoration,
+) {
+  @include LINK($class-name) {
+    // Here we set `cursor` as `pointer`, especially for cases when the link does not have `href`
+    // attribute.
+
+    @include cursor(pointer);
+    @include display(inline);
+    @include padding(0, 0);
+    @include shape(transparent, --U, 0);
+    @include text($color, inherit, inherit, inherit, inherit, $text-decoration: $text-decoration);
+  }
+
+  @include LINK--HOVER($class-name) {
+    @include text($hover-color, --U, $text-decoration: $hover-text-decoration);
+  }
+
+  @include LINK--ACTIVE($class-name) {
+    @include text($active-color, --U, $text-decoration: $active-text-decoration);
+  }
+
+  @include LINK--FOCUS($class-name) {
+    outline: none;
+    @include text($focus-color, --U, $text-decoration: $focus-text-decoration);
+  }
+
+  @include LINK--VISITED($class-name) {
+    @include text($visited-color, --U, $text-decoration: $visited-text-decoration);
+  }
+
+  @include LINK--DISABLED($class-name) {
+    @include cursor(default, none);
+    @include shape(--U, --U, $opacity: $disabled-opacity);
+    @include text($disabled-color, --U, $text-decoration: $disabled-text-decoration);
+  }
+
+  @include LINK--FIELDSET-DISABLED($class-name) {
+    @include shape(--U, --U, $opacity: $fieldset-disabled-opacity);
+  }
+}

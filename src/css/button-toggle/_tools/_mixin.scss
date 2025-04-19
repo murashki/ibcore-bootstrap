@@ -1,6 +1,6 @@
 @use "sass:color";
-@use "../_selectors/button-toggle" as *;
-@use "../_tools/style" as *;
+@use "../../_tools/style" as *;
+@use "./selector" as *;
 
 @function get-hover-color($color) {
   @return $color;
@@ -58,14 +58,25 @@
   @return $border-color;
 }
 
+@function get-disabled-opacity() {
+  @return 0.5;
+}
+
+@function get-fieldset-disabled-opacity() {
+  @return 1;
+}
+
 @mixin button-toggle(
   $class-name,
+  $color,
+  $bg-color,
+  $border-color,
+  $border-width,
+  $border-radius,
   $font-family,
   $font-size,
   $font-weight,
   $line-height,
-  $border-width,
-  $border-radius,
   $vertical-padding,
   $horizontal-padding,
   $inner-text-left-padding,
@@ -80,46 +91,61 @@
   $label-line-height,
   $label-left-padding,
   $group-ngb-margin,
-  $disabled-opacity,
-  $fieldset-disabled-opacity,
+  $hover-color: get-hover-color($color),
+  $hover-bg-color: get-hover-bg-color($bg-color),
+  $hover-border-color: get-hover-border-color($border-color),
+  $focus-color: get-focus-color($color),
+  $focus-bg-color: get-focus-bg-color($bg-color),
+  $focus-border-color: get-focus-border-color($border-color),
+  $focus-box-shadow: get-focus-box-shadow($focus-border-color),
+  $active-color: get-active-color($color),
+  $active-bg-color: get-active-bg-color($bg-color),
+  $active-border-color: get-active-border-color($border-color),
+  $active-box-shadow: get-active-box-shadow($active-border-color),
+  $disabled-color: get-disabled-color($color),
+  $disabled-bg-color: get-disabled-bg-color($bg-color),
+  $disabled-border-color: get-disabled-border-color($border-color),
+  $disabled-opacity: get-disabled-opacity(),
+  $fieldset-disabled-opacity: get-fieldset-disabled-opacity(),
 ) {
   @include BUTTON-TOGGLE($class-name) {
     position: relative;
-    @include cursor-style(pointer, $user-select: none);
-    @include display-style(flex, center, center);
-    @include font-style(--UNDEFINED, $font-size, $font-weight, $font-family, $line-height, none, $white-space: nowrap);
-    @include layout-style(--UNDEFINED, --UNDEFINED, $border-width, solid, $border-radius);
-    @include padding-style($vertical-padding, $horizontal-padding);
-    @include transition-style($transition);
+    @include cursor(pointer, $user-select: none);
+    @include display(flex, center, center);
+    @include padding($vertical-padding, $horizontal-padding);
+    @include shape(--U, --U, $border-width, solid, $border-radius);
+    @include text(--U, $font-size, $font-weight, $font-family, $line-height, none, $white-space: nowrap);
+    @include transition($transition);
   }
 
   @include BUTTON-TOGGLE--INSIDE-GROUP($class-name) {
-    @include padding-style($vertical-padding, $vertical-padding);
+    @include padding($vertical-padding, $vertical-padding);
   }
 
   @include BUTTON-TOGGLE--DISABLED($class-name) {
-    @include cursor-style(default, none);
-    @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
+    @include cursor(default, none);
+    @include shape(--U, --U, $opacity: $disabled-opacity);
   }
 
   @include BUTTON-TOGGLE--FIELDSET-DISABLED($class-name) {
-    @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $fieldset-disabled-opacity);
+    @include shape(--U, --U, $opacity: $fieldset-disabled-opacity);
   }
 
   @include BUTTON-TOGGLE--WITH-RADIO($class-name) {
-    @include layout-style(--UNDEFINED, --UNDEFINED, $border-radius: calc(1lh / 2 + $vertical-padding + $border-width));
+    @include shape(--U, --U, $border-radius: calc(1lh / 2 + $vertical-padding + $border-width));
   }
 
   @include BUTTON-TOGGLE--CONTROL($class-name) {
+    // Here we set `margin` as `0`, because it does not removed via appearance.
+
     appearance: none;
     content: "";
-    // Not removed via appearance
     margin: 0;
-    @include cursor-style(inherit, inherit);
-    @include display-style(block);
-    @include layout-style($icon-bg-color, $icon-border-color, $icon-border-width, solid);
-    @include size-style($icon-size, $icon-size);
-    @include transition-style($transition);
+    @include cursor(inherit, inherit);
+    @include display(block);
+    @include shape($icon-bg-color, $icon-border-color, $icon-border-width, solid);
+    @include size($icon-size, $icon-size);
+    @include transition($transition);
   }
 
   @include BUTTON-TOGGLE--CONTROL--FOCUS($class-name) {
@@ -127,38 +153,59 @@
   }
 
   @include BUTTON-TOGGLE--CONTROL--CHECKED($class-name) {
-    @include layout-style($icon-checked-bg-color, $icon-checked-border-color);
+    @include shape($icon-checked-bg-color, $icon-checked-border-color);
   }
 
   @include BUTTON-TOGGLE--RADIO($class-name) {
-    @include layout-style(--UNDEFINED, --UNDEFINED, $border-radius: 50%);
+    @include shape(--U, --U, $border-radius: 50%);
   }
 
   @include BUTTON-TOGGLE-TEXT($class-name) {
     padding-left: $inner-text-left-padding;
-    @include font-style(--UNDEFINED, $text-align: center);
+    @include text(--U, --U, $text-align: center);
   }
 
   @include BUTTON-TOGGLE-GROUP($class-name) {
     margin-bottom: $group-ngb-margin;
-    @include display-style(flex, flex-start);
+    @include display(flex, flex-start);
   }
 
   @include BUTTON-TOGGLE-LABEL($class-name) {
     padding-left: $label-left-padding;
     padding-top: calc($vertical-padding + $border-width - ((1lh - $icon-size) / 2));
-    @include font-style(--UNDEFINED, $line-height: $label-line-height);
-    @include cursor-style(pointer, $user-select: none);
+    @include cursor(pointer, $user-select: none);
+    @include text(--U, --U, $line-height: $label-line-height);
   }
 
   @include BUTTON-TOGGLE-LABEL--DISABLED($class-name) {
-    @include cursor-style(default, none);
-    @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $disabled-opacity);
+    @include cursor(default, none);
+    @include shape(--U, --U, $opacity: $disabled-opacity);
   }
 
   @include BUTTON-TOGGLE-LABEL--FIELDSET-DISABLED($class-name) {
-    @include layout-style(--UNDEFINED, --UNDEFINED, $opacity: $fieldset-disabled-opacity);
+    @include shape(--U, --U, $opacity: $fieldset-disabled-opacity);
   }
+
+  @include button-toggle-variant(
+    $class-name,
+    $color,
+    $bg-color,
+    $border-color,
+    $hover-color,
+    $hover-bg-color,
+    $hover-border-color,
+    $focus-color,
+    $focus-bg-color,
+    $focus-border-color,
+    $focus-box-shadow,
+    $active-color,
+    $active-bg-color,
+    $active-border-color,
+    $active-box-shadow,
+    $disabled-color,
+    $disabled-bg-color,
+    $disabled-border-color,
+  );
 }
 
 @mixin button-toggle-variant(
@@ -182,28 +229,28 @@
   $disabled-border-color: get-disabled-border-color($border-color),
 ) {
   @include BUTTON-TOGGLE($class-name) {
-    @include layout-style($bg-color, $border-color);
-    @include font-style($color);
+    @include shape($bg-color, $border-color);
+    @include text($color, --U);
   }
 
   @include BUTTON-TOGGLE--HOVER($class-name) {
-    @include layout-style($hover-bg-color, $hover-border-color);
-    @include font-style($hover-color);
+    @include shape($hover-bg-color, $hover-border-color);
+    @include text($hover-color, --U);
   }
 
   @include BUTTON-TOGGLE--FOCUS($class-name) {
     outline: none;
-    @include layout-style($focus-bg-color, $focus-border-color, $box-shadow: $focus-box-shadow);
-    @include font-style($focus-color);
+    @include shape($focus-bg-color, $focus-border-color, $box-shadow: $focus-box-shadow);
+    @include text($focus-color, --U);
   }
 
   @include BUTTON-TOGGLE--ACTIVE($class-name) {
-    @include layout-style($active-bg-color, $active-border-color, $box-shadow: $active-box-shadow);
-    @include font-style($active-color);
+    @include shape($active-bg-color, $active-border-color, $box-shadow: $active-box-shadow);
+    @include text($active-color, --U);
   }
 
   @include BUTTON-TOGGLE--DISABLED($class-name) {
-    @include font-style($disabled-color);
-    @include layout-style($disabled-bg-color, $disabled-border-color, $box-shadow: none);
+    @include text($disabled-color, --U);
+    @include shape($disabled-bg-color, $disabled-border-color, $box-shadow: none);
   }
 }

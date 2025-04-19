@@ -1,5 +1,6 @@
 @use "../../variables" as *;
 
-$btn-danger-color: $btn-color !default;
-$btn-danger-bg-color: #f63030 !default;
-$btn-danger-border-color: $btn-danger-bg-color !default;
+$button-danger-class-name: "#{$button-class-name}--danger" !default;
+$button-danger-color: $button-color !default;
+$button-danger-bg-color: #f63030 !default;
+$button-danger-border-color: $button-danger-bg-color !default;

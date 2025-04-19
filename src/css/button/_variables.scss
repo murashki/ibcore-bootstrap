@@ -1,56 +1,33 @@
 @use "../_tools/smart-round" as *;
+@use "./_tools/get-default" as *;
 @use "../variables" as *;
 
-@function get-btn-font-size-xs($btn-font-size) {
-  @return smart_round($btn-font-size * 0.75);
-}
+$button-class-name: "btn" !default;
+$button-color: $color !default;
+$button-font-family: inherit !default;
+$button-font-size: 1em !default;
+  $button-font-size-xs:  get-default-font-size-xs($button-font-size) !default;
+  $button-font-size-sm:  get-default-font-size-sm($button-font-size) !default;
+  $button-font-size-md:  get-default-font-size-md($button-font-size) !default;
+  $button-font-size-lg:  get-default-font-size-lg($button-font-size) !default;
+  $button-font-size-xl:  get-default-font-size-xl($button-font-size) !default;
+$button-font-weight: inherit !default;
+$button-line-height: $line-height !default;
+$button-bg-color: #e3e4ea !default;
+  $button-border-color:  get-default-border-color($button-bg-color) !default;
+$button-border-width: 2px !default;
+$button-border-radius: 0.15em !default;
+$button-vertical-padding: 0.375em !default;
+$button-horizontal-padding: 0.575em !default;
+$button-disabled-opacity: 0.5 !default;
+$button-fieldset-disabled-opacity: 1 !default;
 
-@function get-btn-font-size-sm($btn-font-size) {
-  @return smart_round($btn-font-size * 0.833);
-}
+$button-transition-appearance: 0.15s ease-in-out !default;
+  $button-transition:  get-default-transition($button-transition-appearance) !default;
 
-@function get-btn-font-size-md($btn-font-size) {
-  @return $btn-font-size;
-}
 
-@function get-btn-font-size-lg($btn-font-size) {
-  @return smart_round($btn-font-size * 1.166);
-}
-
-@function get-btn-font-size-xl($btn-font-size) {
-  @return smart_round($btn-font-size * 1.333);
-}
-
-@function get-btn-border-color($btn-bg-color) {
-  @return $btn-bg-color;
-}
-
-@function get-btn-transition($btn-transition-appearance) {
-  @return
-    color $btn-transition-appearance,
-    background-color $btn-transition-appearance,
-    border-color $btn-transition-appearance,
-    box-shadow $btn-transition-appearance;
-}
-
-$btn-color: $color !default;
-$btn-font-family: inherit !default;
-$btn-font-size: 1em !default;
-  $btn-font-size-xs: get-btn-font-size-xs($btn-font-size) !default;
-  $btn-font-size-sm: get-btn-font-size-sm($btn-font-size) !default;
-  $btn-font-size-md: get-btn-font-size-md($btn-font-size) !default;
-  $btn-font-size-lg: get-btn-font-size-lg($btn-font-size) !default;
-  $btn-font-size-xl: get-btn-font-size-xl($btn-font-size) !default;
-$btn-font-weight: inherit !default;
-$btn-line-height: $line-height !default;
-$btn-bg-color: #e3e4ea !default;
-  $btn-border-color: get-btn-border-color($btn-bg-color) !default;
-$btn-border-width: 2px !default;
-$btn-border-radius: 0.15em !default;
-$btn-vertical-padding: 0.375em !default;
-$btn-horizontal-padding: 0.575em !default;
-$btn-disabled-opacity: 0.5 !default;
-$btn-fieldset-disabled-opacity: 1 !default;
-
-$btn-transition-appearance: 0.15s ease-in-out !default;
-  $btn-transition: get-btn-transition($btn-transition-appearance) !default;
+$button-xs-class-name: "#{$button-class-name}--xs" !default;
+$button-sm-class-name: "#{$button-class-name}--sm" !default;
+$button-md-class-name: "#{$button-class-name}--md" !default;
+$button-lg-class-name: "#{$button-class-name}--lg" !default;
+$button-xl-class-name: "#{$button-class-name}--xl" !default;

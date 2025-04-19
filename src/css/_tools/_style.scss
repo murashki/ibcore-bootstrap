@@ -1,137 +1,137 @@
 // -- STYLES -- //
 
-@mixin display-style(
+@mixin display(
   $display,
-  $align-items: --UNDEFINED,
-  $justify-content: --UNDEFINED,
-  $flex-direction: --UNDEFINED,
+  $align-items: --U,
+  $justify-content: --U,
+  $flex-direction: --U,
 ) {
   display: $display;
 
   @if $display == flex {
-    @if $align-items != --UNDEFINED {
+    @if $align-items != --U {
       align-items: $align-items;
     }
-    @if $justify-content != --UNDEFINED {
+    @if $justify-content != --U {
       justify-content: $justify-content;
     }
-    @if $flex-direction != --UNDEFINED {
+    @if $flex-direction != --U {
       flex-direction: $flex-direction;
     }
   }
 }
 
-@mixin size-style(
-  $width: --UNDEFINED,
-  $height: --UNDEFINED,
+@mixin size(
+  $width: --U,
+  $height: --U,
 ) {
-  @if $width != --UNDEFINED {
+  @if $width != --U {
     width: $width;
   }
-  @if $height != --UNDEFINED {
+  @if $height != --U {
     height: $height;
   }
 }
 
-@mixin font-style(
+@mixin text(
   $color,
-  $font-size: --UNDEFINED,
-  $font-weight: --UNDEFINED,
-  $font-family: --UNDEFINED,
-  $line-height: --UNDEFINED,
-  $text-decoration: --UNDEFINED,
-  $text-align: --UNDEFINED,
-  $white-space: --UNDEFINED,
+  $font-size,
+  $font-weight: --U,
+  $font-family: --U,
+  $line-height: --U,
+  $text-decoration: --U,
+  $text-align: --U,
+  $white-space: --U,
 ) {
-  @if $color != --UNDEFINED {
+  @if $color != --U {
     color: $color;
   }
-  @if $font-family != --UNDEFINED {
+  @if $font-family != --U {
     font-family: $font-family;
   }
-  @if $font-size != --UNDEFINED {
+  @if $font-size != --U {
     font-size: $font-size;
   }
-  @if $font-weight != --UNDEFINED {
+  @if $font-weight != --U {
     font-weight: $font-weight;
   }
-  @if $line-height != --UNDEFINED {
+  @if $line-height != --U {
     line-height: $line-height;
   }
-  @if $text-decoration != --UNDEFINED {
+  @if $text-decoration != --U {
     text-decoration: $text-decoration;
   }
-  @if $text-align != --UNDEFINED {
+  @if $text-align != --U {
     text-align: $text-align;
   }
-  @if $white-space != --UNDEFINED {
+  @if $white-space != --U {
     white-space: $white-space;
   }
 }
 
-@mixin layout-style(
+@mixin shape(
   $bg-color,
   $border-color,
-  $border-width: --UNDEFINED,
-  $border-style: --UNDEFINED,
-  $border-radius: --UNDEFINED,
-  $box-shadow: --UNDEFINED,
-  $opacity: --UNDEFINED,
+  $border-width: --U,
+  $border-style: --U,
+  $border-radius: --U,
+  $box-shadow: --U,
+  $opacity: --U,
 ) {
-  @if $bg-color != --UNDEFINED {
+  @if $bg-color != --U {
     background-color: $bg-color;
   }
-  @if $border-color != --UNDEFINED {
+  @if $border-color != --U {
     border-color: $border-color;
   }
-  @if $border-width != --UNDEFINED {
+  @if $border-width != --U {
     border-width: $border-width;
   }
-  @if $border-style != --UNDEFINED {
+  @if $border-style != --U {
     border-style: $border-style;
   }
-  @if $border-radius != --UNDEFINED {
+  @if $border-radius != --U {
     border-radius: $border-radius;
   }
-  @if $box-shadow != --UNDEFINED {
+  @if $box-shadow != --U {
     box-shadow: $box-shadow;
   }
-  @if $opacity != --UNDEFINED {
+  @if $opacity != --U {
     opacity: $opacity;
   }
 }
 
-@mixin margin-style(
+@mixin margin(
   $vertical-margin,
   $horizontal-margin,
 ) {
-  padding: $vertical-margin $horizontal-margin;
+  margin: $vertical-margin $horizontal-margin;
 }
 
-@mixin padding-style(
+@mixin padding(
   $vertical-padding,
   $horizontal-padding,
 ) {
   padding: $vertical-padding $horizontal-padding;
 }
 
-@mixin cursor-style(
-  $cursor: --UNDEFINED,
-  $pointer-events: --UNDEFINED,
-  $user-select: --UNDEFINED,
+@mixin cursor(
+  $cursor: --U,
+  $pointer-events: --U,
+  $user-select: --U,
 ) {
-  @if $cursor != --UNDEFINED {
+  @if $cursor != --U {
     cursor: $cursor;
   }
-  @if $pointer-events != --UNDEFINED {
+  @if $pointer-events != --U {
     pointer-events: $pointer-events;
   }
-  @if $user-select != --UNDEFINED {
+  @if $user-select != --U {
     user-select: $user-select;
   }
 }
 
-@mixin transition-style(
+@mixin transition(
   $transition,
 ) {
   transition: $transition;

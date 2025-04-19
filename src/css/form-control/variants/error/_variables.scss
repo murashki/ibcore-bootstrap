@@ -1,5 +1,6 @@
 @use "../../variables" as *;
 
+$form-control-error-class-name: "#{$form-control-class-name}--error" !default;
 $form-control-error-color: $form-control-color !default;
 $form-control-error-bg-color: $form-control-bg-color !default;
 $form-control-error-border-color: #dc3545 !default;

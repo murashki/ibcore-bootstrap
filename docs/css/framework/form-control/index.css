@@ -1,14 +1,14 @@
 .form-control {
   display: block;
+  padding: 0.375em 0.75em;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.3em;
+  width: 100%;
   font-family: inherit;
   font-size: 1em;
   font-weight: inherit;
   line-height: 1.4em;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 0.3em;
-  padding: 0.375em 0.75em;
-  width: 100%;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media screen and (prefers-reduced-motion: reduce) {
@@ -18,8 +18,8 @@
 }
 
 textarea.form-control {
-  line-height: 1.4em;
   height: 5em;
+  line-height: 1.4em;
 }
 
 .form-control::placeholder {
@@ -42,10 +42,14 @@ textarea.form-control {
   opacity: 0.5;
 }
 
+fieldset:disabled .form-control, fieldset:disabled .form-control:disabled {
+  opacity: 1;
+}
+
 .form-control {
-  color: #323442;
   background-color: #f5f5f8;
-  border-color: #ebebef;
+  border-color: rgb(209, 209, 222.8);
+  color: #323442;
 }
 
 .form-control::placeholder {
@@ -53,20 +57,30 @@ textarea.form-control {
 }
 
 .form-control:hover {
-  color: #323442;
   background-color: #f5f5f8;
-  border-color: rgb(213.75, 213.75, 222);
+  border-color: rgb(186.5, 186.5, 207.05);
+  color: #323442;
 }
 
 .form-control:hover::placeholder {
   color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
 }
 
-.form-control:focus {
-  color: #323442;
+.form-control:active {
   background-color: #f5f5f8;
-  border-color: rgb(213.75, 213.75, 222);
-  box-shadow: 0 0 0 0.2em rgba(213.75, 213.75, 222, 0.5);
+  border-color: rgb(186.5, 186.5, 207.05);
+  color: #323442;
+}
+
+.form-control:active::placeholder {
+  color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
+}
+
+.form-control:focus {
+  background-color: #f5f5f8;
+  border-color: rgb(186.5, 186.5, 207.05);
+  box-shadow: 0 0 0 0.2em rgba(186.5, 186.5, 207.05, 0.5);
+  color: #323442;
 }
 
 .form-control:focus::placeholder {
@@ -74,9 +88,9 @@ textarea.form-control {
 }
 
 .form-control[readonly] {
-  color: #323442;
   background-color: rgb(237.5, 237.5, 242.75);
-  border-color: #ebebef;
+  border-color: rgb(209, 209, 222.8);
+  color: #323442;
 }
 
 .form-control[readonly]::placeholder {
@@ -84,12 +98,12 @@ textarea.form-control {
 }
 
 .form-control:disabled, fieldset:disabled .form-control {
-  color: #323442;
   background-color: #f5f5f8;
-  border-color: #ebebef;
+  border-color: rgb(209, 209, 222.8);
+  color: #323442;
 }
 
-.form-control[readonly]::placeholder {
+.form-control:disabled::placeholder, fieldset:disabled .form-control::placeholder {
   color: rgb(132.3879310345, 136.1034482759, 162.1120689655);
 }
 

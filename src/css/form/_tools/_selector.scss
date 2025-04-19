@@ -1,8 +1,6 @@
-@use "../_tools/selector" as *;
+@use "../../_tools/selector" as *;
 
-//
 // Форма
-//
 @mixin FORM($class-name) {
   $FORM: ".#{$class-name}";
 
@@ -11,9 +9,7 @@
   }
 }
 
-//
 // Ярлык формы
-//
 @mixin FORM-LABEL($class-name) {
   $FORM-LABEL: ".#{$class-name}-label";
 
@@ -22,9 +18,25 @@
   }
 }
 
-//
+// Ярлык формы когда заблокирован или когда в неактивной группе полей
+@mixin FORM-LABEL--DISABLED($class-name) {
+  @include FORM-LABEL($class-name) {
+    @include exactly(that-is(".disabled") that-is-inside("fieldset:disabled")) {
+      @content;
+    }
+  }
+}
+
+// Ярлык формы в неактивной группе полей
+@mixin FORM-LABEL--FIELDSET-DISABLED($class-name) {
+  @include FORM-LABEL($class-name) {
+    @include exactly(optionally(that-is(".disabled")), that-is-inside("fieldset:disabled")) {
+      @content;
+    }
+  }
+}
+
 // Группа полей
-//
 @mixin FORM-FIELDSET($class-name) {
   $FORM-FIELDSET: ".#{$class-name}-fieldset";
 
@@ -33,9 +45,7 @@
   }
 }
 
-//
 // Неактивная группа полей
-//
 @mixin FORM-FIELDSET--DISABLED($class-name) {
 
   @include FORM-FIELDSET($class-name) {

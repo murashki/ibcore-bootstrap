@@ -1,0 +1,98 @@
+@use "sass:color";
+@use "../../_tools/smart-round" as *;
+
+@function get-default-border-color($bg-color) {
+  @return $bg-color;
+}
+
+@function get-default-transition($transition-appearance) {
+  @return
+    color $transition-appearance,
+    background-color $transition-appearance,
+    border-color $transition-appearance,
+    box-shadow $transition-appearance;
+}
+
+@function  get-default-hover-color($color) {
+  @return $color;
+}
+
+@function  get-default-hover-bg-color($bg-color) {
+  @return color.adjust($bg-color, $lightness: -5%);
+}
+
+@function  get-default-hover-border-color($border-color) {
+  @return color.adjust($border-color, $lightness: -7.5%);
+}
+
+@function  get-default-focus-color($color) {
+  @return $color;
+}
+
+@function  get-default-focus-bg-color($bg-color) {
+  @return color.adjust($bg-color, $lightness: -5%);
+}
+
+@function  get-default-focus-border-color($border-color) {
+  @return color.adjust($border-color, $lightness: -7.5%);
+}
+
+@function  get-default-focus-box-shadow($focus-border-color) {
+  @return 0 0 0 0.2em rgba($focus-border-color, 0.5);
+}
+
+@function  get-default-active-color($color) {
+  @return $color;
+}
+
+@function  get-default-active-bg-color($bg-color) {
+  @return color.adjust($bg-color, $lightness: -5%);
+}
+
+@function  get-default-active-border-color($border-color) {
+  @return color.adjust($border-color, $lightness: -7.5%);
+}
+
+@function  get-default-active-box-shadow($active-border-color) {
+  @return 0 0 0 0.2em rgba($active-border-color, 0.5);
+}
+
+@function  get-default-disabled-color($color) {
+  @return $color;
+}
+
+@function  get-default-disabled-bg-color($bg-color) {
+  @return $bg-color;
+}
+
+@function  get-default-disabled-border-color($border-color) {
+  @return $border-color;
+}
+
+@function  get-default-disabled-opacity() {
+  @return 0.5;
+}
+
+@function  get-default-fieldset-disabled-opacity() {
+  @return 1;
+}
+
+@function get-default-font-size-xs($font-size) {
+  @return smart_round($font-size * 0.75);
+}
+
+@function get-default-font-size-sm($font-size) {
+  @return smart_round($font-size * 0.833);
+}
+
+@function get-default-font-size-md($font-size) {
+  @return $font-size;
+}
+
+@function get-default-font-size-lg($font-size) {
+  @return smart_round($font-size * 1.166);
+}
+
+@function get-default-font-size-xl($font-size) {
+  @return smart_round($font-size * 1.333);
+}

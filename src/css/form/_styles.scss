@@ -1,9 +1,11 @@
-@use "../_mixins/form" as *;
+@use "./_tools/mixin" as *;
 @use "./variables" as *;
 
 @include form(
-  "form",
-  $fieldset-disabled-opacity: $form-fieldset-disabled-opacity,
+  $class-name: $form-class-name,
   $label-font-size: $form-label-font-size,
   $label-line-height: $form-label-line-height,
+  $label-disabled-opacity: $form-label-disabled-opacity,
+  $label-fieldset-disabled-opacity: $form-label-fieldset-disabled-opacity,
+  $fieldset-disabled-opacity: $form-fieldset-disabled-opacity,
 );

@@ -1,3 +1,6 @@
+@use "sass:color";
+
+$form-control-class-name: "form-control" !default;
 $form-control-color: #323442 !default;
 $form-control-vertical-padding: 0.375em !default;
 $form-control-horizontal-padding: 0.75em !default;
@@ -6,11 +9,12 @@ $form-control-font-family: inherit !default;
 $form-control-font-size: 1em !default;
 $form-control-font-weight: inherit !default;
 $form-control-bg-color: #f5f5f8 !default;
-$form-control-border-color: #ebebef !default;
+  $form-control-border-color: color.adjust($form-control-bg-color, $lightness: -12%) !default;
 $form-control-border-width: 2px !default;
 $form-control-border-radius: 0.3em !default;
 $form-control-readonly-opacity: 1 !default;
 $form-control-disabled-opacity: 0.5 !default;
+$form-control-fieldset-disabled-opacity: 1 !default;
 
 $form-control-transition-appearance: 0.15s ease-in-out !default;
 $form-control-transition:

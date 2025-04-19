@@ -1,9 +1,9 @@
-@use "../../../_mixins/button" as *;
+@use "../../_tools/mixin" as *;
 @use "./variables" as *;
 
 @include button-variant(
-  "btn--success",
-  $color: $btn-success-color,
-  $bg-color: $btn-success-bg-color,
-  $border-color: $btn-success-border-color,
+  $class-name: $button-success-class-name,
+  $color: $button-success-color,
+  $bg-color: $button-success-bg-color,
+  $border-color: $button-success-border-color,
 );

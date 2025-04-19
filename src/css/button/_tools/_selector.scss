@@ -1,8 +1,6 @@
-@use "../_tools/selector" as *;
+@use "../../_tools/selector" as *;
 
-//
 // Кнопка
-//
 @mixin BUTTON($class-name) {
   $BUTTON: ".#{$class-name}";
 
@@ -11,9 +9,7 @@
   }
 }
 
-//
 // Кнопка при наведении
-//
 @mixin BUTTON--HOVER($class-name) {
   @include BUTTON($class-name) {
     @include exactly(that-is(--HOVER)) {
@@ -22,9 +18,7 @@
   }
 }
 
-//
 // Кнопка когда активная
-//
 @mixin BUTTON--ACTIVE($class-name) {
   @include BUTTON($class-name) {
     @include exactly(that-is(--ACTIVE))  {
@@ -33,9 +27,7 @@
   }
 }
 
-//
 // Кнопка когда в фокусе
-//
 @mixin BUTTON--FOCUS($class-name) {
   @include BUTTON($class-name) {
     @include exactly(that-is(--FOCUS))  {
@@ -44,9 +36,7 @@
   }
 }
 
-//
 // Кнопка когда заблокирована или когда в неактивной группе полей
-//
 @mixin BUTTON--DISABLED($class-name) {
   @include BUTTON($class-name) {
     @include exactly(that-is(--DISABLED) that-is(".disabled") that-is-inside("fieldset:disabled")) {
@@ -55,14 +45,12 @@
   }
 }
 
-//
 // Кнопка в неактивной группе полей
-//
 @mixin BUTTON--FIELDSET-DISABLED($class-name) {
   @include BUTTON($class-name) {
     // Гарантированно повысим специфичность за счет изменения предыдущего селектора добавив
     // вложенности
-    @include exactly(that-is(--THAT) that-is(".disabled"), that-is-inside("fieldset:disabled")) {
+    @include exactly(optionally(that-is(--DISABLED)) optionally(that-is(".disabled")), that-is-inside("fieldset:disabled")) {
       @content;
     }
   }

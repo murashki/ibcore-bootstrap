@@ -1,0 +1,135 @@
+@use "../../_tools/style" as *;
+@use "./get-default" as *;
+@use "./selector" as *;
+
+@mixin button(
+  $class-name,
+  $color,
+  $bg-color,
+  $border-color,
+  $border-width,
+  $border-radius,
+  $font-family,
+  $font-size,
+  $font-weight,
+  $line-height,
+  $vertical-padding,
+  $horizontal-padding,
+  $transition,
+  $hover-color: get-default-hover-color($color),
+  $hover-bg-color: get-default-hover-bg-color($bg-color),
+  $hover-border-color: get-default-hover-border-color($border-color),
+  $active-color: get-default-active-color($color),
+  $active-bg-color: get-default-active-bg-color($bg-color),
+  $active-border-color: get-default-active-border-color($border-color),
+  $active-box-shadow: get-default-active-box-shadow($active-border-color),
+  $focus-color: get-default-focus-color($color),
+  $focus-bg-color: get-default-focus-bg-color($bg-color),
+  $focus-border-color: get-default-focus-border-color($border-color),
+  $focus-box-shadow: get-default-focus-box-shadow($focus-border-color),
+  $disabled-color: get-default-disabled-color($color),
+  $disabled-bg-color: get-default-disabled-bg-color($bg-color),
+  $disabled-border-color: get-default-disabled-border-color($border-color),
+  $disabled-opacity: get-default-disabled-opacity(),
+  $fieldset-disabled-opacity: get-default-fieldset-disabled-opacity(),
+) {
+  @include BUTTON($class-name) {
+    @include cursor(pointer, $user-select: none);
+    @include display(flex, center, center);
+    @include padding($vertical-padding, $horizontal-padding);
+    @include shape(--U, --U, $border-width, solid, $border-radius);
+    @include text(--U, --U, $font-weight, $font-family, $line-height, none, center, nowrap);
+    @include transition($transition);
+  }
+
+  @include BUTTON--DISABLED($class-name) {
+    @include cursor(default, none);
+    @include shape(--U, --U, $opacity: $disabled-opacity);
+  }
+
+  @include BUTTON--FIELDSET-DISABLED($class-name) {
+    @include shape(--U, --U, $opacity: $fieldset-disabled-opacity);
+  }
+
+  @include button-variant(
+    $class-name,
+    $color,
+    $bg-color,
+    $border-color,
+    $hover-color,
+    $hover-bg-color,
+    $hover-border-color,
+    $active-color,
+    $active-bg-color,
+    $active-border-color,
+    $active-box-shadow,
+    $focus-color,
+    $focus-bg-color,
+    $focus-border-color,
+    $focus-box-shadow,
+    $disabled-color,
+    $disabled-bg-color,
+    $disabled-border-color,
+  );
+
+  @include button-size(
+    $class-name,
+    $font-size,
+  );
+}
+
+@mixin button-variant(
+  $class-name,
+  $color,
+  $bg-color,
+  $border-color,
+  $hover-color: get-default-hover-color($color),
+  $hover-bg-color: get-default-hover-bg-color($bg-color),
+  $hover-border-color: get-default-hover-border-color($border-color),
+  $active-color: get-default-active-color($color),
+  $active-bg-color: get-default-active-bg-color($bg-color),
+  $active-border-color: get-default-active-border-color($border-color),
+  $active-box-shadow: get-default-active-box-shadow($active-border-color),
+  $focus-color: get-default-focus-color($color),
+  $focus-bg-color: get-default-focus-bg-color($bg-color),
+  $focus-border-color: get-default-focus-border-color($border-color),
+  $focus-box-shadow: get-default-focus-box-shadow($focus-border-color),
+  $disabled-color: get-default-disabled-color($color),
+  $disabled-bg-color: get-default-disabled-bg-color($bg-color),
+  $disabled-border-color: get-default-disabled-border-color($border-color),
+) {
+  @include BUTTON($class-name) {
+    @include shape($bg-color, $border-color);
+    @include text($color, --U);
+  }
+
+  @include BUTTON--HOVER($class-name) {
+    @include shape($hover-bg-color, $hover-border-color);
+    @include text($hover-color, --U);
+  }
+
+  @include BUTTON--FOCUS($class-name) {
+    outline: none;
+    @include shape($focus-bg-color, $focus-border-color, $box-shadow: $focus-box-shadow);
+    @include text($focus-color, --U);
+  }
+
+  @include BUTTON--ACTIVE($class-name) {
+    @include shape($active-bg-color, $active-border-color, $box-shadow: $active-box-shadow);
+    @include text($active-color, --U);
+  }
+
+  @include BUTTON--DISABLED($class-name) {
+    @include text($disabled-color, --U);
+    @include shape($disabled-bg-color, $disabled-border-color, $box-shadow: none);
+  }
+}
+
+@mixin button-size(
+  $class-name,
+  $font-size,
+) {
+  @include BUTTON($class-name) {
+    @include text(--U, $font-size);
+  }
+}

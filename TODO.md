@@ -15,8 +15,8 @@
     * https://www.color-blindness.com/color-name-hue
     * https://github.com/ryanzec/name-that-color
   
-  button
-  field-control
-  button-control
-  control-group
-  control-group-member
+form-control => ctrl
+label-group => ctrl-group
+label-group-column => ctrl-group-col
+label-group-row => ctrl-group-row
+btn-toggle

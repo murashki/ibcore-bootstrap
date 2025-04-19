@@ -1,49 +1,45 @@
-@use "../_mixins/button" as *;
+@use "./_tools/mixin" as *;
 @use "./variables" as *;
 
 @include button(
-  "btn",
-  $font-family: $btn-font-family,
-  $font-size: $btn-font-size,
-  $font-weight: $btn-font-weight,
-  $line-height: $btn-line-height,
-  $border-width: $btn-border-width,
-  $border-radius: $btn-border-radius,
-  $vertical-padding: $btn-vertical-padding,
-  $horizontal-padding: $btn-horizontal-padding,
-  $transition: $btn-transition,
-  $disabled-opacity: $btn-disabled-opacity,
-  $fieldset-disabled-opacity: $btn-fieldset-disabled-opacity,
-);
-
-@include button-variant(
-  "btn",
-  $color: $btn-color,
-  $bg-color: $btn-bg-color,
-  $border-color: $btn-border-color,
+  $class-name: $button-class-name,
+  $color: $button-color,
+  $bg-color: $button-bg-color,
+  $border-color: $button-border-color,
+  $border-width: $button-border-width,
+  $border-radius: $button-border-radius,
+  $font-family: $button-font-family,
+  $font-size: $button-font-size,
+  $font-weight: $button-font-weight,
+  $line-height: $button-line-height,
+  $vertical-padding: $button-vertical-padding,
+  $horizontal-padding: $button-horizontal-padding,
+  $transition: $button-transition,
+  $disabled-opacity: $button-disabled-opacity,
+  $fieldset-disabled-opacity: $button-fieldset-disabled-opacity,
 );
 
 @include button-size(
-  "btn--xs",
-  $font-size: $btn-font-size-xs,
+  $class-name: $button-xs-class-name,
+  $font-size: $button-font-size-xs,
 );
 
 @include button-size(
-  "btn--sm",
-  $font-size: $btn-font-size-sm,
+  $class-name: $button-sm-class-name,
+  $font-size: $button-font-size-sm,
 );
 
 @include button-size(
-  "btn--md",
-  $font-size: $btn-font-size,
+  $class-name: $button-md-class-name,
+  $font-size: $button-font-size,
 );
 
 @include button-size(
-  "btn--lg",
-  $font-size: $btn-font-size-lg,
+  $class-name: $button-lg-class-name,
+  $font-size: $button-font-size-lg,
 );
 
 @include button-size(
-  "btn--xl",
-  $font-size: $btn-font-size-xl,
+  $class-name: $button-xl-class-name,
+  $font-size: $button-font-size-xl,
 );

@@ -4,17 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.375em 0.575em;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.15em;
   font-family: inherit;
-  font-size: 1em;
   font-weight: inherit;
   line-height: 1.4em;
   text-decoration: none;
   text-align: center;
   white-space: nowrap;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 0.15em;
-  padding: 0.375em 0.575em;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media screen and (prefers-reduced-motion: reduce) {
@@ -29,7 +28,7 @@
   opacity: 0.5;
 }
 
-fieldset:disabled .btn:is(*), fieldset:disabled .btn.disabled {
+fieldset:disabled .btn, fieldset:disabled .btn:disabled, fieldset:disabled .btn.disabled {
   opacity: 1;
 }
 
@@ -65,6 +64,10 @@ fieldset:disabled .btn:is(*), fieldset:disabled .btn.disabled {
   background-color: #e3e4ea;
   border-color: #e3e4ea;
   box-shadow: none;
+}
+
+.btn {
+  font-size: 1em;
 }
 
 .btn--xs {

@@ -1,8 +1,6 @@
-@use "../_tools/selector" as *;
+@use "../../_tools/selector" as *;
 
-//
 // Базовая группа с ярлыком
-//
 @mixin LABEL-GROUP-COMMON($class-name) {
   $LABEL-GROUP: ".#{$class-name}";
 
@@ -11,9 +9,7 @@
   }
 }
 
-//
 // Горизонтальная группа с ярлыком
-//
 @mixin LABEL-GROUP-ROW($class-name) {
   $LABEL-GROUP-ROW: ".#{$class-name}-row";
 
@@ -22,9 +18,7 @@
   }
 }
 
-//
 // Вертикальная группа с ярлыком
-//
 @mixin LABEL-GROUP-COLUMN($class-name) {
   $LABEL-GROUP-COLUMN: ".#{$class-name}-column";
 
@@ -33,9 +27,7 @@
   }
 }
 
-//
 // Любая группы с ярлыком
-//
 @mixin LABEL-GROUP($class-name) {
   $LABEL-GROUP: ".#{$class-name}";
   $LABEL-GROUP-ROW: ".#{$class-name}-row";
@@ -46,9 +38,7 @@
   }
 }
 
-//
 // Ярлык базовой группы
-//
 @mixin LABEL-GROUP-COMMON--LABEL($class-name) {
   $LABEL-GROUP-COMMON: ".#{$class-name}";
 
@@ -57,9 +47,7 @@
   }
 }
 
-//
 // Ярлык горизонтальной группы
-//
 @mixin LABEL-GROUP-ROW--LABEL($class-name) {
   $LABEL-GROUP-ROW: ".#{$class-name}-row";
 
@@ -68,9 +56,7 @@
   }
 }
 
-//
 // Ярлык вертикальной группы
-//
 @mixin LABEL-GROUP-COLUMN--LABEL($class-name) {
   $LABEL-GROUP-COLUMN: ".#{$class-name}-column";
 
@@ -79,9 +65,7 @@
   }
 }
 
-//
 // Ярлык любой группы
-//
 @mixin LABEL-GROUP--LABEL($class-name) {
   $LABEL-GROUP: ".#{$class-name}";
   $LABEL-GROUP-ROW: ".#{$class-name}-row";

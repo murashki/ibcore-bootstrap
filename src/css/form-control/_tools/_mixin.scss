@@ -1,0 +1,198 @@
+@use "sass:color";
+@use "../../_tools/style" as *;
+@use "./selector" as *;
+
+@mixin form-control(
+  $class-name,
+  $color,
+  $bg-color,
+  $border-color,
+  $border-width,
+  $border-radius,
+  $font-family,
+  $font-size,
+  $font-weight,
+  $line-height,
+  $vertical-padding,
+  $horizontal-padding,
+  $transition,
+  $readonly-opacity,
+  $disabled-opacity,
+  $fieldset-disabled-opacity,
+  $textarea-line-height,
+  $textarea-height,
+  $hover-color: $color,
+  $hover-bg-color: $bg-color,
+  $hover-border-color: color.adjust($border-color, $lightness: -7.5%),
+  $active-color: $color,
+  $active-bg-color: $bg-color,
+  $active-border-color: color.adjust($border-color, $lightness: -7.5%),
+  $active-box-shadow: 0 0 0 0.2em rgba($active-border-color, 0.5),
+  $focus-color: $color,
+  $focus-bg-color: $bg-color,
+  $focus-border-color: color.adjust($border-color, $lightness: -7.5%),
+  $focus-box-shadow: 0 0 0 0.2em rgba($focus-border-color, 0.5),
+  $readonly-color: $color,
+  $readonly-bg-color: color.adjust($bg-color, $lightness: -2.5%),
+  $readonly-border-color: $border-color,
+  $disabled-color: $color,
+  $disabled-bg-color: $bg-color,
+  $disabled-border-color: $border-color,
+  $placeholder-color: color.adjust($color, $lightness: 35%),
+  $hover-placeholder-color: $placeholder-color,
+  $active-placeholder-color: $placeholder-color,
+  $focus-placeholder-color: $placeholder-color,
+  $readonly-placeholder-color: $placeholder-color,
+  $disabled-placeholder-color: $placeholder-color
+) {
+  @include FORM-CONTROL($class-name) {
+    @include display(block);
+    @include padding($vertical-padding, $horizontal-padding);
+    @include shape(--U, --U, $border-width, solid, $border-radius);
+    @include size(100%);
+    @include text(--U, $font-size, $font-weight, $font-family, $line-height);
+    @include transition($transition);
+  }
+
+  @include FORM-CONTROL-TEXTAREA($class-name) {
+    @include size(--U, $textarea-height);
+    @include text(--U, --U, $line-height: $textarea-line-height);
+  }
+
+  @include FORM-CONTROL--PLACEHOLDER($class-name) {
+    @include cursor($user-select: none);
+    @include shape(--U, --U, $opacity: 1);
+  }
+
+  @include FORM-CONTROL--FOCUS($class-name) {
+    outline: none;
+  }
+
+  @include FORM-CONTROL--READONLY($class-name) {
+    @include cursor(default);
+    @include shape(--U, --U, $opacity: $readonly-opacity);
+  }
+
+  @include FORM-CONTROL--DISABLED($class-name) {
+    @include cursor(default, none);
+    @include shape(--U, --U, $opacity: $disabled-opacity);
+  }
+
+  @include FORM-CONTROL--FIELDSET-DISABLED($class-name) {
+    @include shape(--U, --U, $opacity: $fieldset-disabled-opacity);
+  }
+
+  @include form-control-variant(
+    $class-name,
+    $color,
+    $bg-color,
+    $border-color,
+    $hover-color,
+    $hover-bg-color,
+    $hover-border-color,
+    $active-color,
+    $active-bg-color,
+    $active-border-color,
+    $active-box-shadow,
+    $focus-color,
+    $focus-bg-color,
+    $focus-border-color,
+    $focus-box-shadow,
+    $readonly-color,
+    $readonly-bg-color,
+    $readonly-border-color,
+    $disabled-color,
+    $disabled-bg-color,
+    $disabled-border-color,
+    $placeholder-color,
+    $hover-placeholder-color,
+    $active-placeholder-color,
+    $focus-placeholder-color,
+    $readonly-placeholder-color,
+    $disabled-placeholder-color,
+  );
+}
+
+@mixin form-control-variant(
+  $class-name,
+  $color,
+  $bg-color,
+  $border-color: color.adjust($bg-color, $lightness: -12%),
+  $hover-color: $color,
+  $hover-bg-color: $bg-color,
+  $hover-border-color: color.adjust($border-color, $lightness: -7.5%),
+  $active-color: $color,
+  $active-bg-color: $bg-color,
+  $active-border-color: color.adjust($border-color, $lightness: -7.5%),
+  $active-box-shadow: 0 0 0 0.2em rgba($active-border-color, 0.5),
+  $focus-color: $color,
+  $focus-bg-color: $bg-color,
+  $focus-border-color: color.adjust($border-color, $lightness: -7.5%),
+  $focus-box-shadow: 0 0 0 0.2em rgba($focus-border-color, 0.5),
+  $readonly-color: $color,
+  $readonly-bg-color: color.adjust($bg-color, $lightness: -2.5%),
+  $readonly-border-color: $border-color,
+  $disabled-color: $color,
+  $disabled-bg-color: $bg-color,
+  $disabled-border-color: $border-color,
+  $placeholder-color: color.adjust($color, $lightness: 35%),
+  $hover-placeholder-color: $placeholder-color,
+  $active-placeholder-color: $placeholder-color,
+  $focus-placeholder-color: $placeholder-color,
+  $readonly-placeholder-color: $placeholder-color,
+  $disabled-placeholder-color: $placeholder-color,
+) {
+  @include FORM-CONTROL($class-name) {
+    @include shape($bg-color, $border-color);
+    @include text($color, --U);
+  }
+
+  @include FORM-CONTROL--PLACEHOLDER($class-name) {
+    @include text($placeholder-color, --U);
+  }
+
+  @include FORM-CONTROL--HOVER($class-name) {
+    @include shape($hover-bg-color, $hover-border-color);
+    @include text($hover-color, --U);
+  }
+
+  @include FORM-CONTROL--HOVER--PLACEHOLDER($class-name) {
+    @include text($hover-placeholder-color, --U);
+  }
+
+  @include FORM-CONTROL--ACTIVE($class-name) {
+    @include shape($active-bg-color, $active-border-color);
+    @include text($active-color, --U);
+  }
+
+  @include FORM-CONTROL--ACTIVE--PLACEHOLDER($class-name) {
+    @include text($active-placeholder-color, --U);
+  }
+
+  @include FORM-CONTROL--FOCUS($class-name) {
+    @include shape($focus-bg-color, $focus-border-color, $box-shadow: $focus-box-shadow);
+    @include text($focus-color, --U);
+  }
+
+  @include FORM-CONTROL--FOCUS--PLACEHOLDER($class-name) {
+    @include text($focus-placeholder-color, --U);
+  }
+
+  @include FORM-CONTROL--READONLY($class-name) {
+    @include shape($readonly-bg-color, $readonly-border-color);
+    @include text($readonly-color, --U);
+  }
+
+  @include FORM-CONTROL--READONLY--PLACEHOLDER($class-name) {
+    @include text($readonly-placeholder-color, --U);
+  }
+
+  @include FORM-CONTROL--DISABLED($class-name) {
+    @include shape($disabled-bg-color, $disabled-border-color);
+    @include text($disabled-color, --U);
+  }
+
+  @include FORM-CONTROL--DISABLED--PLACEHOLDER($class-name) {
+    @include text($disabled-placeholder-color, --U);
+  }
+}

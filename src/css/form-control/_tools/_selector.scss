@@ -1,8 +1,6 @@
-@use "../_tools/selector" as *;
+@use "../../_tools/selector" as *;
 
-//
 // Контроллер
-//
 @mixin FORM-CONTROL($class-name) {
   $FORM-CONTROL: ".#{$class-name}";
 
@@ -11,9 +9,7 @@
   }
 }
 
-//
 // Контроллер при наведении
-//
 @mixin FORM-CONTROL--HOVER($class-name) {
   @include FORM-CONTROL($class-name) {
     @include exactly(that-is(--HOVER)) {
@@ -22,9 +18,7 @@
   }
 }
 
-//
 // Контроллер когда активный
-//
 @mixin FORM-CONTROL--ACTIVE($class-name) {
   @include FORM-CONTROL($class-name) {
     @include exactly(that-is(--ACTIVE)) {
@@ -33,9 +27,7 @@
   }
 }
 
-//
 // Контроллер когда в фокусе
-//
 @mixin FORM-CONTROL--FOCUS($class-name) {
   @include FORM-CONTROL($class-name) {
     @include exactly(that-is(--FOCUS)) {
@@ -44,9 +36,7 @@
   }
 }
 
-//
 // Контроллер когда только для чтения
-//
 @mixin FORM-CONTROL--READONLY($class-name) {
   @include FORM-CONTROL($class-name) {
     @include exactly(that-is(--READONLY)) {
@@ -55,9 +45,7 @@
   }
 }
 
-//
-// Контроллер в неактивной группе полей или когда заблокирована
-//
+// Контроллер когда заблокирован или когда в неактивной группе полей
 @mixin FORM-CONTROL--DISABLED($class-name) {
   @include FORM-CONTROL($class-name) {
     @include exactly(that-is(--DISABLED) that-is-inside("fieldset:disabled")) {
@@ -66,9 +54,18 @@
   }
 }
 
-//
+// Контроллер в неактивной группе полей
+@mixin FORM-CONTROL--FIELDSET-DISABLED($class-name) {
+  @include FORM-CONTROL($class-name) {
+    // Гарантированно повысим специфичность за счет изменения предыдущего селектора добавив
+    // вложенности
+    @include exactly(optionally(that-is(--DISABLED)), that-is-inside("fieldset:disabled")) {
+      @content;
+    }
+  }
+}
+
 // Заглушка контроллера
-//
 @mixin FORM-CONTROL--PLACEHOLDER($class-name) {
   @include FORM-CONTROL($class-name) {
     @include use-placeholder() {
@@ -77,9 +74,7 @@
   }
 }
 
-//
 // Заглушка контроллера при наведении
-//
 @mixin FORM-CONTROL--HOVER--PLACEHOLDER($class-name) {
   @include FORM-CONTROL--HOVER($class-name) {
     @include use-placeholder() {
@@ -88,9 +83,7 @@
   }
 }
 
-//
 // Заглушка контроллера когда активный
-//
 @mixin FORM-CONTROL--ACTIVE--PLACEHOLDER($class-name) {
   @include FORM-CONTROL--ACTIVE($class-name) {
     @include use-placeholder() {
@@ -99,9 +92,7 @@
   }
 }
 
-//
 // Заглушка контроллера когда в фокусе
-//
 @mixin FORM-CONTROL--FOCUS--PLACEHOLDER($class-name) {
   @include FORM-CONTROL--FOCUS($class-name) {
     @include use-placeholder() {
@@ -110,9 +101,7 @@
   }
 }
 
-//
 // Заглушка контроллера
-//
 @mixin FORM-CONTROL--READONLY--PLACEHOLDER($class-name) {
   @include FORM-CONTROL--READONLY($class-name) {
     @include use-placeholder() {
@@ -121,20 +110,16 @@
   }
 }
 
-//
 // Заглушка контроллера
-//
 @mixin FORM-CONTROL--DISABLED--PLACEHOLDER($class-name) {
-  @include FORM-CONTROL--READONLY($class-name) {
+  @include FORM-CONTROL--DISABLED($class-name) {
     @include use-placeholder() {
       @content;
     }
   }
 }
 
-//
 // Контроллер, если он input
-//
 @mixin FORM-CONTROL-INPUT($class-name) {
   $FORM-CONTROL: ".#{$class-name}";
 
@@ -143,9 +128,7 @@
   }
 }
 
-//
 // Заглушка контроллера, если он input
-//
 @mixin FORM-CONTROL-INPUT--PLACEHOLDER($class-name) {
   @include FORM-CONTROL-INPUT($class-name) {
     @include use-placeholder() {
@@ -154,9 +137,7 @@
   }
 }
 
-//
 // Контроллер, если он textarea
-//
 @mixin FORM-CONTROL-TEXTAREA($class-name) {
   $FORM-CONTROL: ".#{$class-name}";
 
@@ -165,9 +146,7 @@
   }
 }
 
-//
 // Заглушка контроллера, если он textarea
-//
 @mixin FORM-CONTROL-TEXTAREA--PLACEHOLDER($class-name) {
   @include FORM-CONTROL-TEXTAREA($class-name) {
     @include use-placeholder() {

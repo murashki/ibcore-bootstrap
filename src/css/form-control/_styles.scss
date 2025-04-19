@@ -1,26 +1,23 @@
-@use "../_mixins/form-control" as *;
+@use "./_tools/mixin" as *;
 @use "./variables" as *;
 
 @include form-control(
-  "form-control",
-  $vertical-padding: $form-control-vertical-padding,
-  $horizontal-padding: $form-control-horizontal-padding,
-  $line-height: $form-control-line-height,
+  $class-name: $form-control-class-name,
+  $color: $form-control-color,
+  $bg-color: $form-control-bg-color,
+  $border-color: $form-control-border-color,
+  $border-width: $form-control-border-width,
+  $border-radius: $form-control-border-radius,
   $font-family: $form-control-font-family,
   $font-size: $form-control-font-size,
   $font-weight: $form-control-font-weight,
-  $border-width: $form-control-border-width,
-  $border-radius: $form-control-border-radius,
+  $line-height: $form-control-line-height,
+  $vertical-padding: $form-control-vertical-padding,
+  $horizontal-padding: $form-control-horizontal-padding,
+  $transition: $form-control-transition,
   $readonly-opacity: $form-control-readonly-opacity,
   $disabled-opacity: $form-control-disabled-opacity,
-  $transition: $form-control-transition,
+  $fieldset-disabled-opacity: $form-control-fieldset-disabled-opacity,
   $textarea-line-height: $form-control-textarea-line-height,
   $textarea-height: $form-control-textarea-height,
-);
-
-@include form-control-variant(
-  "form-control",
-  $color: $form-control-color,
-  $bg-color: $form-control-bg-color,
-  $border-color: $form-control-border-color
 );

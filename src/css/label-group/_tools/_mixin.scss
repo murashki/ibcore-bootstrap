@@ -1,5 +1,5 @@
-@use "../_selectors/label-group" as *;
-@use "../_tools/style" as *;
+@use "../../_tools/style" as *;
+@use "./selector" as *;
 
 @mixin label-group(
   $class-name,
@@ -9,15 +9,15 @@
 ) {
   @include LABEL-GROUP($class-name) {
     margin-bottom: $ngb-margin;
-    @include display-style(flex, baseline);
+    @include display(flex, baseline);
   }
 
   @include LABEL-GROUP-COMMON($class-name) {
-    @include display-style(flex, baseline);
+    @include display(flex, baseline);
   }
 
   @include LABEL-GROUP-COLUMN($class-name) {
-    @include display-style(flex, baseline, $flex-direction: column);
+    @include display(flex, baseline, $flex-direction: column);
   }
 
   @include LABEL-GROUP-COLUMN--LABEL($class-name) {
@@ -25,7 +25,7 @@
   }
 
   @include LABEL-GROUP-ROW($class-name) {
-    @include display-style(flex, baseline, $flex-direction: row);
+    @include display(flex, baseline, $flex-direction: row);
   }
 
   @include LABEL-GROUP-ROW--LABEL($class-name) {

@@ -1,5 +1,6 @@
 @use "../../variables" as *;
 
-$btn-success-color: $btn-color !default;
-$btn-success-bg-color: #34c353 !default;
-$btn-success-border-color: $btn-success-bg-color !default;
+$button-success-class-name: "#{$button-class-name}--success" !default;
+$button-success-color: $button-color !default;
+$button-success-bg-color: #34c353 !default;
+$button-success-border-color: $button-success-bg-color !default;

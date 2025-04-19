@@ -1,9 +1,6 @@
-@use "../_tools/selector" as *;
-@use "../_tools/style" as *;
+@use "../../_tools/selector" as *;
 
-//
 // Группа
-//
 @mixin FORM-GROUP($class-name) {
   $FORM-GROUP: ".#{$class-name}";
 
@@ -12,9 +9,7 @@
   }
 }
 
-//
 // Любой дочерний элемент группы, который не игнорируется
-//
 @mixin FORM-GROUP--CHILD($class-name) {
   $FORM-GROUP: ".#{$class-name}";
 
@@ -23,9 +18,7 @@
   }
 }
 
-//
 // Любой дочерний элемент группы, который не игнорируется, при наведении
-//
 @mixin FORM-GROUP--CHILD--HOVER($class-name) {
   @include FORM-GROUP--CHILD($class-name) {
     @include exactly(that-is(--HOVER)) {
@@ -34,9 +27,7 @@
   }
 }
 
-//
 // Любой дочерний элемент группы, который не игнорируется, и который активный или имеет активного потомка
-//
 @mixin FORM-GROUP--CHILD--ACTIVE($class-name) {
   @include FORM-GROUP--CHILD($class-name) {
     @include exactly(that-is(--ACTIVE)) {
@@ -45,9 +36,7 @@
   }
 }
 
-//
 // Любой дочерний элемент группы когда в фокусе или имеет потомка который в фокусе
-//
 @mixin FORM-GROUP--CHILD--FOCUS($class-name) {
   @include FORM-GROUP--CHILD($class-name) {
     @include exactly(that-is(--FOCUS)) {
@@ -56,9 +45,7 @@
   }
 }
 
-//
 // Любой дочерний элемент группы, который не игнорируется, и который не является первым потомком
-//
 @mixin FORM-GROUP--CHILD--NOT-FIRST($class-name) {
   @include FORM-GROUP--CHILD($class-name) {
     @include exactly(that-is-not(--FIRST-CHILD)) {
@@ -67,9 +54,7 @@
   }
 }
 
-//
 // Любой дочерний элемент группы, который не игнорируется, и который не является последним потомком
-//
 @mixin FORM-GROUP--CHILD--NOT-LAST($class-name) {
   @include FORM-GROUP--CHILD($class-name) {
     @include exactly(that-is-not(--LAST-CHILD)) {

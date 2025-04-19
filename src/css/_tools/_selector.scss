@@ -2,9 +2,7 @@
 @use "sass:meta";
 @use "sass:selector";
 
-@function expand-selector(
-  $selector,
-) {
+@function expand-selector($selector) {
   @if $selector == --ANY {
     @return "*";
   }
@@ -49,22 +47,46 @@
   }
 }
 
-@function to-string(
-  $list,
-  $glue: "",
-) {
-  $result: "";
+@function get-flat-values($list) {
+  $result: ();
 
   @for $i from 1 through list.length($list) {
     $e: list.nth($list, $i);
 
     @if meta.type-of($e) == "list" {
-      $result: "#{$result}#{to-string($e, $glue)}";
+      $result: list.join($result, get-flat-values($e), $separator: comma);
     } @else {
-      $result: "#{$result}#{expand-selector($e)}";
+      $result: list.join($result, ($e), $separator: comma);
     }
+  }
 
-    @if ($i != list.length($list)) {
+  @return $result;
+}
+
+@function get-unique-values($list) {
+  $result: ();
+
+  @for $i from 1 through list.length($list) {
+    $e: list.nth($list, $i);
+
+    @if list.index($result, $e) == null {
+      $result: list.append($result, $e, $separator: comma);
+    }
+  }
+
+  @return $result;
+}
+
+@function to-string($list, $glue: "") {
+  $values: get-unique-values(get-flat-values($list));
+  $result: "";
+
+  @for $i from 1 through list.length($values) {
+    $e: list.nth($values, $i);
+
+    $result: "#{$result}#{expand-selector($e)}";
+
+    @if ($i != list.length($values)) {
       $result: "#{$result}#{$glue}";
     }
   }
@@ -72,37 +94,31 @@
   @return $result;
 }
 
-@function get-nest-selectors(
-  $selectors...
-) {
+@function get-nest-selectors($selectors...) {
   $nest-selectors: ();
 
   @for $i from 1 through list.length($selectors) {
     $selector: list.nth($selectors, $i);
 
     @if meta.type-of($selector) == "list" {
-      $nest-selectors: list.append($nest-selectors, #{to-string($selector, $glue: ", ")});
+      $nest-selectors: list.append($nest-selectors, to-string($selector, $glue: ", "), $separator: comma);
     }
     @else if meta.type-of($selector) == "function" {
-      $nest-selectors: list.append($nest-selectors, meta.call($selector));
+      $nest-selectors: list.append($nest-selectors, meta.call($selector), $separator: comma);
     }
     @else {
-      $nest-selectors: list.append($nest-selectors, expand-selector($selector));
+      $nest-selectors: list.append($nest-selectors, expand-selector($selector), $separator: comma);
     }
   }
 
   @return $nest-selectors;
 }
 
-@mixin use(
-  $selectors...
-) {
+@mixin use($selectors...) {
   $nest-selectors: get-nest-selectors($selectors...);
   @if & {
-    @at-root {
-      #{selector.nest(&, $nest-selectors...)} {
-        @content;
-      }
+    #{selector.nest(&, $nest-selectors...)} {
+      @content;
     }
   }
   @else {
@@ -130,9 +146,7 @@
   }
 }
 
-@mixin exactly(
-  $selectors...
-) {
+@mixin exactly($selectors...) {
   $nest-selectors: get-nest-selectors($selectors...);
   @at-root {
     #{selector.nest(&, $nest-selectors...)} {
@@ -141,59 +155,38 @@
   }
 }
 
-// Следующие селекторы работают некорректно, когда им передают несколько селекторов
-
 @function optionally(
   $selector,
 ) {
-  @return "&, #{$selector}";
+  @return ("&", $selector);
 }
 
-@function that-is(
-  $selectors...
-) {
-  $nest-selectors: get-nest-selectors($selectors...);
-  @return "&#{selector.nest($nest-selectors...)}";
+@function that-is($selector) {
+  @return "&#{expand-selector($selector)}";
 }
 
-@function that-is-not(
-  $selectors...
-) {
-  $nest-selectors: get-nest-selectors($selectors...);
-  @return "&:not(#{selector.nest($nest-selectors...)})";
+@function that-is-not($selector) {
+  @return "&:not(#{expand-selector($selector)})";
 }
 
-@function that-is-inside(
-  $selectors...
-) {
-  $nest-selectors: get-nest-selectors($selectors...);
-  @return "#{selector.nest($nest-selectors...)} &";
+@function that-is-inside($selector) {
+  @return "#{expand-selector($selector)} &";
 }
 
-@function that-is-child-of(
-  $selectors...
-) {
-  $nest-selectors: get-nest-selectors($selectors...);
-  @return "#{selector.nest($nest-selectors...)} > &";
+@function that-is-child-of($selector) {
+  @return "#{expand-selector($selector)} > &";
 }
 
-@function that-is-subsequent-to(
-  $selectors...
-) {
-  $nest-selectors: get-nest-selectors($selectors...);
-  @return "#{selector.nest($nest-selectors...)} ~ &";
+@function that-is-subsequent-to($selector) {
+  @return "#{expand-selector($selector)} ~ &";
 }
 
-@function that-has(
-  $selectors...
-) {
+@function that-has($selectors...) {
   $nest-selectors: get-nest-selectors($selectors...);
   @return "&:has(#{selector.nest($nest-selectors...)})";
 }
 
-@function that-has-not(
-  $selectors...
-) {
+@function that-has-not($selectors...) {
   $nest-selectors: get-nest-selectors($selectors...);
   @return "&:not(:has(#{selector.nest($nest-selectors...)}))";
 }

@@ -1,5 +1,5 @@
-@use "../_selectors/form-group" as *;
-@use "../_tools/style" as *;
+@use "../../_tools/style" as *;
+@use "./selector" as *;
 
 @mixin form-group(
   $class-name,
@@ -8,7 +8,7 @@
   @include FORM-GROUP($class-name) {
     position: relative;
     z-index: 0;
-    @include display-style(flex);
+    @include display(flex);
   }
 
   @include FORM-GROUP--CHILD($class-name) {
@@ -30,7 +30,7 @@
   @include FORM-GROUP--CHILD--NOT-FIRST($class-name) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    margin-left: $compensating-margin;
+    margin-left: -$compensating-margin;
   }
 
   @include FORM-GROUP--CHILD--NOT-LAST($class-name) {

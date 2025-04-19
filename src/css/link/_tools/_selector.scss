@@ -1,8 +1,6 @@
-@use "../_tools/selector" as *;
+@use "../../_tools/selector" as *;
 
-//
 // Ссылка
-//
 @mixin LINK($class-name) {
   $LINK: ".#{$class-name}";
 
@@ -11,9 +9,7 @@
   }
 }
 
-//
 // Ссылка при наведении
-//
 @mixin LINK--HOVER($class-name) {
   @include LINK($class-name) {
     @include exactly(that-is(--HOVER)) {
@@ -22,9 +18,7 @@
   }
 }
 
-//
 // Ссылка когда активная
-//
 @mixin LINK--ACTIVE($class-name) {
   @include LINK($class-name) {
     @include exactly(that-is(--ACTIVE)) {
@@ -33,9 +27,7 @@
   }
 }
 
-//
 // Ссылка когда в фокусе
-//
 @mixin LINK--FOCUS($class-name) {
   @include LINK($class-name) {
     @include exactly(that-is(--FOCUS))  {
@@ -44,9 +36,7 @@
   }
 }
 
-//
 // Посещенная ссылка
-//
 @mixin LINK--VISITED($class-name) {
   @include LINK($class-name) {
     @include exactly(that-is(--VISITED) that-is(".visited")) {
@@ -55,9 +45,7 @@
   }
 }
 
-//
 // Ссылка когда заблокирована или когда в неактивной группе полей
-//
 @mixin LINK--DISABLED($class-name) {
   @include LINK($class-name) {
     @include exactly(that-is(--DISABLED) that-is(".disabled") that-is-inside("fieldset:disabled")) {
@@ -66,14 +54,12 @@
   }
 }
 
-//
 // Ссылка в неактивной группе полей
-//
 @mixin LINK--FIELDSET-DISABLED($class-name) {
   @include LINK($class-name) {
     // Гарантированно повысим специфичность за счет изменения предыдущего селектора добавив
     // вложенности
-    @include exactly(that-is(--THAT) that-is(".disabled"), that-is-inside("fieldset:disabled")) {
+    @include exactly(optionally(that-is(--DISABLED)) optionally(that-is(".disabled")), that-is-inside("fieldset:disabled")) {
       @content;
     }
   }

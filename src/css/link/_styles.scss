@@ -1,8 +1,8 @@
-@use '../_mixins/link' as *;
+@use './_tools/mixin' as *;
 @use "./variables" as *;
 
 @include link(
-  "link",
+  $class-name: $link-class-name,
   $color: $link-color,
   $text-decoration: $link-text-decoration,
   $hover-color: $link-hover-color,

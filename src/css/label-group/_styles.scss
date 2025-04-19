@@ -1,9 +1,9 @@
-@use "../_mixins/label-group" as *;
+@use "./_tools/mixin" as *;
 @use "./variables" as *;
 
 @include label-group(
-  "label-group",
-  $label-group-ngb-margin,
-  $label-group-label-right-margin,
-  $label-group-label-bottom-margin,
+  $class-name: $label-group-class-name,
+  $ngb-margin: $label-group-ngb-margin,
+  $label-right-margin: $label-group-label-right-margin,
+  $label-bottom-margin: $label-group-label-bottom-margin,
 );

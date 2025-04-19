@@ -1,8 +1,8 @@
-@use "../../../_mixins/form-control" as *;
+@use "../../_tools/mixin" as *;
 @use "./variables" as *;
 
 @include form-control-variant(
-  "form-control--error",
+  $class-name: $form-control-error-class-name,
   $color: $form-control-error-color,
   $bg-color: $form-control-error-bg-color,
   $border-color: $form-control-error-border-color,

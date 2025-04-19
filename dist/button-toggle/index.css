@@ -1,141 +1,20 @@
-.btn-toggle {
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: inherit;
-  font-size: 1em;
-  font-weight: inherit;
-  line-height: 1.4em;
-  text-decoration: none;
-  white-space: nowrap;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 0.15em;
-  padding: 0.375em calc(0.375em + (1lh - 1em) / 2);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-@media screen and (prefers-reduced-motion: reduce) {
-  .btn-toggle {
-    transition: none;
-  }
-}
+/* Error: $color: get-btn-border-color(#e3e4ea) is not a color.
+ *    ,
+ * 14 |   @return color.adjust($border-color, $lightness: -7.5%);
+ *    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   src/css/button-toggle/_tools/_mixin.scss 14:11  get-hover-border-color()
+ *   src/css/button-toggle/_tools/_mixin.scss 96:24  button-toggle()
+ *   src/css/button-toggle/_styles.scss 4:1          @use
+ *   src/css/button-toggle/index.scss 1:1            root stylesheet */
 
-.btn-toggle-group .btn-toggle {
-  padding: 0.375em 0.375em;
-}
-
-.btn-toggle:has([type=checkbox]:disabled, [type=radio]:disabled), fieldset:disabled .btn-toggle {
-  cursor: default;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-fieldset:disabled .btn-toggle:has([type=checkbox]:is(*), [type=radio]:is(*)) {
-  opacity: 1;
-}
-
-.btn-toggle:has([type=radio]) {
-  border-radius: calc(0.5lh + 0.375em + 2px);
-}
-
-.btn-toggle [type=checkbox], .btn-toggle [type=radio] {
-  appearance: none;
-  content: "";
-  margin: 0;
-  cursor: inherit;
-  pointer-events: inherit;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  background-color: transparent;
-  border-color: rgb(127.5, 127.5, 127.5);
-  border-width: 2px;
-  border-style: solid;
-  width: 1em;
-  height: 1em;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-@media screen and (prefers-reduced-motion: reduce) {
-  .btn-toggle [type=checkbox], .btn-toggle [type=radio] {
-    transition: none;
-  }
-}
-
-.btn-toggle [type=checkbox]:focus, .btn-toggle [type=radio]:focus {
-  outline: none;
-}
-
-.btn-toggle [type=checkbox]:checked, .btn-toggle [type=radio]:checked {
-  background-color: rgb(76.5, 76.5, 76.5);
-  border-color: rgb(38.25, 38.25, 38.25);
-}
-
-.btn-toggle [type=radio] {
-  border-radius: 50%;
-}
-
-.btn-toggle-text {
-  padding-left: 0.575em;
-  text-align: center;
-}
-
-.btn-toggle-group {
+  padding: 1em;
   margin-bottom: 1em;
-  display: flex;
-  align-items: flex-start;
+  border-bottom: 2px solid black;
+  content: "Error: $color: get-btn-border-color(#e3e4ea) is not a color.\a    \2577 \a 14 \2502    @return color.adjust($border-color, $lightness: -7.5%);\a    \2502            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   src/css/button-toggle/_tools/_mixin.scss 14:11  get-hover-border-color()\a   src/css/button-toggle/_tools/_mixin.scss 96:24  button-toggle()\a   src/css/button-toggle/_styles.scss 4:1          @use\a   src/css/button-toggle/index.scss 1:1            root stylesheet";
 }
-
-.btn-toggle-label {
-  padding-left: 0.575em;
-  padding-top: calc(0.375em + 2px - (1lh - 1em) / 2);
-  line-height: 1.4em;
-  cursor: pointer;
-  user-select: none;
-}
-
-.btn-toggle-label.disabled, fieldset:disabled .btn-toggle-label {
-  cursor: default;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-fieldset:disabled .btn-toggle-label, fieldset:disabled .btn-toggle-label.disabled {
-  opacity: 1;
-}
-
-.btn-toggle {
-  background-color: #e3e4ea;
-  border-color: #e3e4ea;
-  color: #000;
-}
-
-.btn-toggle:hover {
-  background-color: rgb(212.4285714286, 213.9489795918, 223.0714285714);
-  border-color: rgb(205.1428571429, 206.9234693878, 217.6071428571);
-  color: #000;
-}
-
-.btn-toggle:has([type=checkbox]:focus, [type=radio]:focus) {
-  outline: none;
-  background-color: rgb(212.4285714286, 213.9489795918, 223.0714285714);
-  border-color: rgb(205.1428571429, 206.9234693878, 217.6071428571);
-  box-shadow: 0 0 0 0.2em rgba(205.1428571429, 206.9234693878, 217.6071428571, 0.5);
-  color: #000;
-}
-
-.btn-toggle:has([type=checkbox]:active, [type=radio]:active) {
-  background-color: rgb(212.4285714286, 213.9489795918, 223.0714285714);
-  border-color: rgb(205.1428571429, 206.9234693878, 217.6071428571);
-  box-shadow: 0 0 0 0.2em rgba(205.1428571429, 206.9234693878, 217.6071428571, 0.5);
-  color: #000;
-}
-
-.btn-toggle:has([type=checkbox]:disabled, [type=radio]:disabled), fieldset:disabled .btn-toggle {
-  color: #000;
-  background-color: #e3e4ea;
-  border-color: #e3e4ea;
-  box-shadow: none;
-}
-
-/*# sourceMappingURL=index.css.map */
